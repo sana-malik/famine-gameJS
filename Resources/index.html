@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<!-- UTILITIES -->
+		<script type="text/javascript" src="utils/jquery.min.js"></script>
+		<script type="text/javascript" src="utils/utils.js"></script>
+		
+		<!-- MODEL -->
+		<script type="text/javascript" src="model/Team.js"></script>
+		<script type="text/javascript" src="model/Puzzle.js"></script>
+		<script type="text/javascript" src="model/Hint.js"></script>
+		<script type="text/javascript" src="model/Answer.js"></script>
+
+		<!-- View & Controller & Init -->
+		<script type="text/javascript" src="controller.js"></script>
+		<script type="text/javascript" src="view.js"></script>
+		<script type="text/javascript" src="init.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<title>Famine Game</title>
+	</head>
+	<body>
+		<div id="popup_container" style="display:none;">
+			<div id="popup_content">
+				<div class="title"><a href="#"><img src="images/gui/close_icon.gif" id="close_popup"></a></div>
+				<div class="content"></div>
+			</div>
+		</div>
+
+		<div id="main_container">
+			<div id="sidebar"></div>
+			<div id="main"></div>
+			<div id="bottombar"></div>
+		</div>
+	</body>
+</html>
