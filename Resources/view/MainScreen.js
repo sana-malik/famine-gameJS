@@ -2,31 +2,39 @@ function showStartScreen() {
 	$("#main").empty();
 
 	// List active puzzles
-	var puzzles = session.getActivePuzzles();
-	$("#main").append("<div id=\"active_puzzles\">Active Puzzles: </div>");
-
+	$("#main").append("<div id=\"active_puzzles\"></div>");
+	listActivePuzzles();
 
 	// Start code box
 	$("#main").append("Enter a start code: <input type=\"text\" id=\"start_input\">" +
-  		"<button id=\"start_button\">Submit</button>");
+  		"<button id=\"start_button\">Submit</button><div id=\"return_message\"></div>");
 
 	$("#start_button").click(function() {
 		var entry = clean($("#start_input").val());
-		if (entry in session.puzzles) {
-			session.addToActivePuzzles(session.puzzles[entry]);
+
+		// activate puzzles in session
+		var result = session.activatePuzzles(entry);
+
+		if (result > 0) {
+			// show in list!
+			listActivePuzzles();
+			$("#return_message").html("<font color=green>Success!</font>");
 		}
 		else {
-			$("#main #wrong_message").remove();
-			$("#main").append("<div id=\"wrong_message\">sorry! " + entry + " is not a valid code.</div>");
+			$("#return_message").html("<font color=red>sorry! " + entry + " is not a valid code.</font>");
 		}
 	});
 }
 
-function refreshActivePuzzles() {
-	$("#active_puzzles").empty();
-	$("#active_puzzles").append("Active Puzzles: ");
+function listActivePuzzles() {
+	$("#active_puzzles").empty().append("Active Puzzles: ");
 
-	$.each(session.getActivePuzzles(), function(id, puzzle) {
-		$("#active_puzzles").append(puzzle.name);
+	$.each(session.getActivePuzzles(), function(index, name) {
+		$("#active_puzzles").append(puzzles[name].getHTMLLink());
 	})
+
+	$(".puzzle_link").click(function() {
+		var name = this.id;
+		showPuzzleScreen(puzzles[name]);
+	});
 }

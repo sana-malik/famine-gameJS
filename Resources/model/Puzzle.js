@@ -7,7 +7,7 @@ function Puzzle(puzzleObj) {
 
 	var hints = {};
 	$.each(puzzleObj.hints, function(index, hintObj) {
-		hints[hintObj.name] = new Hint(hintObj));
+		hints[hintObj.name] = new Hint(hintObj);
 	});
 
 	this.hints = hints;
@@ -35,5 +35,9 @@ Puzzle.prototype.checkAnswer = function(entry) {
 
 
 Puzzle.prototype.getPuzzleHTML = function() {
-	return "<span id=\"puzzle_title\">" + this.name + "</span><span id=\"flavor_text\">" + this.flavor_text + "</span>";
+	return "<span class=\"puzzle_title\">" + this.name + "</span><span class=\"flavor_text\">" + this.flavor_text + "</span>";
+}
+
+Puzzle.prototype.getHTMLLink = function() {
+	return "<span class=\"puzzle_link\" id=\""+this.name+"\">" + this.name + "</span>";
 }

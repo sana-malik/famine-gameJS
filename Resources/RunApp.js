@@ -4,7 +4,6 @@ var teams;
 var locations;
 var locOrder;
 var resources;
-
 var tid;
 
 /**
@@ -14,10 +13,10 @@ $(document).ready(function() {
 	$("#close_popup").click(hidePopup);
 
 	// Set up model
-	puzzles = populatePuzzles();
 	teams = populateTeams();
 	locations = populateLocations(); 
 	resources = populateResources();
+	puzzles = populatePuzzles();
 
 	session = initSession();
 	
@@ -83,14 +82,14 @@ function populateLocations() {
 }
 
 function loadSession() {
-	var json = jsonToString(data_dir + 'locations.json')
+	var json = jsonToString(data_dir + 'session.json')
 	var sessionObj = Ti.JSON.parse(json);
 	
 	return new Session(sessionObj);
 }
 
 function initSession() {
-	var file = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDirectory(),"session.json");
+	var file = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDirectory(),data_dir + "session.json");
 	if (file.exists()) {
 		return loadSession();
 	}
