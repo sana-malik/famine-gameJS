@@ -1,6 +1,8 @@
 function Session() {
 	this.teams = populateTeams();
 	this.puzzles = populatePuzzles();
+
+	populateSessionData();
 }
 
 
@@ -28,13 +30,26 @@ function populatePuzzles() {
 	return puzzles;
 }
 
+function populateSessionData() {
+	var json = jsonToString(data_dir + 'session.json');
+	var obj = Ti.JSON.parse(json);
+	this.user = obj.user;
+	this.fans = obj.fans;;
+}
+
 Session.prototype.getActivePuzzles = function() {
 	var active = [];
 	$.each(this.puzzles, function(id, puzzle) {
-		if (puzzle.status = puzzleStatus.active) {
+		if (puzzle.status == puzzleStatus.active) {
 			active.push(puzzle);
 		}
 	});
 
 	return active;
+}
+
+Session.prototype.addToActivePuzzles = function(puzzle) {
+	puzzle.status = puzzleStatus.active;
+
+	refreshActivePuzzles();
 }

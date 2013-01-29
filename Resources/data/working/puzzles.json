@@ -3,7 +3,7 @@
 "start_code":"boingboing",
 "max_fans" : 100,
 "current_fans" : 100,
-"status" : "ACTIVE",
+"status" : "INACTIVE",
 "flavor_text" :"Upon entering the room you see a gelatinous cube before you.",
 "hints" :[
 	{
