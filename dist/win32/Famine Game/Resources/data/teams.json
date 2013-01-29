@@ -1,0 +1,20 @@
+{
+activeTeam : "1a",
+teams : [
+{"id":"1a",
+"bio":"meow meow!",
+"icon":"images/team_icons/team01.gif",
+"video":"video file",
+"name" :"Team 1a",
+"talents":["KNIVES","painting"],
+"mentor":"Haymitch"}
+,
+{"id":"1b",
+"bio":"woof!",
+"icon":"images/team_icons/team02.gif",
+"video":"video file",
+"name" :"Team 1b",
+"talent":["NUNCHUCKS","shelter","traps"],
+"mentor":"Philip"}
+]
+}

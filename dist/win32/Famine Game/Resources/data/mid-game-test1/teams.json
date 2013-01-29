@@ -1,0 +1,21 @@
+[
+{"id":"1a",
+"bio":"meow meow!",
+"icon":"images/team_icons/team01.gif",
+"video":"video file",
+"name" :"Team 1a",
+"password":"abcd01",
+"status":"ALIVE",
+"talents":["KNIVES","painting"],
+"mentor":"Haymitch"}
+,
+{"id":"1b",
+"bio":"woof!",
+"icon":"images/team_icons/team02.gif",
+"video":"video file",
+"name" :"Team 1b",
+"password":"abcd02",
+"status":"DEAD",
+"talent":["NUNCHUCKS","shelter","traps"],
+"mentor":"Philip"}
+]

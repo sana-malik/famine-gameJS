@@ -1,0 +1,130 @@
+body {
+	color: #333333;
+	font-family: "Helvetica", "Arial",sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+#main_container {
+	width: 1000px; height: 600px;
+	background-color: #000000;
+	position:absolute;
+	top: 0px; left: 0px;
+}
+
+#main_container > div {
+	background-color: #EEEEEE;
+}
+
+#sidebar {
+	position:absolute;
+	left: 25px; top:100px;
+	width: 250px; height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/* START SCREEN */
+#main {
+	position:absolute;
+	left: 325px; top: 100px;
+	width: 650px; height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#wrong_message {
+	color: #FF0000;
+}
+
+/* BOTTOM BAR */
+#bottombar {
+	position:absolute;
+	left: 25; top: 425px;
+	width: 950px; height: 150px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.team_div {
+	margin: 5px;
+	display: inline-block;
+	position: relative;
+}
+
+#bottombar > .team_div:hover {
+	cursor: pointer;
+}
+.team_div > .status {
+	background: rgba(0,0,0,0.5);
+	color: #000000;
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 100%; height: 50px;
+	padding-top: 25px;
+}
+
+#bottombar > .team_div:hover {
+	cursor: pointer;
+}
+
+/* TOOLTIP */
+#tt {
+ 	position:absolute;
+ 	display:block;
+ 	background:url(images/tt_left.gif) top left no-repeat;
+ 	}
+#tttop {
+ 	display:block;
+ 	height:5px;
+ 	margin-left:5px;
+ 	background:url(images/tt_top.gif) top right no-repeat;
+ 	overflow:hidden;
+}
+#ttcont {
+	display:block;
+ 	padding:2px 12px 3px 7px;
+ 	margin-left:5px;
+ 	background:#666;
+ 	color:#fff;
+}
+#ttbot {
+	display:block;
+	height:5px;
+	margin-left:5px;
+	background:url(images/tt_bottom.gif) top right no-repeat;
+	overflow:hidden;
+}
+
+/* POPUP */
+#popup_container {
+	position:relative;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.5);
+	z-index: 10;
+}
+
+#popup_content {
+	position:absolute;
+	top: 50%; left: 50%;
+	background-color: #FFFFFF;
+	width: 500px;
+	height: 300px;
+	margin: -150px 0 0 -250px;
+}
+
+#close_popup {
+	float: right;
+}
+
+/* DIV STYLING */
+.title {
+	width: 100%;
+}
+
+.content {
+	clear:both;
+	width: 100%;
+}
