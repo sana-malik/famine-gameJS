@@ -2,16 +2,12 @@ function Puzzle(puzzleObj) {
 	this.name = puzzleObj.name;
 	this.start_code = puzzleObj.start_code;
 
-	this.max_fans = puzzleObj.max_fans,
-	this.current_fans = puzzleObj.current_fans,
-
-	this.status = puzzleObj.status;
-	
+	this.max_fans = puzzleObj.max_fans;
 	this.flavor_text = puzzleObj.flavor_text;
 
-	var hints = [];
+	var hints = {};
 	$.each(puzzleObj.hints, function(index, hintObj) {
-		hints.push(new Hint(hintObj));
+		hints[hintObj.name] = new Hint(hintObj));
 	});
 
 	this.hints = hints;

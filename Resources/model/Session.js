@@ -1,35 +1,28 @@
+<<<<<<< HEAD
 function Session() {
 	this.teams = populateTeams();
 	this.puzzles = populatePuzzles();
 
 	populateSessionData();
+=======
+function Session(sessionObj) {
+	this.fans = sessionObj.fans;
+	this.locationStats = sessionObj.locationStats;
+	this.puzzleStats = sessionObj.puzzleStats;
+	this.teamStats = sessionObj.teamStats;
+	this.resourceStats = sessionObj.resourceStats;
+>>>>>>> 926582c17ad81b727a9396cdbfb01373102d001f
 }
 
-
-function populateTeams() {
-	var json = jsonToString(data_dir + 'teams.json');
-
-	var teams = {};
-	var teamObjs = Ti.JSON.parse(json);
-	$.each(teamObjs, function(index, team) {
-		teams[team.id] = new Team(team);
-	});
-
-	return teams;
+function Session() {
+	this.fans = 0;	
+	this.locationStats = {locOrder[0] : locationStatus.VISITED};
+	this.puzzleStats = {};
+	this.teamStats = {};
+	this.resourceStats = {};
 }
 
-function populatePuzzles() {
-	var json = jsonToString(data_dir + 'puzzles.json');
-
-	var puzzles = {};
-	var puzObjs = Ti.JSON.parse(json);
-	$.each(puzObjs, function(index, puzzle) {
-		puzzles[puzzle.start_code] = new Puzzle(puzzle);
-	});
-
-	return puzzles;
-}
-
+<<<<<<< HEAD
 function populateSessionData() {
 	var json = jsonToString(data_dir + 'session.json');
 	var obj = Ti.JSON.parse(json);
@@ -53,3 +46,6 @@ Session.prototype.addToActivePuzzles = function(puzzle) {
 
 	refreshActivePuzzles();
 }
+=======
+
+>>>>>>> 926582c17ad81b727a9396cdbfb01373102d001f

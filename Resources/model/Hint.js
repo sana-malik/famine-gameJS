@@ -1,7 +1,10 @@
 function Hint(hintObj) {
+	this.name = hintObj.name;
 	this.text = hintObj.text;
-	this.min_min = hintObj.min_min;
-	this.max_min = hintObj.max_min;
-	this.min_cost = hintObj.min_cost;
-	this.max_cost = hintObj.max_cost;
+	
+	this.start_time = hintObj.start_time;
+	this.start_cost = hintObj.start_cost;
+	
+	this.end_time = hintObj.end_time;
+	this.end_cost = hintObj.end_cost;
 }

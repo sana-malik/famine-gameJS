@@ -1,10 +1,4 @@
-package model;
-
-public class Resource {
-	private String item;
-	private String locked_icon;
-	private String unlocked_icon;
-	
-	private boolean unlocked;
-
+function Resource(resourceObj) {
+	this.name = resourceObj.name;
+	this.icon = resourceObj.icon;
 }

@@ -1,19 +1,16 @@
-package model;
 
-import java.sql.Time;
-import java.util.ArrayList;
-
-public class Location {
-	private ArrayList<Puzzle> puzzle_list;
-	private String address;
+function Location(locationObj) {
+	this.name = locationObj.name;
+	this.puzzles = locationObj.puzzles;
+	this.address = locationObj.address;
 	
-	private String notes;
-	private String restroom_description;
-	private String food_description;
+	this.notes = locationObj.notes;
+	this.restroom_description = locationObj.restroom_description;
+	this.food_description = locationObj.food_description;
 	
-	private String image_file;
-	private String map_file;
+	this.image_file = locationObj.image_file;
+	this.map_file = locationObj.map_file;
 	
-	private Time time_open;
-	private Time time_closed;
+	this.time_open = locationObj.time_open;
+	this.time_closed = locationObj.time_closed;
 }

@@ -4,7 +4,6 @@ function Team(teamObj) {
 		this.bio = teamObj.bio;
 		this.mentor = teamObj.mentor;
 		this.icon = teamObj.icon;
-		this.status = teamObj.status;
 		this.talents = teamObj.talents;
 		this.password = teamObj.password;
 		this.video = teamObj.video;
