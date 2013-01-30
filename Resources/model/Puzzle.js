@@ -26,6 +26,10 @@ function Puzzle(puzzleObj) {
 
 Puzzle.prototype.checkAnswer = function(entry) {
 	if (entry in this.answers) {
+		if (this.answers[entry]["type"] == answerTypes.FINAL) {
+			this.killTeams();
+			this.unlockResources();
+		}
 		return this.answers[entry].response;
 	}
 	else {
@@ -40,4 +44,19 @@ Puzzle.prototype.getPuzzleHTML = function() {
 
 Puzzle.prototype.getHTMLLink = function() {
 	return "<li class=\"puzzle_link\" id=\""+this.name+"\">" + this.name + "</li>";
+}
+
+Puzzle.prototype.killTeams = function() {
+	$.each(this.teams_killed, function(index, id) {
+		if (tid === id) {
+			// this is current team! don't do anything! :)
+		}
+		else {
+			teams[id].die();
+		}
+	});
+}
+
+Puzzle.prototype.unlockResources = function() {
+	// todo	
 }

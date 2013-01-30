@@ -17,17 +17,21 @@ Team.prototype.getHTMLSummary = function() {
 Team.prototype.getIconHTML = function() {
 	var stat = "<div class=\"team_div\" id=\"" + this.id +"\">" +
 				"<img src=\"" + this.icon + "\" class=\"team_img\">";
-	if (this.status == teamStatus.dead) {
+	if (this.id in session.teamStats && session.teamStats[this.id]["status"] === teamStatus.DEAD) {
 		stat = stat + "<div class=\"status\">DEAD</div>";
 	}
 	stat = stat + "</div>";
 	return stat;
 }
 
-Team.prototype.kill = function() {
+Team.prototype.die = function() {
+	if (this.id in session.teamStats && session.teamStats[this.id]["status"] === teamStatus.DEAD) {
+		return; // already dead?!
+	}
+
 	// mark dead visually
 	$(".team_div#" + this.id).append("<div class=\"status\">DEAD</div>");
 
 	// update object
-	this.status = teamStatus.dead;
+	session.teamStats[this.id] = {"status" : teamStatus.DEAD};
 }
