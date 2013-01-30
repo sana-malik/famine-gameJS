@@ -15,7 +15,7 @@ function jsonToString(filename) {
 }
 
 function clean(str) {
-	return str.replace(/[\s+!.@#$%^&*()]/g, '');
+	return str.replace(/[\s+!.@#$%^&*()]/g, '').toLowerCase();
 }
 
 function showPopup(content) {
