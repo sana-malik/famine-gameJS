@@ -33,10 +33,12 @@ function listActivePuzzles() {
 	if (active.length === 0) {
 		$("#active_puzzles").append("none!");
 	}
-	$.each(session.getActivePuzzles(), function(index, name) {
-		$("#active_puzzles").append(puzzles[name].getHTMLLink());
-	})
-
+	else {
+		$.each(active, function(index, name) {
+			$("#active_puzzles").append(puzzles[name].getHTMLLink());
+		})
+	}
+	
 	$(".puzzle_link").click(function() {
 		var name = this.id;
 		showPuzzleScreen(puzzles[name]);
