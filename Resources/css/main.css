@@ -35,7 +35,6 @@ body {
 
 .puzzle_link {
 	color: blue;
-	display: block;
 }
 
 .puzzle_link:hover {

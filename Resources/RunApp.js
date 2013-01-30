@@ -10,7 +10,16 @@ var tid;
  * Executes once the DOM is fully loaded. Essentially a "main" method
  */
 $(document).ready(function() {
-	$("#close_popup").click(hidePopup);
+	//Create the menu object
+    var menu = Ti.UI.createMenu();
+
+    //Create menu items
+    var debug = menu.addItem('Debug');
+    debug.addItem('Save session', Debug.saveSession);
+    debug.addItem('Clear session', Debug.clearSession);
+
+    //Add menu to the current window
+    Ti.UI.getCurrentWindow().setMenu(menu);
 
 	// Set up model
 	teams = populateTeams();
@@ -24,7 +33,6 @@ $(document).ready(function() {
 	displayTeams();
 	showStartScreen();
 });
-
 
 function populateTeams() {
 	var json = jsonToString(data_dir + 'teams.json');
@@ -67,33 +75,25 @@ function populateResources() {
 
 function populateLocations() {
 	var json = jsonToString(data_dir + 'locations.json')
-	
-
-	var locations = [];
-	
 	var locObjs = Ti.JSON.parse(json);
 	
 	// Order of locations needs to be extracted first
 	locOrder = locObjs.order;
-
+	
+	var locations = [];
 	$.each(locObjs.locations, function(index, location) {
 		locations[location.name] = new Location(location);
 	});
 }
 
-function loadSession() {
-	var json = jsonToString(data_dir + 'session.json')
-	var sessionObj = Ti.JSON.parse(json);
-	
-	return new Session(sessionObj);
-}
-
 function initSession() {
-	var file = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDirectory(),data_dir + "session.json");
-	if (file.exists()) {
-		return loadSession();
+	var json = jsonToString(data_dir + 'session.json');
+
+	if (json.length > 0) {
+		var sessionObj = Ti.JSON.parse(json);
+		return new Session(sessionObj);
 	}
 	else {
-		return new Session();
+		return new Session(null);
 	}	
 }

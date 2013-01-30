@@ -2,7 +2,7 @@ function showStartScreen() {
 	$("#main").empty();
 
 	// List active puzzles
-	$("#main").append("<div id=\"active_puzzles\"></div>");
+	$("#main").append("<b>Active Puzzles</b><ul id=\"active_puzzles\"></ul>");
 	listActivePuzzles();
 
 	// Start code box
@@ -27,8 +27,12 @@ function showStartScreen() {
 }
 
 function listActivePuzzles() {
-	$("#active_puzzles").empty().append("Active Puzzles: ");
+	$("#active_puzzles").empty();
 
+	var active = session.getActivePuzzles();
+	if (active.length === 0) {
+		$("#active_puzzles").append("none!");
+	}
 	$.each(session.getActivePuzzles(), function(index, name) {
 		$("#active_puzzles").append(puzzles[name].getHTMLLink());
 	})

@@ -35,9 +35,9 @@ Puzzle.prototype.checkAnswer = function(entry) {
 
 
 Puzzle.prototype.getPuzzleHTML = function() {
-	return "<span class=\"puzzle_title\">" + this.name + "</span><span class=\"flavor_text\">" + this.flavor_text + "</span>";
+	return "<span class=\"puzzle_title\">" + this.name + "</span><span class=\"flavor_text\">" + this.flavor_text + "</li>";
 }
 
 Puzzle.prototype.getHTMLLink = function() {
-	return "<span class=\"puzzle_link\" id=\""+this.name+"\">" + this.name + "</span>";
+	return "<li class=\"puzzle_link\" id=\""+this.name+"\">" + this.name + "</li>";
 }

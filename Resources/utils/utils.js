@@ -1,10 +1,9 @@
 function jsonToString(filename) {
 	var file = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDirectory(),filename);
 
-	var json;
+	var json = "";
 	if(file.exists()) {
 		var document = file.open();
-		json = "";
     	var line = document.readLine();
     	while (line != null) {
     		json += line;
@@ -22,6 +21,8 @@ function clean(str) {
 function showPopup(content) {
 	$("#popup_container").show();
 	$("#popup_content > .content").append(content);
+	$("#close_popup").click(hidePopup);
+
 }
 
 function hidePopup() {
