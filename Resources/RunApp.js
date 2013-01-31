@@ -5,6 +5,7 @@ var locations;
 var locOrder;
 var resources;
 var tid;
+var currentScreen;
 
 /**
  * Executes once the DOM is fully loaded. Essentially a "main" method

@@ -12,4 +12,7 @@ function showPuzzleScreen(puzzle) {
 		$("#result").remove();
 		$("#main").append("<div id=\"result\">" + puzzle.checkAnswer(entry) + "</div>");
 	});
+	
+	
+	currentScreen = screenTypes.PUZZLE;
 }

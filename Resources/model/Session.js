@@ -2,7 +2,7 @@ function Session(sessionObj) {
 	if (sessionObj === null) {
 		this.fans = 0;	
 		this.locationStats = {};
-		this.locationStats[locOrder[0]] = locationStatus.VISITED;
+		this.locationStats[locOrder[0]] = locationStatus.CURRENT;
 		
 		this.puzzleStats = {};
 		this.teamStats = {};
@@ -37,7 +37,7 @@ Session.prototype.activatePuzzles = function(start_code) {
 	var count = 0;
 	$.each(puzzles, function(name, puzzle) {
 		if (!(name in that.puzzleStats) && puzzle["start_code"] === start_code) {
-			var obj = {
+			var puzzObj = {
 				"name" : name, 
 				"current_worth" : puzzle["max_fans"],
 				"status" : puzzleStatus.ACTIVE,
@@ -45,10 +45,24 @@ Session.prototype.activatePuzzles = function(start_code) {
 				"hintStats" : {},
 				"log" : ["RIGHT NOW: Started puzzle"]
 			};
+			
+			$.each( puzzle.hints, function(name, hint) {
+				hintStats[name] = {
+					"status" : hintStatus.LOCKED
+					//"timer" : setTimeout(function() { that.activateHint(hint.name) }, 1000*hint.start_time);
+				}
+			});
 
-			that.puzzleStats[name] = obj;
+			that.puzzleStats[name] = puzzObj;
 			count += 1;
 		}
 	});
 	return count;
+}
+
+// Gets called every minute
+Session.prototype.activateHint = function(hint) {
+	
+	alert("hint " + hint.name + " activated");
+	
 }

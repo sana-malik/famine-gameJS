@@ -24,6 +24,8 @@ function showStartScreen() {
 			$("#return_message").html("<font color=red>sorry! " + entry + " is not a valid code.</font>");
 		}
 	});
+	
+	currentScreen = screenTypes.MAIN;
 }
 
 function listActivePuzzles() {
