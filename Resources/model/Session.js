@@ -46,10 +46,10 @@ Session.prototype.activatePuzzles = function(start_code) {
 				"log" : ["RIGHT NOW: Started puzzle"]
 			};
 			
-			$.each( puzzle.hints, function(name, hint) {
-				hintStats[name] = {
-					"status" : hintStatus.LOCKED
-					//"timer" : setTimeout(function() { that.activateHint(hint.name) }, 1000*hint.start_time);
+			$.each(puzzle.hints, function(name, hint) {
+				puzzObj.hintStats[name] = {
+					"status" : hintStatus.LOCKED,
+					"time" : hint.start_time
 				}
 			});
 
@@ -62,7 +62,6 @@ Session.prototype.activatePuzzles = function(start_code) {
 
 // Gets called every minute
 Session.prototype.activateHint = function(hint) {
-	
 	alert("hint " + hint.name + " activated");
 	
 }
