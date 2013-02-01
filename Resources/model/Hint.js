@@ -8,3 +8,14 @@ function Hint(hintObj) {
 	this.end_time = hintObj.end_time;
 	this.end_cost = hintObj.end_cost;
 }
+
+// Input is minutes past the start of puzzle
+Hint.prototype.getCost = function(mins) {
+	
+	var rise = end_time - start_time;
+	var run = end_cost - start_cost;
+	
+	var slope = rise/run;
+	
+	return Math.max( end_cost, start_cost + slope * (mins - start_time) );
+}

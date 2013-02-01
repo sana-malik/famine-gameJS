@@ -35,21 +35,25 @@ Session.prototype.getActivePuzzles = function() {
 Session.prototype.activatePuzzles = function(start_code) {
 	var that = this;
 	var count = 0;
+
 	$.each(puzzles, function(name, puzzle) {
 		if (!(name in that.puzzleStats) && puzzle["start_code"] === start_code) {
+
+			PuzzleTimer( name, 5000 );
+
 			var puzzObj = {
 				"name" : name, 
 				"current_worth" : puzzle["max_fans"],
 				"status" : puzzleStatus.ACTIVE,
-				"time_crap" : "RIGHT NOW", // TO DO
+				"min_elapsed" : 0, 
 				"hintStats" : {},
-				"log" : ["RIGHT NOW: Started puzzle"]
+				"log" : ["ABSOLUTE TIME RIGHT NOW: Started puzzle"]
+				// add absolute start time
 			};
 			
 			$.each(puzzle.hints, function(name, hint) {
 				puzzObj.hintStats[name] = {
-					"status" : hintStatus.LOCKED,
-					"time" : hint.start_time
+					"status" : hintStatus.LOCKED
 				}
 			});
 

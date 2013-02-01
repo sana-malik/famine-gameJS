@@ -7,6 +7,7 @@ function showPuzzleScreen(puzzle) {
 	
 	$.each(session.puzzleStats[puzzle.name].hintStats, function(name, status) {
 		$("#hints").append("<div>"+name+"</div><div id=\"" + name + "\" class=\"hint_counter\"></div>");
+		/*
 		$('.hint_counter#'+name).countdown({
     		stepTime: 60,
    			format: 'mm:ss',
@@ -17,6 +18,7 @@ function showPuzzleScreen(puzzle) {
     		timerEnd: function() { alert('end!!'); },
     		image: "images/gui/digits.png"
   		});
+	*/
 	});
 
 	// Input button
