@@ -68,7 +68,7 @@ Puzzle.prototype.activate = function() {
 		"name" : this["name"], 
 		"current_worth" : this["max_fans"],
 		"status" : puzzleStatus.ACTIVE,
-		"min_elapsed" : 0, 
+		"sec_elapsed" : 0, 
 		"timer_id" : timerID,
 		"hintStats" : {},
 		"log" : ["ABSOLUTE TIME RIGHT NOW: Started puzzle"]

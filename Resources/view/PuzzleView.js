@@ -7,16 +7,9 @@ function showPuzzleScreen(puzzle) {
 	
 	$.each(puzzle.hints, function(name, hint) {
 		$("#hints").append("<div>"+name+"</div><div id=\"" + nameToId(name) + "\" class=\"hint_counter\"></div>");
-		$('.hint_counter#'+nameToId(name)).countdown({
-    		stepTime: 60,
-   			format: 'mm:ss',
-    		startTime: hint["start_time"]-session.puzzleStats[puzzle.name]["min_elapsed"]+":00",
-    		digitImages: 6,
-    		digitWidth: 53,
-    		digitHeight: 77,
-    		timerEnd: function() { alert('end!!'); },
-    		image: "images/gui/digits.png"
-  		});
+		if (!(hint.name in session.puzzleStats[puzzle.name].hintStats)) {
+			$(".hint_counter#"+nameToId(name)).countdown(hint.start_time*60-session.puzzleStats[puzzle.name]["sec_elapsed"], function() {alert("end!!!")});
+		}
 	});
 
 	// Input button
@@ -32,4 +25,8 @@ function showPuzzleScreen(puzzle) {
 	
 	
 	currentScreen = screenTypes.PUZZLE;
+
+	// this is laziness for now, will implement something more permanent soon
+	$("#main").append("<span id=\"back_to_main\">back to main</span>");
+	$("#back_to_main").click(showStartScreen);
 }
