@@ -12,6 +12,8 @@ function Session(sessionObj) {
 		this.fans = sessionObj.fans;
 		this.locationStats = sessionObj.locationStats;
 		this.puzzleStats = sessionObj.puzzleStats;
+		// make sure to overwrite the min_elapsed and timerID for puzzleStats
+		// as well as initialize the intervals!
 		this.teamStats = sessionObj.teamStats;
 		this.resourceStats = sessionObj.resourceStats;
 	}
@@ -27,7 +29,6 @@ Session.prototype.getActivePuzzles = function() {
 	return active;
 }
 
-
 // Activates all the puzzles associated with a start code.
 // This creates the "puzzleStatus" object for each puzzle.
 // Input: start_code - the start code.
@@ -38,26 +39,7 @@ Session.prototype.activatePuzzles = function(start_code) {
 
 	$.each(puzzles, function(name, puzzle) {
 		if (!(name in that.puzzleStats) && puzzle["start_code"] === start_code) {
-
-			PuzzleTimer( name, 5000 );
-
-			var puzzObj = {
-				"name" : name, 
-				"current_worth" : puzzle["max_fans"],
-				"status" : puzzleStatus.ACTIVE,
-				"min_elapsed" : 0, 
-				"hintStats" : {},
-				"log" : ["ABSOLUTE TIME RIGHT NOW: Started puzzle"]
-				// add absolute start time
-			};
-			
-			$.each(puzzle.hints, function(name, hint) {
-				puzzObj.hintStats[name] = {
-					"status" : hintStatus.LOCKED
-				}
-			});
-
-			that.puzzleStats[name] = puzzObj;
+			puzzle.activate();
 			count += 1;
 		}
 	});

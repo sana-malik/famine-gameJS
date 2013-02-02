@@ -1,26 +1,9 @@
-/* text version adapted from: 
-/*
- * jquery-counter plugin
- *
- * Copyright (c) 2009 Martin Conte Mac Donell <Reflejo@gmail.com>
+/* text version of countdown adapted from Martin Conte Mac Donell <Reflejo@gmail.com>
  * Dual licensed under the MIT and GPL licenses.
  * http://docs.jquery.com/License
  */
-jQuery.fn.countdown = function(userOptions)
+jQuery.fn.countdown = function(startTime, )
 {
-  // Default options
-  var options = {
-    stepTime: 60,
-    // startTime and format MUST follow the same format.
-    // also you cannot specify a format unordered (e.g. hh:ss:mm is wrong)
-    format: "dd:hh:mm:ss",
-    startTime: "01:12:32:55",
-    digitImages: 6,
-    digitWidth: 53,
-    digitHeight: 77,
-    timerEnd: function(){},
-    image: "digits.png"
-  };
   var digits = [], interval;
 
   // Draw digits in given container
@@ -77,7 +60,7 @@ jQuery.fn.countdown = function(userOptions)
   };
 
   // Makes the movement. This is done by "digitImages" steps.
-  var moveStep = function(elem) 
+  var moveStep = function() 
   {
     digits[elem]._digitInitial = -(digits[elem].__max * options.digitHeight * options.digitImages);
     return function _move() {
@@ -106,8 +89,6 @@ jQuery.fn.countdown = function(userOptions)
     }
   };
 
-  $.extend(options, userOptions);
-  this.css({height: options.digitHeight, overflow: 'hidden'});
   createDigits(this);
-  interval = setInterval(moveStep(digits.length - 1), 1000);
+  interval = setInterval(moveStep, 1000);
 };

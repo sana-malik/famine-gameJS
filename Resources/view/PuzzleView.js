@@ -5,20 +5,18 @@ function showPuzzleScreen(puzzle) {
 
 	$("#main").append("<div id=\"hints\"></div>");
 	
-	$.each(session.puzzleStats[puzzle.name].hintStats, function(name, status) {
-		$("#hints").append("<div>"+name+"</div><div id=\"" + name + "\" class=\"hint_counter\"></div>");
-		/*
-		$('.hint_counter#'+name).countdown({
+	$.each(puzzle.hints, function(name, hint) {
+		$("#hints").append("<div>"+name+"</div><div id=\"" + nameToId(name) + "\" class=\"hint_counter\"></div>");
+		$('.hint_counter#'+nameToId(name)).countdown({
     		stepTime: 60,
    			format: 'mm:ss',
-    		startTime: puzzle.hints[name].start_time+":00",
+    		startTime: hint["start_time"]-session.puzzleStats[puzzle.name]["min_elapsed"]+":00",
     		digitImages: 6,
     		digitWidth: 53,
     		digitHeight: 77,
     		timerEnd: function() { alert('end!!'); },
     		image: "images/gui/digits.png"
   		});
-	*/
 	});
 
 	// Input button

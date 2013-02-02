@@ -29,3 +29,7 @@ function hidePopup() {
 	$("#popup_content > .content").empty();
 	$("#popup_container").hide();
 }
+
+function nameToId(str) {
+	return str.replace(/ /g,'_');
+}

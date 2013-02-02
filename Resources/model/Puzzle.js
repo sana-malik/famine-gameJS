@@ -60,3 +60,27 @@ Puzzle.prototype.killTeams = function() {
 Puzzle.prototype.unlockResources = function() {
 	// todo	
 }
+
+Puzzle.prototype.activate = function() {
+	var timerID = PuzzleTimer(this["name"]);
+
+	var puzzObj = {
+		"name" : this["name"], 
+		"current_worth" : this["max_fans"],
+		"status" : puzzleStatus.ACTIVE,
+		"min_elapsed" : 0, 
+		"timer_id" : timerID,
+		"hintStats" : {},
+		"log" : ["ABSOLUTE TIME RIGHT NOW: Started puzzle"]
+		// add absolute start time
+	};
+	
+	/*
+	$.each(this["hints"], function(name, hint) {
+		puzzObj.hintStats[name] = {
+			"status" : hintStatus.LOCKED
+		}
+	});*/
+
+	session.puzzleStats[this["name"]] = puzzObj;
+}
