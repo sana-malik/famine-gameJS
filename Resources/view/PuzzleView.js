@@ -6,7 +6,7 @@ function showPuzzleScreen(puzzle) {
 	$("#main").append("<div id=\"hints\"></div>");
 	
 	$.each(puzzle.hints, function(name, hint) {
-		$("#hints").append("<div>"+name+"</div><div id=\"" + nameToId(name) + "\" class=\"hint_counter\"></div>");
+		$("#hints").append("<table border=\"0\"><tr><td><div>"+name+": </div></td><td><div id=\"" + nameToId(name) + "\" class=\"hint_counter\"></div></td></tr></table>");
 		if (!(hint.name in session.puzzleStats[puzzle.name].hintStats)) {
 			$(".hint_counter#"+nameToId(name)).countdown(hint.start_time*60-session.puzzleStats[puzzle.name]["sec_elapsed"], function() {alert("end!!!")});
 		}
