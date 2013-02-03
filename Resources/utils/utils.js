@@ -51,3 +51,25 @@ function PuzzleTimer(puzzleIn, intervalIn){
 
 	return setInterval(increment, interval);  // returns timer id	
 }
+
+function getCurrentDateTime() {
+	var currentTime = new Date();
+	var year = currentTime.getFullYear();
+	var day = currentTime.getDate();
+	var month = currentTime.getMonth() + 1;
+	var hours = currentTime.getHours();
+	var minutes = currentTime.getMinutes();
+	
+	if (minutes < 10){
+		minutes = "0" + minutes
+	}
+	
+	var out = month + "/" + day + "/" + year + "  " + hours + ":" + minutes;
+	if(hours > 11){
+		out += "pm";
+	} else {
+		out += "am";
+	}
+	
+	return out;
+}
