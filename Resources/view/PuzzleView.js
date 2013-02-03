@@ -11,7 +11,7 @@ function showPuzzleScreen(puzzle) {
 		$("#hints").append("<table border=\"0\"><tr><td><div>"+name+": </div></td><td><div id=\"" + nameToId(name) + "\" class=\"hint_counter\"></div></td></tr></table>");
 		if (!(hint.name in session.puzzleStats[puzzle.name].hintStats)) {
 			var current_time = Math.round(date.getTime()/1000);
-			var seconds_passed = (current_time-session.puzzleStats[puzzle.name]["start_time"]) * 1000/timeInterval;
+			var seconds_passed = session.puzzleStats[puzzle.name]["sec_elapsed"] ;
 			$(".hint_counter#"+nameToId(name)).countdown(hint.start_time*60-seconds_passed, function() {alert("display end!!!")});
 		}
 	});
