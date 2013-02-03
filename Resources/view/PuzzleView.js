@@ -12,7 +12,7 @@ function showPuzzleScreen(puzzle) {
 		}
 	});
 
-	// Input button
+	// Answer section
 	$("#main").append("Enter an answer: <input type=\"text\" id=\"answer_input\">" + 
 			"<button id=\"answer_button\">Submit</button><button id=\"giveup_button\">I give up!</button>");
 	$("#main").append("<div id=\"result\"></div>");
@@ -22,6 +22,8 @@ function showPuzzleScreen(puzzle) {
 		$("#result").remove();
 		$("#main").append("<div id=\"result\">" + puzzle.checkAnswer(entry) + "</div>");
 	});
+
+	$("#main").append("<div id=\"log\"></div>");
 	
 	
 	currentScreen = screenTypes.PUZZLE;
