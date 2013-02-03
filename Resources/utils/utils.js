@@ -34,19 +34,66 @@ function nameToId(str) {
 	return str.replace(/ /g,'_');
 }
 
-function PuzzleTimer(puzzleIn, intervalIn){
-
-	var puzzleId = puzzleIn;	
-	var interval = 1000; // every second
-
-	if (arguments.length == 2) { 
-			interval = intervalIn; 
+function PuzzleTimer(puzzleId, interval){	
+	if (arguments.length == 1) { 
+			interval = timeInterval; 
 	}
 
 
+	function formatTime(seconds) {
+		var mins = Math.floor(seconds / 60);
+		var secs = seconds % 60;
+		var out = "";
+		if (mins < 10) out += "0";
+		out += mins + ":";
+		if (secs < 10) out += "0";
+		out += secs;
+		return out;
+	}
+
 	var increment = function() {
+		// update status
 		session.puzzleStats[puzzleId]["sec_elapsed"] += 1;
-		// Now check for status changes
+
+		var current_time = Math.round((new Date()).getTime()/1000);
+		var elapsed = (current_time-session.puzzleStats[puzzleId]["start_time"]) * 1000/timeInterval;
+		var hints = puzzles[puzzleId]["hints"];
+
+		// go through hints. update visually & check for status changes
+		$.each(hints, function(name, hint) {
+			var remaining;
+			if (!(name in session.puzzleStats[puzzleId]["hintStats"])) {
+				remaining = hint["start_time"]*60 - elapsed;
+			}
+			else if (session.puzzleStats[puzzleId]["hintStats"][name]["status"] == hintStatus.AVAILABLE) {
+				remaining = hint["end_time"]*60 - elapsed;
+			}
+			else {
+				return; // no need to display any timer/change any status
+			}
+
+			var hintDiv = $("#"+nameToId(puzzleId) + " > #" + nameToId(name) + " > .hint_text").empty();
+			if (remaining === 0) { // change status
+				if (!(name in session.puzzleStats[puzzleId]["hintStats"])) { // go to available
+					session.puzzleStats[puzzleId]["hintStats"][name] = {"status" : hintStatus.AVAILABLE};
+					remaining = hint["end_time"]*60 - elapsed;
+				}
+				else { // reveal the hint
+					session.puzzleStats[puzzleId]["hintStats"][name]["status"] = hintStatus.REVEALED;
+					// reveal the hint
+					hintDiv.append("hint is revealed");
+					return;
+				}
+			}
+			// update the hint visually
+			if (!(name in session.puzzleStats[puzzleId]["hintStats"])) {
+				hintDiv.append("available in ");	
+			}
+			else {
+				hintDiv.append("get hint button -- min cost in ");
+			}
+			hintDiv.append(formatTime(remaining));
+		});
 	}	
 
 	return setInterval(increment, interval);  // returns timer id	

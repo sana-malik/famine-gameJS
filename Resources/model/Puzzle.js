@@ -62,14 +62,18 @@ Puzzle.prototype.unlockResources = function() {
 }
 
 Puzzle.prototype.activate = function() {
-	var date = new Date().getTime();
-	var startTime = Math.round(date / 1000);
+	// start timer
+	var timerID = PuzzleTimer(this["name"]);
+
+	var date = (new Date()).getTime();
+	var startTime = Math.round((new Date()).getTime() / 1000);
 	
 	var puzzObj = {
 		"name" : this["name"], 
 		"current_worth" : this["max_fans"],
 		"status" : puzzleStatus.ACTIVE,
-		"sec_elapsed" : 0, // currently unused
+		"sec_elapsed" : 0, 
+		"timerID" : timerID, // need to keep this so we can destroy it when the puzzle is completed
 		"start_time" : startTime,
 		"hintStats" : {},
 		"log" : [getCurrentDateTime() + ":  Puzzle Started"]

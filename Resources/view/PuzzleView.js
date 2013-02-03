@@ -5,14 +5,14 @@ function showPuzzleScreen(puzzle) {
 	$("#main").append(puzzle.getPuzzleHTML());
 
 
-	$("#main").append("<div id=\"hints\"></div>");
+	$("#main").append("<div class=\"hints\" id=\""+ nameToId(puzzle.name)+"\"></div>");
 	
 	$.each(puzzle.hints, function(name, hint) {
-		$("#hints").append("<table border=\"0\"><tr><td><div>"+name+": </div></td><td><div id=\"" + nameToId(name) + "\" class=\"hint_counter\"></div></td></tr></table>");
+		$(".hints#" + nameToId(puzzle.name)).append("<div class=\"hint\" id=\"" + nameToId(name) + "\"><span class=\"hint_name\">"+ name + ":</span> <span class=\"hint_text\"></span></div>");
 		if (!(hint.name in session.puzzleStats[puzzle.name].hintStats)) {
 			var current_time = Math.round(date.getTime()/1000);
 			var seconds_passed = (current_time-session.puzzleStats[puzzle.name]["start_time"]) * 1000/timeInterval;
-			$(".hint_counter#"+nameToId(name)).countdown(hint.start_time*60-seconds_passed, function() {alert("display end!!!")});
+			//$(".hint_counter#"+nameToId(name)).countdown(hint.start_time*60-seconds_passed, function() {alert("display end!!!")});
 		}
 	});
 

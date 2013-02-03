@@ -11,6 +11,10 @@ jQuery.fn.countdown = function(startTime, callback)
 
   var formatTime = function(minutes, seconds) {
     var out = "";
+    if (minutes < 0) {
+      moveStep();
+      return "00:00";
+    }
     if (minutes < 10) out += "0";
     out += minutes + ":";
     if (seconds < 10) out += "0";
