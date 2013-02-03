@@ -25,7 +25,7 @@ jQuery.fn.countdown = function(startTime, callback)
       seconds = startTime % 60;
 
       div.append(formatTime(minutes, seconds));
-    }
+  }
 
   // Ticks the timer
   var moveStep = function() {
@@ -41,8 +41,8 @@ jQuery.fn.countdown = function(startTime, callback)
         clearInterval(interval);
       }
       div.text(formatTime(minutes, seconds));
-    }
+  }
 
   setStart();
-  interval = setInterval(moveStep, 1000);
+  interval = setInterval(moveStep, timeInterval);
 };

@@ -13,5 +13,12 @@ var Debug = {
 			document.deleteFile();
 		}
 
+	},
+
+	toggleDebugTiming: function() {
+		if (timeInterval != 1000)
+			timeInterval = 1000;
+		else 
+			timeInterval = 50;
 	}
 }

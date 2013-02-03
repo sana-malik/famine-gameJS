@@ -18,6 +18,7 @@ $(document).ready(function() {
     var debug = menu.addItem('Debug');
     debug.addItem('Save session', Debug.saveSession);
     debug.addItem('Clear session', Debug.clearSession);
+    debug.addItem('Toggle Quick Timer', Debug.toggleDebugTiming)
 
     //Add menu to the current window
     Ti.UI.getCurrentWindow().setMenu(menu);

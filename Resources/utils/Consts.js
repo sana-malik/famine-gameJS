@@ -6,3 +6,5 @@ var answerTypes = {FINAL: "final", PARTIAL: "partial"};
 var screenTypes = {MAIN: "main", PUZZLE: "puzzle"}; 
 
 var data_dir = "Resources/data/";
+
+var timeInterval = 1000;
