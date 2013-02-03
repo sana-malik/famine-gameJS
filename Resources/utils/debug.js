@@ -21,6 +21,12 @@ var Debug = {
 		else 
 			timeInterval = 50;
 
+		$.each(session.puzzleStats, function(name, puzzle) {
+			clearInterval( puzzle["timerId"] )
+			puzzle["timerId"] = setInterval( function(){ puzzle["sec_elapsed"]++}, timeInterval);
+		});
+	
+
 		// reload puzzle page
 		if ( currentScreen == screenTypes.PUZZLE )
 			showPuzzleScreen( puzzles[$(".puzzle_title").text()] );
