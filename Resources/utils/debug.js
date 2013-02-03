@@ -13,5 +13,16 @@ var Debug = {
 			document.deleteFile();
 		}
 
+	},
+
+	toggleDebugTiming: function() {
+		if (timeInterval != 1000)
+			timeInterval = 1000;
+		else 
+			timeInterval = 50;
+
+		// reload puzzle page
+		if ( currentScreen == screenTypes.PUZZLE )
+			showPuzzleScreen( puzzles[$(".puzzle_title").text()] );
 	}
 }

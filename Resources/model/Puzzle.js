@@ -62,17 +62,17 @@ Puzzle.prototype.unlockResources = function() {
 }
 
 Puzzle.prototype.activate = function() {
-	var timerID = PuzzleTimer(this["name"]);
-
+	var date = new Date().getTime();
+	var startTime = Math.round(date / 1000);
+	
 	var puzzObj = {
 		"name" : this["name"], 
 		"current_worth" : this["max_fans"],
 		"status" : puzzleStatus.ACTIVE,
-		"sec_elapsed" : 0, 
-		"timer_id" : timerID,
+		"sec_elapsed" : 0, // currently unused
+		"start_time" : startTime,
 		"hintStats" : {},
-		"log" : ["ABSOLUTE TIME RIGHT NOW: Started puzzle"]
-		// add absolute start time
+		"log" : [getCurrentDateTime() + ":  Puzzle Started"]
 	};
 	
 	/*
