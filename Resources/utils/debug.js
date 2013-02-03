@@ -20,5 +20,9 @@ var Debug = {
 			timeInterval = 1000;
 		else 
 			timeInterval = 50;
+
+		// reload puzzle page
+		if ( currentScreen == screenTypes.PUZZLE )
+			showPuzzleScreen( puzzles[$(".puzzle_title").text()] );
 	}
 }
