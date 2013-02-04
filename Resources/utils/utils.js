@@ -81,7 +81,7 @@ function PuzzleTimer(puzzleId, interval){
 				else { // reveal the hint
 					session.puzzleStats[puzzleId]["hintStats"][name]["status"] = hintStatus.REVEALED;
 					// reveal the hint
-					hintDiv.append("hint is revealed");
+					hintDiv.append(puzzles[puzzleId]["hints"][name].text);
 					return;
 				}
 			}
