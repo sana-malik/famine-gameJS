@@ -8,6 +8,13 @@ function Team(teamObj) {
 		this.video = teamObj.video;
 }
 
+Team.prototype.getActiveTeamHTML = function() {
+	var output = this.getIconHTML() + "<span class=\"team_title\">" + this.name + "</span>" + 
+		"<span class=\"team_bio\">" + this.bio + "</span>" + 
+		"<span class=\"fan_count\">Fans: " + session.fans + "</span>";
+	return output;
+}
+
 Team.prototype.getHTMLSummary = function() {
 	var output = this.getIconHTML() + "<span class=\"team_title\">" + this.name + "</span>" + 
 		"<span class=\"team_bio\">" + this.bio + "</span>";

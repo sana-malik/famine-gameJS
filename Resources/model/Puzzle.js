@@ -29,6 +29,8 @@ Puzzle.prototype.checkAnswer = function(entry) {
 		if (this.answers[entry]["type"] == answerTypes.FINAL) {
 			this.killTeams();
 			this.unlockResources();
+			session.fans += session.puzzleStats[this["name"]]["current_worth"] 
+			displayInfo();
 		}
 		return this.answers[entry].response;
 	}

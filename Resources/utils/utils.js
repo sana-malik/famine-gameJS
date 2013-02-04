@@ -81,7 +81,7 @@ function PuzzleTimer(puzzleId, interval){
 				else { // reveal the hint
 					session.puzzleStats[puzzleId]["hintStats"][name]["status"] = hintStatus.REVEALED;
 					// reveal the hint
-					hintDiv.append(puzzles[puzzleId]["hints"][name].text);
+					hintDiv.append( puzzles[puzzleId]["hints"][name].text );
 					return;
 				}
 			}
@@ -90,7 +90,7 @@ function PuzzleTimer(puzzleId, interval){
 				hintDiv.append("available in ");	
 			}
 			else {
-				hintDiv.append("get hint button -- min cost in ");
+				hintDiv.append("<button id=\"hint_button\">Get Hint</button> -- min cost in ");
 			}
 			hintDiv.append(formatTime(remaining));
 		});
