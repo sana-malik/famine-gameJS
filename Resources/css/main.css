@@ -1,3 +1,4 @@
+/** BODY **/
 body {
 	color: #333333;
 	font-family: "Helvetica", "Arial",sans-serif;
@@ -5,6 +6,8 @@ body {
 	padding: 0px;
 }
 
+
+/** MAIN APP **/
 #main_container {
 	width: 1000px; height: 600px;
 	background-color: #000000;

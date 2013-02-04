@@ -14,17 +14,16 @@ function showPuzzleScreen(puzzle) {
 	});
 
 	// Answer section
-	$("#main").append("Enter an answer: <input type=\"text\" id=\"answer_input\">" + 
-			"<button id=\"answer_button\">Submit</button><button id=\"giveup_button\">I give up!</button>");
-	$("#main").append("<div id=\"result\"></div>");
+	if (session.puzzleStats[puzzle["name"]]["status"] === puzzleStatus.ACTIVE) {
+		$("#main").append("<div id=\"answer_box\">Enter an answer: <input type=\"text\" id=\"answer_input\">" + 
+				"<button id=\"answer_button\">Submit</button><button id=\"giveup_button\">I give up!</button></div>");
+		$("#answer_button").click(function () {
+			var entry = clean($("#answer_input").val());
+			puzzle.checkAnswer(entry);
+		});
+	}
 
-	$("#answer_button").click(function () {
-		var entry = clean($("#answer_input").val());
-		$("#result").remove();
-		$("#main").append("<div id=\"result\">" + puzzle.checkAnswer(entry) + "</div>");
-	});
-
-	$("#main").append("<div id=\"log\"></div>");
+	$("#main").append("<div id=\"log\">"+puzzle.getLogHTML()+"</div>");
 	
 	
 	currentScreen = screenTypes.PUZZLE;

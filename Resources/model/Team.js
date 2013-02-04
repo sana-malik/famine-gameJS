@@ -39,6 +39,14 @@ Team.prototype.die = function() {
 	// mark dead visually
 	$(".team_div#" + this.id).append("<div class=\"status\">DEAD</div>");
 
+	// show video
+	this.showVideo();
+
 	// update object
 	session.teamStats[this.id] = {"status" : teamStatus.DEAD};
+}
+
+
+Team.prototype.showVideo = function() {
+	showPopup("<iframe width=\"560\" height=\"315\" src=\"" + this.video + "\" frameborder=\"0\"></iframe>");
 }

@@ -25,18 +25,28 @@ function Puzzle(puzzleObj) {
 
 
 Puzzle.prototype.checkAnswer = function(entry) {
+	var response, that = this;
 	if (entry in this.answers) {
 		if (this.answers[entry]["type"] == answerTypes.FINAL) {
-			this.killTeams();
-			this.unlockResources();
-			session.fans += session.puzzleStats[this["name"]]["current_worth"] 
+			// update status object + visually
+			session.puzzleStats[that["name"]]["status"] = puzzleStatus.SOLVED;
+			$("#answer_box").remove();
+
+			// puzzle results
+			that.killTeams();
+			that.unlockResources();
+
+
+			// allot fans
+			session.fans += session.puzzleStats[that["name"]]["current_worth"];
 			displayInfo();
 		}
-		return this.answers[entry].response;
+		response = entry + " - " + that.answers[entry]["response"];
 	}
 	else {
-		return "Sorry, " + entry + " is not the answer."
+		response = entry + " is not the answer."
 	}
+	that.log(response);
 }
 
 
@@ -76,7 +86,7 @@ Puzzle.prototype.activate = function() {
 		"name" : this["name"], 
 		"current_worth" : this["max_fans"],
 		"status" : puzzleStatus.ACTIVE,
-		"sec_elapsed" : 0, 
+		"sec_elapsed" : 0, // not used 
 		"timerID" : timerID, // need to keep this so we can destroy it when the puzzle is completed
 		"start_time" : startTime,
 		"hintStats" : {},
@@ -91,4 +101,22 @@ Puzzle.prototype.activate = function() {
 	});*/
 
 	session.puzzleStats[this["name"]] = puzzObj;
+}
+
+
+/*** LOG THINGS ***/
+Puzzle.prototype.log = function(entry) {
+	session.puzzleStats[this.name]["log"].push(entry);
+	$("#log").append(getCurrentDateTime() + ": " + entry);
+
+}
+
+Puzzle.prototype.getLogHTML = function() {
+	var log = session.puzzleStats[this.name]["log"];
+	var out = "";
+	$.each(log, function(index, entry) {
+		out += "<span class=\"log_entry\">" + entry + "</span>";
+	});
+
+	return out;
 }
