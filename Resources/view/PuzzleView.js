@@ -9,7 +9,7 @@ function showPuzzleScreen(puzzle) {
 	
 	$.each(puzzle.hints, function(name, hint) {
 		$(".hints#" + nameToId(puzzle.name)).append("<div class=\"hint\" id=\"" + nameToId(name) + "\"><span class=\"hint_name\">"+ name + ":</span> <span class=\"hint_text\"></span></div>");
-		if (!(hint.name in session.puzzleStats[puzzle.name].hintStats)) {
+		if (!(hint.name in session.puzzleStats[puzzle.name].hintStats)) {  // Does this do anything?
 		}
 	});
 

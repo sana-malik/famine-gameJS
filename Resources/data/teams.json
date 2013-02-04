@@ -2,10 +2,10 @@
 "activeTeam" : "1a",
 "teams" : [
 {"id":"1a",
-"bio":"meow meow!",
-"icon":"images/team_icons/team01.gif",
+"bio":"A boisterous combination of improvisation, sketch comedy, music, dance, and interactive theater, performed by men dressed as chickens.  They also do puzzles.",
+"icon":"images/team_icons/chickens.gif",
 "video":"video file",
-"name" :"Team 1a",
+"name" :"Boneless Chicken Cabaret",
 "talents":["KNIVES","painting"],
 "mentor":"Haymitch"}
 ,

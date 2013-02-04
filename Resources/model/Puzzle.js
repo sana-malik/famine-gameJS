@@ -41,7 +41,9 @@ Puzzle.prototype.checkAnswer = function(entry) {
 
 
 Puzzle.prototype.getPuzzleHTML = function() {
-	return "<span class=\"puzzle_title\">" + this.name + "</span><span class=\"flavor_text\">" + this.flavor_text + "</li>";
+	return "<span class=\"puzzle_title\">" + this.name + "</span>" + 
+		"<span class=\"flavor_text\">" + this.flavor_text + "</span>" +
+		"Fans watching: <span id=\"fan_worth\">" + session.puzzleStats[this.name]["current_worth"] + "</span>";
 }
 
 Puzzle.prototype.getHTMLLink = function() {

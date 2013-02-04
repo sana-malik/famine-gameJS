@@ -39,7 +39,6 @@ function PuzzleTimer(puzzleId, interval){
 			interval = timeInterval; 
 	}
 
-
 	function formatTime(seconds) {
 		var mins = Math.floor(seconds / 60);
 		var secs = seconds % 60;
@@ -91,6 +90,20 @@ function PuzzleTimer(puzzleId, interval){
 			}
 			else {
 				hintDiv.append("<button id=\"hint_button\">Get Hint</button> -- min cost in ");
+
+				$("#hint_button").click(function () {
+					session.puzzleStats[puzzleId]["hintStats"][name]["status"] = hintStatus.REVEALED;
+					session.puzzleStats[puzzleId]["current_worth"] -= hint.getCost(session.puzzleStats[puzzleId]["sec_elapsed"]/60)
+					
+					if (session.puzzleStats[puzzleId]["current_worth"] < 0)
+						session.puzzleStats[puzzleId]["current_worth"] = 0
+
+					$("#fan_worth").text( session.puzzleStats[puzzleId]["current_worth"] )
+
+					hintDiv = $("#"+nameToId(puzzleId) + " > #" + nameToId(name) + " > .hint_text").empty();
+					hintDiv.append( puzzles[puzzleId]["hints"][name].text );
+					return;
+				});
 			}
 			hintDiv.append(formatTime(remaining));
 		});
