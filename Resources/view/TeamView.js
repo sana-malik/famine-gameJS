@@ -1,4 +1,4 @@
-function displayTeams() {
+function showTeamView() {
 	$.each(teams, function(id, team) {
 		$("#bottombar").append(team.getIconHTML());
 	});

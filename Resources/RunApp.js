@@ -1,4 +1,4 @@
-var session;
+	var session;
 var puzzles;
 var teams;
 var locations;
@@ -32,8 +32,8 @@ $(document).ready(function() {
 	session = initSession();
 	
 	// Set up view
-	displayTeams();
-	displayInfo();
+	showTeamView();
+	showUserView();
 	showStartScreen();
 });
 

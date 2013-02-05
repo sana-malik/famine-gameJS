@@ -39,7 +39,7 @@ Puzzle.prototype.checkAnswer = function(entry) {
 
 			// allot fans
 			session.fans += session.puzzleStats[that["name"]]["current_worth"];
-			displayInfo();
+			showUserView();
 		}
 		response = entry + " - " + that.answers[entry]["response"];
 	}

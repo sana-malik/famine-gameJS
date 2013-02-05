@@ -51,3 +51,11 @@ Session.prototype.activateHint = function(hint) {
 	alert("hint " + hint.name + " activated");
 	
 }
+
+Session.prototype.getActiveTeamHTML = function() {
+	var team = teams[tid];
+	var output = team.getIconHTML() + "<span class=\"team_title\">" + team.name + "</span>" + 
+		"<span class=\"team_bio\">" + team.bio + "</span>" + 
+		"<span class=\"fan_count\">Fans: " + this.fans + "</span>";
+	return output;
+}

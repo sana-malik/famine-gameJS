@@ -1,10 +1,6 @@
 function showStartScreen() {
 	$("#main").empty();
 
-	// List active puzzles
-	$("#main").append("<b>Active Puzzles</b><ul id=\"active_puzzles\"></ul>");
-	listActivePuzzles();
-
 	// Start code box
 	$("#main").append("Enter a start code: <input type=\"text\" id=\"start_input\">" +
   		"<button id=\"start_button\">Submit</button><div id=\"return_message\"></div>");
@@ -24,18 +20,22 @@ function showStartScreen() {
 			$("#return_message").html("<font color=red>sorry! " + entry + " is not a valid code.</font>");
 		}
 	});
+
+	listActivePuzzles();
 	
 	currentScreen = screenTypes.MAIN;
 }
 
 function listActivePuzzles() {
-	$("#active_puzzles").empty();
 
 	var active = session.getActivePuzzles();
 	if (active.length === 0) {
 		$("#active_puzzles").append("none!");
 	}
 	else {
+		// List active puzzles
+		$("#active_puzzles").empty();
+		$("#main").append("<b>Active Puzzles</b><ul id=\"active_puzzles\"></ul>");
 		$.each(active, function(index, name) {
 			$("#active_puzzles").append(puzzles[name].getHTMLLink());
 		})
