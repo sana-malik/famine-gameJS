@@ -42,12 +42,12 @@
 		"end_time":30,
 		"start_cost":50,
 		"end_cost":20,
-		"text":"The Braille solves to \"Blacklight\".  Apply a blacklight to the puzzle and you should see the answer: Sugar Rush."
+		"text":"The Braille solves to \"Blacklight\".  Apply a blacklight to the puzzle and you should see the answer: Acid Burn."
 	}],
 "answers" : [
 	{
 		"type" : "final",
-		"text" : "sugarrush",
+		"text" : "acidburn",
 		"response" : "Congratulations, you have solved the puzzle.",
 		"skipped_hints" : []
 	},
@@ -55,25 +55,25 @@
 		"type" : "partial",
 		"text" : "blacklight",
 		"response" : "You're on the right track, but you need to go one step further.  Do you have a blacklight?",
-		"skipped_hints" : [1,2,3]
+		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
 	},
 	{
 		"type" : "partial",
 		"text": "lightblack",
 		"response" : "Oops, red comes before blue.",
-		"skipped_hints" : [1,2,3]
+		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
 	},
 	{
 		"type" : "partial",
 		"text" : "grey",
 		"response" : "You're being too literal.  Also, red comes before blue.",
-		"skipped_hints" : [1,2,3]
+		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
 	},
 	{
 		"type" : "partial",
 		"text" : "gray",
 		"response" : "You're being too literal.  Also, red comes before blue.",
-		"skipped_hints" : [1,2,3]
+		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
 	}
 	],
  "resources_unlocked" : ["fork"],
