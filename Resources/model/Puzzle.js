@@ -1,122 +1,66 @@
-function Puzzle(puzzleObj) {
-	this.name = puzzleObj.name;
-	this.start_code = puzzleObj.start_code;
+var Puzzle = Backbone.Model.extend({
+	initialize: function(puzzleObj) {
+		var that = this;
+		var temp = {};
+		$.each(puzzleObj["hints"], function(name, hObj) {
+			temp[name] = new Hint(hObj);
+		});
 
-	this.max_fans = puzzleObj.max_fans;
-	this.flavor_text = puzzleObj.flavor_text;
+		this.set("hints",temp);
+	},
 
-	var hints = {};
-	$.each(puzzleObj.hints, function(index, hintObj) {
-		hints[hintObj.name] = new Hint(hintObj);
-	});
-
-	this.hints = hints;
-
-	var answers = {};
-	$.each(puzzleObj.answers, function(index, answerObj) {
-		answers[answerObj.text] = new Answer(answerObj);
-	});
-
-	this.answers = answers;
-
-	this.resources_unlocked = puzzleObj.resources_unlocked;
-	this.teams_killed = puzzleObj.teams_killed;
-}
-
-
-Puzzle.prototype.checkAnswer = function(entry) {
-	var response, that = this;
-	if (entry in this.answers) {
-		if (this.answers[entry]["type"] == answerTypes.FINAL) {
-			// update status object + visually
-			session.puzzleStats[that["name"]]["status"] = puzzleStatus.SOLVED;
-			$("#answer_box").remove();
-
-			// puzzle results
-			that.killTeams();
-			that.unlockResources();
-
-
-			// allot fans
-			session.fans += session.puzzleStats[that["name"]]["current_worth"];
-			showUserView();
+	checkAnswer : function(entry) {
+		var stats = $.extend(true, {}, session.get("puzzleStats"));
+		var response = getCurrentDateTime() + ": ";
+		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED) { // puzzle already solved!
+			return;
 		}
-		response = entry + " - " + that.answers[entry]["response"];
-	}
-	else {
-		response = entry + " is not the answer."
-	}
-	that.log(response);
-}
+		else if (entry in this.get("answers")) {
+			if (this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
+				// update status object
+				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
+				
+				// puzzle results
+				this.killTeams();
+				//this.unlockResources();
 
+				// remove timer
 
-Puzzle.prototype.getPuzzleHTML = function() {
-	return "<span class=\"puzzle_title\">" + this.name + "</span>" + 
-		"<span class=\"flavor_text\">" + this.flavor_text + "</span>" +
-		"Fans watching: <span id=\"fan_worth\">" + session.puzzleStats[this.name]["current_worth"] + "</span>";
-}
+				// what to do about unopened hints?	
+				
+				// allot fans
+				session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
 
-Puzzle.prototype.getHTMLLink = function() {
-	return "<li class=\"puzzle_link\" id=\""+this.name+"\">" + this.name + "</li>";
-}
-
-Puzzle.prototype.killTeams = function() {
-	$.each(this.teams_killed, function(index, id) {
-		if (tid === id) {
-			// this is current team! don't do anything! :)
+				session.set("puzzleStats",stats);
+			}
+			response += entry + " - " + this.get("answers")[entry]["response"];
 		}
 		else {
-			teams[id].die();
+			response += entry + " is not the answer."
 		}
-	});
-}
+		this.log(response);
+	},
 
-Puzzle.prototype.unlockResources = function() {
-	// todo	
-}
+	killTeams : function() {
+		$.each(this.get("teams_killed"), function(index, id) {
+			if (tid === id) {
+				// this is current team! don't do anything! :)
+			}
+			else {
+				teams[id].die();
+			}
+		});
+	},
 
-Puzzle.prototype.activate = function() {
-	// start timer
-	var timerID = PuzzleTimer(this["name"]);
-
-	var date = (new Date()).getTime();
-	var startTime = Math.round((new Date()).getTime() / 1000);
-	
-	var puzzObj = {
-		"name" : this["name"], 
-		"current_worth" : this["max_fans"],
-		"status" : puzzleStatus.ACTIVE,
-		"sec_elapsed" : 0, // not used 
-		"timerID" : timerID, // need to keep this so we can destroy it when the puzzle is completed
-		"start_time" : startTime,
-		"hintStats" : {},
-		"log" : [getCurrentDateTime() + ":  Puzzle Started"]
-	};
-	
-	/*
-	$.each(this["hints"], function(name, hint) {
-		puzzObj.hintStats[name] = {
-			"status" : hintStatus.LOCKED
-		}
-	});*/
-
-	session.puzzleStats[this["name"]] = puzzObj;
-}
+	unlockResources : function() {
+		// todo	
+	},
 
 
-/*** LOG THINGS ***/
-Puzzle.prototype.log = function(entry) {
-	session.puzzleStats[this.name]["log"].push(entry);
-	$("#log").append(getCurrentDateTime() + ": " + entry);
-
-}
-
-Puzzle.prototype.getLogHTML = function() {
-	var log = session.puzzleStats[this.name]["log"];
-	var out = "";
-	$.each(log, function(index, entry) {
-		out += "<span class=\"log_entry\">" + entry + "</span>";
-	});
-
-	return out;
-}
+	// perhaps move this to Session.js
+	log : function(entry) {
+		var stats = $.extend(true, {}, session.get("puzzleStats"));
+		stats[this.get("name")]["log"].push(entry);
+		session.set("puzzleStats",stats);	
+	}
+});

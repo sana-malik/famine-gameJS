@@ -1,7 +1,7 @@
 {
 "order" : ["The Motley Fool"],
-"locations" : [
-{
+"locations" : {
+"The Motley Fool" : {
 	"name" : "The Motley Fool",
 	"puzzles" : ["Gelatinous Cube"],
 	"address" : "2000 Duke St., Fourth Floor, Alexandria, VA 22314",
@@ -16,5 +16,5 @@
 	"time_open" : "11:00 PM",
 	"time_closed" : "2:00 AM"
 }
-]
+}
 }

@@ -1,7 +1,7 @@
 {
 "activeTeam" : "1a",
-"teams" : [
-{"id":"1a",
+"teams" : {
+"1a" : {"id":"1a",
 "bio":"A boisterous combination of improvisation, sketch comedy, music, dance, and interactive theater, performed by men dressed as chickens.  They also do puzzles.",
 "icon":"images/team_icons/chickens.gif",
 "video":"video file",
@@ -9,11 +9,12 @@
 "talents":["KNIVES","painting"],
 "mentor":"Haymitch"}
 ,
-{"id":"1b",
+"1b" : {"id":"1b",
 "bio":"woof!",
 "icon":"images/team_icons/team02.gif",
 "video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
 "name" :"Team 1b",
 "talent":["NUNCHUCKS","shelter","traps"],
 "mentor":"Philip"}
-]}
+}
+}

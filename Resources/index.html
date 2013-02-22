@@ -2,8 +2,9 @@
 	<head>
 		<!-- UTILITIES -->
 		<script type="text/javascript" src="utils/jquery.min.js"></script>
-		<script type="text/javascript" src="utils/angular.min.js"></script>
-		<script type="text/javascript" src="utils/jquery.textCountdown.js"></script>
+		<script type="text/javascript" src="utils/underscore-min.js"></script>
+		<script type="text/javascript" src="utils/json2.js"></script>
+		<script type="text/javascript" src="utils/backbone-min.js"></script>
 		<script type="text/javascript" src="utils/utils.js"></script>
 		<script type="text/javascript" src="utils/consts.js"></script>
 		<script type="text/javascript" src="utils/debug.js"></script>
@@ -19,7 +20,7 @@
 
 		<!-- VIEW -->
 		<script type="text/javascript" src="view/UserView.js"></script>
-		<script type="text/javascript" src="view/TeamView.js"></script>
+		<script type="text/javascript" src="view/TeamViews.js"></script>
 		<script type="text/javascript" src="view/MainScreen.js"></script>
 		<script type="text/javascript" src="view/PuzzleView.js"></script>
 
@@ -40,8 +41,14 @@
 		</div>
 
 		<div id="main_container">
-			<div id="sidebar"></div>
-			<div id="main"></div>
+			<div id="sidebar">
+				<div id="icon"></div>
+				<div id="stats"></div>
+				<div id="resources"></div>
+			</div>
+			<div id="main">
+				<div id="main_screen" class="main"></div>
+			</div>
 			<div id="bottombar"></div>
 		</div>
 	</body>

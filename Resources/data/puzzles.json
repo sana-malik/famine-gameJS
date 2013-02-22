@@ -1,82 +1,77 @@
-[
-{"name":"Gelatinous Cube",
+{
+"Gelatinous Cube" : {"name":"Gelatinous Cube",
 "start_code":"boingboing",
 "max_fans" : 100,
 "flavor_text" :"Upon entering the room you see a gelatinous cube before you.",
-"hints" :[
-	{
-		"name":"Hint 1",
+"hints" :{
+	"Hint 1" : {
 		"start_time":5,
 		"end_time": 10,
 		"start_cost":10,
 		"end_cost" : 0,
-		"text":"If you're having trouble seeing what to do, it might be a case of the blind leading the blind."
-	},
-	{
-		"name":"Hint 2",
+		"text":"If you're having trouble seeing what to do, it might be a case of the blind leading the blind."},
+	"Hint 2": {
 		"start_time" : 10,
 		"end_time" : 15,
 		"start_cost" : 10,
 		"end_cost" : 0,
 		"text" : "Did you know red and blue make purple?"
-	},
-	{
-		"name":"Hint 3",
+		},
+	"Hint 3" : {
 		"start_time" : 15,
 		"end_time" : 20,
 		"start_cost" : 10,
 		"end_cost" : 5,
 		"text" : "The dots are Braille letters.  There are two sets super-imposed, one red and one blue.  Purple dots are where a red and blue dot exist."
-	},
-	{
-		"name":"Hint 4",
+		},
+	"Hint 4" : {
 		"start_time":20,
 		"end_time":25,
 		"start_cost":10,
 		"end_cost":5,
 		"text" :"Have you tried applying the Braille message to the puzzle?  Literally?"
-	},
-	{
-		"name":"Hint 5",
+		},
+	"Hint 5" : {
 		"start_time":25,
 		"end_time":30,
 		"start_cost":50,
 		"end_cost":20,
 		"text":"The Braille solves to \"Blacklight\".  Apply a blacklight to the puzzle and you should see the answer: Sugar Rush."
-	}],
-"answers" : [
-	{
+		}
+	},
+"answers" : {
+	"sugarrush" : {
 		"type" : "final",
 		"text" : "sugarrush",
 		"response" : "Congratulations, you have solved the puzzle.",
 		"skipped_hints" : []
 	},
-	{
+	"blacklight" : {
 		"type" : "partial",
 		"text" : "blacklight",
 		"response" : "You're on the right track, but you need to go one step further.  Do you have a blacklight?",
 		"skipped_hints" : [1,2,3]
 	},
-	{
+	"lightblack" : {
 		"type" : "partial",
 		"text": "lightblack",
 		"response" : "Oops, red comes before blue.",
 		"skipped_hints" : [1,2,3]
 	},
-	{
+	"grey" : {
 		"type" : "partial",
 		"text" : "grey",
 		"response" : "You're being too literal.  Also, red comes before blue.",
 		"skipped_hints" : [1,2,3]
 	},
-	{
+	"gray" : {
 		"type" : "partial",
 		"text" : "gray",
 		"response" : "You're being too literal.  Also, red comes before blue.",
 		"skipped_hints" : [1,2,3]
 	}
-	],
+	},
  "resources_unlocked" : ["fork"],
  "teams_killed" : ["1b"]
 }
-]
+}
