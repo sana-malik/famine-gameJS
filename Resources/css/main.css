@@ -27,6 +27,14 @@ body {
 	overflow-y: auto;
 }
 
+.main {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
 /* MAIN SCREEN */
 #main {
 	position:absolute;
@@ -43,6 +51,11 @@ body {
 .puzzle_link:hover {
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+/* PUZZLE SCREEN */
+.log_entry {
+	display: block;
 }
 
 /* BOTTOM BAR */

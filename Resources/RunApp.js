@@ -1,11 +1,10 @@
-	var session;
+var session;
 var puzzles;
 var teams;
 var locations;
 var locOrder;
 var resources;
 var tid;
-var currentScreen;
 
 /**
  * Executes once the DOM is fully loaded. Essentially a "main" method
@@ -23,7 +22,7 @@ $(document).ready(function() {
     //Add menu to the current window
     Ti.UI.getCurrentWindow().setMenu(menu);
 
-	// Set up model
+	// Set up models
 	teams = populateTeams();
 	locations = populateLocations(); 
 	resources = populateResources();
@@ -31,10 +30,10 @@ $(document).ready(function() {
 
 	session = initSession();
 	
-	// Set up view
-	showTeamView();
-	showUserView();
-	showStartScreen();
+	// Set up views
+	var team = new TeamView({el : "#bottombar", model : session});
+	var user = new UserView({el : "#sidebar", model : session});
+	var main = new MainView({el : "#main > #main_screen", model: session});
 });
 
 function populateTeams() {
@@ -45,8 +44,8 @@ function populateTeams() {
 	
 	tid = teamObjs.activeTeam;
 	
-	$.each(teamObjs.teams, function(index, team) {
-		teams[team.id] = new Team(team);
+	$.each(teamObjs.teams, function(id, team) {
+		teams[id] = new Team(team);
 	});
 
 	return teams;
@@ -57,8 +56,9 @@ function populatePuzzles() {
 
 	var puzzles = {};
 	var puzObjs = Ti.JSON.parse(json);
-	$.each(puzObjs, function(index, puzzle) {
-		puzzles[puzzle.name] = new Puzzle(puzzle);
+
+	$.each(puzObjs, function(name, puzzle) {
+		puzzles[name] = new Puzzle(puzzle);
 	});
 
 	return puzzles;
@@ -69,8 +69,8 @@ function populateResources() {
 
 	var resources = {};
 	var resObjs = Ti.JSON.parse(json);
-	$.each(resObjs, function(index, resource) {
-		resources[resource.name] = new Resource(resource);
+	$.each(resObjs, function(name, resource) {
+		resources[name] = new Resource(resource);
 	});
 
 	return resources;
@@ -83,10 +83,12 @@ function populateLocations() {
 	// Order of locations needs to be extracted first
 	locOrder = locObjs.order;
 	
-	var locations = [];
-	$.each(locObjs.locations, function(index, location) {
-		locations[location.name] = new Location(location);
+	var locations = {};
+	$.each(locObjs.locations, function(name, location) {
+		locations[name] = new Location(location);
 	});
+
+	return locations;
 }
 
 function initSession() {
@@ -97,6 +99,6 @@ function initSession() {
 		return new Session(sessionObj);
 	}
 	else {
-		return new Session(null);
+		return new Session();
 	}	
 }

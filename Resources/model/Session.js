@@ -1,61 +1,88 @@
-function Session(sessionObj) {
-	if (sessionObj === null) {
-		this.fans = 0;	
-		this.locationStats = {};
-		this.locationStats[locOrder[0]] = locationStatus.CURRENT;
+var Session = Backbone.Model.extend({
+	initialize: function() {
+		var temp = {};
+
+		this.set("fans",0);
+
+		// locations
+		$.each(locations, function(name, location) {
+			temp[name] = {"status" : locationStatus.UNVISITED};
+		});
+		this.set("locationStats", temp);
+
+		// resources
+		temp = {};
+		$.each(resources, function(name, resource) {
+			temp[name] = {"status" : resourceStatus.LOCKED};
+		});
+		this.set("resourceStats", temp);
+
+		// teams
+		temp = {};
+		$.each(teams, function(id, team) {
+			temp[id] = {"status" : teamStatus.ALIVE};
+		});
+		this.set("teamStats", temp);
+
+		// puzzles
+		temp = {};
+		$.each(puzzles, function(pname, puzzle) {
+			temp[pname] = {
+				"current_worth" : this.get("max_fans"),
+				"status" : puzzleStatus.INACTIVE,
+				"hintStats" : {},
+				"log" : []
+			};
+
+			$.each(puzzle.get("hints"), function(hname, hint) {
+				temp[pname]["hintStats"][hname] = {"status" : hintStatus.LOCKED, "remaining" : hint.get("start_time")*60};
+			});
+		});
+		this.set("puzzleStats", temp);
+	},
+
+	getActivePuzzles : function() {
+		var active = [];
+		$.each(this.get(puzzleStats), function(name, pStat) {
+			if (pStat["status"] === puzzleStatus.ACTIVE) {
+				active.push(name);
+			}
+		});
+		return active;
+	},
+
+	// Activates all the puzzles associated with a start code.
+	// This creates the "puzzleStatus" object for each puzzle.
+	// Input: start_code - the start code.
+	// Returns: number of puzzles activated (0 if none)
+	activatePuzzles : function(start_code) {
+		var count = 0;
+		var that = this;
 		
-		this.puzzleStats = {};
-		this.teamStats = {};
-		this.resourceStats = {};
-	}
-	else {
-		this.fans = sessionObj.fans;
-		this.locationStats = sessionObj.locationStats;
-		this.puzzleStats = sessionObj.puzzleStats;
-		// make sure to overwrite the min_elapsed and timerID for puzzleStats
-		// as well as initialize the intervals!
-		this.teamStats = sessionObj.teamStats;
-		this.resourceStats = sessionObj.resourceStats;
-	}
-}
+		var puzStats = $.extend(true, {}, this.get("puzzleStats"));
+		$.each(puzzles, function(name, puzzle) {
+			if (puzStats[name]["status"] == puzzleStatus.INACTIVE && puzzle.get("start_code") === start_code) {
+				var timerID = PuzzleTimer(name);
 
-Session.prototype.getActivePuzzles = function() {
-	var active = [];
-	$.each(this.puzzleStats, function(name, pStat) {
-		if (pStat["status"] === puzzleStatus.ACTIVE) {
-			active.push(name);
+				var date = (new Date()).getTime();
+				var startTime = Math.round((new Date()).getTime() / 1000);
+		
+				var puzzObj = {
+					"status" : puzzleStatus.ACTIVE,
+					"sec_elapsed" : 0, // not used 
+					"timerID" : timerID, // need to keep this so we can destroy it when the puzzle is completed
+					"start_time" : startTime,
+					"log" : [getCurrentDateTime() + ":  Puzzle Started"]
+				};
+				$.extend(true, puzStats[name], puzzObj);
+				count += 1;
+				$("#main").append("<div class=\"main puzzle\" id=\""+nameToId(name) + "\"></div>");
+				var puzView = new PuzzleView({el : ".puzzle#"+nameToId(name), puzzleName : name});
+			}
+		});
+		if (count > 0) {
+			that.set("puzzleStats", puzStats);
 		}
-	});
-	return active;
-}
-
-// Activates all the puzzles associated with a start code.
-// This creates the "puzzleStatus" object for each puzzle.
-// Input: start_code - the start code.
-// Returns: number of puzzles activated (0 if none)
-Session.prototype.activatePuzzles = function(start_code) {
-	var that = this;
-	var count = 0;
-
-	$.each(puzzles, function(name, puzzle) {
-		if (!(name in that.puzzleStats) && puzzle["start_code"] === start_code) {
-			puzzle.activate();
-			count += 1;
-		}
-	});
-	return count;
-}
-
-// Gets called every minute
-Session.prototype.activateHint = function(hint) {
-	alert("hint " + hint.name + " activated");
-	
-}
-
-Session.prototype.getActiveTeamHTML = function() {
-	var team = teams[tid];
-	var output = team.getIconHTML() + "<span class=\"team_title\">" + team.name + "</span>" + 
-		"<span class=\"team_bio\">" + team.bio + "</span>" + 
-		"<span class=\"fan_count\">Fans: " + this.fans + "</span>";
-	return output;
-}
+		return count;
+	}
+});

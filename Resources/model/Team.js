@@ -1,52 +1,38 @@
-function Team(teamObj) {
-		this.id = teamObj.id;
-		this.name = teamObj.name;
-		this.bio = teamObj.bio;
-		this.mentor = teamObj.mentor;
-		this.icon = teamObj.icon;
-		this.talents = teamObj.talents;
-		this.video = teamObj.video;
-}
+var Team = Backbone.Model.extend({
 
-Team.prototype.getActiveTeamHTML = function() {
-	var output = this.getIconHTML() + "<span class=\"team_title\">" + this.name + "</span>" + 
-		"<span class=\"team_bio\">" + this.bio + "</span>" + 
-		"<span class=\"fan_count\">Fans: " + session.fans + "</span>";
-	return output;
-}
+	// the following two functions *should* be taken care of in TeamViews.js but too lazy right now...
+	getHTMLSummary : function() {
+		var output = this.getIconHTML() + "<span class=\"team_title\">" + this.get("name") + "</span>" + 
+		"<span class=\"team_bio\">" + this.get("bio") + "</span>";
+		return output;
+	},
 
-Team.prototype.getHTMLSummary = function() {
-	var output = this.getIconHTML() + "<span class=\"team_title\">" + this.name + "</span>" + 
-		"<span class=\"team_bio\">" + this.bio + "</span>";
-	return output;
-}
+	getIconHTML : function() {
+		var stat = "<div class=\"team_div\" id=\"" + this.get("id") +"\">" +
+		"<img src=\"" + this.get("icon") + "\" class=\"team_img\">";
+		if (this.get("id") in session.get("teamStats") && session.get("teamStats")[this.get("id")]["status"] === teamStatus.DEAD) {
+			stat = stat + "<div class=\"status\">DEAD</div>";
+		}
+		stat = stat + "</div>";
+		return stat;
+	},
 
-Team.prototype.getIconHTML = function() {
-	var stat = "<div class=\"team_div\" id=\"" + this.id +"\">" +
-				"<img src=\"" + this.icon + "\" class=\"team_img\">";
-	if (this.id in session.teamStats && session.teamStats[this.id]["status"] === teamStatus.DEAD) {
-		stat = stat + "<div class=\"status\">DEAD</div>";
+	die : function() {
+		if (session.get("teamStats")[this.get("id")]["status"] === teamStatus.DEAD) {
+			return; // already dead?!
+		}
+	
+		// show video
+		this.showVideo();
+	
+		// update object
+		var stats = $.extend({},session.get("teamStats"));
+		stats[this.get("id")] = {"status" : teamStatus.DEAD};
+		session.set("teamStats",stats);
+	},
+
+
+	showVideo : function() {
+		showPopup("<iframe width=\"560\" height=\"315\" src=\"" + this.get("video") + "\" frameborder=\"0\"></iframe>");
 	}
-	stat = stat + "</div>";
-	return stat;
-}
-
-Team.prototype.die = function() {
-	if (this.id in session.teamStats && session.teamStats[this.id]["status"] === teamStatus.DEAD) {
-		return; // already dead?!
-	}
-
-	// mark dead visually
-	$(".team_div#" + this.id).append("<div class=\"status\">DEAD</div>");
-
-	// show video
-	this.showVideo();
-
-	// update object
-	session.teamStats[this.id] = {"status" : teamStatus.DEAD};
-}
-
-
-Team.prototype.showVideo = function() {
-	showPopup("<iframe width=\"560\" height=\"315\" src=\"" + this.video + "\" frameborder=\"0\"></iframe>");
-}
+});

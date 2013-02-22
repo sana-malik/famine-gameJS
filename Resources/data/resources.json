@@ -1,18 +1,18 @@
-[
 {
+"Fork" : {
 "name" : "Fork",
 "icon" : "images/resources/fork.jpg"
 },
-{
+"Pencil" : {
 "name" : "Pencil",
 "icon" : "images/resources/pencil.jpg"
 },
-{
+"Paper" : {
 "name" : "Paper",
 "icon" : "images/resources/paper.jpg"
 },
-{
+"Scissors" : {
 "name" : "Scissors",
 "icon" : "images/resources/scissors.jpg"
 }
-]
+}

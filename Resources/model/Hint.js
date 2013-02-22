@@ -1,22 +1,17 @@
-function Hint(hintObj) {
-	this.name = hintObj.name;
-	this.text = hintObj.text;
-	
-	this.start_time = hintObj.start_time;
-	this.start_cost = hintObj.start_cost;
-	
-	this.end_time = hintObj.end_time;
-	this.end_cost = hintObj.end_cost;
-}
+var Hint = Backbone.Model.extend({
 
-// Input is minutes past the start of puzzle
-Hint.prototype.getCost = function(mins) {
 	
-	var rise = this.end_time - this.start_time;
-	var run = this.end_cost - this.start_cost;
+	/** Function: getCost
+	* Input: mins - minutes since start of puzzle
+	* Output: current cost of hint
+	**/
+	getCost : function(mins) {
+		var rise = this.get("end_time") - this.get("start_time");
+		var run = this.get("end_cost") - this.get("start_cost");
+		
+		var slope = rise/run;
+		var cost = Math.round(this.get("start_cost") + slope * (mins - this.get("start_time")));
 	
-	var slope = rise/run;
-	var cost = Math.round(this.start_cost + slope * (mins - this.start_time));
-	
-	return Math.max( this.end_cost, cost );
-}
+		return Math.max( this.get("end_cost"), cost );
+	}
+});

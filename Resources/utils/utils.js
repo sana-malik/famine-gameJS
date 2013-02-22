@@ -34,79 +34,47 @@ function nameToId(str) {
 	return str.replace(/ /g,'_');
 }
 
+function formatTime(seconds) {
+	var mins = Math.floor(seconds / 60);
+	var secs = seconds % 60;
+	var out = "";
+	if (mins < 10) out += "0";
+	out += mins + ":";
+	if (secs < 10) out += "0";
+	out += secs;
+	return out;
+}
+
 function PuzzleTimer(puzzleId, interval){	
 	if (arguments.length == 1) { 
 			interval = timeInterval; 
 	}
 
-	function formatTime(seconds) {
-		var mins = Math.floor(seconds / 60);
-		var secs = seconds % 60;
-		var out = "";
-		if (mins < 10) out += "0";
-		out += mins + ":";
-		if (secs < 10) out += "0";
-		out += secs;
-		return out;
-	}
-
 	var increment = function() {
-		// update status
-		session.puzzleStats[puzzleId]["sec_elapsed"] += 1;
+		var stats = $.extend(true,{},session.get("puzzleStats"));
+
 
 		var current_time = Math.round((new Date()).getTime()/1000);
-		var elapsed = (current_time-session.puzzleStats[puzzleId]["start_time"]) * 1000/timeInterval;
-		var hints = puzzles[puzzleId]["hints"];
+		var elapsed = (current_time-stats[puzzleId]["start_time"]) * 1000/timeInterval;
+		var hints = puzzles[puzzleId].get("hints");
 
-		// go through hints. update visually & check for status changes
+		// go through hints & check for status changes
 		$.each(hints, function(name, hint) {
 			var remaining;
-			if (!(name in session.puzzleStats[puzzleId]["hintStats"])) {
-				remaining = hint["start_time"]*60 - elapsed;
+			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
+				remaining = hint.get("start_time")*60 - elapsed;
+				stats[puzzleId]["hintStats"][name]["remaining"] = remaining;
+				if (remaining <= 0) stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
 			}
-			else if (session.puzzleStats[puzzleId]["hintStats"][name]["status"] == hintStatus.AVAILABLE) {
-				remaining = hint["end_time"]*60 - elapsed;
+			else if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.AVAILABLE) {
+				stats[puzzleId]["hintStats"][name]["remaining"] = hint.get("end_time")*60 - elapsed;
 			}
 			else {
 				return; // no need to display any timer/change any status
 			}
-
-			var hintDiv = $("#"+nameToId(puzzleId) + " > #" + nameToId(name) + " > .hint_text").empty();
-			if (remaining === 0) { // change status
-				if (!(name in session.puzzleStats[puzzleId]["hintStats"])) { // go to available
-					session.puzzleStats[puzzleId]["hintStats"][name] = {"status" : hintStatus.AVAILABLE};
-					remaining = hint["end_time"]*60 - elapsed;
-				}
-				else { // reveal the hint
-					session.puzzleStats[puzzleId]["hintStats"][name]["status"] = hintStatus.REVEALED;
-					// reveal the hint
-					hintDiv.append( puzzles[puzzleId]["hints"][name].text );
-					return;
-				}
-			}
-			// update the hint visually
-			if (!(name in session.puzzleStats[puzzleId]["hintStats"])) {
-				hintDiv.append("available in ");	
-			}
-			else {
-				hintDiv.append("<button id=\"hint_button\">Get Hint</button> -- min cost in ");
-
-				$("#hint_button").click(function () {
-					session.puzzleStats[puzzleId]["hintStats"][name]["status"] = hintStatus.REVEALED;
-					session.puzzleStats[puzzleId]["current_worth"] -= hint.getCost(session.puzzleStats[puzzleId]["sec_elapsed"]/60)
-					
-					if (session.puzzleStats[puzzleId]["current_worth"] < 0)
-						session.puzzleStats[puzzleId]["current_worth"] = 0
-
-					$("#fan_worth").text( session.puzzleStats[puzzleId]["current_worth"] )
-
-					hintDiv = $("#"+nameToId(puzzleId) + " > #" + nameToId(name) + " > .hint_text").empty();
-					hintDiv.append( puzzles[puzzleId]["hints"][name].text );
-					return;
-				});
-			}
-			hintDiv.append(formatTime(remaining));
 		});
+
+		session.set("puzzleStats", stats);
 	}	
 
 	return setInterval(increment, interval);  // returns timer id	
