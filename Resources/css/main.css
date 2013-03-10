@@ -7,24 +7,31 @@ body {
 }
 
 
+/** General Formatting **/
+#sidebar, #main, #bottombar  {
+	border: 1px #9899b7 solid;
+}
+
+
 /** MAIN APP **/
 #main_container {
 	width: 1000px; height: 600px;
-	background-color: #000000;
+	background: url("../images/hexbg.jpg");
 	position:absolute;
 	top: 0px; left: 0px;
 }
 
 #main_container > div {
-	background-color: #EEEEEE;
+	background-color: #494757;
 }
 
 #sidebar {
 	position:absolute;
 	left: 25px; top:100px;
-	width: 250px; height: 300px;
+	width: 240px; height: 280px;
 	overflow-x: hidden;
 	overflow-y: auto;
+	padding: 10px;
 }
 
 .main {
@@ -38,10 +45,12 @@ body {
 /* MAIN SCREEN */
 #main {
 	position:absolute;
-	left: 325px; top: 100px;
-	width: 650px; height: 300px;
+	left: 305px; top: 100px;
+	width: 650px; height: 280px;
 	overflow-x: hidden;
 	overflow-y: auto;
+	padding: 10px;
+	
 }
 
 .puzzle_link {
@@ -61,10 +70,11 @@ body {
 /* BOTTOM BAR */
 #bottombar {
 	position:absolute;
-	left: 25; top: 425px;
-	width: 950px; height: 150px;
+	left: 25; top: 415px;
+	width: 930px; height: 130px;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	padding: 10px;
 }
 .team_div {
 	margin: 5px;
