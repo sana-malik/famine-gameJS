@@ -24,19 +24,65 @@ var ActivePuzzlesView = Backbone.View.extend({
 		var that = this;
 		$(that.el).empty();
 
+		var count = 0;
 		$.each(that.model.get("puzzleStats"), function(name, puzzle) {
 			if (puzzle["status"] === puzzleStatus.ACTIVE) {
 				$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
+				count += 1;
 			}
 		});
+
+		if (count === 0) {
+			$(that.el).append("<li>none!</li>");
+		}
+	}
+});
+
+var SolvedPuzzlesView = Backbone.View.extend({
+	template : _.template('<li class="puzzle_link" id=<%= puzzleID %>><%= puzzleName %></li>'),
+
+	initialize: function() {
+		_.bindAll(this, 'render');
+		this.render();
+		this.model.bind('change:puzzleStats', this.render);
+	},
+
+	events : {
+		'click .puzzle_link' : 'showPuzzleScreen'
+	},
+
+	showPuzzleScreen : function(e) {
+		var clickedEl = $(e.currentTarget);
+  		var name = clickedEl.attr("id");
+
+  		$('.active').removeClass('active');
+  		$('div.puzzle#' + name).addClass('active');
+
+	},
+
+	render: function() {
+		var that = this;
+		$(that.el).empty();
+
+		var count = 0;
+		$.each(that.model.get("puzzleStats"), function(name, puzzle) {
+			if (puzzle["status"] === puzzleStatus.SOLVED) {
+				$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
+				count += 1;
+			}
+		});
+
+		if (count === 0) {
+			$(that.el).append("<li>none!</li>");
+		}
 	}
 });
 
 var MainView = Backbone.View.extend({
 	template: _.template('Enter a start code: <input type="text" id="start_input">\
 		<button id="start_button">Submit</button><div id="return_message"></div>\
-		<b>Active Puzzles</b><ul id="active_puzzles"></ul>\
-	'),
+		<b>Active Puzzles</b><ul id="active_puzzles"><li></ul>\
+		<b>Solved Puzzles</b><ul id="solved_puzzles"><li></ul>'),
 
 	events: {
 		'click #start_button' : 'start_button_clicked'
@@ -60,6 +106,7 @@ var MainView = Backbone.View.extend({
 		_.bindAll(this, 'render');
 		this.render();
 		this.ActiveView = new ActivePuzzlesView({el : "#main_screen > #active_puzzles", model : this.model});
+		this.SolvedView = new SolvedPuzzlesView({el : "#main_screen > #solved_puzzles", model : this.model});
 	},
 
 	render: function() {

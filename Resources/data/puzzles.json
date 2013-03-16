@@ -3,6 +3,8 @@
 "start_code":"boingboing",
 "max_fans" : 100,
 "flavor_text" :"Upon entering the room you see a gelatinous cube before you.",
+ "resources_unlocked" : ["fork"],
+ "teams_killed" : ["1b"],
 "hints" :{
 	"Hint 1" : {
 		"start_time":5,
@@ -70,8 +72,6 @@
 		"response" : "You're being too literal.  Also, red comes before blue.",
 		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
 	}
-	},
- "resources_unlocked" : ["fork"],
- "teams_killed" : ["1b"]
+	}
 }
 }

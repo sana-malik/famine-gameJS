@@ -1,11 +1,3 @@
-/*	getActiveTeamHTML : function() {
-		var team = teams[tid];
-		var output = "<span class=\"team_title\">" + team.name + "</span>" + 
-		"<span class=\"team_bio\">" + team.bio + "</span>" + 
-		"<span class=\"fan_count\">Fans: " + this.get("fans") + "</span>";
-		return output;
-}*/
-
 var UserView = Backbone.View.extend({
 	template : _.template('Fans: <span class="fan_count"><%= fans %></span>'),
 
