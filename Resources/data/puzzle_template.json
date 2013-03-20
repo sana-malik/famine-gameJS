@@ -1,0 +1,46 @@
+{
+"<PUZZLENAME>" : {
+"start_code":"<STARTCODE>",
+"max_fans" : <TOTAL FAN WORTH>,
+"flavor_text" :"<FLAVOR TEXT>",
+"hints" :{
+	"<HINT_NAME>" : {
+		"start_time":<AVAILABLE TIME>,
+		"end_time": <CHEAPEST TIME>,
+		"start_cost":<START COST>,
+		"end_cost" : <CHEAPEST COST>,
+		"text":"<HINT TEXT>"},
+	"<HINT_NAME>" : {
+		"start_time":<AVAILABLE TIME>,
+		"end_time": <CHEAPEST TIME>,
+		"start_cost":<START COST>,
+		"end_cost" : <CHEAPEST COST>,
+		"text":"<HINT TEXT>"},
+	"<HINT_NAME>" : {
+		"start_time":<AVAILABLE TIME>,
+		"end_time": <CHEAPEST TIME>,
+		"start_cost":<START COST>,
+		"end_cost" : <CHEAPEST COST>,
+		"text":"<HINT TEXT>"}
+	},
+"answers" : {
+	"<ANSWER TEXT>" : {
+		"type" : "<ANSWER TYPE>",
+		"response" : "<RESPONSE TEXT>",
+		"skipped_hints" : []
+	},
+	"<ANSWER TEXT>" : {
+		"type" : "<ANSWER TYPE>",
+		"response" : "<RESPONSE TEXT>",
+		"skipped_hints" : ["<HINT NAME>", "<HINT NAME>"]
+	},
+	"<ANSWER TEXT>" : {
+		"type" : "<ANSWER TYPE>",
+		"response" : "<RESPONSE TEXT>",
+		"skipped_hints" : ["<HINT NAME>", "<HINT NAME>"]
+	}
+	},
+ "resources_unlocked" : ["<RESOURCE NAME>"],
+ "teams_killed" : ["<TEAM ID>"]
+}
+}
