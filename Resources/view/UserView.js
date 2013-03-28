@@ -1,5 +1,5 @@
 var UserView = Backbone.View.extend({
-	template : _.template('Fans: <span class="fan_count"><%= fans %></span>'),
+	template : _.template('<h3 class="fan_count"><%= fans %></h3><h3 class="fans">Fans</h3>'),
 
 	initialize: function() {
 		_.bindAll(this, 'render');
