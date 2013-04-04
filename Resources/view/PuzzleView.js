@@ -87,25 +87,32 @@ var PuzzleSessionView = Backbone.View.extend({
 });
 
 var PuzzleView = Backbone.View.extend({
-	template: _.template('<span class="puzzle_title"><%= name %></span>\
+	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
+				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
+				<div id="path">Path > Goes > Here</div>\
+			</div>\
+			<div class="content"><span class="puzzle_title"><%= name %></span>\
 		<span class="flavor_text"><%= flavor_text %></span>\
 		<div class="session_vars"></div>\
 		<div class="hints"></div>\
+		</div></div>\
+		<div class="right-sidebar">\
 		<div class="answer_box">Enter an answer: <input type="text" class="answer_input">\
 		<button class="answer_button">Submit</button><button class="giveup_button">I give up!</button></div>\
 		<div class="log"></div>\
-		<span id="back_to_main">back to main</span>'),
+		</div>'),
 
 	initialize: function(options) {
 		var that = this;
 		_.bindAll(this, 'render');
+		
 		this.puzzleName = options.puzzleName;
 
 		this.render();
 		this.session_vars = new PuzzleSessionView({el : ".main#" + nameToId(this.puzzleName) + " .session_vars", puzzleName : this.puzzleName, model : session});
 		this.hints = {};
 		$.each(puzzles[this.puzzleName].get("hints"), function(name, hint) {
-			$("#" + nameToId(that.puzzleName) + " > .hints").append("<div class=\"hint\" id=\"" + nameToId(name) + "\"></div>");
+			$("#" + nameToId(that.puzzleName) + " .hints").append("<div class=\"hint\" id=\"" + nameToId(name) + "\"></div>");
 			that.hints[name] = new HintView({el : '.main#' + nameToId(that.puzzleName) + " .hint#" + nameToId(name), hintName : name, puzzleName: that.puzzleName, model : session});
 		});
 
@@ -119,7 +126,7 @@ var PuzzleView = Backbone.View.extend({
 
 	events : {
 		'click .answer_button' : 'submit_answer',
-		'click #back_to_main' : 'back_to_main'
+		'click #backbutton' : 'back_to_main'
 	},
 
 	submit_answer : function() {

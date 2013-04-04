@@ -20,6 +20,8 @@ var Puzzle = Backbone.Model.extend({
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
 				
+				// hide answer box
+				$("#"+nameToId(this.get("name")) + " .answer_box").hide();
 				// puzzle results
 				this.killTeams();
 				//this.unlockResources();
