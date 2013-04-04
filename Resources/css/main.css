@@ -9,7 +9,6 @@ body {
 
 
 /** MAIN APP **/
-
 #topbar {
 	position:absolute;
 	left: 0px; top: 0px;
@@ -61,7 +60,7 @@ text-transform: uppercase;
 }
 
 /* MAIN SCREEN */
-#main {
+.left-sidebar {
 	position:absolute;
 	left: 265px; top: 100px;
 	width: 415px; height: 310px;
@@ -82,7 +81,7 @@ text-transform: uppercase;
 	cursor: pointer;
 }
 
-#right-sidebar {
+.right-sidebar {
 	position:absolute;
 	left: 700px; top:100px;
 	width: 240px; height: 310px;

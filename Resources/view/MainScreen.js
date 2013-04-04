@@ -79,10 +79,9 @@ var SolvedPuzzlesView = Backbone.View.extend({
 });
 
 var MainView = Backbone.View.extend({
-	template: _.template('Enter a start code: <input type="text" id="start_input">\
+	template: _.template('<div class="left-sidebar">Objective: meow meow</div><div class="right-sidebar">location stuff <br>Enter a start code: <input type="text" id="start_input">\
 		<button id="start_button">Submit</button><div id="return_message"></div>\
-		<b>Active Puzzles</b><ul id="active_puzzles"><li></ul>\
-		<b>Solved Puzzles</b><ul id="solved_puzzles"><li></ul>'),
+		</div>'),
 
 	events: {
 		'click #start_button' : 'start_button_clicked'
