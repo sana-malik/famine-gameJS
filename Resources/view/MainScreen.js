@@ -79,7 +79,15 @@ var SolvedPuzzlesView = Backbone.View.extend({
 });
 
 var MainView = Backbone.View.extend({
-	template: _.template('<div class="left-sidebar">Objective: meow meow</div><div class="right-sidebar">location stuff <br>Enter a start code: <input type="text" id="start_input">\
+	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
+				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
+				<div id="path">Path > Goes > Here</div>\
+			</div>\
+			<div class="content"><p>Testing the scrollbar</p>\
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum enim mi, vulputate et rutrum quis, feugiat ut libero. Nulla eu velit odio. Aliquam enim nunc, pharetra vel laoreet non, malesuada at sapien. Nullam eleifend sem eu eros facilisis euismod. Etiam quis lacus id felis gravida venenatis. Quisque blandit pharetra dolor, vel accumsan eros gravida vitae. Integer ac leo urna. Nullam ut iaculis orci. Nunc at orci eros. Morbi quis nibh purus, id ultricies sapien.</p>\
+				<p>Nam accumsan, tellus eget pretium posuere, nisl orci dignissim felis, vel pharetra mauris lacus sed est. Nullam id turpis venenatis sem viverra volutpat sed quis elit. Integer non ipsum facilisis velit tincidunt convallis non vitae nisi. Sed bibendum vulputate nisl, et vehicula sapien tincidunt commodo. Aliquam erat volutpat. Donec a massa vitae justo laoreet fringilla a vel urna. Sed ultrices tincidunt cursus. Curabitur bibendum placerat tortor, non laoreet est bibendum in. Nulla vel elit eros, id pharetra dolor. Nullam quis velit eget purus iaculis aliquet. Etiam pellentesque augue nisi, sit amet cursus neque.</p></div>\
+				</div></div>\
+				<div class="right-sidebar">location stuff <br>Enter a start code: <input type="text" id="start_input">\
 		<button id="start_button">Submit</button><div id="return_message"></div>\
 		</div>'),
 

@@ -1,55 +1,67 @@
+/** FONTS **/
+@font-face {
+	font-family: 'Orbitron';
+	src: url('../fonts/Orbitron-Black.svg#Orbitron') format(‘svg’);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Regular.svg#Open&nbsp;Sans') format(‘svg’);
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 /** BODY **/
 body {
 	color: #fff;
-	font-family: "Helvetica", "Arial",sans-serif;
+	font-family: 'Open Sans';
 	margin: 0px;
 	padding: 0px;
 }
 
 
+/** MAIN LAYOUT **/
+#main_container {
+	width: 1000px; height: 600px;
+	background: url("../images/gui/background.jpg");
+	position:absolute;
+	top: 0px; left: 0px;
+	}
 
-/** MAIN APP **/
+/** TOP BAR **/
 #topbar {
 	position:absolute;
 	left: 0px; top: 0px;
 	width: 930px; height: 50px;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	padding: 5px;
-	background: url("../images/gui/logo.png") left no-repeat;
-}
-
-#main_container {
-	width: 1000px; height: 600px;
-	background: url("../images/gui/background.jpg");
-	position:absolute;
-	top: 0px; left: 0px;
+	height: 68px;
+	width: 100%;
+	background: url("../images/gui/logo.png") 20 10 no-repeat;
 }
 
 
-
-
-/** LEFT SIDEBAR **/
+/** LEFT USER SIDEBAR **/
 #sidebar {
 	position:absolute;
-	left: 10px; top:100px;
+	left: 10px; top:80px;
 	width: 225px; height: 310px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 10px;
 	text-align: center;
+	font-family: 'Orbitron';
 }
 
 h3.fan_count {
-
 }
 
 h3.fans {
-text-transform: uppercase;
+	text-transform: uppercase;
 }
-
-
-
 
 .main {
 	display: none;
@@ -59,17 +71,146 @@ text-transform: uppercase;
 	display: block;
 }
 
-/* MAIN SCREEN */
-.left-sidebar {
+/* NAVIGATION TABS */
+#tabs {
 	position:absolute;
-	left: 265px; top: 100px;
-	width: 415px; height: 310px;
+	left: 265px; top: 80px;
+	width: 435px; height: 25px;
 	overflow-x: hidden;
 	overflow-y: auto;
+	background: url("../images/gui/border-bg.jpg") no-repeat;
+	background-position:321px 23px;
+}
+
+
+ol#toc {
+	height: 24px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol#toc a {
+	color: #fff;
+	display: block;
+	float: left;
+	height: 21px;
+	margin: 0px;
+	padding: 3px 0px 0px 0px;
+	text-decoration: none;
+	width: 97px;
+	font-family: 'Orbitron';
+	font-size: .9em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+ol#toc li {
+	background: url("../images/gui/tab-bg.png");
+	float: left;
+	margin: 0px;
+	text-align: center;
+	width: 107px;
+	padding: 0px;
+}
+
+ol#toc li.current  {
+	background: url("../images/gui/current-tab-bg.png");
+}
+
+ol#toc li.current a {
+	color: #fff;
+}
+
+ol#toc li.current span {
+	margin: 0px;
+	padding: 0px;
+}
+
+ol#toc span {
+	background: url(tabs.gif) 100% 0;
+	display: block;
+	padding-right: 10px;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/* PATH */
+#navigation-bar {
+	position:absolute;
+	left: 265px; top: 104px;
+	width: 415px; height: 23px;
 	padding: 10px;
-	border: 1px solid #ddd;
-	background: url("../images/gui/dark-trans-bg.png") repeat;
-	
+	border-left: 1px solid #8c909b;
+	border-right: 1px solid #8c909b;
+	border-bottom: #8c909b 1px solid;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background:rgba(19,19,22, 0.5);
+}
+
+#backbutton {
+	float: left;
+	margin-right: 4px;
+	width: 30px;
+	height: 23px;
+}
+
+#path {
+	float: left;
+	background: url("../images/gui/path-bg.png") right;
+	width: 371px;
+	height: 21px;
+	padding-left: 10px;
+	padding-top: 2px;
+	font-family: 'Open Sans';
+	font-size: .8em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+/*  MAIN CONTENT AREA */
+#main .left-sidebar .content{
+	position:absolute;
+	left: 265px; top: 148px;
+	width: 415px; height: 289px;
+	overflow: auto;
+	padding: 10px;	
+	border-bottom: #8c909b solid 1px;
+	border-left: #8c909b solid 1px;
+	border-right: #8c909b solid 1px;
+	background:rgba(19,19,22, 0.4);
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+background:rgba(255,255,255, 0.2);
+}
+ 
+::-webkit-scrollbar-thumb {
+background:rgba(255,255,255, 0.2);
+}
+
+
+/* RIGHT SIDEBAR */
+.right-sidebar {
+	position:absolute;
+	left: 700px; top:103px;
+	width: 240px; height: 333px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 10px;		
+	background:rgba(255,255,255, 0.2);
+	border: 1px solid #8c909b;
+	border-left: none;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 .puzzle_link {
@@ -80,21 +221,6 @@ text-transform: uppercase;
 	text-decoration: underline;
 	cursor: pointer;
 }
-
-.right-sidebar {
-	position:absolute;
-	left: 700px; top:100px;
-	width: 240px; height: 310px;
-	overflow-x: hidden;
-	overflow-y: auto;
-	padding: 10px;		
-	background: url("../images/gui/light-trans-bg.png") repeat;
-	border: 1px solid #ddd;
-	border-left: none;
-	border-bottom-right-radius: 10px;
-	border-top-right-radius: 10px;
-}
-
 
 /* PUZZLE SCREEN */
 .log_entry {
