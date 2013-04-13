@@ -73,5 +73,103 @@
 		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
 	}
 	}
+},
+"Test Puzzle" : {"name":"Test Puzzle",
+"start_code":"meowstart",
+"max_fans" : 300,
+"flavor_text" :"test test test.",
+ "resources_unlocked" : ["pencil"],
+ "teams_killed" : ["3a"],
+"hints" :{
+	"Hint 1" : {
+		"start_time":3,
+		"end_time": 10,
+		"start_cost":10,
+		"end_cost" : 0,
+		"text":"If you're having trouble seeing what to do, it might be a case of the blind leading the blind."},
+	"Hint 2": {
+		"start_time" : 6,
+		"end_time" : 15,
+		"start_cost" : 10,
+		"end_cost" : 0,
+		"text" : "Did you know red and blue make purple?"
+		},
+	"Hint 3" : {
+		"start_time" : 9,
+		"end_time" : 20,
+		"start_cost" : 10,
+		"end_cost" : 5,
+		"text" : "The dots are Braille letters.  There are two sets super-imposed, one red and one blue.  Purple dots are where a red and blue dot exist."
+		}
+	},
+"answers" : {
+	"theanswer" : {
+		"type" : "final",
+		"text" : "theanswer",
+		"response" : "Congratulations, you have solved the puzzle.",
+		"skipped_hints" : []
+	},
+	"partial" : {
+		"type" : "partial",
+		"text" : "partial",
+		"response" : "You're on the right track, but you need to go one step further.  Do you have a blacklight?",
+		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
+	},
+	"woops" : {
+		"type" : "partial",
+		"text": "woops",
+		"response" : "Oops, red comes before blue.",
+		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
+	}
+	}
+},
+"Test Puzzle 2" : {"name":"Test Puzzle 2",
+"start_code":"meowstart",
+"max_fans" : 300,
+"flavor_text" :"test test test.",
+ "resources_unlocked" : [],
+ "teams_killed" : [],
+"hints" :{
+	"Hint 1" : {
+		"start_time":3,
+		"end_time": 10,
+		"start_cost":10,
+		"end_cost" : 0,
+		"text":"If you're having trouble seeing what to do, it might be a case of the blind leading the blind."},
+	"Hint 2": {
+		"start_time" : 6,
+		"end_time" : 15,
+		"start_cost" : 10,
+		"end_cost" : 0,
+		"text" : "Did you know red and blue make purple?"
+		},
+	"Hint 3" : {
+		"start_time" : 9,
+		"end_time" : 20,
+		"start_cost" : 10,
+		"end_cost" : 5,
+		"text" : "The dots are Braille letters.  There are two sets super-imposed, one red and one blue.  Purple dots are where a red and blue dot exist."
+		}
+	},
+"answers" : {
+	"theanswer" : {
+		"type" : "final",
+		"text" : "theanswer",
+		"response" : "Congratulations, you have solved the puzzle.",
+		"skipped_hints" : []
+	},
+	"partial" : {
+		"type" : "partial",
+		"text" : "partial",
+		"response" : "You're on the right track, but you need to go one step further.  Do you have a blacklight?",
+		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
+	},
+	"woops" : {
+		"type" : "partial",
+		"text": "woops",
+		"response" : "Oops, red comes before blue.",
+		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
+	}
+	}
 }
 }

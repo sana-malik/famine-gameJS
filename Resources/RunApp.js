@@ -34,6 +34,7 @@ $(document).ready(function() {
 	var team = new TeamView({el : "#bottombar", model : session});
 	var user = new UserView({el : "#sidebar", model : session});
 	var main = new MainView({el : "#main > #main_screen", model: session});
+	var multipuz = new MultiPuzzleView({el : "#main > #multipuzzle", model: session});
 });
 
 function populateTeams() {

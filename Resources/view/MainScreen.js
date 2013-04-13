@@ -66,8 +66,20 @@ var MainView = Backbone.View.extend({
 		// activate puzzles in session
 		var result = this.model.activatePuzzles(entry);
 		if (result > 0) {
+			// clear and hide start code box
 			$("#start_input").val("");
 			$("#start_code_box").hide();
+
+			// hide main screen
+			$(".active").removeClass("active");
+			// go to either single puzzle view or multipuzzle view
+			if (result === 1) {
+				var activePuz = this.model.getActivePuzzles();
+				$(".puzzle#"+nameToId(activePuz[0])).addClass("active");
+			}
+			else {
+				$("#multipuzzle").addClass("active");
+			}
 		}
 		else {
 			$("#return_message").html("<font color=red>sorry! " + entry + " is not a valid code.</font>");

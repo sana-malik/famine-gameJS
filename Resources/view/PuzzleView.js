@@ -139,3 +139,22 @@ var PuzzleView = Backbone.View.extend({
 		$('#main_screen').addClass('active');
 	}
 });
+
+var MultiPuzzleView = Backbone.View.extend({
+	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
+				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
+				<div id="path">Path > Goes > Here</div>\
+			</div>\
+			<div class="content"></div></div>\
+		<div class="right-sidebar">what should go here? probably an overall timer?</div>'),
+
+	initialize: function() {
+		_.bindAll(this, 'render');
+		this.render();
+		this.ActiveView = new ActivePuzzlesView({el : "#multipuzzle .content", model : this.model});
+	},
+
+	render: function() {
+		$(this.el).html(this.template());
+	}
+});

@@ -43,7 +43,7 @@ var Session = Backbone.Model.extend({
 
 	getActivePuzzles : function() {
 		var active = [];
-		$.each(this.get(puzzleStats), function(name, pStat) {
+		$.each(this.get("puzzleStats"), function(name, pStat) {
 			if (pStat["status"] === puzzleStatus.ACTIVE) {
 				active.push(name);
 			}

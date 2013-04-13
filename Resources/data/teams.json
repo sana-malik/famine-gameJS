@@ -16,5 +16,13 @@
 "name" :"Team 1b",
 "talent":["NUNCHUCKS","shelter","traps"],
 "mentor":"Philip"}
+,
+"3a" : {"id":"3a",
+"bio":"moo!",
+"icon":"images/team_icons/team03.gif",
+"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
+"name" :"Team 3a",
+"talent":["NUNCHUCKS","shelter","traps"],
+"mentor":"Todd"}
 }
 }
