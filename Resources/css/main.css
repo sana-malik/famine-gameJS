@@ -213,6 +213,19 @@ background:rgba(255,255,255, 0.2);
 	border-top-right-radius: 10px;
 }
 
+.right-sidebar #return_message {
+height: 20px;
+padding: 2px;
+}
+
+#right_sidebar_content {
+height: 250px;
+}
+
+.answer_box {
+
+}
+
 .puzzle_link {
 	color: blue;
 }
@@ -321,8 +334,44 @@ background:rgba(255,255,255, 0.2);
 }
 
 
+.hint_name {
+font-family: 'Orbitron';
+font-size: 1em;
+margin-bottom: 0px;
+padding-bottom: 0px;
+}
 
+#hint_button {
+}
 
+h2.puzzle_title {
+font-family: 'Orbitron';
+font-size: 1em;
+margin-bottom: 0px;
+margin-top: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+}
 
+button {
+background:rgba(255,255,255, 0.2);
+color: #fff;
+border: 1px solid #fff;
+font-family: 'Electrolize', sans-serif;
+font-size: 1em;
+letter-spacing: 1px;
+-webkit-appearance: none;
+border-radius: 3px;
+}
+
+button:hover {
+background: #222;
+color: #fff;
+}
+
+.log {
+height: 200px;
+overflow: auto;
+}
 
 

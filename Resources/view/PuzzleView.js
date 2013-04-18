@@ -18,7 +18,7 @@ var PuzzleLogView = Backbone.View.extend({
 });
 
 var HintView = Backbone.View.extend({
-	template : _.template('<span class="hint_name"><%= name %>: </span><span class="hint_text"></span>'),
+	template : _.template('<h3 class="hint_name"><%= name %>: </h3><div class="hint_text"></div>'),
 	
 	initialize: function(options) {
 		var that = this;
@@ -55,7 +55,7 @@ var HintView = Backbone.View.extend({
 
 		var remaining = session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["remaining"];
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
-			$(that.el).children('.hint_text').html('available in ' + formatTime(remaining));
+			$(that.el).children('.hint_text').html('Available in ' + formatTime(remaining));
 		}
 		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.AVAILABLE) {
 			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Get Hint</button>');
@@ -91,15 +91,20 @@ var PuzzleView = Backbone.View.extend({
 				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
 				<div id="path">Path > Goes > Here</div>\
 			</div>\
-			<div class="content"><span class="puzzle_title"><%= name %></span>\
+			<div class="content"><h2 class="puzzle_title"><%= name %></h2>\
 		<span class="flavor_text"><%= flavor_text %></span>\
 		<div class="session_vars"></div>\
 		<div class="hints"></div>\
 		</div></div>\
 		<div class="right-sidebar">\
+		<div id="right_sidebar_content">\
+		<h2 class="puzzle_title"><%= name %></h2>\
+		<div class="puzzle_data">Fans watching</div>\
+		<div class="puzzle_data">Time elapsed</div>\
+			<div class="log"></div>\
+		</div>\
 		<div class="answer_box">Enter an answer: <input type="text" class="answer_input">\
 		<button class="answer_button">Submit</button><button class="giveup_button">I give up!</button></div>\
-		<div class="log"></div>\
 		</div>'),
 
 	initialize: function(options) {
