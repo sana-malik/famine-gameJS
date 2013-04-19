@@ -95,16 +95,17 @@ var PuzzleView = Backbone.View.extend({
 		<span class="flavor_text"><%= flavor_text %></span>\
 		<div class="session_vars"></div>\
 		<div class="hints"></div>\
+		<button class="giveup_button">I give up!</button>\
 		</div></div>\
 		<div class="right-sidebar">\
 		<div id="right_sidebar_content">\
 		<h2 class="puzzle_title"><%= name %></h2>\
-		<div class="puzzle_data">Fans watching</div>\
-		<div class="puzzle_data">Time elapsed</div>\
+		<div class="puzzle_data">Fans watching<br />\
+		Time elapsed</div>\
 			<div class="log"></div>\
 		</div>\
 		<div class="answer_box">Enter an answer: <input type="text" class="answer_input">\
-		<button class="answer_button">Submit</button><button class="giveup_button">I give up!</button></div>\
+		<button class="answer_button">Submit</button></div>\
 		</div>'),
 
 	initialize: function(options) {
