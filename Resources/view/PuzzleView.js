@@ -139,9 +139,16 @@ var PuzzleView = Backbone.View.extend({
 		puzzles[this.puzzleName].checkAnswer(entry);
 	},
 
-	back_to_main : function() {
+	back_to_main :function() {
 		$('.main.active').removeClass('active');
-		$('#main_screen').addClass('active');
+
+		var results = session.getActivePuzzles().length;
+		if (results <= 1) {
+			$('#main_screen').addClass('active');
+		}
+		else {
+			$('#multipuzzle').addClass('active');
+		}
 	}
 });
 
@@ -161,5 +168,14 @@ var MultiPuzzleView = Backbone.View.extend({
 
 	render: function() {
 		$(this.el).html(this.template());
+	},
+
+	events : {
+		'click #backbutton' : 'back_to_main',
+	},
+
+	back_to_main :function() {
+		$('.main.active').removeClass('active');
+		$('#main_screen').addClass('active');
 	}
 });

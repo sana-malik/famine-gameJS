@@ -38,9 +38,23 @@ var ActivePuzzlesView = Backbone.View.extend({
 		}
 		else {
 			$("#start_code_box").show();
+			$("#active_puzzle_button").hide();
 		}
 	}
 });
+
+var goToActivePuzzle = function(result) {
+	// hide main screen
+	$(".active").removeClass("active");
+	// go to either single puzzle view or multipuzzle view
+	if (result === 1) {
+		var activePuz = session.getActivePuzzles();
+		$(".puzzle#"+nameToId(activePuz[0])).addClass("active");
+	}
+	else {
+		$("#multipuzzle").addClass("active");
+	}
+}
 
 var MainView = Backbone.View.extend({
 	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
@@ -53,11 +67,12 @@ var MainView = Backbone.View.extend({
 				</div></div>\
 				<div class="right-sidebar"><div id="right_sidebar_content">location stuff</div><div id="return_message"></div><div id="start_code_box">Enter a start code: <input type="text" id="start_input">\
 		<button id="start_button">Submit</button></div>\
-		<div id="active_puzzles"></div>\
+		<button id="active_puzzle_button">ACTIVE PUZZLE</button>\
 		</div>'),
 
 	events: {
-		'click #start_button' : 'start_button_clicked'
+		'click #start_button' : 'start_button_clicked',
+		'click #active_puzzle_button' : 'active_puzzle_clicked'
 	},
 
 
@@ -70,21 +85,20 @@ var MainView = Backbone.View.extend({
 			// clear and hide start code box
 			$("#start_input").val("");
 			$("#start_code_box").hide();
+			// show puzzle link box
+			$("#active_puzzle_button").show();
 
-			// hide main screen
-			$(".active").removeClass("active");
-			// go to either single puzzle view or multipuzzle view
-			if (result === 1) {
-				var activePuz = this.model.getActivePuzzles();
-				$(".puzzle#"+nameToId(activePuz[0])).addClass("active");
-			}
-			else {
-				$("#multipuzzle").addClass("active");
-			}
+			goToActivePuzzle(result);
 		}
 		else {
 			$("#return_message").html("<font color=red>" + entry + " is not valid</font>");
 		}
+	},
+
+	active_puzzle_clicked : function() {
+		// activate puzzles in session
+		var result = this.model.getActivePuzzles().length;
+		goToActivePuzzle(result);
 	},
 
 	initialize: function() {
