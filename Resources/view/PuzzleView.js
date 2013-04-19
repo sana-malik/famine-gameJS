@@ -89,7 +89,7 @@ var PuzzleSessionView = Backbone.View.extend({
 var PuzzleView = Backbone.View.extend({
 	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
 				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
-				<div id="path">Path > Goes > Here</div>\
+				<div id="path">Main > <% var active = session.getActivePuzzles(); if (active.length > 1) { %> Puzzles > <%}%><%= name %></div>\
 			</div>\
 			<div class="content"><span class="puzzle_title"><%= name %></span>\
 		<span class="flavor_text"><%= flavor_text %></span>\
@@ -143,7 +143,7 @@ var PuzzleView = Backbone.View.extend({
 var MultiPuzzleView = Backbone.View.extend({
 	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
 				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
-				<div id="path">Path > Goes > Here</div>\
+				<div id="path">Main > Puzzles</div>\
 			</div>\
 			<div class="content"></div></div>\
 		<div class="right-sidebar">what should go here? probably an overall timer?</div>'),

@@ -44,7 +44,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 var MainView = Backbone.View.extend({
 	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
 				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
-				<div id="path">Path > Goes > Here</div>\
+				<div id="path">Main</div>\
 			</div>\
 			<div class="content"><p>Testing the scrollbar</p>\
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum enim mi, vulputate et rutrum quis, feugiat ut libero. Nulla eu velit odio. Aliquam enim nunc, pharetra vel laoreet non, malesuada at sapien. Nullam eleifend sem eu eros facilisis euismod. Etiam quis lacus id felis gravida venenatis. Quisque blandit pharetra dolor, vel accumsan eros gravida vitae. Integer ac leo urna. Nullam ut iaculis orci. Nunc at orci eros. Morbi quis nibh purus, id ultricies sapien.</p>\
