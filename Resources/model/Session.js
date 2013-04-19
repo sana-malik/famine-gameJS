@@ -72,7 +72,7 @@ var Session = Backbone.Model.extend({
 					"sec_elapsed" : 0, // not used 
 					"timerID" : timerID, // need to keep this so we can destroy it when the puzzle is completed
 					"start_time" : startTime,
-					"log" : [getCurrentDateTime() + ":  Puzzle Started"]
+					"log" : ["<div class='log_time'>" + getCurrentDateTime() + ":</div><div class='log_content'>Puzzle Started</div>"]
 				};
 				$.extend(true, puzStats[name], puzzObj);
 				count += 1;
