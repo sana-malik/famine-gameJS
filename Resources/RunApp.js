@@ -20,7 +20,7 @@ $(document).ready(function() {
     debug.addItem('Toggle Quick Timer', Debug.toggleDebugTiming)
 
     //Add menu to the current window
-    Ti.UI.getCurrentWindow().setMenu(menu);
+   // Ti.UI.getCurrentWindow().setMenu(menu);
 
 	// Set up models
 	teams = populateTeams();
