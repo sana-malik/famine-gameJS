@@ -35,6 +35,30 @@ $(document).ready(function() {
 	var user = new UserView({el : "#sidebar", model : session});
 	var main = new MainView({el : "#main > #main_screen", model: session});
 	var multipuz = new MultiPuzzleView({el : "#main > #multipuzzle", model: session});
+
+
+	// Set up tab functionality
+	$('#tab_main').click(function() {
+		$("#toc > .current").removeClass("current");
+		$("#toc > #tab_main").addClass("current");
+
+		$("#main_container > .tab.active").removeClass("active");
+		$("#main.tab").addClass("active");
+	});
+	$('#tab_activity').click(function() {
+		$("#toc > .current").removeClass("current");
+		$("#toc > #tab_activity").addClass("current");
+
+		$("#main_container > .active.tab").removeClass("active");
+		$("#activity.tab").addClass("active");
+	});
+	$('#tab_info').click(function() {
+		$("#toc > .current").removeClass("current");
+		$("#toc > #tab_info").addClass("current");
+
+		$("#main_container > .active.tab").removeClass("active");
+		$("#info.tab").addClass("active");
+	});
 });
 
 function populateTeams() {

@@ -67,10 +67,6 @@ h3.fans {
 	display: none;
 }
 
-.active {
-	display: block;
-}
-
 /* NAVIGATION TABS */
 #tabs {
 	position:absolute;
@@ -199,7 +195,7 @@ background:rgba(255,255,255, 0.2);
 
 
 /* RIGHT SIDEBAR */
-.right-sidebar {
+#main .right-sidebar {
 	position:absolute;
 	left: 700px; top:103px;
 	width: 245px; height: 333px;
@@ -238,6 +234,41 @@ height: 250px;
 /* PUZZLE SCREEN */
 .log_entry {
 	display: block;
+}
+
+/* TAB DIVS */
+.tab {
+	display: none;
+}
+
+/* ACTIVITY PAGE */
+#activity {
+	position:absolute;
+	left: 265px; top: 103px;
+	width: 680px; height: 333px;
+	overflow: auto;
+	padding: 10px;	
+	border-bottom: #8c909b solid 1px;
+	border-left: #8c909b solid 1px;
+	border-right: #8c909b solid 1px;
+	background:rgba(19,19,22, 0.4);
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+/* INFO PAGE */
+#info {
+	position:absolute;
+	left: 265px; top: 103px;
+	width: 680px; height: 333px;
+	overflow: auto;
+	padding: 10px;	
+	border-bottom: #8c909b solid 1px;
+	border-left: #8c909b solid 1px;
+	border-right: #8c909b solid 1px;
+	background:rgba(19,19,22, 0.4);
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 /* BOTTOM BAR */
@@ -413,3 +444,8 @@ clear: both;
 margin-top:10px;
 }
 
+/* MISC */
+
+.active {
+	display: block;
+}
