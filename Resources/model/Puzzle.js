@@ -27,13 +27,27 @@ var Puzzle = Backbone.Model.extend({
 				//this.unlockResources();
 
 				// remove timer
-
-				// what to do about unopened hints?	
+				clearInterval(stats[this.get("name")]["timerID"]);
 				
+				// set all hints to revealed
+				$.each(stats[this.get("name")]["hintStats"], function(hname, hint) {
+					hint["status"] = hintStatus.REVEALED;
+				});
+
 				// allot fans
 				session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
 
+				// advance location
+				if (this.get("advance_location")) {
+					session.set("currentLocation", session.get("currentLocation")+1);
+				}
+
+				// update the stats
 				session.set("puzzleStats",stats);
+
+				// go back to main
+				$('.main.active').removeClass('active');
+				$('#main_screen').addClass('active');
 			}
 			response += entry + " - " + this.get("answers")[entry]["response"];
 		}

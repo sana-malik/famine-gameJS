@@ -5,6 +5,8 @@
 "flavor_text" :"Upon entering the room you see a gelatinous cube before you.",
  "resources_unlocked" : ["fork"],
  "teams_killed" : ["1b"],
+ "meta" : false,
+ "advance_location" : true,
 "hints" :{
 	"Hint 1" : {
 		"start_time":5,
@@ -80,6 +82,8 @@
 "flavor_text" :"test test test.",
  "resources_unlocked" : ["pencil"],
  "teams_killed" : ["3a"],
+ "meta" : true,
+ "advance_location" : true,
 "hints" :{
 	"Hint 1" : {
 		"start_time":3,
@@ -129,6 +133,8 @@
 "flavor_text" :"test test test.",
  "resources_unlocked" : [],
  "teams_killed" : [],
+ "meta" : false,
+ "advance_location" : false,
 "hints" :{
 	"Hint 1" : {
 		"start_time":3,

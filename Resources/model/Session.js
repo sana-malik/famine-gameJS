@@ -9,6 +9,7 @@ var Session = Backbone.Model.extend({
 			temp[name] = {"status" : locationStatus.UNVISITED};
 		});
 		this.set("locationStats", temp);
+		this.set("currentLocation", 0);
 
 		// resources
 		temp = {};

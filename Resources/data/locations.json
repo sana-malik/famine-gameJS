@@ -1,5 +1,5 @@
 {
-"order" : ["The Motley Fool"],
+"order" : ["Air Force Memorial", "The Motley Fool"],
 "locations" : {
 "The Motley Fool" : {
 	"name" : "The Motley Fool",
@@ -13,8 +13,23 @@
 	"image_file" : "images/locations/fool_logo.jpg",
 	"map_file" : "images/maps/fool_map.png",
 	
-	"time_open" : "11:00 PM",
-	"time_closed" : "2:00 AM"
-}
+	"time_open" : "23:00",
+	"time_closed" : "2:00"
+	},
+"Air Force Memorial" : {
+	"name" : "Air Force Memorial",
+	"puzzles" : ["Test Puzzle","Test Puzzle 2"],
+	"address" : "One Air Force Memorial Drive, Arlington, VA 22204",
+	
+	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
+	"restroom_description" : "There are restrooms located inside the office building.",
+	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
+	
+	"image_file" : "images/locations/fool_logo.jpg",
+	"map_file" : "images/maps/fool_map.png",
+	
+	"time_open" : "8:00",
+	"time_closed" : "23:00"
+	}
 }
 }
