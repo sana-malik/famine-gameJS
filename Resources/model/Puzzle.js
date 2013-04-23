@@ -49,6 +49,14 @@ var Puzzle = Backbone.Model.extend({
 				$('.main.active').removeClass('active');
 				$('#main_screen').addClass('active');
 			}
+			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct final answer
+				// reveal skipped hints
+				that = this;
+				$.each(that.get("answers")[entry]["skipped_hints"], function(index, hint_name)  {
+					that.get("hints")[hint_name]["status"] = hintStatus.SKIPPED;
+				});
+			}
+		
 			response += entry + " - " + this.get("answers")[entry]["response"];
 		}
 		else {
