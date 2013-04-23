@@ -51,10 +51,15 @@ var Puzzle = Backbone.Model.extend({
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct final answer
 				// reveal skipped hints
-				that = this;
-				$.each(that.get("answers")[entry]["skipped_hints"], function(index, hint_name)  {
-					that.get("hints")[hint_name]["status"] = hintStatus.SKIPPED;
+				puzzle = this;
+				hints_to_skip = puzzle.get("answers")[entry]["skipped_hints"];
+
+				$.each(hints_to_skip, function(index, hint_name)  {
+					stats[puzzle.get("name")]["hintStats"][hint_name]["status"] = hintStatus.SKIPPED;
 				});
+
+				// update the stats
+				session.set("puzzleStats",stats);
 			}
 		
 			response += entry + " - " + this.get("answers")[entry]["response"];

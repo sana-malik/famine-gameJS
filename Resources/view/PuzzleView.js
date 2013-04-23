@@ -38,13 +38,16 @@ var HintView = Backbone.View.extend({
 		var current_time = Math.round((new Date()).getTime()/1000);
 		var elapsed = (current_time-stats[this.puzzleName]["start_time"]) * 1000/timeInterval;
 		
+		if (stats[this.puzzleName]["hintStats"][this.hintName]["status"] != hintStatus.SKIPPED) {
+			var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
+			stats[this.puzzleName]["current_worth"] -= cost;
+			
+			if (stats[this.puzzleName]["current_worth"] < 0)
+				stats[this.puzzleName]["current_worth"] = 0;
+
+		}
+
 		stats[this.puzzleName]["hintStats"][this.hintName]["status"] = hintStatus.REVEALED;
-		
-		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
-		stats[this.puzzleName]["current_worth"] -= cost;
-		
-		if (stats[this.puzzleName]["current_worth"] < 0)
-			stats[this.puzzleName]["current_worth"] = 0;
 
 		this.model.set("puzzleStats",stats);
 	},
@@ -54,12 +57,16 @@ var HintView = Backbone.View.extend({
 		$(that.el).html(that.template({name : this.hintName}));
 
 		var remaining = session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["remaining"];
+
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
 			$(that.el).children('.hint_text').html('Available in ' + formatTime(remaining));
 		}
 		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.AVAILABLE) {
 			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Get Hint</button>');
 			if (remaining > 0) $(that.el).children('.hint_text').append(' -- min cost in ' + formatTime(remaining));
+		}
+		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.SKIPPED) {
+			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Get Hint</button>');
 		}
 		else {
 			$(that.el).children('.hint_text').html(puzzles[this.puzzleName].get("hints")[this.hintName].get("text"));
@@ -69,7 +76,7 @@ var HintView = Backbone.View.extend({
 });
 
 var PuzzleSessionView = Backbone.View.extend({
-	template : _.template('Fans watching: <span id="fan_worth"><%= current_worth %></span>'),
+	template : _.template('Viewers watching: <span id="fan_worth"><%= current_worth %></span>'),
 
 	initialize: function(options) {
 		_.bindAll(this, 'render');
@@ -100,7 +107,7 @@ var PuzzleView = Backbone.View.extend({
 		<div class="right-sidebar">\
 		<div id="right_sidebar_content">\
 		<h2 class="puzzle_title"><%= name %></h2>\
-		<div class="puzzle_data">Fans watching<br />\
+		<div class="puzzle_data">Viewers watching<br />\
 		Time elapsed</div>\
 			<div class="log"></div>\
 		</div>\
