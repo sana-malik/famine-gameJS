@@ -1,181 +1,436 @@
 {
 "Gelatinous Cube" : {"name":"Gelatinous Cube",
-"start_code":"boingboing",
+"start_code" : "boingboing",
 "max_fans" : 100,
-"flavor_text" :"Upon entering the room you see a gelatinous cube before you.",
- "resources_unlocked" : ["fork"],
- "teams_killed" : ["1b"],
- "meta" : false,
- "advance_location" : true,
-"hints" :{
-	"Hint 1" : {
-		"start_time":5,
-		"end_time": 10,
-		"start_cost":10,
-		"end_cost" : 0,
-		"text":"If you're having trouble seeing what to do, it might be a case of the blind leading the blind."},
-	"Hint 2": {
-		"start_time" : 10,
-		"end_time" : 15,
-		"start_cost" : 10,
-		"end_cost" : 0,
-		"text" : "Did you know red and blue make purple?"
-		},
-	"Hint 3" : {
-		"start_time" : 15,
-		"end_time" : 20,
-		"start_cost" : 10,
-		"end_cost" : 5,
-		"text" : "The dots are Braille letters.  There are two sets super-imposed, one red and one blue.  Purple dots are where a red and blue dot exist."
-		},
-	"Hint 4" : {
-		"start_time":20,
-		"end_time":25,
-		"start_cost":10,
-		"end_cost":5,
-		"text" :"Have you tried applying the Braille message to the puzzle?  Literally?"
-		},
-	"Hint 5" : {
-		"start_time":25,
-		"end_time":30,
-		"start_cost":50,
-		"end_cost":20,
-		"text":"The Braille solves to \"Blacklight\".  Apply a blacklight to the puzzle and you should see the answer: Sugar Rush."
-		}
-	},
+"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"resources_unlocked" : ["fork"],
+"teams_killed" : ["1b"],
+"meta" : false,
+"advance_location" : false,
+"hints" : {
+        "Hint 1" : {
+                "start_time" : 5,
+                "end_time" : 10,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "If you're having trouble seeing what to do, it might be a case of the blind leading the blind."
+                },
+        "Hint 2" : {
+                "start_time" : 10,
+                "end_time" : 15,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "Did you know red and blue make purple?"
+                },
+        "Hint 3" : {
+                "start_time" : 15,
+                "end_time" : 20,
+                "start_cost" : 10,
+                "end_cost" : 5,
+                "text" : "The dots are Braille letters. There are two sets super-imposed, one red and one blue. Purple dots are where a red and blue dot exist."
+                },
+        "Hint 4" : {
+                "start_time" : 20,
+                "end_time" : 25,
+                "start_cost" : 10,
+                "end_cost" : 5,
+                "text" : "Have you tried applying the Braille message to the puzzle? Literally?"
+                },
+        "Hint 5" : {
+                "start_time" : 25,
+                "end_time" : 30,
+                "start_cost" : 50,
+                "end_cost" : 20,
+                "text" : "The Braille solves to \"Blacklight\". Apply a blacklight to the puzzle and you should see the answer: Sugar Rush."
+                }
+        },
 "answers" : {
-	"sugarrush" : {
-		"type" : "final",
-		"text" : "sugarrush",
-		"response" : "Congratulations, you have solved the puzzle.",
-		"skipped_hints" : []
-	},
-	"blacklight" : {
-		"type" : "partial",
-		"text" : "blacklight",
-		"response" : "You're on the right track, but you need to go one step further.  Do you have a blacklight?",
-		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
-	},
-	"lightblack" : {
-		"type" : "partial",
-		"text": "lightblack",
-		"response" : "Oops, red comes before blue.",
-		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
-	},
-	"grey" : {
-		"type" : "partial",
-		"text" : "grey",
-		"response" : "You're being too literal.  Also, red comes before blue.",
-		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
-	},
-	"gray" : {
-		"type" : "partial",
-		"text" : "gray",
-		"response" : "You're being too literal.  Also, red comes before blue.",
-		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
-	}
-	}
+        "sugarrush" : {
+                "type" : "final",
+                "text" : "sugarrush",
+                "response" : "Congratulations, you have solved the puzzle.",
+                "skipped_hints" : []
+                },
+        "blacklight" : {
+                "type" : "partial",
+                "text" : "blacklight",
+                "response" : "You're on the right track, but you need to go one step further.",
+                "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+                },
+        "lightblack" : {
+                "type" : "partial",
+                "text" : "lightblack",
+                "response" : "Oops, red comes before blue.",
+                "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+                },
+        "grey" : {
+                "type" : "partial",
+                "text" : "grey",
+                "response" : "You're being too literal. Also, red comes before blue.",
+                "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+                },
+        "gray" : {
+                "type" : "partial",
+                "text" : "gray",
+                "response" : "You're being too literal. Also, red comes before blue.",
+                "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+                }
+        }
 },
-"Test Puzzle" : {"name":"Test Puzzle",
-"start_code":"meowstart",
-"max_fans" : 300,
-"flavor_text" :"test test test.",
- "resources_unlocked" : ["pencil"],
- "teams_killed" : ["3a"],
- "meta" : true,
- "advance_location" : true,
-"hints" :{
-	"Hint 1" : {
-		"start_time":3,
-		"end_time": 10,
-		"start_cost":10,
-		"end_cost" : 0,
-		"text":"If you're having trouble seeing what to do, it might be a case of the blind leading the blind."},
-	"Hint 2": {
-		"start_time" : 6,
-		"end_time" : 15,
-		"start_cost" : 10,
-		"end_cost" : 0,
-		"text" : "Did you know red and blue make purple?"
-		},
-	"Hint 3" : {
-		"start_time" : 9,
-		"end_time" : 20,
-		"start_cost" : 10,
-		"end_cost" : 5,
-		"text" : "The dots are Braille letters.  There are two sets super-imposed, one red and one blue.  Purple dots are where a red and blue dot exist."
-		}
-	},
+"Lincoln Logs" : {"name":"Lincoln Logs",
+"start_code" : "cabin",
+"max_fans" : 100,
+"flavor_text" : "Now that you're on your own in the woods, it's time to start gather some lumber and build a shelter. ",
+"resources_unlocked" : [],
+"teams_killed" : ["7a"],
+"meta" : false,
+"advance_location" : true,
+"hints" : {
+        "Hint 1" : {
+                "start_time" : 5,
+                "end_time" : 15,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "You're building a single structure by making complete words in the slots of stacked logs. "
+                },
+        "Hint 2" : {
+                "start_time" : 15,
+                "end_time" : 25,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "The completed words should be read in groups of two, forming a clue which you need to answer. "
+                },
+        "Hint 3" : {
+                "start_time" : 30,
+                "end_time" : 40,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "The six answers that lie on the same level have something in common.  "
+                },
+        "Hint 4" : {
+                "start_time" : 45,
+                "end_time" : 55,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "Each set of six answers suggests a common type of tree. "
+                },
+        "Hint 5" : {
+                "start_time" : 55,
+                "end_time" : 65,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "Look at every two levels of your structure from above.  Do they make a pattern?"
+                },
+        "Hint 6" : {
+                "start_time" : 65,
+                "end_time" : 75,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "Each level makes a number that will be used in conjuction with the wood from the six sets of clues. "
+                }
+        },
 "answers" : {
-	"theanswer" : {
-		"type" : "final",
-		"text" : "theanswer",
-		"response" : "Congratulations, you have solved the puzzle.",
-		"skipped_hints" : []
-	},
-	"partial" : {
-		"type" : "partial",
-		"text" : "partial",
-		"response" : "You're on the right track, but you need to go one step further.  Do you have a blacklight?",
-		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
-	},
-	"woops" : {
-		"type" : "partial",
-		"text": "woops",
-		"response" : "Oops, red comes before blue.",
-		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
-	}
-	}
+        "ritual" : {
+                "type" : "final",
+                "text" : "ritual",
+                "response" : "Congratulations, you have solved the puzzle!",
+                "skipped_hints" : []
+                },
+        "538214" : {
+                "type" : "partial",
+                "text" : "538214",
+                "response" : "Those look like the correct numbers, but you still need to figure out how to use them. ",
+                "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+                },
+        "412835" : {
+                "type" : "partial",
+                "text" : "412835",
+                "response" : "You might want to put those numbers in the opposite order. ",
+                "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+                },
+        "cherryolivechestnutgumashapple" : {
+                "type" : "partial",
+                "text" : "cherryolivechestnutgumashapple",
+                "response" : "Those are the correct woods, but you're not done just yet. ",
+                "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+                },
+        "appleashgumchestnutolivecherry" : {
+                "type" : "partial",
+                "text" : "appleashgumchestnutolivecherry",
+                "response" : "Looks like you've got your woods in reverse order. ",
+                "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+                }
+        }
 },
-"Test Puzzle 2" : {"name":"Test Puzzle 2",
-"start_code":"meowstart",
-"max_fans" : 300,
-"flavor_text" :"test test test.",
- "resources_unlocked" : [],
- "teams_killed" : [],
- "meta" : false,
- "advance_location" : false,
-"hints" :{
-	"Hint 1" : {
-		"start_time":3,
-		"end_time": 10,
-		"start_cost":10,
-		"end_cost" : 0,
-		"text":"If you're having trouble seeing what to do, it might be a case of the blind leading the blind."},
-	"Hint 2": {
-		"start_time" : 6,
-		"end_time" : 15,
-		"start_cost" : 10,
-		"end_cost" : 0,
-		"text" : "Did you know red and blue make purple?"
-		},
-	"Hint 3" : {
-		"start_time" : 9,
-		"end_time" : 20,
-		"start_cost" : 10,
-		"end_cost" : 5,
-		"text" : "The dots are Braille letters.  There are two sets super-imposed, one red and one blue.  Purple dots are where a red and blue dot exist."
-		}
-	},
+"Animal Farm" : {"name":"Animal Farm",
+"start_code" : "silo",
+"max_fans" : 100,
+"flavor_text" : "The team from the Agriculture district has been cruelly branding some of the local livestock.  Can you put an end to this horrible deed?",
+"resources_unlocked" : [],
+"teams_killed" : ["11a"],
+"meta" : false,
+"advance_location" : true,
+"hints" : {
+        "Hint 1" : {
+                "start_time" : 10,
+                "end_time" : 20,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "The word \"brands\" has more than one meaning in this context. "
+                },
+        "Hint 2" : {
+                "start_time" : 20,
+                "end_time" : 25,
+                "start_cost" : 5,
+                "end_cost" : 0,
+                "text" : "Pair companies with their animal mascots and then find out what ranch each one belongs to. "
+                },
+        "Hint 3" : {
+                "start_time" : 25,
+                "end_time" : 30,
+                "start_cost" : 10,
+                "end_cost" : 5,
+                "text" : "Each brand is composed of two letters from the company logo. "
+                },
+        "Hint 4" : {
+                "start_time" : 30,
+                "end_time" : 35,
+                "start_cost" : 10,
+                "end_cost" : 5,
+                "text" : "Each company name and its ranch share an interesting property. "
+                },
+        "Hint 5" : {
+                "start_time" : 35,
+                "end_time" : 45,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "What positions do the two letters appear in the logo?  This will help you figure out how to spell your final answer."
+                },
+        "Hint 6" : {
+                "start_time" : 50,
+                "end_time" : 50,
+                "start_cost" : 10,
+                "end_cost" : 10,
+                "text" : "Note the positions of the letters in the logo and take the letters in the same positions from the ranch name (they have the same number of letters).  To order your answer, look closely at the signs. "
+                }
+        },
 "answers" : {
-	"theanswer" : {
-		"type" : "final",
-		"text" : "theanswer",
-		"response" : "Congratulations, you have solved the puzzle.",
-		"skipped_hints" : []
-	},
-	"partial" : {
-		"type" : "partial",
-		"text" : "partial",
-		"response" : "You're on the right track, but you need to go one step further.  Do you have a blacklight?",
-		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
-	},
-	"woops" : {
-		"type" : "partial",
-		"text": "woops",
-		"response" : "Oops, red comes before blue.",
-		"skipped_hints" : ["Hint 1","Hint 2","Hint 3"]
-	}
-	}
+        "gorycattleprodmassacre" : {
+                "type" : "final",
+                "text" : "gorycattleprodmassacre",
+                "response" : "Congratulations, you have solved the puzzle!",
+                "skipped_hints" : []
+                },
+        "frostedflakes" : {
+                "type" : "partial",
+                "text" : "frostedflakes",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "geico" : {
+                "type" : "partial",
+                "text" : "geico",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "chickfila" : {
+                "type" : "partial",
+                "text" : "chickfila",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "vlasic" : {
+                "type" : "partial",
+                "text" : "vlasic",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "budweiser" : {
+                "type" : "partial",
+                "text" : "budweiser",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "serta" : {
+                "type" : "partial",
+                "text" : "serta",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "greyhound" : {
+                "type" : "partial",
+                "text" : "greyhound",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "energizer" : {
+                "type" : "partial",
+                "text" : "energizer",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "disney" : {
+                "type" : "partial",
+                "text" : "disney",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "cocacola" : {
+                "type" : "partial",
+                "text" : "cocacola",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                },
+        "toysrus" : {
+                "type" : "partial",
+                "text" : "toysrus",
+                "response" : "That's one of the companies. ",
+                "skipped_hints" : []
+                }
+        }
+},
+"Mining Artifact" : {"name":"Mining Artifact",
+"start_code" : "coal",
+"max_fans" : 100,
+"flavor_text" : "You've unearthed an artifact that clearly was planted by a team from the mining district.  Can you solve its mysteries and kill off your foe?",
+"resources_unlocked" : [],
+"teams_killed" : ["12a"],
+"meta" : false,
+"advance_location" : true,
+"hints" : {
+        "Hint 1" : {
+                "start_time" : 5,
+                "end_time" : 5,
+                "start_cost" : 0,
+                "end_cost" : 0,
+                "text" : "The correct orientation of the artifact should be with the DECRYPT US message facing you right side up.  "
+                },
+        "Hint 2" : {
+                "start_time" : 15,
+                "end_time" : 25,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "How are you going to solve this fracking puzzle?  Well, to start, did you count the number of holes on the top and the bottom?"
+                },
+        "Hint 3" : {
+                "start_time" : 25,
+                "end_time" : 35,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "The message DECRYPT US is self-referential.  Can you match up those letters to holes on the top of the artifact?"
+                },
+        "Hint 4" : {
+                "start_time" : 35,
+                "end_time" : 45,
+                "start_cost" : 20,
+                "end_cost" : 10,
+                "text" : "Perhaps holes don't run straight through the cube as they appear to?"
+                },
+        "Hint 5" : {
+                "start_time" : 45,
+                "end_time" : 55,
+                "start_cost" : 10,
+                "end_cost" : 0,
+                "text" : "You should have a small piece of equipment that may help you decode the message. "
+                },
+        "Hint 6" : {
+                "start_time" : 55,
+                "end_time" : 50,
+                "start_cost" : 10,
+                "end_cost" : 10,
+                "text" : "Squirt water through holes and see where it comes out on the other side.  This should give you a letter to letter translation. "
+                }
+        },
+"answers" : {
+        "blocklung" : {
+                "type" : "final",
+                "text" : "blocklung",
+                "response" : "Congratulations, you have solved the puzzle!",
+                "skipped_hints" : []
+                },
+        "blacklung" : {
+                "type" : "partial",
+                "text" : "blacklung",
+                "response" : "While that would totally make sense, it's not quite right. ",
+                "skipped_hints" : []
+                },
+        "decryptus" : {
+                "type" : "partial",
+                "text" : "decryptus",
+                "response" : "Yes, perhaps you should try that. ",
+                "skipped_hints" : []
+                }
+        }
+},
+"Flexipuzzle" : {"name":"Flexipuzzle",
+"start_code" : "Flexipuzzle",
+"max_fans" : 100,
+"flavor_text" : "Ooh, look, a flexipuzzle!",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : true,
+"hints" : {
+        "Hint 1" : {
+                "start_time" : 10,
+                "end_time" : 20,
+                "start_cost" : 20,
+                "end_cost" : 10,
+                "text" : "This is a diagramless crossword puzzle with bars as dividers instead of black squares. "
+                },
+        "Hint 2" : {
+                "start_time" : 25,
+                "end_time" : 35,
+                "start_cost" : 20,
+                "end_cost" : 10,
+                "text" : "Use the flexi-puzzle to help recreate the grid.  The number \"1\" has been given to you, and it should go in the upper left."
+                },
+        "Hint 3" : {
+                "start_time" : 35,
+                "end_time" : 45,
+                "start_cost" : 20,
+                "end_cost" : 10,
+                "text" : "Once you've solved the puzzle, follow 13 Down's instructions to see what takes shape."
+                },
+        "Hint 4" : {
+                "start_time" : 45,
+                "end_time" : 55,
+                "start_cost" : 20,
+                "end_cost" : 10,
+                "text" : "Part 2's answer is entirely in lowercase.  Make sure to read your answer with red on the left and purple on the right. "
+                }
+        },
+"answers" : {
+        "SING HANSEN" : {
+                "type" : "final",
+                "text" : "SING HANSEN",
+                "response" : "Congrats!",
+                "skipped_hints" : []
+                },
+        "SING" : {
+                "type" : "partial",
+                "text" : "SING",
+                "response" : "That's Part 1 of the answer.  To get full credit, you need to type both Part 1 and Part 2 in the same entry. ",
+                "skipped_hints" : []
+                },
+        "HANSEN" : {
+                "type" : "partial",
+                "text" : "HANSEN",
+                "response" : "That's Part 2 of the answer.  To get full credit, you need to type both Part 1 and Part 2 in the same entry. ",
+                "skipped_hints" : []
+                },
+        "SING OTHER SIDE" : {
+                "type" : "partial",
+                "text" : "SING OTHER SIDE",
+                "response" : "Part 1 is correct, but you still need to work on Part 2. ",
+                "skipped_hints" : ["Hint 1", "Hint 2"]
+                },
+        "OTHER SIDE" : {
+                "type" : "partial",
+                "text" : "OTHER SIDE",
+                "response" : "This is a clue to Part 2 of your answer. ",
+                "skipped_hints" : []
+                }
+        }
 }
 }
