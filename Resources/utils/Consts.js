@@ -1,4 +1,4 @@
-var puzzleStatus = {ACTIVE: "active", SKIPPED: "skipped", SOLVED: "solved", INACTIVE: "inactive"};
+var puzzleStatus = {ACTIVE: "active", SKIPPED: "skipped", SOLVED: "solved", INACTIVE: "inactive", ARCHIVED: "archived"};
 var teamStatus = {DEAD: "dead"};
 var locationStatus = {VISITED: "visited", SKIPPED: "skipped", CURRENT: "current", UNVISITED: "unvisited"};
 var hintStatus = {LOCKED: "locked", AVAILABLE: "available", REVEALED: "revealed", SKIPPED: "skipped"};

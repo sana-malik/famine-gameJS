@@ -1,9 +1,11 @@
 
 var ActivePuzzlesView = Backbone.View.extend({
 	template : _.template('<span class="puzzle_link clickable" id=<%= puzzleID %>><%= puzzleName %></span>'),
+	solvedtemplate : _.template('<span class="puzzle_link clickable" id=<%= puzzleID %>><%= puzzleName %>  (ANSWER - to do)</span>'),
 
-	initialize: function() {
+	initialize: function(options) {
 		_.bindAll(this, 'render');
+		this.puzzleName = options.puzzleName;
 		this.render();
 		this.model.bind('change:puzzleStats', this.render);
 	},
@@ -27,9 +29,15 @@ var ActivePuzzlesView = Backbone.View.extend({
 
 		var count = 0;
 		$.each(that.model.get("puzzleStats"), function(name, puzzle) {
-			if (puzzle["status"] === puzzleStatus.ACTIVE && !puzzles[name].get("meta")) {
-				$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
-				count += 1;
+			if (puzzles[name].get("start_code") === puzzles[that.puzzleName].get("start_code")) {
+				if ((puzzle["status"] === puzzleStatus.ACTIVE || puzzle["status"] === puzzleStatus.ARCHIVED) && !puzzles[name].get("meta")) {
+					$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
+					count += 1;
+				}
+				else if (puzzle["status"] === puzzleStatus.SOLVED && !puzzles[name].get("meta")) {
+					$(that.el).append(that.solvedtemplate({puzzleID: nameToId(name), puzzleName: name}));
+					count += 1;
+				}
 			}
 		});
 
@@ -191,7 +199,7 @@ var PuzzleView = Backbone.View.extend({
 
 		this.log_view = new PuzzleLogView({el : ".main#" + nameToId(this.puzzleName) + " .log", model : session, puzzleName : this.puzzleName});
 		if (puzzles[that.puzzleName].get("meta")) {
-			that.ActiveView = new ActivePuzzlesView({el : ".main#" + nameToId(this.puzzleName) + " .metas", model : session});
+			that.ActiveView = new ActivePuzzlesView({el : ".main#" + nameToId(this.puzzleName) + " .metas", model : session, puzzleName: that.puzzleName});
 		}
 		$(".meta_name", this.el).text(getMetaName(puzzles[this.puzzleName].get("start_code")));
 	},

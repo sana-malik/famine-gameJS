@@ -53,9 +53,6 @@ var Puzzle = Backbone.Model.extend({
 					}
 				}
 
-				// update the stats
-				session.set("puzzleStats",stats);
-
 				// go back to main or meta and change buttons if main
 				if (this.get("meta") || session.getActivePuzzles().length === 0) {
 					$('.main.active').removeClass('active');
@@ -64,10 +61,17 @@ var Puzzle = Backbone.Model.extend({
 					$('#active_puzzle_button').hide();
 
 					// change unfinished puzzles to ARCHIVED?? -- solvable but not active
+					$.each(session.getActivePuzzles(), function(index, pname) {
+						stats[pname]["status"] = puzzleStatus.ARCHIVED;
+					});
 				}
 				else {
 					// show the meta
 				}
+
+
+				// update the stats
+				session.set("puzzleStats",stats);
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct final answer
 				// reveal skipped hints
