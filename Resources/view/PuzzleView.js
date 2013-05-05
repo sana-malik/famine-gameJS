@@ -70,12 +70,11 @@ var HintView = Backbone.View.extend({
 		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.AVAILABLE) {
 			var button_text = 'Get hint, lose ' + cost + ' viewers';
 			if (cost == 0)
-				button_text = 'Get free hint';
+				button_text = 'Reveal free hint';
 			$(that.el).children('.hint_text').html('<button id=\"hint_button\">' + button_text + '</button>');
-			//if (remaining > 0) $(that.el).children('.hint_text').append(' -- min cost in ' + formatTime(remaining));
 		}
 		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.SKIPPED) {
-			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Reveal hint</button>');
+			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Reveal free hint</button>');
 		}
 		else {
 			$(that.el).children('.hint_text').html(puzzles[this.puzzleName].get("hints")[this.hintName].get("text"));
