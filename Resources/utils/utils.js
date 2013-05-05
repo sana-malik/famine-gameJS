@@ -38,10 +38,17 @@ function formatTime(seconds) {
 	var mins = Math.floor(seconds / 60);
 	var secs = seconds % 60;
 	var out = "";
-	if (mins < 10) out += "0";
-	out += mins + ":";
-	if (secs < 10) out += "0";
-	out += secs;
+	
+	if (mins > 0) {
+		out = mins + " minute";
+		if (mins > 1)
+			out += "s";
+	}
+	else {
+		out = secs + " second";
+		if (secs > 1)
+			out += "s";
+	}
 	return out;
 }
 
