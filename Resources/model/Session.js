@@ -77,6 +77,7 @@ var Session = Backbone.Model.extend({
 				};
 				$.extend(true, puzStats[name], puzzObj);
 				count += 1;
+
 				$("#main").append("<div class=\"main puzzle\" id=\""+nameToId(name) + "\"></div>");
 				var puzView = new PuzzleView({el : ".puzzle#"+nameToId(name), puzzleName : name});
 			}

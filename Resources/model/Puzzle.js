@@ -39,15 +39,35 @@ var Puzzle = Backbone.Model.extend({
 
 				// advance location
 				if (this.get("advance_location")) {
-					session.set("currentLocation", session.get("currentLocation")+1);
+					var currentLoc = session.get("currentLocation") + 1;
+					var now = new Date();
+					var nowStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear() + " " + now.getHours() + ":" + now.getMinutes();
+					while (locations[locOrder[currentLoc]].get("time_closed") < nowStr) {
+						currentLoc++;
+					}
+					session.set("currentLocation", currentLoc);
+
+					// if they are too early for the current location, display an alert
+					if (nowStr < locations[locOrder[currentLoc]].get("time_open")) {
+						alert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
+					}
 				}
 
 				// update the stats
 				session.set("puzzleStats",stats);
 
-				// go back to main
-				$('.main.active').removeClass('active');
-				$('#main_screen').addClass('active');
+				// go back to main or meta and change buttons if main
+				if (this.get("meta") || session.getActivePuzzles().length === 0) {
+					$('.main.active').removeClass('active');
+					$('#main_screen').addClass('active');
+					$('#start_code_box').show();
+					$('#active_puzzle_button').hide();
+
+					// change unfinished puzzles to ARCHIVED?? -- solvable but not active
+				}
+				else {
+					// show the meta
+				}
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct final answer
 				// reveal skipped hints

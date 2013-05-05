@@ -18,6 +18,30 @@ function clean(str) {
 	return str.replace(/[\s+!.@#$%^&*()]/g, '').toLowerCase();
 }
 
+function puzzlesWithStartCode(start) {
+	var count = 0;
+	$.each(puzzles, function(name, puz) {
+		if (puz.get("start_code") === start) {
+			count++;
+		}
+	})
+
+	return count;
+}
+
+function getMetaName(start) {
+	var pname = "";
+	$.each(puzzles, function(name, puz) {
+		if (puz.get("start_code") === start && puz.get("meta")) {
+			pname = name;
+			return false;
+		}
+	})
+
+	return pname;
+
+}
+
 function showPopup(content) {
 	$("#popup_container").show();
 	$("#popup_content > .content").append(content);

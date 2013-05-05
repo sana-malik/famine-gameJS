@@ -1,48 +1,3 @@
-
-var ActivePuzzlesView = Backbone.View.extend({
-	template : _.template('<span class="puzzle_link" id=<%= puzzleID %>><%= puzzleName %></span>'),
-
-	initialize: function() {
-		_.bindAll(this, 'render');
-		this.render();
-		this.model.bind('change:puzzleStats', this.render);
-	},
-
-	events : {
-		'click .puzzle_link' : 'showPuzzleScreen'
-	},
-
-	showPuzzleScreen : function(e) {
-		var clickedEl = $(e.currentTarget);
-  		var name = clickedEl.attr("id");
-
-  		$('.main.active').removeClass('active');
-  		$('div.puzzle#' + name).addClass('active');
-
-	},
-
-	render: function() {
-		var that = this;
-		$(that.el).empty();
-
-		var count = 0;
-		$.each(that.model.get("puzzleStats"), function(name, puzzle) {
-			if (puzzle["status"] === puzzleStatus.ACTIVE) {
-				$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
-				count += 1;
-			}
-		});
-
-		if (count != 0) {
-			$(that.el).prepend('<span class="title">Active Puzzles:</span>');
-		}
-		else {
-			$("#start_code_box").show();
-			$("#active_puzzle_button").hide();
-		}
-	}
-});
-
 var goToActivePuzzle = function(result) {
 	// hide main screen
 	$(".main.active").removeClass("active");
@@ -52,7 +7,15 @@ var goToActivePuzzle = function(result) {
 		$(".puzzle#"+nameToId(activePuz[0])).addClass("active");
 	}
 	else {
-		$("#multipuzzle").addClass("active");
+		var activePuzs = session.getActivePuzzles();
+		var activePuz = activePuzs[0];
+		$.each(activePuzs, function(index, puzzle) {
+			if (puzzles[puzzle].get("meta")) {
+				activePuz = puzzle;
+				return false;
+			}
+		})
+		$(".puzzle#"+nameToId(activePuz)).addClass("active");
 	}
 }
 
@@ -72,8 +35,7 @@ var LocationView = Backbone.View.extend({
 
 var MainView = Backbone.View.extend({
 	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
-				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
-				<div id="path">Path > Goes > Here</div>\
+				<div id="path">Main</div>\
 			</div>\
 			<div class="content"><p>Testing the scrollbar</p>\
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum enim mi, vulputate et rutrum quis, feugiat ut libero. Nulla eu velit odio. Aliquam enim nunc, pharetra vel laoreet non, malesuada at sapien. Nullam eleifend sem eu eros facilisis euismod. Etiam quis lacus id felis gravida venenatis. Quisque blandit pharetra dolor, vel accumsan eros gravida vitae. Integer ac leo urna. Nullam ut iaculis orci. Nunc at orci eros. Morbi quis nibh purus, id ultricies sapien.</p>\
@@ -118,6 +80,7 @@ var MainView = Backbone.View.extend({
 	initialize: function() {
 		_.bindAll(this, 'render');
 		this.render();
+		$("#active_puzzle_button").hide();
 		this.LocationView = new LocationView({el : "#main_screen > .right-sidebar > #right_sidebar_content", model : this.model});
 		$(this.el).addClass('active')
 	},

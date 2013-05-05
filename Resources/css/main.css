@@ -223,7 +223,8 @@ height: 250px;
 }
 
 .puzzle_link {
-	color: blue;
+	color: white;
+	display: block;
 }
 
 .puzzle_link:hover {
@@ -449,3 +450,11 @@ margin-top:10px;
 .active {
 	display: block;
 }
+
+.clickable {
+	color: #CCC;
+	text-decoration: underline;
+}
+
+.clickable:hover {
+	text-decoration: none;

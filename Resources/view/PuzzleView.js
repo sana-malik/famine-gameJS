@@ -1,3 +1,46 @@
+
+var ActivePuzzlesView = Backbone.View.extend({
+	template : _.template('<span class="puzzle_link clickable" id=<%= puzzleID %>><%= puzzleName %></span>'),
+
+	initialize: function() {
+		_.bindAll(this, 'render');
+		this.render();
+		this.model.bind('change:puzzleStats', this.render);
+	},
+
+	events : {
+		'click .puzzle_link' : 'showPuzzleScreen'
+	},
+
+	showPuzzleScreen : function(e) {
+		var clickedEl = $(e.currentTarget);
+  		var name = clickedEl.attr("id");
+
+  		$('.main.active').removeClass('active');
+  		$('div.puzzle#' + name).addClass('active');
+
+	},
+
+	render: function() {
+		var that = this;
+		$(that.el).empty();
+
+		var count = 0;
+		$.each(that.model.get("puzzleStats"), function(name, puzzle) {
+			if (puzzle["status"] === puzzleStatus.ACTIVE && !puzzles[name].get("meta")) {
+				$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
+				count += 1;
+			}
+		});
+
+		if (count != 0) {
+			$(that.el).prepend('<span class="title">Active Puzzles:</span>');
+		}
+		else {
+			$("#start_code_box").show();
+		}
+	}
+});
 var PuzzleLogView = Backbone.View.extend({
 	template : _.template('<span class="log_entry"><%= entry %></span>'),
 	initialize: function(options) {
@@ -95,11 +138,12 @@ var PuzzleSessionView = Backbone.View.extend({
 
 var PuzzleView = Backbone.View.extend({
 	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
-				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
-				<div id="path">Path > Goes > Here</div>\
+				<!--<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>-->\
+				<div id="path"><span id="mainbutton" class="clickable">Main</span> > <% if (puzzlesWithStartCode(start_code) > 1 && !meta) { %> <span class="meta_name clickable"></span>  > <% } %> <%= name %></div>\
 			</div>\
 			<div class="content"><h2 class="puzzle_title"><%= name %></h2>\
 		<span class="flavor_text"><%= flavor_text %></span>\
+		<div class="metas"></div>\
 		<div class="session_vars"></div>\
 		<div class="hints"></div>\
 		<!--<button class="giveup_button">I give up!</button>-->\
@@ -130,6 +174,10 @@ var PuzzleView = Backbone.View.extend({
 		});
 
 		this.log_view = new PuzzleLogView({el : ".main#" + nameToId(this.puzzleName) + " .log", model : session, puzzleName : this.puzzleName});
+		if (puzzles[that.puzzleName].get("meta")) {
+			that.ActiveView = new ActivePuzzlesView({el : ".main#" + nameToId(this.puzzleName) + " .metas", model : session});
+		}
+		$(".meta_name", this.el).text(getMetaName(puzzles[this.puzzleName].get("start_code")));
 	},
 
 	render: function() {
@@ -139,7 +187,8 @@ var PuzzleView = Backbone.View.extend({
 
 	events : {
 		'click .answer_button' : 'submit_answer',
-		'click #backbutton' : 'back_to_main'
+		'click #mainbutton' : 'back_to_main',
+		'click .meta_name' : 'go_to_meta'
 	},
 
 	submit_answer : function() {
@@ -149,41 +198,11 @@ var PuzzleView = Backbone.View.extend({
 
 	back_to_main :function() {
 		$('.main.active').removeClass('active');
-
-		var results = session.getActivePuzzles().length;
-		if (results <= 1) {
-			$('#main_screen').addClass('active');
-		}
-		else {
-			$('#multipuzzle').addClass('active');
-		}
-	}
-});
-
-var MultiPuzzleView = Backbone.View.extend({
-	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
-				<div id="backbutton"><a href="back"><img src="images/gui/back-button.png"></a></div>\
-				<div id="path">Path > Goes > Here</div>\
-			</div>\
-			<div class="content"></div></div>\
-		<div class="right-sidebar">what should go here? probably an overall timer?</div>'),
-
-	initialize: function() {
-		_.bindAll(this, 'render');
-		this.render();
-		this.ActiveView = new ActivePuzzlesView({el : "#multipuzzle .content", model : this.model});
-	},
-
-	render: function() {
-		$(this.el).html(this.template());
-	},
-
-	events : {
-		'click #backbutton' : 'back_to_main',
-	},
-
-	back_to_main :function() {
-		$('.main.active').removeClass('active');
 		$('#main_screen').addClass('active');
+	},
+
+	go_to_meta : function() {
+		$('.main.active').removeClass('active');
+		$('.main#' + nameToId(getMetaName(puzzles[this.puzzleName].get("start_code")))).addClass('active');
 	}
 });
