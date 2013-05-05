@@ -48,9 +48,13 @@ var MainView = Backbone.View.extend({
 
 	events: {
 		'click #start_button' : 'start_button_clicked',
-		'click #active_puzzle_button' : 'active_puzzle_clicked'
+		'click #active_puzzle_button' : 'active_puzzle_clicked',
+		'keypress input[type=text]#start_input': 'check_for_enter'
 	},
 
+	check_for_enter : function(e) {
+		 if (e.keyCode == 13) this.start_button_clicked();
+	},
 
 	start_button_clicked : function() {
 		var entry = clean($("#start_input").val());

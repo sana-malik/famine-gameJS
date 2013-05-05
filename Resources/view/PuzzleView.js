@@ -204,7 +204,12 @@ var PuzzleView = Backbone.View.extend({
 	events : {
 		'click .answer_button' : 'submit_answer',
 		'click #mainbutton' : 'back_to_main',
-		'click .meta_name' : 'go_to_meta'
+		'click .meta_name' : 'go_to_meta',
+		'keypress input[type=text].answer_input': 'check_for_enter'
+	},
+
+	check_for_enter : function(e) {
+		 if (e.keyCode == 13) this.submit_answer();
 	},
 
 	submit_answer : function() {

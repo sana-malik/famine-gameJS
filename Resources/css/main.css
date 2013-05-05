@@ -446,7 +446,6 @@ margin-top:10px;
 }
 
 /* MISC */
-
 .active {
 	display: block;
 }
@@ -458,3 +457,5 @@ margin-top:10px;
 
 .clickable:hover {
 	text-decoration: none;
+	cursor: hand;
+}
