@@ -57,16 +57,25 @@ var HintView = Backbone.View.extend({
 		$(that.el).html(that.template({name : this.hintName}));
 
 		var remaining = session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["remaining"];
+		
+		var current_time = Math.round((new Date()).getTime()/1000);
+		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"]) * 1000/timeInterval;
+		
+		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
+		
 
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
 			$(that.el).children('.hint_text').html('Available in ' + formatTime(remaining));
 		}
 		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.AVAILABLE) {
-			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Get Hint</button>');
-			if (remaining > 0) $(that.el).children('.hint_text').append(' -- min cost in ' + formatTime(remaining));
+			var button_text = 'Get hint, lose ' + cost + ' viewers';
+			if (cost == 0)
+				button_text = 'Get free hint';
+			$(that.el).children('.hint_text').html('<button id=\"hint_button\">' + button_text + '</button>');
+			//if (remaining > 0) $(that.el).children('.hint_text').append(' -- min cost in ' + formatTime(remaining));
 		}
 		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.SKIPPED) {
-			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Get Hint</button>');
+			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Reveal hint</button>');
 		}
 		else {
 			$(that.el).children('.hint_text').html(puzzles[this.puzzleName].get("hints")[this.hintName].get("text"));
