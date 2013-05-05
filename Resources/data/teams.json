@@ -24,5 +24,29 @@
 "name" :"Team 3a",
 "talent":["NUNCHUCKS","shelter","traps"],
 "mentor":"Todd"}
+,
+"7a" : {"id":"7a",
+"bio":"moo!",
+"icon":"images/team_icons/team04.gif",
+"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
+"name" :"Team 3a",
+"talent":["NUNCHUCKS","shelter","traps"],
+"mentor":"Todd"}
+,
+"11a" : {"id":"11a",
+"bio":"moo!",
+"icon":"images/team_icons/team05.gif",
+"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
+"name" :"Team 3a",
+"talent":["NUNCHUCKS","shelter","traps"],
+"mentor":"Todd"}
+,
+"12a" : {"id":"12a",
+"bio":"moo!",
+"icon":"images/team_icons/team06.gif",
+"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
+"name" :"Team 3a",
+"talent":["NUNCHUCKS","shelter","traps"],
+"mentor":"Todd"}
 }
 }

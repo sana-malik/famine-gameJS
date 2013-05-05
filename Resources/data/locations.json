@@ -1,35 +1,101 @@
 {
-"order" : ["Air Force Memorial", "The Motley Fool"],
+"order" : ["Air Force Memorial", "The Motley Fool", "cat", "dog", "bear", "horse", "fish", "tiger"],
 "locations" : {
 "The Motley Fool" : {
 	"name" : "The Motley Fool",
-	"puzzles" : ["Gelatinous Cube"],
 	"address" : "2000 Duke St., Fourth Floor, Alexandria, VA 22314",
-	
+	"time_open" : "9/28/2013 10:00",
+	"time_closed" : "9/28/2013 11:00",
 	"notes" : "You arrive in a large, clock-shaped arena.",
 	"restroom_description" : "There are restrooms located inside the office building.",
 	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
-	
 	"image_file" : "images/locations/fool_logo.jpg",
 	"map_file" : "images/maps/fool_map.png",
-	
-	"time_open" : "23:00",
-	"time_closed" : "2:00"
-	},
+	"puzzles" : ["Gelatinous Cube"]
+},
 "Air Force Memorial" : {
 	"name" : "Air Force Memorial",
-	"puzzles" : ["Test Puzzle","Test Puzzle 2"],
 	"address" : "One Air Force Memorial Drive, Arlington, VA 22204",
-	
+	"time_open" : "9/28/2013 9:00",
+	"time_closed" : "9/28/2013 10:00",
 	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
 	"restroom_description" : "There are restrooms located inside the office building.",
 	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
-	
 	"image_file" : "images/locations/fool_logo.jpg",
 	"map_file" : "images/maps/fool_map.png",
-	
-	"time_open" : "8:00",
-	"time_closed" : "23:00"
-	}
+	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+},
+"bear" : {
+	"name" : "bear",
+	"address" : "One Air Force Memorial Drive, Arlington, VA 22204",
+	"time_open" : "9/29/2013 11:00",
+	"time_closed" : "9/29/2013 13:00",
+	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
+	"restroom_description" : "There are restrooms located inside the office building.",
+	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
+	"image_file" : "images/locations/fool_logo.jpg",
+	"map_file" : "images/maps/fool_map.png",
+	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+},
+"cat" : {
+	"name" : "cat",
+	"address" : "One Air Force Memorial Drive, Arlington, VA 22204",
+	"time_open" : "9/28/2013 11:00",
+	"time_closed" : "9/28/2013 13:00",
+	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
+	"restroom_description" : "There are restrooms located inside the office building.",
+	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
+	"image_file" : "images/locations/fool_logo.jpg",
+	"map_file" : "images/maps/fool_map.png",
+	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+},
+"dog" : {
+	"name" : "dog",
+	"address" : "One Air Force Memorial Drive, Arlington, VA 22204",
+	"time_open" : "9/29/2013 3:00",
+	"time_closed" : "9/29/2013 6:00",
+	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
+	"restroom_description" : "There are restrooms located inside the office building.",
+	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
+	"image_file" : "images/locations/fool_logo.jpg",
+	"map_file" : "images/maps/fool_map.png",
+	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+},
+"horse" : {
+	"name" : "horse",
+	"address" : "One Air Force Memorial Drive, Arlington, VA 22204",
+	"time_open" : "9/29/2013 5:00",
+	"time_closed" : "9/29/2013 10:00",
+	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
+	"restroom_description" : "There are restrooms located inside the office building.",
+	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
+	"image_file" : "images/locations/fool_logo.jpg",
+	"map_file" : "images/maps/fool_map.png",
+	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+},
+"fish" : {
+	"name" : "fish",
+	"address" : "One Air Force Memorial Drive, Arlington, VA 22204",
+	"time_open" : "9/29/2013 8:00",
+	"time_closed" : "9/29/2013 12:00",
+	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
+	"restroom_description" : "There are restrooms located inside the office building.",
+	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
+	"image_file" : "images/locations/fool_logo.jpg",
+	"map_file" : "images/maps/fool_map.png",
+	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+},
+"tiger" : {
+	"name" : "tiger",
+	"address" : "One Air Force Memorial Drive, Arlington, VA 22204",
+	"time_open" : "9/29/2013 12:00",
+	"time_closed" : "9/29/2013 16:00",
+	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
+	"restroom_description" : "There are restrooms located inside the office building.",
+	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
+	"image_file" : "images/locations/fool_logo.jpg",
+	"map_file" : "images/maps/fool_map.png",
+	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+}
 }
 }

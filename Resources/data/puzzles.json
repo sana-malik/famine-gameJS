@@ -1,4 +1,89 @@
 {
+"Cereal Meta" : {"name":"Cereal Meta",
+"start_code" : "breakfast",
+"max_fans" : 200,
+"flavor_text" : "This is the cereal puzzle. There are 5 minipuzzles and a meta (this)",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : true,
+"advance_location" : true,
+"hints" : {
+        "Hint 1" : {
+                "start_time" : 10,
+                "end_time" : 20,
+                "start_cost" : 20,
+                "end_cost" : 0,
+                "text" : "The five minipuzzles correspond to the cereals included."
+                },
+        "Hint 2" : {
+                "start_time" : 45,
+                "end_time" : 60,
+                "start_cost" : 20,
+                "end_cost" : 5,
+                "text" : "The free prize included is the key to the meta."
+                }
+        },
+"answers" : {
+        "crunchtheircapns" : {
+                "type" : "final",
+                "text" : "crunchtheircapns",
+                "response" : "Congrats!  That's correct!",
+                "skipped_hints" : ["Skipped Hint", "Skipped Hint", "Etc."]
+                }
+        }
+},
+"Cereal - Fruit Loops" : {"name":"Cereal - Fruit Loops",
+"start_code" : "breakfast",
+"max_fans" : 50,
+"flavor_text" : "Fruit loops are round.",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : false,
+"hints" : {
+        "Hint 1" : {
+                "start_time" : 5,
+                "end_time" : 10,
+                "start_cost" : 15,
+                "end_cost" : 0,
+                "text" : "First hint for fruit loops."
+                }
+        },
+"answers" : {
+        "fruitloopanswer" : {
+                "type" : "final",
+                "text" : "fruitloopanswer",
+                "response" : "Congrats!",
+                "skipped_hints" : []
+                }
+        }
+},
+"Cereal - Trix" : {"name":"Cereal - Trix",
+"start_code" : "breakfast",
+"max_fans" : 50,
+"flavor_text" : "Trix are for kids.",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : false,
+"hints" : {
+        "Hint 1" : {
+                "start_time" : 5,
+                "end_time" : 10,
+                "start_cost" : 15,
+                "end_cost" : 0,
+                "text" : "First hint for trix."
+                }
+        },
+"answers" : {
+        "trixanswer" : {
+                "type" : "final",
+                "text" : "trixanswer",
+                "response" : "Congrats!",
+                "skipped_hints" : []
+                }
+        }
+},
 "Gelatinous Cube" : {"name":"Gelatinous Cube",
 "start_code" : "boingboing",
 "max_fans" : 100,
