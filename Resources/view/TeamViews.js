@@ -1,5 +1,5 @@
 var TeamIconView = Backbone.View.extend({
-	template: _.template('<img src=\"<%= icon %>\" class=\"team_img\">'),
+	template: _.template('<img src=\"images/team_icons/<%= icon %>\" class=\"team_img\">'),
 	initialize: function() {
 		_.bindAll(this, 'render');
 		this.render();
