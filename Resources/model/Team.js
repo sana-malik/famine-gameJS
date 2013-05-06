@@ -22,7 +22,7 @@ var Team = Backbone.Model.extend({
 			return; // already dead?!
 		}
 		
-		playSound('sounds/cannon.wav');
+		playSound('cannon.wav');
 
 		// show video
 		this.showVideo();
