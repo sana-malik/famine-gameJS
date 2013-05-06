@@ -54,7 +54,7 @@ var Puzzle = Backbone.Model.extend({
 				}
 
 				// go back to main or meta and change buttons if main
-				if (this.get("meta") || session.getActivePuzzles().length === 0) {
+				if (this.get("meta") || session.getActivePuzzles().length === 1) {
 					$('.main.active').removeClass('active');
 					$('#main_screen').addClass('active');
 					$('#start_code_box').show();
@@ -66,7 +66,9 @@ var Puzzle = Backbone.Model.extend({
 					});
 				}
 				else {
-					// show the meta
+					var meta = getMetaName(this.get("start_code"));
+					$('.main.active').removeClass('active');
+					$('.main#'+nameToId(meta)).addClass('active');
 				}
 
 

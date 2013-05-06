@@ -1,7 +1,7 @@
 
 var ActivePuzzlesView = Backbone.View.extend({
 	template : _.template('<span class="puzzle_link clickable" id=<%= puzzleID %>><%= puzzleName %></span>'),
-	solvedtemplate : _.template('<span class="puzzle_link clickable" id=<%= puzzleID %>><%= puzzleName %>  (ANSWER - to do)</span>'),
+	solvedtemplate : _.template('<span class="puzzle_link clickable" id=<%= puzzleID %>><%= puzzleName %>  <span class="answer"></span></span>'),
 
 	initialize: function(options) {
 		_.bindAll(this, 'render');
@@ -36,6 +36,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 				}
 				else if (puzzle["status"] === puzzleStatus.SOLVED && !puzzles[name].get("meta")) {
 					$(that.el).append(that.solvedtemplate({puzzleID: nameToId(name), puzzleName: name}));
+					$(".puzzle_link#"+nameToId(name)+" .answer").text(getAnswerToPuzzle(name));
 					count += 1;
 				}
 			}

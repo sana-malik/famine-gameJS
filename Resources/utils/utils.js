@@ -29,6 +29,18 @@ function puzzlesWithStartCode(start) {
 	return count;
 }
 
+function getAnswerToPuzzle(name) {
+	var finalAnswer = "";
+	$.each(puzzles[name].get("answers"), function(answer, ansObj) {
+		if (ansObj["type"] === answerTypes.FINAL) {
+			finalAnswer = answer;
+			return false;
+		}
+	});
+
+	return finalAnswer;
+}
+
 function getMetaName(start) {
 	var pname = "";
 	$.each(puzzles, function(name, puz) {
