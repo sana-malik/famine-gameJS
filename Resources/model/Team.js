@@ -21,7 +21,9 @@ var Team = Backbone.Model.extend({
 		if (session.get("teamStats")[this.get("id")]["status"] === teamStatus.DEAD) {
 			return; // already dead?!
 		}
-	
+		
+		playSound('sounds/cannon.wav');
+
 		// show video
 		this.showVideo();
 	

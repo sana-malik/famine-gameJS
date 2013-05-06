@@ -144,3 +144,8 @@ function getCurrentDateTime() {
 	
 	return out;
 }
+
+
+function playSound(soundfile) {
+	Ti.Media.createSound("C:/Users/Phil/Documents/GitHub/famine-gameJS/Resources/sounds/test.mp3");
+}
