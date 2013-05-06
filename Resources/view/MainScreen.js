@@ -20,7 +20,7 @@ var goToActivePuzzle = function(result) {
 }
 
 var LocationView = Backbone.View.extend({
-	template: _.template('<span class="title"><%= name %></span>'),
+	template: _.template('<span class="title"><%= name %> <%= address %> <%= food_description %> <%= food_description %> <%= name %></span>'),
 
 	initialize: function() {
 		_.bindAll(this, 'render');
