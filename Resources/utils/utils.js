@@ -147,5 +147,5 @@ function getCurrentDateTime() {
 
 
 function playSound(soundfile) {
-	Ti.Media.createSound("sounds/cannon.wav").play();
+	Ti.Media.createSound("sounds/" + soundfile).play();
 }
