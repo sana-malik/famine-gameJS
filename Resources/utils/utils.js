@@ -147,5 +147,5 @@ function getCurrentDateTime() {
 
 
 function playSound(soundfile) {
-	Ti.Media.createSound("C:/Users/Phil/Documents/GitHub/famine-gameJS/Resources/sounds/test.mp3");
+	Ti.Media.createSound("sounds/cannon.wav").play();
 }
