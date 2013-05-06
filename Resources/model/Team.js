@@ -9,7 +9,7 @@ var Team = Backbone.Model.extend({
 
 	getIconHTML : function() {
 		var stat = "<div class=\"team_div\" id=\"" + this.get("id") +"\">" +
-		"<img src=\"" + this.get("icon") + "\" class=\"team_img\">";
+		"<img src=\"images/team_icons/" + this.get("icon") + "\" class=\"team_img\">";
 		if (this.get("id") in session.get("teamStats") && session.get("teamStats")[this.get("id")]["status"] === teamStatus.DEAD) {
 			stat = stat + "<div class=\"status\">DEAD</div>";
 		}
