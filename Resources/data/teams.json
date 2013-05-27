@@ -1,52 +1,586 @@
 {
+
 "activeTeam" : "1a",
+
 "teams" : {
-"1a" : {"id":"1a",
-"bio":"A boisterous combination of improvisation, sketch comedy, music, dance, and interactive theater, performed by men dressed as chickens.  They also do puzzles.",
-"icon":"chickens.gif",
-"video":"video file",
-"name" :"Boneless Chicken Cabaret",
-"talents":["KNIVES","painting"],
-"mentor":"Haymitch"}
-,
-"1b" : {"id":"1b",
-"bio":"woof!",
-"icon":"team02.gif",
-"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
-"name" :"Team 1b",
-"talent":["NUNCHUCKS","shelter","traps"],
-"mentor":"Philip"}
-,
-"3a" : {"id":"3a",
-"bio":"moo!",
-"icon":"team03.gif",
-"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
-"name" :"Team 3a",
-"talent":["NUNCHUCKS","shelter","traps"],
-"mentor":"Todd"}
-,
-"7a" : {"id":"7a",
-"bio":"moo!",
-"icon":"team04.gif",
-"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
-"name" :"Team 3a",
-"talent":["NUNCHUCKS","shelter","traps"],
-"mentor":"Todd"}
-,
-"11a" : {"id":"11a",
-"bio":"moo!",
-"icon":"team05.gif",
-"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
-"name" :"Team 3a",
-"talent":["NUNCHUCKS","shelter","traps"],
-"mentor":"Todd"}
-,
-"12a" : {"id":"12a",
-"bio":"moo!",
-"icon":"team06.gif",
-"video":"http://www.youtube.com/embed/Cf-gAgzlZHU",
-"name" :"Team 3a",
-"talent":["NUNCHUCKS","shelter","traps"],
-"mentor":"Todd"}
+
+"1a" : {
+
+    "id" : "1a",
+
+    "name" : "Boneless Chicken Caberet",
+
+    "bio" : "A boisterous combination of improvisation, sketch comedy, music, dance, and interactive theater, performed by men dressed as chickens. They also do puzzles.",
+
+    "hometown" : "Alexandia, VA",
+
+    "photo" : "team photo",
+
+    "icon" : "chickens.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "improv",
+
+    "members" : ["Todd Etter", "Chris Guthrie", "Mark Brooks", "David Forrest", "Charlie Scarborough", "Matt Hartman"]
+
+},
+
+"1b" : {
+
+    "id" : "1b",
+
+    "name" : "Team 02",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team02.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"2a" : {
+
+    "id" : "2a",
+
+    "name" : "Team 03",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team03.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"2b" : {
+
+    "id" : "2b",
+
+    "name" : "Team 04",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team04.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"3a" : {
+
+    "id" : "3a",
+
+    "name" : "Team 05",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team05.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"3b" : {
+
+    "id" : "3b",
+
+    "name" : "Team 06",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team06.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"4a" : {
+
+    "id" : "4a",
+
+    "name" : "Team 07",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team07.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"4b" : {
+
+    "id" : "4b",
+
+    "name" : "Team 08",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team08.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"5a" : {
+
+    "id" : "5a",
+
+    "name" : "Team 09",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team09.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"5b" : {
+
+    "id" : "5b",
+
+    "name" : "Team 10",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team10.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"6a" : {
+
+    "id" : "6a",
+
+    "name" : "Team 11",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team11.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"6b" : {
+
+    "id" : "6b",
+
+    "name" : "Team 12",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team12.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"7a" : {
+
+    "id" : "7a",
+
+    "name" : "Team 13",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team13.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"7b" : {
+
+    "id" : "7b",
+
+    "name" : "Team 14",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team14.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"8a" : {
+
+    "id" : "8a",
+
+    "name" : "Team 05",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team15.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"8b" : {
+
+    "id" : "8b",
+
+    "name" : "Team 16",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team16.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"9a" : {
+
+    "id" : "9a",
+
+    "name" : "Team 17",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team17.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"9b" : {
+
+    "id" : "9b",
+
+    "name" : "Team 18",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team18.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"10a" : {
+
+    "id" : "10a",
+
+    "name" : "Team 19",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team19.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"10b" : {
+
+    "id" : "10b",
+
+    "name" : "Team 20",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team20.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"11a" : {
+
+    "id" : "11a",
+
+    "name" : "Team 21",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team21.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"11b" : {
+
+    "id" : "11b",
+
+    "name" : "Team 22",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team22.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"12a" : {
+
+    "id" : "12a",
+
+    "name" : "Team 23",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team23.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
+},
+
+"12b" : {
+
+    "id" : "12b",
+
+    "name" : "Team 24",
+
+    "bio" : "A dangerous group of individuals.  Watch out!",
+
+    "hometown" : "Anywhere, USA",
+
+    "photo" : "team photo",
+
+    "icon" : "team24.gif",
+
+    "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
+
+    "mentor" : "Haymitch",
+
+    "talent" : "basket weaving",
+
+    "members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+
 }
+
 }
+
+}
+
