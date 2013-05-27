@@ -7,11 +7,15 @@ var Hint = Backbone.Model.extend({
 	**/
 	getCost : function(mins) {
 		var run = this.get("end_time") - this.get("start_time");
+
 		var rise = this.get("end_cost") - this.get("start_cost");
 		
 		var slope = rise/run;
 		var cost = Math.round(this.get("start_cost") + slope * (mins - this.get("start_time")));
 	
+		if (isNaN(cost))
+			cost = 0;
+		
 		return Math.max( this.get("end_cost"), cost );
 	}
 });
