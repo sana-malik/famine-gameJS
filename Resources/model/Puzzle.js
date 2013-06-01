@@ -12,7 +12,7 @@ var Puzzle = Backbone.Model.extend({
 	checkAnswer : function(entry) {
 		var stats = $.extend(true, {}, session.get("puzzleStats"));
 		var response = "<div class='log_time'>" + getCurrentDateTime() + ": </div><div class='log_content'>";
-		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED) { // puzzle already solved!
+		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "") { // puzzle already solved!
 			return;
 		}
 		else if (entry in this.get("answers")) {
