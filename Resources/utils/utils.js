@@ -58,12 +58,22 @@ function showPopup(content) {
 	$("#popup_container").show();
 	$("#popup_content > .content").append(content);
 	$("#close_popup").click(hidePopup);
+}
 
+function showAlert(content) {
+	$("#alert_container").show();
+	$("#alert_content > .content").append(content);
+	$("#close_alert").click(hideAlert);
 }
 
 function hidePopup() {
 	$("#popup_content > .content").empty();
 	$("#popup_container").hide();
+}
+
+function hideAlert() {
+	$("#alert_content > .content").empty();
+	$("#alert_container").hide();
 }
 
 function nameToId(str) {

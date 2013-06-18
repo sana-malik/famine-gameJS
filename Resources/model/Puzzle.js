@@ -57,7 +57,7 @@ var Puzzle = Backbone.Model.extend({
 
 					// if they are too early for the current location, display an alert
 					if (nowStr < locations[locOrder[currentLoc]].get("time_open")) {
-						alert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
+						showAlert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
 					}
 				}
 
