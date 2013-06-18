@@ -12,11 +12,12 @@ var Puzzle = Backbone.Model.extend({
 	checkAnswer : function(entry) {
 		var stats = $.extend(true, {}, session.get("puzzleStats"));
 		var response = "<div class='log_time'>" + getCurrentDateTime() + ": </div><div class='log_content'>";
+		var give_up = "savemethresh"
 		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "") { // puzzle already solved!
 			return;
 		}
-		else if (entry in this.get("answers")) {
-			if (this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
+		else if (entry === give_up || entry in this.get("answers")) {
+			if (entry === give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
 				
@@ -35,7 +36,8 @@ var Puzzle = Backbone.Model.extend({
 				});
 
 				// allot fans
-				session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
+				if (entry != give_up)
+					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
 
 				// advance location
 				if (this.get("advance_location")) {
