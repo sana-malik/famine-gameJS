@@ -58,12 +58,13 @@ var MainView = Backbone.View.extend({
 
 	start_button_clicked : function() {
 		var entry = clean($("#start_input").val());
+		// clear start code box + error box
+		$("#start_input").val("");
+		$("#return_message").html("");
 
 		// activate puzzles in session
 		var result = this.model.activatePuzzles(entry);
 		if (result > 0) {
-			// clear and hide start code box
-			$("#start_input").val("");
 			$("#start_code_box").hide();
 			// show puzzle link box
 			$("#active_puzzle_button").show();

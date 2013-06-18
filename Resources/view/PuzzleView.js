@@ -223,6 +223,7 @@ var PuzzleView = Backbone.View.extend({
 
 	submit_answer : function() {
 		var entry = clean($("#" + nameToId(this.puzzleName) + " .answer_input").val());
+		$("#" + nameToId(this.puzzleName) + " .answer_input").val("");
 		puzzles[this.puzzleName].checkAnswer(entry);
 	},
 
