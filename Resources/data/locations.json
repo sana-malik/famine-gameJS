@@ -20,7 +20,7 @@
 	"time_closed" : "9/28/2013 10:00",
 	"notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
 	"restroom_description" : "There are restrooms located inside the office building.",
-	"food_description" : "Restaurants within walking distance (e.g. Quiznos, Einstein Bros. Bagels).",
+	"food_description" : "<li>Quiznos</li><li>Subway</li><li>McDonald's</li>",
 	"image_file" : "images/locations/fool_logo.jpg",
 	"map_file" : "images/maps/fool_map.png",
 	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]

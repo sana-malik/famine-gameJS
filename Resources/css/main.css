@@ -198,10 +198,10 @@ background:rgba(255,255,255, 0.2);
 #main .right-sidebar {
 	position:absolute;
 	left: 700px; top:103px;
-	width: 245px; height: 313px;
+	width: 245px; height: 323px;
 	overflow-x: hidden;
 	overflow-y: auto;
-	padding: 10px 5px 10px 10px;		
+	padding: 10px 5px 0px 10px;		
 	background:rgba(255,255,255, 0.2);
 	border: 1px solid #8c909b;
 	border-left: none;
@@ -210,13 +210,35 @@ background:rgba(255,255,255, 0.2);
 }
 
 .right-sidebar #return_message {
+padding: 2px 4px 1px 4px;
+font-size: .7em;
+color: #fff;
+background: rgba(255,0,0, 0.5);
+border-radius: 5px;
+display: inline-block;
+width: 225px;
 height: 20px;
-padding: 2px;
+margin-top: 3px;
+margin-bottom: 3px;
+overflow: hidden;
+
 }
 
+
 #right_sidebar_content {
-height: 250px;
+height: 240px;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
+
+#right_sidebar_content_puzzle {
+height: 269px;
+}
+
+.hidden {
+visibility: hidden;
+}
+
 
 .answer_box {
 
@@ -443,8 +465,35 @@ margin-bottom: 10px;
 
 #start_code_box, #answer_box {
 clear: both;
-margin-top:10px;
 }
+
+#start_button, .answer_button {
+padding: 0px;
+}
+
+/* LOCATION INFORMATION */
+h3.location-name {
+margin: 0px;
+padding: 0px;
+}
+
+.location-address {
+font-size: .8em;
+margin: 0px 0px 10px 0px;
+}
+
+h4.location-restaurants {
+margin: 0px;
+font-size: .9em;
+}
+
+ul.location-restaurant-list {
+margin-top: 0px;
+font-size: .8em;
+}
+
+
+
 
 /* MISC */
 .active {

@@ -174,7 +174,7 @@ var PuzzleView = Backbone.View.extend({
 		<!--<button class="giveup_button">I give up!</button>-->\
 		</div></div>\
 		<div class="right-sidebar">\
-		<div id="right_sidebar_content">\
+		<div id="right_sidebar_content_puzzle">\
 		<h2 class="puzzle_title"><%= name %></h2>\
 		<div class="puzzle_data">Viewers watching<br />\
 		Time elapsed</div>\

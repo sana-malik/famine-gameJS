@@ -20,7 +20,7 @@ var goToActivePuzzle = function(result) {
 }
 
 var LocationView = Backbone.View.extend({
-	template: _.template('<span class="title"><%= name %> <%= address %> <%= food_description %> <%= food_description %> <%= name %></span>'),
+	template: _.template('<h3 class="location-name"><%= name %></h3><p class="location-address"><%= address %></p><h4 class="location-restaurants">Local Restaurants:</h4><ul class="location-restaurant-list"><%= food_description %></ul><h3 class="location-name"><%= name %></h3><p class="location-address"><%= address %></p><h4 class="location-restaurants">Local Restaurants:</h4><ul class="location-restaurant-list"><%= food_description %></ul>'),
 
 	initialize: function() {
 		_.bindAll(this, 'render');
@@ -42,7 +42,9 @@ var MainView = Backbone.View.extend({
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum enim mi, vulputate et rutrum quis, feugiat ut libero. Nulla eu velit odio. Aliquam enim nunc, pharetra vel laoreet non, malesuada at sapien. Nullam eleifend sem eu eros facilisis euismod. Etiam quis lacus id felis gravida venenatis. Quisque blandit pharetra dolor, vel accumsan eros gravida vitae. Integer ac leo urna. Nullam ut iaculis orci. Nunc at orci eros. Morbi quis nibh purus, id ultricies sapien.</p>\
 				<p>Nam accumsan, tellus eget pretium posuere, nisl orci dignissim felis, vel pharetra mauris lacus sed est. Nullam id turpis venenatis sem viverra volutpat sed quis elit. Integer non ipsum facilisis velit tincidunt convallis non vitae nisi. Sed bibendum vulputate nisl, et vehicula sapien tincidunt commodo. Aliquam erat volutpat. Donec a massa vitae justo laoreet fringilla a vel urna. Sed ultrices tincidunt cursus. Curabitur bibendum placerat tortor, non laoreet est bibendum in. Nulla vel elit eros, id pharetra dolor. Nullam quis velit eget purus iaculis aliquet. Etiam pellentesque augue nisi, sit amet cursus neque.</p></div>\
 				</div></div>\
-				<div class="right-sidebar"><div id="right_sidebar_content"></div><div id="return_message"></div><div id="start_code_box">Enter a start code: <input type="text" id="start_input">\
+				<div class="right-sidebar"><div id="right_sidebar_content"></div>\
+				<div id="return_message" class="hidden"></div>\
+				<div id="start_code_box">Enter a start code: <input type="text" id="start_input">\
 		<button id="start_button">Submit</button></div>\
 		</div>'),
 
@@ -70,10 +72,13 @@ var MainView = Backbone.View.extend({
 			$("#active_puzzle_button").show();
 
 			goToActivePuzzle(result);
+			
 		}
 		else {
-			$("#return_message").html("<font color=red>" + entry + " is not valid</font>");
+			$("#return_message").removeClass("hidden");
+			$("#return_message").html(entry + " is not a valid start code.");
 		}
+	    
 	},
 
 	active_puzzle_clicked : function() {
