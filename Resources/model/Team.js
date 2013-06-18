@@ -25,11 +25,10 @@ var Team = Backbone.Model.extend({
 		playSound('cannon.wav');
 
 		// show video
-
 		/******************************************************/
 		/* This is causing the app to crash.  Don't know why. */
 		/******************************************************/
-		//this.showVideo();
+		this.showVideo();
 	
 		// update object
 		var stats = $.extend({},session.get("teamStats"));
