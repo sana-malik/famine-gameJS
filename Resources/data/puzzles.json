@@ -56,7 +56,7 @@
 
         "end_cost" : 10,
 
-        "text" : "After finding all the words, for further instructions focus on the new three-letter sequences.  Read them in order according to the binary markings on the bees. "
+        "text" : "After finding all the words, for further instructions focus on the new three-letter sequences.  Read them in order according to the binary markings on the bees.  Make sure you have all the bees facing the fronts of their words. "
 
         },
 
@@ -184,7 +184,7 @@
 
         "end_time" : 60,
 
-        "start_cost" : 20,
+        "start_cost" : 0,
 
         "end_cost" : 0,
 
@@ -472,21 +472,7 @@
 
         "end_cost" : 0,
 
-        "text" : "You might want to look closely at the flavor text of the clues if you haven't already. "
-
-        },
-
-    "Hint 5" : {
-
-        "start_time" : 50,
-
-        "end_time" : 30,
-
-        "start_cost" : 10,
-
-        "end_cost" : 0,
-
-        "text" : "Did you notice that many of the answers feature an interesting letter or two?"
+        "text" : "You might want to look closely at the flavor text of the clues if you haven't already.   Also, did you notice that many of the answers feature an interesting letter?"
 
         },
 
@@ -500,7 +486,7 @@
 
         "end_cost" : 0,
 
-        "text" : "This puzzle could easily be renamed Tri-X"
+        "text" : "Count up the trix pieces, do those three numbers follow a certain pattern?"
 
         },
 
@@ -514,7 +500,7 @@
 
         "end_cost" : 0,
 
-        "text" : "Count up the trix pieces, do those three numbers follow a certain pattern?"
+        "text" : "This puzzle could easily be renamed Tri-X"
 
         },
 
@@ -1330,6 +1316,18 @@
 
         "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
 
+        },
+
+    "trees" : {
+
+        "type" : "partial",
+
+        "text" : "trees",
+
+        "response" : "Yes, that's certainly a theme of this puzzle, but it's not the answer. ",
+
+        "skipped_hints" : []
+
         }
 
     }
@@ -1738,7 +1736,7 @@
 
 "Flexipuzzle" : {"name":"Flexipuzzle",
 
-"start_code" : "Flexipuzzle",
+"start_code" : "flexipuzzle",
 
 "max_fans" : 100,
 
@@ -1814,11 +1812,11 @@
 
 "answers" : {
 
-    "sing hansen" : {
+    "singhansen" : {
 
         "type" : "final",
 
-        "text" : "sing hansen",
+        "text" : "singhansen",
 
         "response" : "Congrats!",
 
@@ -1850,23 +1848,23 @@
 
         },
 
-    "sing other side" : {
+    "singotherside" : {
 
         "type" : "partial",
 
-        "text" : "sing other side",
+        "text" : "singotherside",
 
         "response" : "Part 1 is correct, but you still need to work on Part 2. ",
 
-        "skipped_hints" : ["Hint 1", "Hint 2"]
+        "skipped_hints" : ["Hint 1", "Hint 2", "Hint 5"]
 
         },
 
-    "other side" : {
+    "otherside" : {
 
         "type" : "partial",
 
-        "text" : "other side",
+        "text" : "otherside",
 
         "response" : "This is a clue to Part 2 of your answer. ",
 
