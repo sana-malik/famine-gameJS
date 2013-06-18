@@ -12,12 +12,18 @@ var Puzzle = Backbone.Model.extend({
 	checkAnswer : function(entry) {
 		var stats = $.extend(true, {}, session.get("puzzleStats"));
 		var response = "<div class='log_time'>" + getCurrentDateTime() + ": </div><div class='log_content'>";
-		var give_up = "savemethresh"
+		var give_up_code = "savemethresh"
+		var give_up = false
+
+		if (entry === give_up_code) {
+			give_up = confirm("Are you sure you want to give up on this puzzle?  You will receive no fans if you choose to do so.")
+		}
+
 		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "") { // puzzle already solved!
 			return;
 		}
-		else if (entry === give_up || entry in this.get("answers")) {
-			if (entry === give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
+		else if (give_up || entry in this.get("answers")) {
+			if (give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
 				
@@ -36,7 +42,7 @@ var Puzzle = Backbone.Model.extend({
 				});
 
 				// allot fans
-				if (entry != give_up)
+				if (!give_up)
 					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
 
 				// advance location
@@ -77,7 +83,7 @@ var Puzzle = Backbone.Model.extend({
 				// update the stats
 				session.set("puzzleStats",stats);
 			}
-			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct final answer
+			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer
 				// reveal skipped hints
 				puzzle = this;
 				hints_to_skip = puzzle.get("answers")[entry]["skipped_hints"];
@@ -129,7 +135,9 @@ var Puzzle = Backbone.Model.extend({
 	},
 
 	unlockResources : function() {
-		// todo	
+		$.each(this.get("resources_unlocked"), function(index, name) {
+			resources[name].unlock();
+		});
 	},
 
 

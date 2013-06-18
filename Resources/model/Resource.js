@@ -1,6 +1,6 @@
 var Resource = Backbone.Model.extend({
 
-		getIconHTML : function() {
+	getIconHTML : function() {
 		var stat = "<div class=\"resource_div\" id=\"" + this.get("name") +"\">" +
 		"<img src=\"images/resources/" + this.get("icon") + "\" class=\"resource_img\">";
 		if (this.get("name") in session.get("resourceStats") && session.get("resourceStats")[this.get("name")]["status"] === resourceStatus.UNLOCKED) {
