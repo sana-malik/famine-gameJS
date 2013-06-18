@@ -22,6 +22,10 @@ body {
 	padding: 0px;
 }
 
+ul {
+list-style-type: square;
+}
+
 
 /** MAIN LAYOUT **/
 #main_container {
@@ -479,17 +483,20 @@ padding: 0px;
 
 .location-address {
 font-size: .8em;
-margin: 0px 0px 10px 0px;
+margin: -3px 0px 10px 0px;
+padding: 0px;
+line-height: 15px;
 }
 
 h4.location-restaurants {
 margin: 0px;
-font-size: .9em;
+font-size: .8em;
 }
 
 ul.location-restaurant-list {
 margin-top: 0px;
 font-size: .8em;
+padding-left: 23px;
 }
 
 
