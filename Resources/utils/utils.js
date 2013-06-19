@@ -155,6 +155,28 @@ function getCurrentDateTime() {
 	return out;
 }
 
+function saveServerSession(mySession, myTeam) {
+	var d=new Date();
+	var n=d.getTime();
+	request = $.ajax({
+	        url: "http://www.rawbw.com/~zero/hg/save.php",
+	        type: "post",
+	        data: "session="+Base64.encode(Ti.JSON.stringify(mySession))+"&team="+myTeam+"&time="+n
+	});
+	request.done(function (response, textStatus, jqXHR){
+		var d=new Date();
+		session.lastSuccess=d.getTime();
+		// uncomment the following line if you want proof you're getting a response
+		// alert(response);
+	});
+	request.fail(function (jqXHR, textStatus, errorThrown){
+		// fail silently
+	});
+	request.always(function () {
+		var d=new Date();
+		session.lastAttempt=d.getTime();
+	});
+}
 
 function playSound(soundfile) {
 	Ti.Media.createSound("sounds/" + soundfile).play();
