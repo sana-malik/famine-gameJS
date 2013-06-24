@@ -268,8 +268,8 @@ visibility: hidden;
 	display: none;
 }
 
-/* ACTIVITY PAGE */
-#activity {
+/* HISTORY PAGE */
+#history {
 	position:absolute;
 	left: 265px; top: 103px;
 	width: 674px; height: 313px;

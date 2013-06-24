@@ -45,12 +45,12 @@ $(document).ready(function() {
 		$("#main_container > .tab.active").removeClass("active");
 		$("#main.tab").addClass("active");
 	});
-	$('#tab_activity').click(function() {
+	$('#tab_history').click(function() {
 		$("#toc > .current").removeClass("current");
-		$("#toc > #tab_activity").addClass("current");
+		$("#toc > #tab_history").addClass("current");
 
 		$("#main_container > .active.tab").removeClass("active");
-		$("#activity.tab").addClass("active");
+		$("#history.tab").addClass("active");
 	});
 	$('#tab_info').click(function() {
 		$("#toc > .current").removeClass("current");
