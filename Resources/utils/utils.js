@@ -181,3 +181,10 @@ function saveServerSession(mySession, myTeam) {
 function playSound(soundfile) {
 	Ti.Media.createSound("sounds/" + soundfile).play();
 }
+
+
+function logAction(type, msg) {
+	var temp = session.get("history").slice();
+	temp.push([getCurrentDateTime(), type, msg]);
+	session.set("history",temp);
+}

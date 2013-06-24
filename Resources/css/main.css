@@ -283,6 +283,15 @@ visibility: hidden;
 	border-top-right-radius: 10px;
 }
 
+#history .log-item {
+	display: block;
+}
+
+#history .log-item .timestamp {
+	margin-right: 5px;
+}
+
+
 /* INFO PAGE */
 #info {
 	position:absolute;

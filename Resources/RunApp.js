@@ -34,6 +34,8 @@ $(document).ready(function() {
 	var team = new TeamView({el : "#bottombar", model : session});
 	var user = new UserView({el : "#sidebar", model : session});
 	var main = new MainView({el : "#main > #main_screen", model: session});
+	var history = new HistoryView({el : "#history", model: session});
+	logAction(logTypes.GAME, "Game started!");
 	//var multipuz = new MultiPuzzleView({el : "#main > #multipuzzle", model: session});
 
 

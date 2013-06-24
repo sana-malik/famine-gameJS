@@ -16,7 +16,7 @@ var Puzzle = Backbone.Model.extend({
 		var give_up = false
 
 		if (entry === give_up_code) {
-			give_up = confirm("Are you sure you want to give up on this puzzle?  You will receive no fans if you choose to do so.")
+			give_up = confirm("Are you sure you want to give up on this puzzle? You will receive no fans if you choose to do so.")
 		}
 
 		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "") { // puzzle already solved!
@@ -43,9 +43,11 @@ var Puzzle = Backbone.Model.extend({
 					hint["status"] = hintStatus.REVEALED;
 				});
 
-				// allot fans
-				if (!give_up)
+				// allot fans & log
+				if (!give_up) {
 					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
+					logAction(logTypes.PUZZLE, "You solved puzzle " + this.get("name") + " ["+entry+"] for " + stats[this.get("name")]["current_worth"] + " fans in [time taken to solve].")
+				}
 
 				// advance location
 				if (this.get("advance_location")) {
@@ -57,7 +59,23 @@ var Puzzle = Backbone.Model.extend({
 					}
 					session.set("currentLocation", currentLoc);
 
-					$("#main #main_screen .left-sidebar .content .location_description").html( locations[locOrder[currentLoc]].get("flavor_text") );
+					var loc_desc = locations[locOrder[currentLoc]].get("flavor_text")
+				 	var teams_killed = []
+				 	 
+				 	// Find all teams that get killed at next location
+				 	$.each( locations[locOrder[currentLoc]].get("puzzles"), function(index, puzzle) {
+				 	if (puzzle in puzzles) 
+				 	teams_killed = teams_killed.concat(puzzles[puzzle].get("teams_killed"));
+				 	else
+				 	console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
+				 	});
+			
+				 	// If active team gets killed at next location, change location description
+				 	if ( $.inArray(tid, teams_killed) != -1 )  
+				 	loc_desc = locations[locOrder[currentLoc]].get("self_flavor_text")
+				 	 
+				 	// Update location text
+				 	$("#main #main_screen .left-sidebar .content .location_description").html( loc_desc );
 
 					// if they are too early for the current location, display an alert
 					if (nowStr < locations[locOrder[currentLoc]].get("time_open")) {
@@ -134,6 +152,7 @@ var Puzzle = Backbone.Model.extend({
 			}
 			else {
 				teams[id].die();
+				logAction(logTypes.KILL, "You killed team " + id + "[put name here]. also link to video!");
 			}
 		});
 	},
@@ -141,6 +160,7 @@ var Puzzle = Backbone.Model.extend({
 	unlockResources : function() {
 		$.each(this.get("resources_unlocked"), function(index, name) {
 			resources[name].unlock();
+			logAction(logTypes.RESOURCE, "You unlocked " + name + "!!!!!");
 		});
 	},
 

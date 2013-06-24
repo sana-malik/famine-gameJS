@@ -32,7 +32,7 @@ var Session = Backbone.Model.extend({
 				"current_worth" : this.get("max_fans"),
 				"status" : puzzleStatus.INACTIVE,
 				"hintStats" : {},
-				"log" : []
+				"log" : [] // this is a more granular log of the puzzle's guesses and what nots.
 			};
 
 			$.each(puzzle.get("hints"), function(hname, hint) {
@@ -40,6 +40,9 @@ var Session = Backbone.Model.extend({
 			});
 		});
 		this.set("puzzleStats", temp);
+
+		// history
+		this.set("history",[])
 	},
 
 	getActivePuzzles : function() {

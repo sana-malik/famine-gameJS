@@ -46,7 +46,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 			$(that.el).prepend('<span class="title">Active Puzzles:</span>');
 		}
 		else {
-			$("#start_code_box").show();
+			$("#start_code_box").show(); // why does it show the start code box here? what if it solved all the minis but not hte meta?
 		}
 	}
 });

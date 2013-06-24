@@ -17,7 +17,7 @@ var TeamIconView = Backbone.View.extend({
 var TeamView = Backbone.View.extend({
 	initialize: function() {
 		_.bindAll(this, 'render');
-		this.model.bind("change:teamStats",this.render)
+		this.model.bind("change:teamStats",this.render);
 		this.render();
 	},
 
