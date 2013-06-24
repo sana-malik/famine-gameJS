@@ -199,10 +199,10 @@ function loadServerSession(myTeam) {
 	});
 }
 
-function playSound(soundfile) {
+function playSound(soundfile, duration) {
 	var sound = Ti.Media.createSound("sounds/" + soundfile)
 	sound.play();
-	setTimeout(function(){sound.stop()}, 3000);
+	setTimeout(function(){sound.stop()}, duration);
 }
 
 
