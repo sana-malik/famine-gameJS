@@ -37,11 +37,9 @@ var MainView = Backbone.View.extend({
 	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
 				<div id="path">Main</div>\
 			</div>\
-			<div class="content"><div class="clickable" id="active_puzzle_button">Return to current puzzle</div><p>\
-				Testing the scrollbar</p>\
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum enim mi, vulputate et rutrum quis, feugiat ut libero. Nulla eu velit odio. Aliquam enim nunc, pharetra vel laoreet non, malesuada at sapien. Nullam eleifend sem eu eros facilisis euismod. Etiam quis lacus id felis gravida venenatis. Quisque blandit pharetra dolor, vel accumsan eros gravida vitae. Integer ac leo urna. Nullam ut iaculis orci. Nunc at orci eros. Morbi quis nibh purus, id ultricies sapien.</p>\
-				<p>Nam accumsan, tellus eget pretium posuere, nisl orci dignissim felis, vel pharetra mauris lacus sed est. Nullam id turpis venenatis sem viverra volutpat sed quis elit. Integer non ipsum facilisis velit tincidunt convallis non vitae nisi. Sed bibendum vulputate nisl, et vehicula sapien tincidunt commodo. Aliquam erat volutpat. Donec a massa vitae justo laoreet fringilla a vel urna. Sed ultrices tincidunt cursus. Curabitur bibendum placerat tortor, non laoreet est bibendum in. Nulla vel elit eros, id pharetra dolor. Nullam quis velit eget purus iaculis aliquet. Etiam pellentesque augue nisi, sit amet cursus neque.</p></div>\
-				</div></div>\
+			<div class="content"><div class="clickable" id="active_puzzle_button">Return to current puzzle</div>\
+				<div class="location_description"></div>\
+				</div></div></div>\
 				<div class="right-sidebar"><div id="right_sidebar_content"></div>\
 				<div id="return_message" class="hidden"></div>\
 				<div id="start_code_box">Enter a start code: <input type="text" id="start_input">\
@@ -92,6 +90,7 @@ var MainView = Backbone.View.extend({
 		this.render();
 		$("#active_puzzle_button").hide();
 		this.LocationView = new LocationView({el : "#main_screen > .right-sidebar > #right_sidebar_content", model : this.model});
+		$("#main #main_screen .left-sidebar .content .location_description").html( locations[locOrder[session.get("currentLocation")]].get("flavor_text") );
 		$(this.el).addClass('active')
 	},
 

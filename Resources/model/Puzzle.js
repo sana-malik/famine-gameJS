@@ -29,10 +29,12 @@ var Puzzle = Backbone.Model.extend({
 				
 				// hide answer box
 				$("#"+nameToId(this.get("name")) + " .answer_box").hide();
+				
 				// puzzle results
 				this.killTeams();
 				//this.unlockResources();
 				try { saveServerSession(session, tid); } catch (err) {}
+
 				// remove timer
 				clearInterval(stats[this.get("name")]["timerID"]);
 				
@@ -54,6 +56,8 @@ var Puzzle = Backbone.Model.extend({
 						currentLoc++;
 					}
 					session.set("currentLocation", currentLoc);
+
+					$("#main #main_screen .left-sidebar .content .location_description").html( locations[locOrder[currentLoc]].get("flavor_text") );
 
 					// if they are too early for the current location, display an alert
 					if (nowStr < locations[locOrder[currentLoc]].get("time_open")) {
