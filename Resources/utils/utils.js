@@ -200,7 +200,9 @@ function loadServerSession(myTeam) {
 }
 
 function playSound(soundfile) {
-	Ti.Media.createSound("sounds/" + soundfile).play();
+	var sound = Ti.Media.createSound("sounds/" + soundfile)
+	sound.play();
+	setTimeout(function(){sound.stop()}, 3000);
 }
 
 
