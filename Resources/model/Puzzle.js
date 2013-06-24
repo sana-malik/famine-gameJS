@@ -33,7 +33,6 @@ var Puzzle = Backbone.Model.extend({
 				// puzzle results
 				this.killTeams();
 				//this.unlockResources();
-				try { saveServerSession(session, tid); } catch (err) {}
 
 				// remove timer
 				clearInterval(stats[this.get("name")]["timerID"]);
@@ -86,6 +85,7 @@ var Puzzle = Backbone.Model.extend({
 
 				// update the stats
 				session.set("puzzleStats",stats);
+				try { saveServerSession(session, tid); } catch (err) {}
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer
 				// reveal skipped hints

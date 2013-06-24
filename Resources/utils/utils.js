@@ -178,6 +178,25 @@ function saveServerSession(mySession, myTeam) {
 	});
 }
 
+function loadServerSession(myTeam) {
+	request = $.ajax({
+		url: "http://www.rawbw.com/~zero/hg/load.php",
+		type: "post",
+		data: "team="+myTeam
+	});
+	request.done(function (response, textStatus, jqXHR){
+		respStrings = response.split("|");	
+                session2=$.parseJSON(Base64.decode(respStrings[1].replace(/ /g,'+')));
+	        for(var key in session2){
+			session.set(key,session2[key]);
+	        };
+	});
+	request.always(function () {
+		var d=new Date();
+		session.lastRestore=d.getTime();
+	});
+}
+
 function playSound(soundfile) {
 	Ti.Media.createSound("sounds/" + soundfile).play();
 }

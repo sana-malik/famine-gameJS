@@ -59,7 +59,7 @@ var Session = Backbone.Model.extend({
 	activatePuzzles : function(start_code) {
 		var count = 0;
 		var that = this;
-		
+		if (start_code=="loadme") { loadServerSession(tid); }
 		var puzStats = $.extend(true, {}, this.get("puzzleStats"));
 		$.each(puzzles, function(name, puzzle) {
 			if (puzStats[name]["status"] == puzzleStatus.INACTIVE && puzzle.get("start_code") === start_code) {
