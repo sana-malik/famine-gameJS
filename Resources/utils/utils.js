@@ -104,6 +104,7 @@ function PuzzleTimer(puzzleId, interval){
 	}
 
 	var increment = function() {
+		var changed = false
 		var stats = $.extend(true,{},session.get("puzzleStats"));
 
 		var current_time = Math.round((new Date()).getTime()/1000);
@@ -117,6 +118,7 @@ function PuzzleTimer(puzzleId, interval){
 				if (remaining <= 0) {
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
 					stats[puzzleId]["hintStats"][name]["remaining"] = hint.get("end_time")*60;
+					changed = true;
 				}
 			}
 			else if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.AVAILABLE) {

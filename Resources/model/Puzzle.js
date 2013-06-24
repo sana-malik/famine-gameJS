@@ -26,7 +26,7 @@ var Puzzle = Backbone.Model.extend({
 			if (give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
-				
+
 				// hide answer box
 				$("#"+nameToId(this.get("name")) + " .answer_box").hide();
 				
@@ -103,6 +103,9 @@ var Puzzle = Backbone.Model.extend({
 
 				// update the stats
 				session.set("puzzleStats",stats);
+				// if this is a mini, increment the meta counter so it knows to refresh the activity view
+				session.set("renderMeta", session.get("renderMeta")+1);
+
 				try { saveServerSession(session, tid); } catch (err) {}
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer

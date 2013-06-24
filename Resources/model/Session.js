@@ -40,6 +40,7 @@ var Session = Backbone.Model.extend({
 			});
 		});
 		this.set("puzzleStats", temp);
+		this.set("renderMeta", 0);
 
 		// history
 		this.set("history",[])
@@ -87,6 +88,7 @@ var Session = Backbone.Model.extend({
 		});
 		if (count > 0) {
 			that.set("puzzleStats", puzStats);
+			that.set("renderMeta",1);
 		}
 		return count;
 	}
