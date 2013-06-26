@@ -86,7 +86,10 @@ var HintView = Backbone.View.extend({
 		var stats = $.extend(true, {}, this.model.get("puzzleStats"));
 
 		var current_time = Math.round((new Date()).getTime()/1000);
-		var elapsed = (current_time-stats[this.puzzleName]["start_time"]) * 1000/timeInterval;
+		var elapsed = (current_time-stats[this.puzzleName]["start_time"]);
+		if (parameters["debug_parameters"]["debug"])
+				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
+
 		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
 		var status = stats[this.puzzleName]["hintStats"][this.hintName]["status"];
 		var reveal = true;
@@ -117,8 +120,10 @@ var HintView = Backbone.View.extend({
 		var remaining = session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["remaining"];
 		
 		var current_time = Math.round((new Date()).getTime()/1000);
-		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"]) * 1000/timeInterval;
-		
+		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"]);
+		if (parameters["debug_parameters"]["debug"])
+				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
+
 		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
 		
 

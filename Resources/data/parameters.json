@@ -1,0 +1,13 @@
+{
+"debug_parameters" : {
+    "debug" : true,
+    "time_multiplyer" : 12,
+    "start_time" : {
+            "year" : 2013,
+            "month" : 9,
+            "day" : 28,
+            "hour" : 22,
+            "minute" : 0
+        }
+    }
+}

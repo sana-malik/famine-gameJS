@@ -11,7 +11,7 @@ var Puzzle = Backbone.Model.extend({
 
 	checkAnswer : function(entry) {
 		var stats = $.extend(true, {}, session.get("puzzleStats"));
-		var response = "<div class='log_time'>" + getCurrentDateTime() + ": </div><div class='log_content'>";
+		var response = "<div class='log_time'>" + getCurrentDateTimeString() + ": </div><div class='log_content'>";
 		var give_up_code = "savemethresh"
 		var give_up = false
 
@@ -51,8 +51,15 @@ var Puzzle = Backbone.Model.extend({
 				// advance location
 				if (this.get("advance_location")) {
 					var currentLoc = session.get("currentLocation") + 1;
-					var now = new Date();
-					var nowStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear() + " " + now.getHours() + ":" + now.getMinutes();
+					var now = getCurrentDateTime();
+					var nowStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear() + " ";
+					if (now.getHours() < 10)
+						nowStr += "0";
+					nowStr += now.getHours() + ":";
+					if (now.getMinutes() < 10)
+						nowStr += "0";
+					nowStr += now.getMinutes();
+
 					while (locations[locOrder[currentLoc]].get("time_closed") < nowStr) {
 						currentLoc++;
 					}
@@ -77,6 +84,8 @@ var Puzzle = Backbone.Model.extend({
 				 	$("#main #main_screen .left-sidebar .content .location_description").html( loc_desc );
 
 					// if they are too early for the current location, display an alert
+					var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
+					console.log(time_open)
 					if (nowStr < locations[locOrder[currentLoc]].get("time_open")) {
 						showAlert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
 					}

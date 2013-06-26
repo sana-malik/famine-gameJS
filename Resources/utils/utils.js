@@ -113,8 +113,12 @@ function PuzzleTimer(puzzleId, interval){
 		// go through hints & check for status changes
 		$.each(hints, function(name, hint) {
 			var remaining = stats[puzzleId]["hintStats"][name]["remaining"];
+			var timediff = 1;
+			if (parameters["debug_parameters"]["debug"])
+				timediff *= parameters["debug_parameters"]["time_multiplyer"];
+
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
-				stats[puzzleId]["hintStats"][name]["remaining"] -= 1;
+				stats[puzzleId]["hintStats"][name]["remaining"] -= timediff;
 				if (remaining <= 0) {
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
 					stats[puzzleId]["hintStats"][name]["remaining"] = hint.get("end_time")*60;
@@ -122,7 +126,7 @@ function PuzzleTimer(puzzleId, interval){
 				}
 			}
 			else if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.AVAILABLE) {
-				stats[puzzleId]["hintStats"][name]["remaining"] -= 1;
+				stats[puzzleId]["hintStats"][name]["remaining"] -= timediff;
 			}
 			else {
 				return; // no need to display any timer/change any status
@@ -136,7 +140,26 @@ function PuzzleTimer(puzzleId, interval){
 }
 
 function getCurrentDateTime() {
-	var currentTime = new Date();
+	var date;
+	var start_time = parameters["debug_parameters"].start_time;
+
+	if (parameters["debug_parameters"]["debug"])
+		date = new Date(
+			start_time.year, 
+			start_time.month-1, 
+			start_time.day, 
+			start_time.hour, 
+			start_time.minute
+			);
+
+	else
+		date = new Date();
+
+	return date;
+}
+
+function getCurrentDateTimeString() {
+	var currentTime = getCurrentDateTime();
 	var year = currentTime.getFullYear();
 	var day = currentTime.getDate();
 	var month = currentTime.getMonth() + 1;
@@ -208,6 +231,6 @@ function playSound(soundfile, duration) {
 
 function logAction(type, msg) {
 	var temp = session.get("history").slice();
-	temp.push([getCurrentDateTime(), type, msg]);
+	temp.push([getCurrentDateTimeString(), type, msg]);
 	session.set("history",temp);
 }

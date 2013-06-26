@@ -22,6 +22,9 @@ $(document).ready(function() {
     //Add menu to the current window
    // Ti.UI.getCurrentWindow().setMenu(menu);
 
+   	// Load parameters
+   	parameters = loadParameters();
+
 	// Set up models
 	teams = populateTeams();
 	locations = populateLocations(); 
@@ -62,6 +65,14 @@ $(document).ready(function() {
 		$("#info.tab").addClass("active");
 	});
 });
+
+function loadParameters() {
+	var json = jsonToString(data_dir + 'parameters.json');
+
+	var params = Ti.JSON.parse(json);
+	
+	return params;
+}
 
 function populateTeams() {
 	var json = jsonToString(data_dir + 'teams.json');
