@@ -16,6 +16,7 @@ var goToActivePuzzle = function(result) {
 			}
 		})
 		$(".puzzle#"+nameToId(activePuz)).addClass("active");
+		$("#" + nameToId(activePuz) + " .answer_input").focus();
 	}
 }
 

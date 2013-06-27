@@ -18,7 +18,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 
   		$('.main.active').removeClass('active');
   		$('div.puzzle#' + name).addClass('active');
-
+  		$('div.puzzle#' + name + " .answer_input").focus()
 	},
 
 	render: function() {
