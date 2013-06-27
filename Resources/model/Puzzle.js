@@ -62,6 +62,7 @@ var Puzzle = Backbone.Model.extend({
 
 					while (locations[locOrder[currentLoc]].get("time_closed") < nowStr) {
 						currentLoc++;
+						// We need to skip over the puzzles appropriately as well, e.g. play cannon sounds for killed teams, show videos, etc.
 					}
 					session.set("currentLocation", currentLoc);
 
