@@ -3,6 +3,7 @@
     "debug" : false,
     "time_multiplyer" : 12,
     "start_time" : {
+            "active" : true,
             "year" : 2013,
             "month" : 9,
             "day" : 28,

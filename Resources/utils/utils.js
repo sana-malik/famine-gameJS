@@ -139,21 +139,13 @@ function PuzzleTimer(puzzleId, interval){
 }
 
 function getCurrentDateTime() {
-	var date;
-	var start_time = parameters["debug_parameters"].start_time;
+	var date = new Date().valueOf();
 
 	if (parameters["debug_parameters"]["debug"])
-		date = new Date(
-			start_time.year, 
-			start_time.month-1, 
-			start_time.day, 
-			start_time.hour, 
-			start_time.minute
-			);
+		date += parameters.time_diff;
 
-	else
-		date = new Date();
-
+	date = new Date(date);
+	
 	return date;
 }
 

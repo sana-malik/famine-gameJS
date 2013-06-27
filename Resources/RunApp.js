@@ -70,6 +70,17 @@ function loadParameters() {
 	var json = jsonToString(data_dir + 'parameters.json');
 
 	var params = Ti.JSON.parse(json);
+
+	var start_time_data = params["debug_parameters"].start_time;
+	var start_time = new Date(
+			start_time_data.year, 
+			start_time_data.month-1, 
+			start_time_data.day, 
+			start_time_data.hour, 
+			start_time_data.minute
+			);
+
+	params.time_diff = start_time - new Date();
 	
 	return params;
 }
