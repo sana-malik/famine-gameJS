@@ -69,8 +69,7 @@ var Session = Backbone.Model.extend({
 			if (puzStats[name]["status"] == puzzleStatus.INACTIVE && puzzle.get("start_code") === start_code) {
 				var timerID = PuzzleTimer(name);
 
-				var date = (new Date()).getTime();
-				var startTime = Math.round((new Date()).getTime() / 1000);
+				var startTime = getCurrentDateTime();
 		
 				var puzzObj = {
 					"status" : puzzleStatus.ACTIVE,

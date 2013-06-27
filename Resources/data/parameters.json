@@ -1,6 +1,6 @@
 {
 "debug_parameters" : {
-    "debug" : true,
+    "debug" : false,
     "time_multiplyer" : 12,
     "start_time" : {
             "year" : 2013,

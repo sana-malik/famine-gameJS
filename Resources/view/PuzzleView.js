@@ -85,12 +85,12 @@ var HintView = Backbone.View.extend({
 	reveal_hint : function () {		
 		var stats = $.extend(true, {}, this.model.get("puzzleStats"));
 
-		var current_time = Math.round((new Date()).getTime()/1000);
-		var elapsed = (current_time-stats[this.puzzleName]["start_time"]);
+		var current_time = getCurrentDateTime();
+		var elapsed = (current_time-stats[this.puzzleName]["start_time"])/1000;
 		if (parameters["debug_parameters"]["debug"])
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
-		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
+		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60); 
 		var status = stats[this.puzzleName]["hintStats"][this.hintName]["status"];
 		var reveal = true;
 
@@ -119,20 +119,20 @@ var HintView = Backbone.View.extend({
 
 		var remaining = session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["remaining"];
 		
-		var current_time = Math.round((new Date()).getTime()/1000);
-		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"]);
+		var current_time = getCurrentDateTime();
+		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"])/1000;
 		if (parameters["debug_parameters"]["debug"])
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
 		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
-		
+		console.log(current_time);
 
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
 			$(that.el).children('.hint_text').html('Available in ' + formatTime(remaining));
 		}
 		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.AVAILABLE) {
 			var button_text = 'Get hint, lose ' + cost + ' viewers';
-			if (cost == 0)
+			if (cost <= 0)
 				button_text = 'Reveal free hint';
 			$(that.el).children('.hint_text').html('<button id=\"hint_button\">' + button_text + '</button>');
 		}

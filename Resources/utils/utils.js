@@ -107,7 +107,6 @@ function PuzzleTimer(puzzleId, interval){
 		var changed = false
 		var stats = $.extend(true,{},session.get("puzzleStats"));
 
-		var current_time = Math.round((new Date()).getTime()/1000);
 		var hints = puzzles[puzzleId].get("hints");
 
 		// go through hints & check for status changes

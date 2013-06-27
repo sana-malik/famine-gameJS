@@ -37,8 +37,16 @@ var TeamView = Backbone.View.extend({
 		var teamIconViews = {};
 		$(this.el).empty();
 		$.each(teams, function(id, team) {
-			$(that.el).append("<div class=\"team_div\" id=\""+id+"\"></div>")
-			teamIconViews[id] = new TeamIconView({el : "#bottombar > div.team_div#"+id, model:team});
+			if (id.indexOf('a') != -1) {
+				$(that.el).append("<div class=\"team_div\" id=\""+id+"\"></div>")
+				teamIconViews[id] = new TeamIconView({el : "#bottombar > div.team_div#"+id, model:team});
+			}
+		});
+		$.each(teams, function(id, team) {
+			if (id.indexOf('b') != -1) {
+				$(that.el).append("<div class=\"team_div\" id=\""+id+"\"></div>")
+				teamIconViews[id] = new TeamIconView({el : "#bottombar > div.team_div#"+id, model:team});
+			}
 		});
 	}
 });

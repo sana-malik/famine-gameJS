@@ -45,7 +45,7 @@ var Puzzle = Backbone.Model.extend({
 				// allot fans & log
 				if (!give_up) {
 					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
-					logAction(logTypes.PUZZLE, "You solved puzzle " + this.get("name") + " ["+entry+"] for " + stats[this.get("name")]["current_worth"] + " fans in [time taken to solve].")
+					logAction(logTypes.PUZZLE, "You solved " + this.get("name") + " [answer: "+entry+"] for " + stats[this.get("name")]["current_worth"] + " fans in " + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes.");
 				}
 
 				// advance location
@@ -164,7 +164,7 @@ var Puzzle = Backbone.Model.extend({
 			}
 			else {
 				teams[id].die();
-				logAction(logTypes.KILL, "You killed team " + id + "[put name here]. also link to video!");
+				logAction(logTypes.KILL, "You killed " + teams[id].get("name"));
 			}
 		});
 	},
