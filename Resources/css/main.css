@@ -330,18 +330,36 @@ margin: 0px;
 
 
 /* INFO PAGE */
-#info {
+#info .left-sidebar .content{
 	position:absolute;
 	left: 265px; top: 103px;
-	width: 674px; height: 313px;
+	width: 415px; height: 313px;
 	overflow: auto;
 	padding: 10px;	
 	border-bottom: #8c909b solid 1px;
 	border-left: #8c909b solid 1px;
 	border-right: #8c909b solid 1px;
 	background:rgba(19,19,22, 0.4);
+}
+
+#info .right-sidebar {
+	position:absolute;
+	left: 700px; top:103px;
+	width: 245px; height: 323px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 10px 5px 0px 10px;		
+	background:rgba(255,255,255, 0.2);
+	border: 1px solid #8c909b;
+	border-left: none;
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
+}
+
+#info .right_sidebar .content {
+height: 240px;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 /* BOTTOM BAR */

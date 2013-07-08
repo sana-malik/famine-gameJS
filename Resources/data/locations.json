@@ -1,5 +1,5 @@
 {
-"order" : ["#1 - Air Force Memorial", "The Motley Fool", "cat", "dog", "bear", "horse", "fish", "tiger"],
+"order" : ["Air Force Memorial", "The Motley Fool", "cat", "dog", "bear", "horse", "fish", "tiger"],
 "locations" : {
 "The Motley Fool" : {
         "name" : "The Motley Fool",
@@ -21,8 +21,8 @@
         "map_file" : "images/maps/fool_map.png",
         "puzzles" : ["Gelatinous Cube"]
 },
-"#1 - Air Force Memorial" : {
-        "name" : "#1 - Air Force Memorial",
+"Air Force Memorial" : {
+        "name" : "Air Force Memorial",
         "address" : "One Air Force Memorial Drive, Arlington, VA 22204",
         "time_open" : "9/28/2013 14:00",
         "time_closed" : "9/28/2013 22:00",
