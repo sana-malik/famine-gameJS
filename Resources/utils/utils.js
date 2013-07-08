@@ -69,11 +69,13 @@ function showAlert(content) {
 function hidePopup() {
 	$("#popup_content > .content").empty();
 	$("#popup_container").hide();
+	$("#start_input").focus();
 }
 
 function hideAlert() {
 	$("#alert_content > .content").empty();
 	$("#alert_container").hide();
+	$("#start_input").focus();
 }
 
 function nameToId(str) {

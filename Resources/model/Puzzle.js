@@ -97,6 +97,7 @@ var Puzzle = Backbone.Model.extend({
 					$('.main.active').removeClass('active');
 					$('#main_screen').addClass('active');
 					$('#start_code_box').show();
+					$("#start_input").focus();
 					$('#active_puzzle_button').hide();
 
 					// change unfinished puzzles to ARCHIVED?? -- solvable but not active

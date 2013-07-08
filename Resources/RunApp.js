@@ -49,6 +49,7 @@ $(document).ready(function() {
 
 		$("#main_container > .tab.active").removeClass("active");
 		$("#main.tab").addClass("active");
+		$("#start_input").focus();
 	});
 	$('#tab_history').click(function() {
 		$("#toc > .current").removeClass("current");
@@ -80,6 +81,7 @@ function loadParameters() {
 			start_time_data.minute
 			);
 
+	params.start_time = start_time;
 	params.time_diff = start_time - new Date();
 	
 	return params;

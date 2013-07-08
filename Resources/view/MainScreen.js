@@ -5,6 +5,7 @@ var goToActivePuzzle = function(result) {
 	if (result === 1) {
 		var activePuz = session.getActivePuzzles();
 		$(".puzzle#"+nameToId(activePuz[0])).addClass("active");
+		$("#" + nameToId(activePuz[0]) + " .answer_input").focus();
 	}
 	else {
 		var activePuzs = session.getActivePuzzles();
@@ -50,11 +51,22 @@ var MainView = Backbone.View.extend({
 	events: {
 		'click #start_button' : 'start_button_clicked',
 		'click #active_puzzle_button' : 'active_puzzle_clicked',
-		'keypress input[type=text]#start_input': 'check_for_enter'
+		'keypress input[type=text]#start_input': 'check_key'
 	},
 
-	check_for_enter : function(e) {
-		 if (e.keyCode == 13) this.start_button_clicked();
+	check_key : function(e) {
+		 switch(e.keyCode) {
+		 	case 13: // enter
+		 		this.start_button_clicked();
+		 		break;
+		 	case 4: // ctrl-d
+		 		this.open_debug_panel();
+		 		break;
+		 	}
+	},
+
+	open_debug_panel : function(){
+
 	},
 
 	start_button_clicked : function() {
@@ -93,6 +105,7 @@ var MainView = Backbone.View.extend({
 		this.LocationView = new LocationView({el : "#main_screen > .right-sidebar > #right_sidebar_content", model : this.model});
 		$("#main #main_screen .left-sidebar .content .location_description").html( locations[locOrder[session.get("currentLocation")]].get("flavor_text") );
 		$(this.el).addClass('active')
+		$("#start_input").focus();
 	},
 
 	render: function() {
