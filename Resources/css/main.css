@@ -92,6 +92,9 @@ h3.fans {
 	opacity: 0.4;
 }
 
+.resource_img {
+	margin: 2px;
+}
 /* NAVIGATION TABS */
 #tabs {
 	position:absolute;

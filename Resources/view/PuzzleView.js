@@ -147,7 +147,8 @@ var HintView = Backbone.View.extend({
 });
 
 var PuzzleSessionView = Backbone.View.extend({
-	template : _.template('Viewers watching: <span id="fan_worth"><%= current_worth %></span>'),
+	template : _.template('Viewers watching: <span id="fan_worth"><%= current_worth %></span><br />\
+		Elapsed time: <span id="elapsed_time"></span>'),
 
 	initialize: function(options) {
 		_.bindAll(this, 'render');
@@ -171,7 +172,6 @@ var PuzzleView = Backbone.View.extend({
 			</div>\
 			<div class="content"><h2 class="puzzle_title"><%= name %></h2>\
 		<span class="flavor_text"><%= flavor_text %></span>\
-		<div class="session_vars"></div>\
 		<div class="hints"></div>\
 		<!--<button class="giveup_button">I give up!</button>-->\
 		</div></div>\
@@ -193,7 +193,7 @@ var PuzzleView = Backbone.View.extend({
 		this.puzzleName = options.puzzleName;
 
 		this.render();
-		this.session_vars = new PuzzleSessionView({el : ".main#" + nameToId(this.puzzleName) + " .session_vars", puzzleName : this.puzzleName, model : session});
+		this.session_vars = new PuzzleSessionView({el : ".main#" + nameToId(this.puzzleName) + " .puzzle_data", puzzleName : this.puzzleName, model : session});
 		this.hints = {};
 		$.each(puzzles[this.puzzleName].get("hints"), function(name, hint) {
 			$("#" + nameToId(that.puzzleName) + " .hints").append("<div class=\"hint\" id=\"" + nameToId(name) + "\"></div>");
