@@ -1,18 +1,18 @@
 {
-"Fork" : {
-"name" : "Fork",
-"icon" : "images/resources/fork.jpg"
+"pencil" : {
+	"name" : "pencil",
+	"icon" : "pencil.png"
 },
-"Pencil" : {
-"name" : "Pencil",
-"icon" : "images/resources/pencil.jpg"
+"paper" : {
+	"name" : "paper",
+	"icon" : "paper.png"
 },
-"Paper" : {
-"name" : "Paper",
-"icon" : "images/resources/paper.jpg"
+"scissors" : {
+	"name" : "scissors",
+	"icon" : "scissors.png"
 },
-"Scissors" : {
-"name" : "Scissors",
-"icon" : "images/resources/scissors.jpg"
+"tape" : {
+	"name" : "tape",
+	"icon" : "tape.png"
 }
 }

@@ -20,5 +20,4 @@ var Resource = Backbone.Model.extend({
 		stats[this.get("name")] = {"status" : resourceStatus.UNLOCKED};
 		session.set("resourceStats",stats);
 	}
-
 });

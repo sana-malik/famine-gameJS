@@ -516,7 +516,7 @@
 "max_fans" : 100,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
-"resources_unlocked" : ["fork"],
+"resources_unlocked" : ["pencil"],
 "teams_killed" : ["1b"],
 "meta" : false,
 "advance_location" : false,

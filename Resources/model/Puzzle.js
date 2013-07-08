@@ -32,7 +32,7 @@ var Puzzle = Backbone.Model.extend({
 				
 				// puzzle results
 				this.killTeams();
-				//this.unlockResources();
+				this.unlockResources();
 
 				// remove timer
 				clearInterval(stats[this.get("name")]["timerID"]);

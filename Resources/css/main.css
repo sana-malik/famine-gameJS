@@ -83,6 +83,15 @@ h3.fans {
 	display: none;
 }
 
+/* resources */
+#sidebar #resources .resource_div {
+	display: inline;
+}
+
+.resource_div.locked {
+	opacity: 0.4;
+}
+
 /* NAVIGATION TABS */
 #tabs {
 	position:absolute;

@@ -11,19 +11,12 @@
     "name" : "Boneless Chicken Caberet",
 
     "bio" : "A boisterous combination of improvisation, sketch comedy, music, dance, and interactive theater, performed by men dressed as chickens. They also do puzzles.",
-
     "hometown" : "Alexandia, VA",
-
     "photo" : "team photo",
-
     "icon" : "team01.png",
-
     "video" : "http://www.youtube.com/embed/DgsZF6pbGD8",
-
     "mentor" : "Haymitch",
-
     "talent" : "improv",
-
     "members" : ["Todd Etter", "Chris Guthrie", "Mark Brooks", "David Forrest", "Charlie Scarborough", "Matt Hartman"]
 
 },
