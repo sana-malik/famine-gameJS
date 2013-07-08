@@ -26,7 +26,7 @@ var UserView = Backbone.View.extend({
 	initialize: function() {
 		_.bindAll(this, 'render');
 		this.model.bind("change:fans",this.render);
-		this.icon = new TeamIconView({el : "#sidebar > #icon", model:teams[tid]});
+		this.icon = new BigTeamIconView({el : "#sidebar > #icon", model:teams[tid]});
 		this.render();
 	},
 
