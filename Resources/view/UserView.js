@@ -11,7 +11,7 @@ var ResourceView = Backbone.View.extend({
 		var that = this;
 		$(that.el).empty()
 		$.each(resources, function(name, resource) { 
-			$(that.el).append('<div class="resource_div" id="' + nameToId(name) + '"><img src="images/resources/' + resource.get("icon") + '" class="resource_img" alt="' + name + '"></div>');
+			$(that.el).append('<div class="resource_div" id="' + nameToId(name) + '"><img src="images/resources/' + resource.get("icon") + '" class="resource_img" title="' + name + '"></div>');
 
 			if (that.model.get("resourceStats")[name]["status"] == resourceStatus.LOCKED) {
 				$(".resource_div#"+nameToId(name), that.el).addClass("locked");

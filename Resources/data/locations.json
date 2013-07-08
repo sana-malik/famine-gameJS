@@ -30,7 +30,7 @@
         "self_flavor_text" : "Go to this location to find some sweet supplies.",
         "notes" : "The Memorial is free and open to the public every day of the year except Christmas Day.",
         "parking_status" : "No",
-        "parking_description" : "",
+        "parking_description" : "test",
         "restroom_status" : "Yes",
         "restroom_description" : "There are restrooms located inside the office building.",
         "food_status" : "Yes",

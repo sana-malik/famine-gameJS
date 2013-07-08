@@ -8,6 +8,8 @@
 		<script type="text/javascript" src="utils/utils.js"></script>
 		<script type="text/javascript" src="utils/consts.js"></script>
 		<script type="text/javascript" src="utils/base64.js"></script>
+		<script type="text/javascript" src="utils/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="utils/external.js"></script>
 		<script type="text/javascript" src="utils/debug.js"></script>
 
 		<!-- MODEL -->
@@ -31,10 +33,16 @@
 		
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 
 		<title>Famine Game</title>
 	</head>
 	<body>
+		<div id="tt">
+			<div id="tttop"> </div>
+			<div id="ttcont"> </div>
+			<div  id="ttbot"> </div>
+		</div>
 		<div id="popup_container" style="display:none;">
 			<div id="popup_content">
 				<div class="title"><a href="#"><img src="images/gui/close_icon.gif" id="close_popup"></a></div>
