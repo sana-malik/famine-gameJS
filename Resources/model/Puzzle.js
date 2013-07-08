@@ -12,7 +12,7 @@ var Puzzle = Backbone.Model.extend({
 	checkAnswer : function(entry) {
 		var stats = $.extend(true, {}, session.get("puzzleStats"));
 		var response = "<div class='log_time'>" + getCurrentDateTimeString() + ": </div><div class='log_content'>";
-		var give_up_code = "savemethresh"
+		var give_up_code = "saveusthresh"
 		var give_up = false
 
 		if (entry === give_up_code) {
