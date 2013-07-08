@@ -64,7 +64,7 @@ cursor:hand;
 #sidebar {
 	position:absolute;
 	left: 10px; top:80px;
-	width: 225px; height: 330px;
+	width: 225px; height: 335px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 10px;
@@ -73,6 +73,7 @@ cursor:hand;
 }
 
 h3.fan_count {
+	height: 5px;
 }
 
 h3.fans {
