@@ -65,6 +65,11 @@ $(document).ready(function() {
 		$("#main_container > .active.tab").removeClass("active");
 		$("#info.tab").addClass("active");
 	});
+
+	// jquery tooltip
+	$(function() {
+    	$( document ).tooltip();
+  	});
 });
 
 function loadParameters() {

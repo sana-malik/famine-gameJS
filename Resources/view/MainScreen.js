@@ -22,7 +22,16 @@ var goToActivePuzzle = function(result) {
 }
 
 var LocationView = Backbone.View.extend({
-	template: _.template('<h3 class="location-name"><%= name %></h3><p class="location-address"><%= address %></p><h4 class="location-header">Location Details</h4><table class="location-info"><tr><td class="location-item">Parking: </td><td class="location-status"><%= parking_status %></td></tr><tr><td class="location-item">Restrooms: </td><td class="location-status"><%= restroom_status %></td></tr><tr><td class="location-item">Wi-Fi: </td><td class="location-status"><%= wifi_status %></td></tr><tr><td class="location-item">Food: </td><td class="location-status"><%= food_status %></td></tr><tr><td colspan="2" class="location-status"><a href="">more info</a></td></tr></table>'),
+	template: _.template('<h3 class="location-name"><%= name %></h3>\
+		<p class="location-address"><%= address %></p>\
+		<h4 class="location-header">Location Details</h4>\
+		<table class="location-info">\
+			<tr><td class="location-item">Parking: </td><td class="location-status" title="<%= parking_description %>"><%= parking_status %></td></tr>\
+			<tr><td class="location-item">Restrooms: </td><td class="location-status" title="<%= restroom_description %>"><%= restroom_status %></td></tr>\
+			<tr><td class="location-item">Wi-Fi: </td><td class="location-status" title="<%= wifi_description %>"><%= wifi_status %></td></tr><tr>\
+			<td class="location-item">Food: </td><td class="location-status" title="<%= food_description %>"><%= food_status %></td></tr>\
+			<tr><td colspan="2" class="location-status"><a href="">more info</a></td></tr>\
+		</table>'),
 
 	initialize: function() {
 		_.bindAll(this, 'render');

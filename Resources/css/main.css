@@ -64,7 +64,7 @@ cursor:hand;
 #sidebar {
 	position:absolute;
 	left: 10px; top:80px;
-	width: 225px; height: 310px;
+	width: 225px; height: 335px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 10px;
@@ -73,6 +73,7 @@ cursor:hand;
 }
 
 h3.fan_count {
+	height: 5px;
 }
 
 h3.fans {
@@ -362,6 +363,11 @@ height: 240px;
 	overflow-y: auto;
 }
 
+h3.section-name {
+margin: 0px;
+padding: 0px;
+}
+
 /* BOTTOM BAR */
 #bottombar {
 	position:absolute;
@@ -628,4 +634,31 @@ top: 20px;
 text-align: center;
 color: #fff;
 text-decoration: none;
+}
+
+/* TOOLTIP */
+#tt {
+ position:absolute;
+ display:block;
+ background:url(images/tt_left.gif) top left no-repeat;
+ }
+ #tttop {
+ display:block;
+ height:5px;
+ margin-left:5px;
+ background:url(images/tt_top.gif) top right no-repeat;
+ overflow:hidden;
+ }
+ #ttcont {
+ display:block;
+ padding:2px 12px 3px 7px;
+ margin-left:5px;
+ background:#666;
+ color:#fff;
+ }
+#ttbot {
+display:block;
+height:5px; 
+margin-left:5px;  
+overflow:hidden;
 }

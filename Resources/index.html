@@ -8,6 +8,8 @@
 		<script type="text/javascript" src="utils/utils.js"></script>
 		<script type="text/javascript" src="utils/consts.js"></script>
 		<script type="text/javascript" src="utils/base64.js"></script>
+		<script type="text/javascript" src="utils/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="utils/external.js"></script>
 		<script type="text/javascript" src="utils/debug.js"></script>
 
 		<!-- MODEL -->
@@ -31,10 +33,16 @@
 		
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 
 		<title>Famine Game</title>
 	</head>
 	<body>
+		<div id="tt">
+			<div id="tttop"> </div>
+			<div id="ttcont"> </div>
+			<div  id="ttbot"> </div>
+		</div>
 		<div id="popup_container" style="display:none;">
 			<div id="popup_content">
 				<div class="title"><a href="#"><img src="images/gui/close_icon.gif" id="close_popup"></a></div>
@@ -70,16 +78,11 @@
 			</div>
 			<div id="info" class="tab">
 
-
-
 				<div class="left-sidebar">
 					<div class="content">
 
-
-
-
-						
-
+						<!-- NOTE:  This needs to be removed for the production version! Delete up to the appropriate comment. -->
+						<h3 class="section-name">Puzzle Info</h3>
 						<table border="1" fontcolor="#FFFFFF" bordercolor="#FFFFCC" style="background-color:#1B1B27" width="100%" cellpadding="2" cellspacing="1">
 						<tr>
 							<th>Name</th>
@@ -132,8 +135,8 @@
 						</tr>
 						<tr align=center>
 							<td>Lucky Charms</td>
+							<td>breakfast</td>
 							<td>spoonman</td>
-							<td>healthy</td>
 							<td></td>
 							<td></td>
 						</tr>
@@ -145,24 +148,56 @@
 							<td></td>
 						</tr>
 						</table>
-						How to use
-						How you're scored
-						How hints work
+						<br><br>
+						<!-- This is the appropriate comment.  Delete up to here. -->
+
+						<p>
+							<h3 class="section-name">The Arena Field App</h3>
+							<div id="content">
+								The Capitol has provided you with this app for use in the Arena.
+							</div>
+						</p>
+
+						<p>
+							<h3 class="section-name">Parts of the App</h3>
+								Team info on the left.  Tabs up top.  Opponents on bottom. 
+						</p>
+
+						<p>
+							<h3 class="section-name">Earning Fans</h3>
+								Do well, get fans.
+						</p>
+
+						<p>
+							<h3 class="section-name">Getting Help</h3>
+								If you're stuck, get a hint.  But viewers will lose interest, and thus you will lose fans.
+						</p>
+
+						<p>
+							<h3 class="section-name">Forfeiting a Challenge</h3>
+								If it's just too much for you, you can forfeit a challenge by calling for help.
+						</p>
 
 					</div>
 				</div>
 
 				<div class="right-sidebar">
 					<div id="content">
-						<h3 class="location-name">Important Info</h3>
+						<h3 class="section-name">Important Info</h3>
 						<table class="location-info">
 							<tr><td class="location-item">Contact: </td><td class="location-status">555-5555</td></tr>
 							<tr><td class="location-item">Backup: </td><td class="location-status">555-5556</td></tr>
 							<tr><td class="location-item">Hashtag: </td><td class="location-status">#faminegame</td></tr>
-							<tr><td class="location-item">Give up code: </td><td class="location-status">"Save us Thresh!"</td></tr>
 						</table>
 						<br>
-						WARNING: Tweets may contain spoilers!
+						<h3 class="section-name">Important Commands</h3>
+						<table class="location-info">
+							<tr><td class="location-item">Forfeit code: </td><td class="location-status">"Save us Thresh!"</td></tr>
+							<tr><td class="location-item">Load code: </td><td class="location-status">"loadme"</td></tr>
+						</table>
+						<br><br><br><br><br>
+						<center><b>WARNING</b><br> Tweets may contain spoilers! </center>
+
 					</div>
 				</div>
 

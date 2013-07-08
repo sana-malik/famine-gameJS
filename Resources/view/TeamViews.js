@@ -14,6 +14,18 @@ var TeamIconView = Backbone.View.extend({
 	}
 });
 
+var BigTeamIconView = Backbone.View.extend({
+	template: _.template('<img src=\"images/team_icons/big_<%= icon %>\" class=\"team_img\">'),
+	initialize: function() {
+		_.bindAll(this, 'render');
+		this.render();
+	},
+
+	render : function() {
+		$(this.el).html(this.template(this.model.toJSON()));
+	}
+});
+
 var TeamView = Backbone.View.extend({
 	initialize: function() {
 		_.bindAll(this, 'render');
