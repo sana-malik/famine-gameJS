@@ -71,15 +71,15 @@ var Puzzle = Backbone.Model.extend({
 				 	 
 				 	// Find all teams that get killed at next location
 				 	$.each( locations[locOrder[currentLoc]].get("puzzles"), function(index, puzzle) {
-				 	if (puzzle in puzzles) 
-				 	teams_killed = teams_killed.concat(puzzles[puzzle].get("teams_killed"));
-				 	else
-				 	console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
+				 		if (puzzle in puzzles) 
+				 			teams_killed = teams_killed.concat(puzzles[puzzle].get("teams_killed"));
+				 		else
+				 			console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
 				 	});
 			
 				 	// If active team gets killed at next location, change location description
 				 	if ( $.inArray(tid, teams_killed) != -1 )  
-				 	loc_desc = locations[locOrder[currentLoc]].get("self_flavor_text")
+				 		loc_desc = locations[locOrder[currentLoc]].get("self_flavor_text")
 				 	 
 				 	// Update location text
 				 	$("#main #main_screen .left-sidebar .content .location_description").html( loc_desc );

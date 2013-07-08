@@ -3,7 +3,7 @@
 "start_code" : "hive",
 "max_fans" : 100,
 "flavor_text" : "Now that you've cut the tracker jacker hive out of the trees, you need to instruct the bees to take care of your enemies",
-"self_flavor_text" : "",
+"self_flavor_text" : "Now that you've cut the tracker jacker hive out of the trees, you should be safe from the swarm.",
 "resources_unlocked" : [],
 "teams_killed" : ["1b"],
 "meta" : false,

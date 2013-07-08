@@ -206,6 +206,10 @@ var PuzzleView = Backbone.View.extend({
 			that.ActiveView = new ActivePuzzlesView({el : ".main#" + nameToId(this.puzzleName) + " .metas", model : session, puzzleName: that.puzzleName});
 		}
 		$(".meta_name", this.el).text(getMetaName(puzzles[this.puzzleName].get("start_code")));
+
+		var self_text = puzzles[this.puzzleName].get("self_flavor_text")
+		if (self_text != "" && $.inArray(tid, puzzles[this.puzzleName].get("teams_killed")) != -1 )
+			$("#" + nameToId(this.puzzleName) + " .flavor_text").html(self_text)
 	},
 
 	render: function() {
