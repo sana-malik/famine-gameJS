@@ -154,7 +154,7 @@ var Puzzle = Backbone.Model.extend({
 			response += entry + " - " + this.get("answers")[entry]["response"];
 		}
 		else {
-			response += entry + " is not the answer.</div>"
+			response += entry + "</strong> is not the answer.</div>"
 		}
 		this.log(response);
 	},

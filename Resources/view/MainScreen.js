@@ -22,7 +22,7 @@ var goToActivePuzzle = function(result) {
 }
 
 var LocationView = Backbone.View.extend({
-	template: _.template('<h3 class="location-name"><%= name %></h3><p class="location-address"><%= address %></p><h4 class="location-restaurants">Location Details</h4><table class="location-info"><tr><td>Parking: </td><td><%= parking_status %></td></tr><tr><td>Restrooms: </td><td><%= restroom_status %></td></tr><tr><td>Wi-Fi: </td><td><%= wifi_status %></td></tr><tr><td>Food: </td><td><%= food_status %></td></tr></table>'),
+	template: _.template('<h3 class="location-name"><%= name %></h3><p class="location-address"><%= address %></p><h4 class="location-header">Location Details</h4><table class="location-info"><tr><td class="location-item">Parking: </td><td class="location-status"><%= parking_status %></td></tr><tr><td class="location-item">Restrooms: </td><td class="location-status"><%= restroom_status %></td></tr><tr><td class="location-item">Wi-Fi: </td><td class="location-status"><%= wifi_status %></td></tr><tr><td class="location-item">Food: </td><td class="location-status"><%= food_status %></td></tr><tr><td colspan="2" class="location-status"><a href="">more info</a></td></tr></table>'),
 
 	initialize: function() {
 		_.bindAll(this, 'render');
@@ -39,13 +39,14 @@ var MainView = Backbone.View.extend({
 	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
 				<div id="path">Main</div>\
 			</div>\
-			<div class="content"><div class="clickable" id="active_puzzle_button">Return to current puzzle</div>\
+			<div class="content">\
 				<div class="location_description"></div>\
 				</div></div></div>\
 				<div class="right-sidebar"><div id="right_sidebar_content"></div>\
 				<div id="return_message" class="hidden"></div>\
 				<div id="start_code_box">Enter a start code: <input type="text" id="start_input">\
 		<button id="start_button">Submit</button></div>\
+		<div class="return-button"><button class="clickable" id="active_puzzle_button">Return to current puzzle</button></div>\
 		</div>'),
 
 	events: {
@@ -79,6 +80,7 @@ var MainView = Backbone.View.extend({
 		var result = this.model.activatePuzzles(entry);
 		if (result > 0) {
 			$("#start_code_box").hide();
+			$("#return_message").addClass("hidden");
 			// show puzzle link box
 			$("#active_puzzle_button").show();
 
