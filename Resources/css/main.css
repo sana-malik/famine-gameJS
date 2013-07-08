@@ -362,6 +362,11 @@ height: 240px;
 	overflow-y: auto;
 }
 
+h3.section-name {
+margin: 0px;
+padding: 0px;
+}
+
 /* BOTTOM BAR */
 #bottombar {
 	position:absolute;
