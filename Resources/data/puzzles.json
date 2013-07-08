@@ -130,7 +130,7 @@
 "max_fans" : 100,
 "flavor_text" : "This is the normal flavor text. ",
 "self_flavor_text" : "This is custom flavor text if it's your puzzle. ",
-"resources_unlocked" : ["PENCIL"],
+"resources_unlocked" : ["pencil"],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : true,
