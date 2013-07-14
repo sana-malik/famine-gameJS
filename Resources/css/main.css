@@ -17,7 +17,7 @@
 /** BODY **/
 body {
 	color: #fff;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', Arial;
 	margin: 0px;
 	padding: 0px;
 }
@@ -69,7 +69,7 @@ cursor:hand;
 	overflow-y: auto;
 	padding: 10px;
 	text-align: center;
-	font-family: 'Orbitron';
+	font-family: 'Orbitron', 'Bank Gothic';
 }
 
 h3.fan_count {
@@ -128,7 +128,7 @@ ol#toc a {
 	padding: 3px 0px 0px 0px;
 	text-decoration: none;
 	width: 97px;
-	font-family: 'Orbitron';
+	font-family: 'Orbitron', 'Bank Gothic';
 	font-size: .9em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -193,7 +193,7 @@ ol#toc span {
 	height: 21px;
 	padding-left: 10px;
 	padding-top: 2px;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', Arial;
 	font-size: .8em;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -555,14 +555,14 @@ margin-bottom: 0px;
 }
 
 .hint_name {
-font-family: 'Orbitron';
+font-family: 'Orbitron', 'Bank Gothic';
 font-size: 1em;
 margin-bottom: 0px;
 padding-bottom: 0px;
 }
 
 .puzzle_data {
-font-family: 'Orbitron';
+font-family: 'Orbitron', 'Bank Gothic';
 font-size: .9em;
 letter-spacing: 2px;
 margin-bottom: 10px;
@@ -572,7 +572,7 @@ margin-bottom: 10px;
 }
 
 h2.puzzle_title {
-font-family: 'Orbitron';
+font-family: 'Orbitron', 'Bank Gothic';
 font-size: 1.1em;
 margin-bottom: 0px;
 margin-top: 0px;

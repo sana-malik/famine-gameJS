@@ -772,7 +772,7 @@ button.ui-button::-moz-focus-inner {
 	background: none;
 }
 .ui-tooltip {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', Arial;
 	src: url('../fonts/OpenSans-Regular.svg#Open&nbsp;Sans') format("svg");
 	font-size: .9em;
 	padding: 5px;
