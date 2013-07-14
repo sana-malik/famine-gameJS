@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 	// jquery tooltip
 	$(function() {
-    	$( document ).tooltip();
+    	$( document ).tooltip({track: true});
   	});
 });
 
