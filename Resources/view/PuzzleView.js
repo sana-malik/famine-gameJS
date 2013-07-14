@@ -1,5 +1,5 @@
 var ActivePuzzlesView = Backbone.View.extend({
-	template : _.template('<span class="puzzle_link clickable" id=<%= puzzleID %>><%= puzzleName %><span class="answer"></span></span>'),
+	template : _.template('<div class="puzzle_row"><span class="puzzle_link clickable" id="<%= puzzleID %>"><%= puzzleName %></span><span id="<%= puzzleID %>" class="answer"></span></div>'),
 
 	initialize: function(options) {
 		_.bindAll(this, 'render');
@@ -34,7 +34,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 				}
 				else if (puzzle["status"] === puzzleStatus.SOLVED && !puzzles[name].get("meta")) {
 					$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
-					$(".puzzle_link#"+nameToId(name)+" .answer").text(': ' + getAnswerToPuzzle(name));
+					$(".answer#"+nameToId(name)).text(': ' + getAnswerToPuzzle(name));
 					count += 1;
 				}
 			}
@@ -173,7 +173,6 @@ var PuzzleView = Backbone.View.extend({
 			<div class="content"><h2 class="puzzle_title"><%= name %></h2>\
 		<span class="flavor_text"><%= flavor_text %></span>\
 		<div class="hints"></div>\
-		<!--<button class="giveup_button">I give up!</button>-->\
 		</div></div>\
 		<div class="right-sidebar">\
 		<div id="right_sidebar_content_puzzle">\
@@ -202,7 +201,7 @@ var PuzzleView = Backbone.View.extend({
 
 		this.log_view = new PuzzleLogView({el : ".main#" + nameToId(this.puzzleName) + " .log", model : session, puzzleName : this.puzzleName});
 		if (puzzles[that.puzzleName].get("meta")) {
-			$('<div class="metas"></div>').insertAfter('.session_vars', this.el);
+			$('<div class="metas"></div>').insertAfter('.flavor_text', this.el);
 			that.ActiveView = new ActivePuzzlesView({el : ".main#" + nameToId(this.puzzleName) + " .metas", model : session, puzzleName: that.puzzleName});
 		}
 		$(".meta_name", this.el).text(getMetaName(puzzles[this.puzzleName].get("start_code")));

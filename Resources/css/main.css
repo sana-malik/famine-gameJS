@@ -273,9 +273,12 @@ visibility: hidden;
 
 }
 
+.puzzle_row {
+	dislay: block;
+}
+
 .puzzle_link {
 	color: white;
-	display: block;
 }
 
 .puzzle_link:hover {

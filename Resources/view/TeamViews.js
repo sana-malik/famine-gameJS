@@ -50,7 +50,7 @@ var TeamView = Backbone.View.extend({
 		$(this.el).empty();
 		$.each(teams, function(id, team) {
 			if (id.indexOf('a') != -1) {
-				$(that.el).append("<div class=\"team_div\" id=\""+id+"\"></div>")
+				$(that.el).append("<div class=\"team_div\" title=\""+teams[id].get("name")+"\" id=\""+id+"\"></div>")
 				teamIconViews[id] = new TeamIconView({el : "#bottombar > div.team_div#"+id, model:team});
 			}
 		});
