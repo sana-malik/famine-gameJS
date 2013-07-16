@@ -291,8 +291,8 @@
 "Vehicles" : {"name":"Vehicles",
 "start_code" : "traffic",
 "max_fans" : 100,
-"flavor_text" : "This is the normal flavor text. ",
-"self_flavor_text" : "This is custom flavor text if it's your puzzle. ",
+"flavor_text" : "This is the normal flavor text.  Note: enter TBD for answer",
+"self_flavor_text" : "This is custom flavor text.  Note: enter TBD for answer",
 "resources_unlocked" : [],
 "teams_killed" : ["6a"],
 "meta" : false,
@@ -342,9 +342,9 @@
 		}
 	},
 "answers" : {
-	"escapesafely" : {
+	"tbd" : {
 		"type" : "final",
-		"text" : "escapesafely",
+		"text" : "tbd",
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
@@ -669,7 +669,7 @@
 		}
 	}
 },
-"Plants vs. Zombies" : {"name":"Plants vs. Zombies",
+"Plants vs Zombies" : {"name":"Plants vs Zombies",
 "start_code" : "compost",
 "max_fans" : 100,
 "flavor_text" : "This is the normal flavor text. ",
@@ -738,7 +738,7 @@
 "flavor_text" : "This box of cereal contains 5 minipuzzles and a metapuzzle, which uses the answers from the minis.  To solve a mini (and receive hints), click on the name of the particular puzzle.  To enter the meta answer, return to this page. ",
 "self_flavor_text" : "This box of cereal contains 5 minipuzzles and a metapuzzle, which uses the answers from the minis.  To solve a mini (and receive hints), click on the name of the particular puzzle.  To enter the meta answer, return to this page.",
 "resources_unlocked" : [],
-"teams_killed" : ["4b,5b,9a"],
+"teams_killed" : ["4b", "5b", "9a"],
 "meta" : true,
 "advance_location" : true,
 "hints" : {
@@ -1486,7 +1486,7 @@
 "flavor_text" : "This is the normal flavor text. ",
 "self_flavor_text" : "This is custom flavor text if it's your puzzle. ",
 "resources_unlocked" : [],
-"teams_killed" : ["2b,7a,8b,9b,12a"],
+"teams_killed" : ["2b", "7a", "8b", "9b", "12a"],
 "meta" : true,
 "advance_location" : true,
 "hints" : {
@@ -1981,6 +1981,86 @@
 		"response" : "Congratulations, you have solved the puzzle.",
 		"self_response" : "",
 		"skipped_hints" : []
+		}
+	}
+},
+"Gelatinous Cube" : {"name":"Gelatinous Cube",
+"start_code" : "boingboing",
+"max_fans" : 100,
+"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"self_flavor_text" : "",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : false,
+"hints" : {
+	"Hint 1" : {
+		"start_time" : 5,
+		"end_time" : 10,
+		"start_cost" : 10,
+		"end_cost" : 0,
+		"text" : "If you're having trouble seeing what to do, it might be a case of the blind leading the blind."
+		},
+	"Hint 2" : {
+		"start_time" : 10,
+		"end_time" : 15,
+		"start_cost" : 10,
+		"end_cost" : 0,
+		"text" : "Did you know red and blue make purple?"
+		},
+	"Hint 3" : {
+		"start_time" : 15,
+		"end_time" : 20,
+		"start_cost" : 10,
+		"end_cost" : 5,
+		"text" : "The dots are Braille letters. There are two sets super-imposed, one red and one blue. Purple dots are where a red and blue dot exist."
+		},
+	"Hint 4" : {
+		"start_time" : 20,
+		"end_time" : 25,
+		"start_cost" : 10,
+		"end_cost" : 5,
+		"text" : "Have you tried applying the Braille message to the puzzle? Literally?"
+		},
+	"Hint 5" : {
+		"start_time" : 25,
+		"end_time" : 30,
+		"start_cost" : 50,
+		"end_cost" : 20,
+		"text" : "The Braille solves to \"Blacklight\". Apply a blacklight to the puzzle and you should see the answer: Sugar Rush."
+		}
+	},
+"answers" : {
+	"sugarrush" : {
+		"type" : "final",
+		"text" : "sugarrush",
+		"response" : "Congratulations, you have solved the puzzle.",
+		"self_response" : "",
+		"skipped_hints" : []
+		},
+	"blacklight" : {
+		"type" : "partial",
+		"text" : "blacklight",
+		"response" : "You're on the right track, but you need to go one step further.",
+		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+		},
+	"lightblack" : {
+		"type" : "partial",
+		"text" : "lightblack",
+		"response" : "Oops, red comes before blue.",
+		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+		},
+	"grey" : {
+		"type" : "partial",
+		"text" : "grey",
+		"response" : "You're being too literal. Also, red comes before blue.",
+		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+		},
+	"gray" : {
+		"type" : "partial",
+		"text" : "gray",
+		"response" : "You're being too literal. Also, red comes before blue.",
+		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
 		}
 	}
 }
