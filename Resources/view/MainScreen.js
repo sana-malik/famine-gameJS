@@ -30,7 +30,6 @@ var LocationView = Backbone.View.extend({
 			<tr><td class="location-item">Restrooms: </td><td class="location-status" title="<%= restroom_description %>"><%= restroom_status %></td></tr>\
 			<tr><td class="location-item">Wi-Fi: </td><td class="location-status" title="<%= wifi_description %>"><%= wifi_status %></td></tr><tr>\
 			<td class="location-item">Food: </td><td class="location-status" title="<%= food_description %>"><%= food_status %></td></tr>\
-			<tr><td colspan="2" class="location-status"><a href="">more info</a></td></tr>\
 		</table>'),
 
 	initialize: function() {

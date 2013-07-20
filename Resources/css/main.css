@@ -378,14 +378,14 @@ padding: 0px;
 /* BOTTOM BAR */
 #bottombar {
 	position:absolute;
-	left: 40; top: 435px;
-	width: 900px; height: 145px;
+	left: 20px; top: 435px;
+	width: 980px; height: 145px;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	padding: 10px;
+	padding-top: 10px;
 }
 .team_div {
-	padding: 5px 10px;
+	padding: 5px 12px;
 	/*
 	display: inline-block;*/
 	display: inline;
@@ -416,10 +416,13 @@ padding: 0px;
 .team-popup-sidebar {
 width: 125px;
 float: left;
+font-size: .9em;
 }
 
 .team-popup-sidebar ul {
-margin-top: 0px;
+margin: 0px;
+padding-left: 20px;
+font-size: .8em;
 }
 
 img.team-popup-img {
@@ -554,11 +557,29 @@ h4.title {
 margin-bottom: 0px;
 }
 
+.hints {
+width: 90%;
+background:rgba(255,255,255, 0.1);
+padding: 10px;
+margin: 30px auto 0px auto;
+border-radius: 5px;
+}
+
+.hint {
+padding-bottom: 20px;
+}
+
 .hint_name {
 font-family: 'Orbitron', 'Bank Gothic';
 font-size: 1em;
 margin-bottom: 0px;
 padding-bottom: 0px;
+margin-left: 10px;
+}
+
+.hint_text {
+margin-top: 5px;
+margin-left: 20px;
 }
 
 .puzzle_data {
@@ -566,6 +587,11 @@ font-family: 'Orbitron', 'Bank Gothic';
 font-size: .9em;
 letter-spacing: 2px;
 margin-bottom: 10px;
+}
+
+.puzzle_row {
+margin-left: 10px;
+padding: 5px;
 }
 
 #hint_button {
