@@ -3,13 +3,17 @@
     "debug" : true,
     "time_multiplyer" : 12,
     "start_time" : {
-            "active" : true,
-            "year" : 2013,
-            "month" : 9,
-            "day" : 28,
-            "hour" : 22,
-            "minute" : 0
-        }
-    }, 
+        "active" : true,
+        "year" : 2013,
+        "month" : 9,
+        "day" : 28,
+        "hour" : 22,
+        "minute" : 0
+    },
+    
+    "ephemeral_session" : false,
+    "verbose_server" : true
+}, 
+
 "self_defense_vid" : "movies/2b.html"
 }

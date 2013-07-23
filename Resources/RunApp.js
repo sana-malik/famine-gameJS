@@ -150,7 +150,7 @@ function populateLocations() {
 function initSession() {
 	var json = jsonToString(data_dir + 'session.json');
 
-	if (json.length > 0) {
+	if (!debugActive("ephemeral_session") && json.length > 0) {
 		var sessionObj = Ti.JSON.parse(json);
 		return new Session(sessionObj);
 	}

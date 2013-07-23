@@ -115,7 +115,7 @@ function PuzzleTimer(puzzleId, interval){
 		$.each(hints, function(name, hint) {
 			var remaining = stats[puzzleId]["hintStats"][name]["remaining"];
 			var timediff = 1;
-			if (parameters["debug_parameters"]["debug"])
+			if ( debugActive() )
 				timediff *= parameters["debug_parameters"]["time_multiplyer"];
 
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
@@ -143,7 +143,7 @@ function PuzzleTimer(puzzleId, interval){
 function getCurrentDateTime() {
 	var date = new Date().valueOf();
 
-	if (parameters["debug_parameters"]["debug"])
+	if ( debugActive() )
 		date += parameters.time_diff;
 
 	date = new Date(date);
@@ -215,6 +215,19 @@ function loadServerSession(myTeam) {
 	});
 }
 
+function saveLocalSession() {
+	try{
+		var document = Ti.Filesystem.getFileStream(Ti.Filesystem.getApplicationDirectory(), data_dir+'session.json');  //This saves in the distribution version!
+
+		if (document.open(Ti.Filesystem.MODE_WRITE)) {
+			document.write(Ti.JSON.stringify(session));
+			document.close();
+		}
+	} catch(err)	{
+  		alert("Error description: " + err.message + "\n\n");
+ 	}
+}
+
 function playSound(soundfile, duration) {
 	var sound = Ti.Media.createSound("sounds/" + soundfile)
 	sound.play();
@@ -226,4 +239,8 @@ function logAction(type, msg) {
 	var temp = session.get("history").slice();
 	temp.push([getCurrentDateTimeString(), type, msg]);
 	session.set("history",temp);
+}
+
+function debugActive(flag) {
+	return parameters["debug_parameters"]["debug"] && (arguments.length == 0 || parameters["debug_parameters"][flag]); 
 }

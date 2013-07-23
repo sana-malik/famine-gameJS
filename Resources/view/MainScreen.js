@@ -68,14 +68,7 @@ var MainView = Backbone.View.extend({
 		 	case 13: // enter
 		 		this.start_button_clicked();
 		 		break;
-		 	case 4: // ctrl-d
-		 		this.open_debug_panel();
-		 		break;
 		 	}
-	},
-
-	open_debug_panel : function(){
-
 	},
 
 	start_button_clicked : function() {

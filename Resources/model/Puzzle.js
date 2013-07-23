@@ -117,7 +117,9 @@ var Puzzle = Backbone.Model.extend({
 				// if this is a mini, increment the meta counter so it knows to refresh the activity view
 				session.set("renderMeta", session.get("renderMeta")+1);
 
-				try { saveServerSession(session, tid); } catch (err) {}
+				// If server saving is not verbose, we need to at least save when the answer is given
+				if( !debugActive("verbose_server"))
+					try { saveServerSession(session, tid); } catch (err) {}
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer
 				// reveal skipped hints
@@ -157,6 +159,16 @@ var Puzzle = Backbone.Model.extend({
 			response += "<strong>" + entry + "</strong> is not the answer.</div>"
 		}
 		this.log(response);
+
+		// Save session
+		if (!debugActive("ephemeral_session")) {
+			
+			// If verbose, save whenever an answer is entered.  This updates logs, partial answers, and final answers.
+			if( debugActive("verbose_server"))
+				try { saveServerSession(session, tid); } catch (err) {}
+			
+			saveLocalSession();
+		}
 	},
 
 	killTeams : function() {

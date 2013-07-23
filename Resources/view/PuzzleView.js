@@ -87,7 +87,7 @@ var HintView = Backbone.View.extend({
 
 		var current_time = getCurrentDateTime();
 		var elapsed = (current_time-stats[this.puzzleName]["start_time"])/1000;
-		if (parameters["debug_parameters"]["debug"])
+		if ( debugActive() )
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
 		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60); 
@@ -110,6 +110,15 @@ var HintView = Backbone.View.extend({
 			stats[this.puzzleName]["hintStats"][this.hintName]["status"] = hintStatus.REVEALED;
 
 			this.model.set("puzzleStats",stats);
+
+			// Save session
+			if (!debugActive("ephemeral_session")) {
+				
+				if( debugActive("verbose_server"))
+					try { saveServerSession(session, tid); } catch (err) {}
+				
+				saveLocalSession();
+			}
 		}
 	},
 
@@ -121,7 +130,7 @@ var HintView = Backbone.View.extend({
 		
 		var current_time = getCurrentDateTime();
 		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"])/1000;
-		if (parameters["debug_parameters"]["debug"])
+		if ( debugActive() )
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
 		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);

@@ -88,6 +88,15 @@ var Session = Backbone.Model.extend({
 		if (count > 0) {
 			that.set("puzzleStats", puzStats);
 			that.set("renderMeta",1);
+
+			// Save session
+			if (!debugActive("ephemeral_session")) {
+				
+				if( debugActive("verbose_server"))
+					try { saveServerSession(session, tid); } catch (err) {}
+				
+				saveLocalSession();
+			}
 		}
 		return count;
 	}
