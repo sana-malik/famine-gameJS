@@ -82,20 +82,28 @@ function nameToId(str) {
 	return str.replace(/ /g,'_');
 }
 
-function formatTime(seconds) {
-	var mins = Math.floor(seconds / 60);
-	var secs = seconds % 60;
-	var out = "";
-	
-	if (mins > 0) {
-		out = mins + " minute";
-		if (mins > 1)
-			out += "s";
+function formatTime(seconds, clock) {
+	if (arguments.length == 0) { 
+			clock = false; 
 	}
-	else {
-		out = secs + " second";
-		if (secs > 1)
-			out += "s";
+
+	var hours = Math.floor(seconds / 3600); 
+	var mins = Math.floor((seconds%3600) / 60);
+	var secs = Math.round(seconds % 60);
+	var out = (hours<10?"0":"") + hours+":"+(mins<10?"0":"")+mins+":"+(secs<10?"0":"")+secs;
+
+	if (!clock) {
+		out = ""
+		if (mins > 0) {
+			out = mins + " minute";
+			if (mins > 1)
+				out += "s";
+		}
+		else {
+			out = secs + " second";
+			if (secs > 1)
+				out += "s";
+		}
 	}
 	return out;
 }

@@ -15,7 +15,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 	showPuzzleScreen : function(e) {
 		var clickedEl = $(e.currentTarget);
   		var name = clickedEl.attr("id");
-  		
+
   		$('.main.active').removeClass('active');
   		$('div.puzzle#' + name).addClass('active');
   		$('div.puzzle#' + name + " .answer_input").focus()
@@ -134,7 +134,6 @@ var HintView = Backbone.View.extend({
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
 		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
-		console.log(current_time);
 
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
 			$(that.el).children('.hint_text').html('Available in ' + formatTime(remaining));
@@ -170,6 +169,12 @@ var PuzzleSessionView = Backbone.View.extend({
 		var that = this;
 		var stat = this.model.get("puzzleStats")[this.puzzleName];	
 		$(that.el).html(that.template(stat));
+		var current_time = getCurrentDateTime();
+		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"])/1000;
+		if ( debugActive() )
+				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
+
+		$(that.el).children('#elapsed_time').html( formatTime(elapsed, true) )
 	}
 
 });
