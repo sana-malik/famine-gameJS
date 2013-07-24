@@ -15,7 +15,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 	showPuzzleScreen : function(e) {
 		var clickedEl = $(e.currentTarget);
   		var name = clickedEl.attr("id");
-
+  		
   		$('.main.active').removeClass('active');
   		$('div.puzzle#' + name).addClass('active');
   		$('div.puzzle#' + name + " .answer_input").focus()

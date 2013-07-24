@@ -33,7 +33,7 @@ var HistoryView = Backbone.View.extend({
 		$("#main.tab").addClass("active");
 
   		$('.main.active').removeClass('active');
-  		$('div.puzzle#' + name).addClass('active');
+  		$('div.puzzle#' + nameToId(name)).addClass('active');
 	},
 
 	playVideo : function(e) {
