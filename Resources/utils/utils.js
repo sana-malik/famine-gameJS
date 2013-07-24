@@ -176,6 +176,7 @@ function getCurrentDateTimeString() {
 function saveServerSession(mySession, myTeam) {
 	var d=new Date();
 	var n=d.getTime();
+	session.lastAttempt=d.getTime();
 	request = $.ajax({
 	        url: "http://www.rawbw.com/~zero/hg/save.php",
 	        type: "post",
@@ -191,8 +192,7 @@ function saveServerSession(mySession, myTeam) {
 		// fail silently
 	});
 	request.always(function () {
-		var d=new Date();
-		session.lastAttempt=d.getTime();
+		// nothing for now
 	});
 }
 

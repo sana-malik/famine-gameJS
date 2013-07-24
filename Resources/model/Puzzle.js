@@ -31,6 +31,7 @@ var Puzzle = Backbone.Model.extend({
 				$("#"+nameToId(this.get("name")) + " .answer_box").hide();
 				
 				// puzzle results
+				session.set("lastSolved", this.get("name"));
 				this.killTeams();
 				this.unlockResources();
 
