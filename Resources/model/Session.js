@@ -1,49 +1,61 @@
 var Session = Backbone.Model.extend({
-	initialize: function() {
-		var temp = {};
-
-		this.set("fans",0);
-
-		// locations
-		$.each(locations, function(name, location) {
-			temp[name] = {"status" : locationStatus.UNVISITED};
-		});
-		this.set("locationStats", temp);
-		this.set("currentLocation", 0);
-
-		// resources
-		temp = {};
-		$.each(resources, function(name, resource) {
-			temp[name] = {"status" : resourceStatus.LOCKED};
-		});
-		this.set("resourceStats", temp);
-
-		// teams
-		temp = {};
-		$.each(teams, function(id, team) {
-			temp[id] = {"status" : teamStatus.ALIVE};
-		});
-		this.set("teamStats", temp);
-
-		// puzzles
-		temp = {};
-		$.each(puzzles, function(pname, puzzle) {
-			temp[pname] = {
-				"current_worth" : this.get("max_fans"),
-				"status" : puzzleStatus.INACTIVE,
-				"hintStats" : {},
-				"log" : [] // this is a more granular log of the puzzle's guesses and what nots.
-			};
-
-			$.each(puzzle.get("hints"), function(hname, hint) {
-				temp[pname]["hintStats"][hname] = {"status" : hintStatus.LOCKED, "remaining" : hint.get("start_time")*60};
+	initialize: function(sessionObj) {
+	  	if (sessionObj === "new") {
+			var temp = {};
+	
+			this.set("fans",0);
+	
+			// locations
+			$.each(locations, function(name, location) {
+				temp[name] = {"status" : locationStatus.UNVISITED};
 			});
-		});
-		this.set("puzzleStats", temp);
-		this.set("renderMeta", 0);
-
-		// history
-		this.set("history",[])
+			this.set("locationStats", temp);
+			this.set("currentLocation", 0);
+	
+			// resources
+			temp = {};
+			$.each(resources, function(name, resource) {
+				temp[name] = {"status" : resourceStatus.LOCKED};
+			});
+			this.set("resourceStats", temp);
+	
+			// teams
+			temp = {};
+			$.each(teams, function(id, team) {
+				temp[id] = {"status" : teamStatus.ALIVE};
+			});
+			this.set("teamStats", temp);
+	
+			// puzzles
+			temp = {};
+			$.each(puzzles, function(pname, puzzle) {
+				temp[pname] = {
+					"current_worth" : this.get("max_fans"),
+					"status" : puzzleStatus.INACTIVE,
+					"hintStats" : {},
+					"log" : [] // this is a more granular log of the puzzle's guesses and what nots.
+				};
+	
+				$.each(puzzle.get("hints"), function(hname, hint) {
+					temp[pname]["hintStats"][hname] = {"status" : hintStatus.LOCKED, "remaining" : hint.get("start_time")*60};
+				});
+			});
+			this.set("puzzleStats", temp);
+			this.set("renderMeta", 0);
+	
+			// history
+			this.set("history",[[getCurrentDateTimeString(), logTypes.GAME, "Game Started!"]])
+		}
+		else {
+			this.set("fans", sessionObj["fans"]);
+			this.set("locationStats", sessionObj["locationStats"]);
+			this.set("currentLocaion", sessionObj["currentLocation"]);
+			this.set("resourceStats", sessionObj["resourceStats"]);
+			this.set("teamStats", sessionObj["teamStats"]);
+			this.set("puzzleStats", sessionObj["puzzleStats"]);
+			this.set("renderMeta", 0);
+			this.set("history", sessionObj["history"]);
+		}
 	},
 
 	getActivePuzzles : function() {

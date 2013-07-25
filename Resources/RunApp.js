@@ -32,13 +32,20 @@ $(document).ready(function() {
 	puzzles = populatePuzzles();
 
 	session = initSession();
+
+	// initialize puzzles that already exist
+	$.each(session.get("puzzleStats"), function(name, puzStat) {
+		if (puzStat["status"] != puzzleStatus.INACTIVE) {
+			$("#main").append("<div class=\"main puzzle\" id=\""+nameToId(name) + "\"></div>");
+			var puzView = new PuzzleView({el : ".puzzle#"+nameToId(name), puzzleName : name});
+		}
+	});
 	
 	// Set up views
 	var team = new TeamView({el : "#bottombar", model : session});
 	var user = new UserView({el : "#sidebar", model : session});
 	var main = new MainView({el : "#main > #main_screen", model: session});
 	var history = new HistoryView({el : "#history", model: session});
-	logAction(logTypes.GAME, "Game started!");
 	//var multipuz = new MultiPuzzleView({el : "#main > #multipuzzle", model: session});
 
 
@@ -69,6 +76,23 @@ $(document).ready(function() {
 	// jquery tooltip
 	$(function() {
     	$( document ).tooltip({track: true});
+
+  	});
+  	$(function() {
+    	$(document).tooltip({
+    		track: true,
+    	  	items: "[map], [title]",
+    	  	content: function() {
+    	  	  var element = $(this);
+    	  	  if (element.is("[map]")) {
+    	  	    var map_file = element.attr("map");
+    	  	    return "<img class='map' src='" + map_file + "'>";
+    	  	  }
+    	  	  else if (element.is("[title]")) {
+    	  	    return element.attr("title");
+    	  	  }
+    	  	}
+    	});
   	});
 });
 
@@ -155,6 +179,6 @@ function initSession() {
 		return new Session(sessionObj);
 	}
 	else {
-		return new Session();
+		return new Session("new");
 	}	
 }

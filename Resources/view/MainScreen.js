@@ -30,6 +30,7 @@ var LocationView = Backbone.View.extend({
 			<tr><td class="location-item">Restrooms: </td><td class="location-status" title="<%= restroom_description %>"><%= restroom_status %></td></tr>\
 			<tr><td class="location-item">Wi-Fi: </td><td class="location-status" title="<%= wifi_description %>"><%= wifi_status %></td></tr><tr>\
 			<td class="location-item">Food: </td><td class="location-status" title="<%= food_description %>"><%= food_status %></td></tr>\
+			<td class="location-item">Map: </td><td class="location-status" map="<%= map_file %>">View</td></tr>\
 		</table>'),
 
 	initialize: function() {
@@ -104,11 +105,19 @@ var MainView = Backbone.View.extend({
 	initialize: function() {
 		_.bindAll(this, 'render');
 		this.render();
-		$("#active_puzzle_button").hide();
-		this.LocationView = new LocationView({el : "#main_screen > .right-sidebar > #right_sidebar_content", model : this.model});
-		$("#main #main_screen .left-sidebar .content .location_description").html( locations[locOrder[session.get("currentLocation")]].get("flavor_text") );
+		
+		if (this.model.getActivePuzzles().length > 0) { // show current puzzle link instead
+			$("#start_code_box").hide();
+			$("#return_message").addClass("hidden");
+			$("#active_puzzle_button").show();
+		} else {
+			$("#active_puzzle_button").hide();
+			$("#start_input").focus();
+		}
+		
 		$(this.el).addClass('active')
-		$("#start_input").focus();
+		$("#main #main_screen .left-sidebar .content .location_description").html( locations[locOrder[session.get("currentLocation")]].get("flavor_text") );
+		this.LocationView = new LocationView({el : "#main_screen > .right-sidebar > #right_sidebar_content", model : this.model});
 	},
 
 	render: function() {

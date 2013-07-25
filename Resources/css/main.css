@@ -20,6 +20,7 @@ body {
 	font-family: 'Open Sans', Arial;
 	margin: 0px;
 	padding: 0px;
+	-webkit-user-select: none;
 }
 
 ul {
@@ -100,6 +101,7 @@ h3.fans {
 .resource_img {
 	margin: 2px;
 }
+
 /* NAVIGATION TABS */
 #tabs {
 	position:absolute;
@@ -721,29 +723,11 @@ color: #fff;
 text-decoration: none;
 }
 
-/* TOOLTIP */
-#tt {
- position:absolute;
- display:block;
- background:url(images/tt_left.gif) top left no-repeat;
- }
- #tttop {
- display:block;
- height:5px;
- margin-left:5px;
- background:url(images/tt_top.gif) top right no-repeat;
- overflow:hidden;
- }
- #ttcont {
- display:block;
- padding:2px 12px 3px 7px;
- margin-left:5px;
- background:#666;
- color:#fff;
- }
-#ttbot {
-display:block;
-height:5px; 
-margin-left:5px;  
-overflow:hidden;
+/* TOOLTIP STUFF */
+[map]:hover, [title]:hover {
+	cursor: default;
+}
+.map {
+	width: 300px;
+	height: 300px;
 }

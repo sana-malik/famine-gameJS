@@ -5,6 +5,9 @@ var ResourceView = Backbone.View.extend({
 		_.bindAll(this, 'render');
 		this.model.bind("change:resourceStats",this.render);
 		this.render();
+		$("#resources")
+			.delegate(".resource_div.locked", "mouseenter", function() {$(this).stop().animate({opacity: 1}, 250)})
+			.delegate(".resource_div.locked", "mouseleave", function() {$(this).stop().animate({opacity: 0.4}, 250)});
 	},
 
 	render : function() {

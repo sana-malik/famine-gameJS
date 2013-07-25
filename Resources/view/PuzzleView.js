@@ -98,7 +98,7 @@ var HintView = Backbone.View.extend({
 		if (cost != 0  && status == hintStatus.AVAILABLE)
 			reveal=confirm("If you take this hint " + cost + " viewers will lose interest in your progress.  Are you sure you want to do this?");
 		
-		if (reveal==true) {
+		if (reveal) {
 			if (stats[this.puzzleName]["hintStats"][this.hintName]["status"] != hintStatus.SKIPPED) {	
 				stats[this.puzzleName]["current_worth"] -= cost;
 				

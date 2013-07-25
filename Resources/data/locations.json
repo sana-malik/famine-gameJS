@@ -18,7 +18,7 @@
 	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "images/locations/fool_logo.jpg",
-	"map_file" : "images/maps/fool_map.png",
+	"map_file" : "images/maps/hains_map.png",
 	"puzzles" : ["Cornucopia Meta", "Test Puzzle 2"]
 },
 "George Mason Memorial" : {

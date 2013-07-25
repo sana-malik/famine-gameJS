@@ -216,14 +216,14 @@ function loadServerSession(myTeam) {
 }
 
 function saveLocalSession() {
-	try{
+	try {
 		var document = Ti.Filesystem.getFileStream(Ti.Filesystem.getApplicationDirectory(), data_dir+'session.json');  //This saves in the distribution version!
 
 		if (document.open(Ti.Filesystem.MODE_WRITE)) {
 			document.write(Ti.JSON.stringify(session));
 			document.close();
 		}
-	} catch(err)	{
+	} catch(err) {
   		alert("Error description: " + err.message + "\n\n");
  	}
 }
