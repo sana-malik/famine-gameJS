@@ -292,6 +292,10 @@ visibility: hidden;
 	cursor: pointer;
 }
 
+.answer {
+display: block;
+}
+
 /* PUZZLE SCREEN */
 .log_entry {
 	display: block;
@@ -559,7 +563,7 @@ h4.title {
 margin-bottom: 0px;
 }
 
-.hints {
+.hints, .sub-container {
 width: 90%;
 background:rgba(255,255,255, 0.1);
 padding: 10px;
@@ -567,8 +571,13 @@ margin: 30px auto 0px auto;
 border-radius: 5px;
 }
 
+.sub-container h4 {
+margin-bottom: 0px;
+margin-top: 0px;
+}
+
 .hint {
-padding-bottom: 20px;
+padding-bottom: 30px;
 }
 
 .hint_name {
@@ -592,8 +601,11 @@ margin-bottom: 10px;
 }
 
 .puzzle_row {
-margin-left: 10px;
 padding: 5px;
+}
+
+.sub-container .answer {
+margin-left: 30px;
 }
 
 #hint_button {

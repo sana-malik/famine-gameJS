@@ -1,5 +1,5 @@
 var ActivePuzzlesView = Backbone.View.extend({
-	template : _.template('<div class="puzzle_row"><span class="puzzle_link clickable" id="<%= puzzleID %>"><%= puzzleName %></span><span id="<%= puzzleID %>" class="answer"></span></div>'),
+	template : _.template('<li class="puzzle_row"><span class="puzzle_link clickable" id="<%= puzzleID %>"><%= puzzleName %></span><span id="<%= puzzleID %>" class="answer"></span></li>'),
 
 	initialize: function(options) {
 		_.bindAll(this, 'render');
@@ -34,7 +34,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 				}
 				else if (puzzle["status"] === puzzleStatus.SOLVED && !puzzles[name].get("meta")) {
 					$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
-					$(".answer#"+nameToId(name)).text(': ' + getAnswerToPuzzle(name));
+					$(".answer#"+nameToId(name)).text('SOLVED: ' + getAnswerToPuzzle(name));
 					count += 1;
 				}
 			}
@@ -134,7 +134,6 @@ var HintView = Backbone.View.extend({
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
 		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
-		console.log(current_time);
 
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
 			$(that.el).children('.hint_text').html('Available in ' + formatTime(remaining));
@@ -170,6 +169,12 @@ var PuzzleSessionView = Backbone.View.extend({
 		var that = this;
 		var stat = this.model.get("puzzleStats")[this.puzzleName];	
 		$(that.el).html(that.template(stat));
+		var current_time = getCurrentDateTime();
+		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"])/1000;
+		if ( debugActive() )
+				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
+
+		$(that.el).children('#elapsed_time').html( formatTime(elapsed, true) )
 	}
 
 });
@@ -210,7 +215,7 @@ var PuzzleView = Backbone.View.extend({
 
 		this.log_view = new PuzzleLogView({el : ".main#" + nameToId(this.puzzleName) + " .log", model : session, puzzleName : this.puzzleName});
 		if (puzzles[that.puzzleName].get("meta")) {
-			$('<div class="metas"></div>').insertAfter('.flavor_text', this.el);
+			$('<div class="metas sub-container"></div>').insertAfter('.flavor_text', this.el);
 			that.ActiveView = new ActivePuzzlesView({el : ".main#" + nameToId(this.puzzleName) + " .metas", model : session, puzzleName: that.puzzleName});
 		}
 		$(".meta_name", this.el).text(getMetaName(puzzles[this.puzzleName].get("start_code")));

@@ -128,6 +128,8 @@ function populateTeams() {
 		teams[id] = new Team(team);
 	});
 
+	document.title = "The Famine Game - " + teams[tid].get("name");
+
 	return teams;
 }
 
