@@ -5,7 +5,7 @@ var hintStatus = {LOCKED: "locked", AVAILABLE: "available", REVEALED: "revealed"
 var answerTypes = {FINAL: "final", PARTIAL: "partial"};
 var screenTypes = {MAIN: "main", PUZZLE: "puzzle"}; 
 var resourceStatus = {LOCKED: "locked", UNLOCKED: "unlocked"};
-var logTypes = {GAME: "game", PUZZLE: "puzzle", RESOURCE: "resource", KILL: "kill"};
+var logTypes = {GAME: "game", PUZZLE: "puzzle", RESOURCE: "resource", KILL: "kill", MESSAGE: "message"};
 
 var data_dir = "Resources/data/";
 

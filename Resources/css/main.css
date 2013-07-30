@@ -17,7 +17,7 @@
 /** BODY **/
 body {
 	color: #fff;
-	font-family: 'Open Sans', Arial;
+	/*font-family: 'Open Sans', Arial;*/
 	margin: 0px;
 	padding: 0px;
 	-webkit-user-select: none;
@@ -70,7 +70,7 @@ cursor:hand;
 	overflow-y: auto;
 	padding: 10px;
 	text-align: center;
-	font-family: 'Orbitron', 'Bank Gothic';
+	/*font-family: 'Orbitron', 'Bank Gothic';*/
 }
 
 h3.fan_count {
@@ -130,7 +130,7 @@ ol#toc a {
 	padding: 3px 0px 0px 0px;
 	text-decoration: none;
 	width: 97px;
-	font-family: 'Orbitron', 'Bank Gothic';
+	/*font-family: 'Orbitron', 'Bank Gothic';*/
 	font-size: .9em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -195,7 +195,7 @@ ol#toc span {
 	height: 21px;
 	padding-left: 10px;
 	padding-top: 2px;
-	font-family: 'Open Sans', Arial;
+	/*font-family: 'Open Sans', Arial;*/
 	font-size: .8em;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -581,7 +581,7 @@ padding-bottom: 30px;
 }
 
 .hint_name {
-font-family: 'Orbitron', 'Bank Gothic';
+/*font-family: 'Orbitron', 'Bank Gothic';*/
 font-size: 1em;
 margin-bottom: 0px;
 padding-bottom: 0px;
@@ -594,7 +594,7 @@ margin-left: 20px;
 }
 
 .puzzle_data {
-font-family: 'Orbitron', 'Bank Gothic';
+/*font-family: 'Orbitron', 'Bank Gothic';*/
 font-size: .9em;
 letter-spacing: 2px;
 margin-bottom: 10px;
@@ -612,7 +612,7 @@ margin-left: 30px;
 }
 
 h2.puzzle_title {
-font-family: 'Orbitron', 'Bank Gothic';
+/*font-family: 'Orbitron', 'Bank Gothic';*/
 font-size: 1.1em;
 margin-bottom: 0px;
 margin-top: 0px;
@@ -625,7 +625,7 @@ button {
 background:rgba(255,255,255, 0.2);
 color: #fff;
 border: 1px solid #fff;
-font-family: 'Electrolize', sans-serif;
+/*font-family: 'Electrolize', sans-serif;*/
 font-size: 1em;
 letter-spacing: 1px;
 -webkit-appearance: none;
@@ -742,4 +742,14 @@ text-decoration: none;
 .map {
 	width: 300px;
 	height: 300px;
+}
+
+/* Let's try new fonts */
+body, #path, button {
+font-family: 'Open Sans';
+letter-spacing: .06em;
+}
+
+#sidebar, ol#toc a, .hint_name, .puzzle_data, h2.puzzle_title {
+font-family: 'Orbitron';
 }
