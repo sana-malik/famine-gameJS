@@ -58,15 +58,15 @@ var Team = Backbone.Model.extend({
 			"</h1><h2 class=\"team-district\">District " + district + " - " + dis_specialty + "</h2>";
 
 			var status;
-			if($.extend({},session.get("teamStats"))[this.get("id")] == teamStatus.DEAD)
-				status = "Dead"
+			if(session.get("teamStats")[this.get("id")]["status"] == teamStatus.DEAD)
+				status = "Dead";
 			else
-				status = "Alive"
+				status = "Alive";
 
 			output = output + "<h2 class=\"team-status\">Status:  " + status + "</h2>" + 
 			"<p class=\"team_bio\">" + 
 			this.get("bio") + 
-			"</p><p class=\"team-contact-info\">Contact: 123-456-7889</p></div>";
+			"</p></div>";
 		return output;
 	},
 
