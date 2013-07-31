@@ -46,27 +46,27 @@ var Team = Backbone.Model.extend({
 		}
 
 		var output = "<div class=\"team-popup-sidebar\">" + 
-			this.getIconHTML() + 
-			"Tributes: <ul>";
+			this.getIconHTML() +
+			"<h2 class=\"team-district\">District " + district + "<br />" + dis_specialty + "</h2>";
 			
-			var members = this.get("members")
-			for( var index = 0; index < members.length; index++)
-				output = output + "<li>" + members[index] + "</li>" 
-
-			output = output + "</ul></div><div class=\"team-popup-content\"><h1 class=\"team_title\">" + 
-			this.get("name") + 
-			"</h1><h2 class=\"team-district\">District " + district + " - " + dis_specialty + "</h2>";
-
 			var status;
 			if(session.get("teamStats")[this.get("id")]["status"] == teamStatus.DEAD)
 				status = "Dead";
 			else
 				status = "Alive";
 
-			output = output + "<h2 class=\"team-status\">Status:  " + status + "</h2>" + 
-			"<p class=\"team_bio\">" + 
+			output = output + "<h2 class=\"team-status\">Status:  " + status + "</h2><h2 class=\"team-status\">(123) 456-7890</h2></div><div class=\"team-popup-content\"><h1 class=\"team_title\">" + 
+			this.get("name") + 
+			"</h1><p class=\"team_bio\">" + 
 			this.get("bio") + 
-			"</p></div>";
+			"</p><h3 class=\"team-popup-header\">Tributes:</h3><code><ul id=\"double\"><span class=\"code-comment\"></span>"
+			
+			var members = this.get("members")
+			for( var index = 0; index < members.length; index++)
+				output = output + "<li>" + members[index] + "</li>" 
+
+			output = output + "</ul></code></div>";
+			
 		return output;
 	},
 

@@ -439,10 +439,46 @@ height: 117px;
 .team-popup-content {
 width: 375px;
 float:right;
+font-size: .8em;
+}
+
+
+
+.team-popup-content h1, .team-popup-content h3 {
+margin-top: 0px;
+padding-top: 0px;
+}
+
+
+.team-popup-content <code>ul{
+  width: 100%;
+  margin-bottom:20px;
+  overflow:hidden;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.team-popup-content li {
+  line-height:1.5em;
+  float:left;
+  display:inline;
+  font-family: 'Open Sans';
+  font-size: 1em;
+}
+#double li  { 
+  width:50%; 
+  margin-left: -30px !important;
+  }
+
+
+.team-popup-content h3 {
+font-weight: bold;
+font-size: 1em;
+margin-bottom: 0px;
+padding-bottom: 0px;
 }
 
 h1.team_title {
-font-size: 1.2em;
+font-size: 1.6em;
 margin-bottom: 2px;
 }
 
@@ -454,15 +490,12 @@ font-weight: normal;
 margin-left: 10px;
 }
 
-p.team_bio {
-display: block;
+.team-popup-sidebar .team-status, .team-popup-sidebar .team-district {
+padding-bottom: 5px;
 }
 
-p.team-contact-info {
-position: absolute;
-bottom: 0px;
-right: 0px;
-padding-right: 10px;
+p.team_bio {
+display: block;
 }
 
 
