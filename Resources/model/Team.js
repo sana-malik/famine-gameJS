@@ -71,11 +71,11 @@ var Team = Backbone.Model.extend({
 	},
 
 	getIconHTML : function() {
-		var stat = "<div class=\"team_div\" id=\"" + this.get("id") +"\">" +
-		"<img src=\"images/team_icons/" + this.get("icon") + "\" class=\"team_img team-popup-img\">";
-		if (this.get("id") in session.get("teamStats") && session.get("teamStats")[this.get("id")]["status"] === teamStatus.DEAD) {
+		var stat = "<div id=\"" + this.get("id") +"\">" +
+		"<img src=\"images/team_icons/med_" + this.get("icon") + "\" class=\"team_img team-popup-img\">";
+		/*if (this.get("id") in session.get("teamStats") && session.get("teamStats")[this.get("id")]["status"] === teamStatus.DEAD) {
 			stat = stat + "<div class=\"status\">DEAD</div>";
-		}
+		}*/
 		stat = stat + "</div>";
 		return stat;
 	},

@@ -458,8 +458,9 @@ font-size: .8em;
 }
 
 img.team-popup-img {
-width: 95px;
-height: 117px;
+width: 111px;
+height: 132px;
+margin-bottom: 10px;
 }
 
 .team-popup-content {
