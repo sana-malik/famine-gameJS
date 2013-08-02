@@ -9,7 +9,9 @@ var TeamIconView = Backbone.View.extend({
 		$(this.el).html(this.template(this.model.toJSON()));
 
 		if (session.get("teamStats")[this.model.get("id")]["status"] === teamStatus.DEAD) {
+			$(this.el).addClass("dead");
 			$(this.el).append("<div class=\"status\">DEAD</div>");
+			
 		}
 	}
 });

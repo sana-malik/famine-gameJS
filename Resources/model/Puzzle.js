@@ -46,7 +46,7 @@ var Puzzle = Backbone.Model.extend({
 				// allot fans & log
 				if (!give_up) {
 					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
-					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span> [answer: "+entry+"] for " + stats[this.get("name")]["current_worth"] + " fans in " + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes.");
+					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+entry+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr></table>");
 				}
 
 				// advance location
@@ -154,7 +154,7 @@ var Puzzle = Backbone.Model.extend({
 				session.set("puzzleStats",stats);
 			}
 		
-			response += entry + " - " + this.get("answers")[entry]["response"];
+			response += "<strong>" + entry + "</strong> - " + this.get("answers")[entry]["response"];
 		}
 		else {
 			response += "<strong>" + entry + "</strong> is not the answer.</div>"

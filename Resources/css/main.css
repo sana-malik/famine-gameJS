@@ -40,6 +40,28 @@ button {
 cursor:hand;
 }
 
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+	background:rgba(255,255,255, 0.2);
+}
+ 
+::-webkit-scrollbar-thumb {
+	background:rgba(255,255,255, 0.2);
+	border-radius: 12px;
+}
+
+#history::-webkit-scrollbar-track, .log::-webkit-scrollbar-track, .info-sidebar::-webkit-scrollbar-track { 
+    border-radius: 12px;
+}
+
+#history::-webkit-scrollbar-thumb, .log::-webkit-scrollbar-thumb, .info-sidebar::-webkit-scrollbar-thumb  {
+    border-radius: 12px;
+}
+
 /** MAIN LAYOUT **/
 #main_container {
 	width: 1000px; height: 600px;
@@ -216,19 +238,6 @@ ol#toc span {
 }
 
 
-::-webkit-scrollbar {
-    width: 12px;
-}
- 
-::-webkit-scrollbar-track {
-background:rgba(255,255,255, 0.2);
-}
- 
-::-webkit-scrollbar-thumb {
-background:rgba(255,255,255, 0.2);
-}
-
-
 /* RIGHT SIDEBAR */
 #main .right-sidebar {
 	position:absolute;
@@ -321,17 +330,25 @@ display: block;
 	border-top-right-radius: 10px;
 }
 
+
+
 #history .log-item {
 	display: block;
 	background:rgba(255,255,255, 0.2);
 	border-radius: 5px;
 	margin-bottom: 10px;
-	padding: 3px 5px;
+	padding: 10px;
 }
 
 #history .log-item .timestamp {
 	margin-right: 5px;
 }
+
+.history-table {
+margin-left: 20px;
+}
+
+
 
 h4.timestamp {
 	font-size: 1em;
@@ -376,6 +393,10 @@ height: 240px;
 	overflow-y: auto;
 }
 
+.solving-details {
+white-space: nowrap;
+}
+
 h3.section-name {
 margin: 0px;
 padding: 0px;
@@ -404,14 +425,19 @@ padding: 0px;
 	cursor: pointer;
 }
 .team_div > .status {
-	background: rgba(0,0,0,0.5);
-	color: #000000;
+	color: #fff;
+	font-weight: bold;
 	text-align: center;
-	font-size: 20px;
+	font-size: 16px;
+	text-shadow: 0px 0px 15px #000;
 	position: absolute;
 	top: 0px; left: 0px;
 	width: 100%; height: 50px;
-	padding-top: 25px;
+	padding-top: 23px;
+}
+
+.dead {
+	opacity: 0.3;
 }
 
 #bottombar > .team_div:hover {
@@ -635,6 +661,7 @@ margin-bottom: 10px;
 
 .puzzle_row {
 padding: 5px;
+margin-left: 15px;
 }
 
 .sub-container .answer {

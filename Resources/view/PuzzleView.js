@@ -155,8 +155,8 @@ var HintView = Backbone.View.extend({
 });
 
 var PuzzleSessionView = Backbone.View.extend({
-	template : _.template('Viewers watching: <span id="fan_worth"><%= current_worth %></span><br />\
-		Elapsed time: <span id="elapsed_time"></span>'),
+	template : _.template('<div class="solving-details">Viewers watching: <span id="fan_worth"><%= current_worth %></span><br />\
+		Elapsed time: <span id="elapsed_time"></span></div>'),
 
 	initialize: function(options) {
 		_.bindAll(this, 'render');
