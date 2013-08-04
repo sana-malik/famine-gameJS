@@ -59,7 +59,9 @@ var Session = Backbone.Model.extend({
 			this.set("history", sessionObj["history"]);
 			this.set("unreadCount", sessionObj["unreadCount"])
 			this.set("messageStats", sessionObj["messageStats"])
-			$('#tab_history').html('<a href="#">Activity ('+sessionObj["unreadCount"]+")</a>");
+			if (sessionObj["unreadCount"] > 0) {
+				$('#tab_history').html('<a href="#">Activity ('+sessionObj["unreadCount"]+")</a>");
+			}
 		}
 	},
 

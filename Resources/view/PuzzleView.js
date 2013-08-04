@@ -136,19 +136,24 @@ var HintView = Backbone.View.extend({
 		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
 
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
+			$(that.el).hide();
 			$(that.el).children('.hint_text').html('Available in ' + formatTime(remaining));
 		}
-		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.AVAILABLE) {
-			var button_text = 'Purchase Hint';
-			if (cost <= 0)
-				button_text = 'Reveal Free Hint';
-			$(that.el).children('.hint_text').html('<button id=\"hint_button\">' + button_text + '</button>');
-		}
-		else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.SKIPPED) {
-			$(that.el).children('.hint_text').html('<button id=\"hint_button\">Reveal Free Hint</button>');
-		}
 		else {
-			$(that.el).children('.hint_text').html(puzzles[this.puzzleName].get("hints")[this.hintName].get("text"));
+			$(that.el).parent().show();	
+			$(that.el).show();
+			if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.AVAILABLE) {
+				var button_text = 'Purchase Hint';
+				if (cost <= 0)
+					button_text = 'Reveal Free Hint';
+				$(that.el).children('.hint_text').html('<button id=\"hint_button\">' + button_text + '</button>');
+			}
+			else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.SKIPPED) {
+				$(that.el).children('.hint_text').html('<button id=\"hint_button\">Reveal Free Hint</button>');
+			}
+			else {
+				$(that.el).children('.hint_text').html(puzzles[this.puzzleName].get("hints")[this.hintName].get("text"));
+			}
 		}
 	}
 
@@ -207,6 +212,7 @@ var PuzzleView = Backbone.View.extend({
 
 		this.render();
 		this.session_vars = new PuzzleSessionView({el : ".main#" + nameToId(this.puzzleName) + " .puzzle_data", puzzleName : this.puzzleName, model : session});
+		$("#" + nameToId(that.puzzleName) + " .hints").hide()
 		this.hints = {};
 		$.each(puzzles[this.puzzleName].get("hints"), function(name, hint) {
 			$("#" + nameToId(that.puzzleName) + " .hints").append("<div class=\"hint\" id=\"" + nameToId(name) + "\"></div>");
