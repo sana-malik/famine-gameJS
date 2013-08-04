@@ -68,7 +68,7 @@ cursor:hand;
 	background: url("../images/gui/background.jpg");
 	position:absolute;
 	top: 0px; left: 0px;
-	}
+}
 
 /** TOP BAR **/
 #topbar {
@@ -129,10 +129,7 @@ h3.fans {
 	position:absolute;
 	left: 265px; top: 80px;
 	width: 689px; height: 25px;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background: url("../images/gui/border-bg.jpg") repeat-x;
-	background-position:321px 23px;
+	overflow: hidden;
 }
 
 
@@ -141,51 +138,34 @@ ol#toc {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-ol#toc a {
-	color: #fff;
-	display: block;
-	float: left;
-	height: 21px;
-	margin: 0px;
-	padding: 3px 0px 0px 0px;
-	text-decoration: none;
-	width: 97px;
-	/*font-family: 'Orbitron', 'Bank Gothic';*/
-	font-size: .9em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	overflow: hidden;
 }
 
 ol#toc li {
-	background: url("../images/gui/tab-bg.png");
-	float: left;
+	color: #fff;
+	display: inline-block;
+	background-color: rgba(255,255,255,0.2);
+	width: auto;
 	margin: 0px;
+	margin-right: 10px;
 	text-align: center;
-	width: 107px;
-	padding: 0px;
+	padding: 3px 10px 0px 10px;
+	height: 21px;
+	font-size: .9em;
+	vertical-align: top;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	overflow: hidden;
+}
+
+ol#toc a {
+	text-decoration: none;
 }
 
 ol#toc li.current  {
-	background: url("../images/gui/current-tab-bg.png");
-}
-
-ol#toc li.current a {
-	color: #fff;
-}
-
-ol#toc li.current span {
-	margin: 0px;
-	padding: 0px;
-}
-
-ol#toc span {
-	background: url(tabs.gif) 100% 0;
-	display: block;
-	padding-right: 10px;
-	margin: 0px;
-	padding: 0px;
+	background-color: rgba(0,0,0,0.35);
+	border: 1px solid #8c909b;
+	border-bottom: none;
 }
 
 
@@ -324,7 +304,6 @@ display: block;
 	padding: 10px;	
 	border-bottom: #8c909b solid 1px;
 	border-left: #8c909b solid 1px;
-	border-right: #8c909b solid 1px;
 	background:rgba(19,19,22, 0.4);
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
@@ -342,6 +321,15 @@ display: block;
 
 #history .log-item .timestamp {
 	margin-right: 5px;
+}
+
+#history .log-item.unread {
+	background: rgba(255, 255, 255, 0.5);
+	border: 1px solid #CCCCCC;
+}
+
+#history .log-item.unread:hover {
+	background: rgba(255, 255, 255, 0.2);
 }
 
 .history-table {
@@ -525,36 +513,6 @@ p.team_bio {
 display: block;
 }
 
-
-
-
-/* TOOLTIP */
-#tt {
- 	position:absolute;
- 	display:block;
- 	background:url(images/tt_left.gif) top left no-repeat;
- 	}
-#tttop {
- 	display:block;
- 	height:5px;
- 	margin-left:5px;
- 	background:url(images/tt_top.gif) top right no-repeat;
- 	overflow:hidden;
-}
-#ttcont {
-	display:block;
- 	padding:2px 12px 3px 7px;
- 	margin-left:5px;
- 	background:#666;
- 	color:#fff;
-}
-#ttbot {
-	display:block;
-	height:5px;
-	margin-left:5px;
-	background:url(images/tt_bottom.gif) top right no-repeat;
-	overflow:hidden;
-}
 
 /* POPUP */
 #popup_container {

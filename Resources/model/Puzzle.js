@@ -34,6 +34,7 @@ var Puzzle = Backbone.Model.extend({
 				session.set("lastSolved", this.get("name"));
 				this.killTeams();
 				this.unlockResources();
+				MessageController.startTimers(this.get("name")); 
 
 				// remove timer
 				clearInterval(stats[this.get("name")]["timerID"]);

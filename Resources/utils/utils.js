@@ -243,9 +243,14 @@ function playSound(soundfile, duration) {
 }
 
 
-function logAction(type, msg) {
+function logAction(type, msg, msgId) {
 	var temp = session.get("history").slice();
-	temp.push([getCurrentDateTimeString(), type, msg]);
+	if (type == logTypes.MESSAGE) {
+		temp.push([getCurrentDateTimeString(), type, msg, msgId]);
+	}
+	else {
+		temp.push([getCurrentDateTimeString(), type, msg]);
+	}
 	session.set("history",temp);
 }
 

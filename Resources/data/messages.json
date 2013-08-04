@@ -1,0 +1,26 @@
+{
+	"Gelatinous Cube" : {
+		"msg1" : {
+			"id" : "msg1",
+			"type" : "text",
+			"content" : "<b>meow message 2</b>",
+			"time" : 3,
+			"sender" : "Sanaaaa"
+		},
+		"msg2" : {
+			"id" : "msg2",
+			"type" : "text",
+			"content" : "<b>meow message 1</b>",
+			"time" : 1,
+			"sender" : "The Capitol"
+		}
+	},
+
+	"Cornucopia" : [{
+		"id" : "msg3",
+		"type" : "text",
+		"content" : "<b>meow meow Cornucopia</b>",
+		"time" : 1,
+		"sender" : "Haymitch"
+	}]
+}

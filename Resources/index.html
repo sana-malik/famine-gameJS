@@ -11,6 +11,10 @@
 		<script type="text/javascript" src="utils/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="utils/external.js"></script>
 		<script type="text/javascript" src="utils/debug.js"></script>
+		<script type="text/javascript" src="utils/toastr.min.js"></script>
+
+		<!-- CONTROLLER --> 
+		<script type="text/javascript" src="controller/MessageController.js"></script>
 
 		<!-- MODEL -->
 		<script type="text/javascript" src="model/Team.js"></script>
@@ -34,15 +38,11 @@
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="css/toastr.css">
 
 		<title>Famine Game</title>  <!-- This is overwritten in RunApp.js by populateTeams() -->
 	</head>
 	<body>
-		<div id="tt">
-			<div id="tttop"> </div>
-			<div id="ttcont"> </div>
-			<div  id="ttbot"> </div>
-		</div>
 		<div id="popup_container" style="display:none;">
 			<div id="popup_content">
 				<div class="title"><a href="#"><img src="images/gui/close_icon.gif" id="close_popup"></a></div>
@@ -65,9 +65,9 @@
 			</div>
 			<div id="tabs">
 				<ol id="toc">
-					<li class="current" id="tab_main"><a href="#"><span>Main</span></a></li>
-					<li id="tab_history"><a href="#"><span>Activity</span></a></li>
-					<li id="tab_info"><a href="#"><span>Info</span></a></li>
+					<li class="current" id="tab_main"><a href="#">Main</a></li>
+					<li id="tab_history"><a href="#">Activity</a></li>
+					<li id="tab_info"><a href="#">Info</a></li>
 				</ol>
 			</div>
 			<div id="main" class="active tab">

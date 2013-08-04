@@ -42,9 +42,11 @@ var Session = Backbone.Model.extend({
 			});
 			this.set("puzzleStats", temp);
 			this.set("renderMeta", 0);
-	
+
 			// history
-			this.set("history",[[getCurrentDateTimeString(), logTypes.GAME, "Game Started!"]])
+			this.set("history",[[getCurrentDateTimeString(), logTypes.GAME, "Game Started!"]]);
+			this.set("messageStats", {});
+			this.set("unreadCount", 0);
 		}
 		else {
 			this.set("fans", sessionObj["fans"]);
@@ -55,6 +57,9 @@ var Session = Backbone.Model.extend({
 			this.set("puzzleStats", sessionObj["puzzleStats"]);
 			this.set("renderMeta", 0);
 			this.set("history", sessionObj["history"]);
+			this.set("unreadCount", sessionObj["unreadCount"])
+			this.set("messageStats", sessionObj["messageStats"])
+			$('#tab_history').html('<a href="#">Activity ('+sessionObj["unreadCount"]+")</a>");
 		}
 	},
 

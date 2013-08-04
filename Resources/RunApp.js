@@ -5,6 +5,7 @@ var locations;
 var locOrder;
 var resources;
 var tid;
+var messages;
 
 /**
  * Executes once the DOM is fully loaded. Essentially a "main" method
@@ -30,8 +31,20 @@ $(document).ready(function() {
 	locations = populateLocations(); 
 	resources = populateResources();
 	puzzles = populatePuzzles();
+	messages = populateMessages();
 
 	session = initSession();
+
+	// set up toast crap
+	toastr.options = {
+ 		"debug": false,
+  		"positionClass": "toast-top-right",
+  		"onclick": null,
+  		"fadeIn": 500,
+  		"fadeOut": 1500,
+  		"timeOut": 2000,
+  		"extendedTimeOut": 1000
+}
 
 	// initialize puzzles that already exist
 	$.each(session.get("puzzleStats"), function(name, puzStat) {
@@ -156,6 +169,12 @@ function populateResources() {
 	});
 
 	return resources;
+}
+
+function populateMessages() {
+	var json = jsonToString(data_dir + 'messages.json');
+
+	return Ti.JSON.parse(json);
 }
 
 function populateLocations() {
