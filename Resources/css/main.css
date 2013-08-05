@@ -163,21 +163,22 @@ ol#toc a {
 }
 
 ol#toc li.current  {
-	background-color: rgba(0,0,0,0.35);
-	border: 1px solid #8c909b;
-	border-bottom: none;
+	/*background-color: rgba(0,0,0,0.35);*/
+	background: #8c909b;
+	border-bottom: none;	
 }
 
+ol#toc li.current a {
+	color: #fff;	
+}
 
 /* PATH */
 #navigation-bar {
 	position:absolute;
-	left: 265px; top: 104px;
+	left: 265px; top: 103px;
 	width: 415px; height: 23px;
 	padding: 10px;
-	border-left: 1px solid #8c909b;
-	border-right: 1px solid #8c909b;
-	border-bottom: #8c909b 1px solid;
+	border: 1px solid #8c909b;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background:rgba(19,19,22, 0.5);
@@ -207,13 +208,11 @@ ol#toc li.current  {
 /*  MAIN CONTENT AREA */
 #main .left-sidebar .content{
 	position:absolute;
-	left: 265px; top: 148px;
+	left: 265px; top: 147px;
 	width: 415px; height: 269px;
 	overflow: auto;
 	padding: 10px;	
-	border-bottom: #8c909b solid 1px;
-	border-left: #8c909b solid 1px;
-	border-right: #8c909b solid 1px;
+	border: #8c909b solid 1px;
 	background:rgba(19,19,22, 0.4);
 }
 
@@ -302,8 +301,7 @@ display: block;
 	width: 674px; height: 313px;
 	overflow: auto;
 	padding: 10px;	
-	border-bottom: #8c909b solid 1px;
-	border-left: #8c909b solid 1px;
+	border: #8c909b solid 1px;
 	background:rgba(19,19,22, 0.4);
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
@@ -355,9 +353,7 @@ margin: 0px;
 	width: 415px; height: 313px;
 	overflow: auto;
 	padding: 10px;	
-	border-bottom: #8c909b solid 1px;
-	border-left: #8c909b solid 1px;
-	border-right: #8c909b solid 1px;
+	border: #8c909b solid 1px;
 	background:rgba(19,19,22, 0.4);
 }
 
@@ -381,9 +377,11 @@ height: 240px;
 	overflow-y: auto;
 }
 
+/*
 .solving-details {
 white-space: nowrap;
 }
+*/
 
 h3.section-name {
 margin: 0px;
