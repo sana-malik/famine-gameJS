@@ -30,6 +30,14 @@ var Puzzle = Backbone.Model.extend({
 				// hide answer box
 				$("#"+nameToId(this.get("name")) + " .answer_box").hide();
 				
+				// allot fans & log
+				if (!give_up) {
+					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
+					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+entry+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr></table>");
+				}
+				else
+					logAction(logTypes.PUZZLE, "Thresh helped you with <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"></table>");
+	
 				// puzzle results
 				session.set("lastSolved", this.get("name"));
 				this.killTeams();
@@ -43,12 +51,6 @@ var Puzzle = Backbone.Model.extend({
 				$.each(stats[this.get("name")]["hintStats"], function(hname, hint) {
 					hint["status"] = hintStatus.REVEALED;
 				});
-
-				// allot fans & log
-				if (!give_up) {
-					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
-					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+entry+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr></table>");
-				}
 
 				this.advanceLocation();
 
@@ -180,8 +182,7 @@ var Puzzle = Backbone.Model.extend({
 				// this is current team! don't do anything! :)
 			}
 			else {
-				teams[id].die();
-				logAction(logTypes.KILL, "You killed <span id=\"" + id + "\" class=\"vid_link clickable\">" + teams[id].get("name") + "</span>");				
+				teams[id].die();				
 			}
 		});
 	},

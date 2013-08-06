@@ -80,15 +80,24 @@ var Team = Backbone.Model.extend({
 		return stat;
 	},
 
-	die : function() {
+	die : function(quiet) {
 		if (session.get("teamStats")[this.get("id")]["status"] === teamStatus.DEAD) {
 			return; // already dead?!
 		}
-		
-		playSound('cannon.wav', 3000);
 
-		// show video
-		this.showVideo();
+		// default quiet to false
+		quiet = typeof quiet !== 'undefined' ? quiet : false;
+		
+		if(quiet) {
+			logAction(logTypes.KILL, "<span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + "</span> has been killed!");
+		} else {
+			logAction(logTypes.KILL, "You killed <span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + "</span>!");
+			
+			playSound('cannon.wav', 3000);
+
+			// show video
+			this.showVideo();
+		}
 	
 		// update object
 		var stats = $.extend({},session.get("teamStats"));
