@@ -11,7 +11,7 @@
         "minute" : 0
     },
     
-    "ephemeral_session" : false,
+    "ephemeral_session" : true,
     "verbose_server" : true
 }, 
 

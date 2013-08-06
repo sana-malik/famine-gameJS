@@ -71,10 +71,9 @@ var Puzzle = Backbone.Model.extend({
 				session.set("renderMeta", session.get("renderMeta")+1);
 
 				// If you've received no notification of success, get a popup
-				/*  For some reason, this flag is not getting set appropriately so you get this message even if you unlock a resource.
- 				if ( !this.notified )
-					showPopup("You have successfully made your way past " + this.get("name") + ".");
-				*/
+				if ( !this.notified )
+					showPopup(this.get("answers")[entry]["response"]);
+				
 
 				// If server saving is not verbose, we need to at least save to the server when the answer is given
 				if( !debugActive("verbose_server"))
@@ -204,7 +203,7 @@ var Puzzle = Backbone.Model.extend({
 				// puzzle results
 				puzzle.killTeams(deathVolume.QUIET);
 				puzzle.unlockResources();
-				MessageController.startTimers(puzzle.get("name"), true, offset); 
+				offset = offset + MessageController.startTimers(puzzle.get("name"), true, offset); 
 
 				// remove timer
 				clearInterval(stats[puzzle.get("name")]["timerID"]);
@@ -222,23 +221,31 @@ var Puzzle = Backbone.Model.extend({
 	},
 
 	killTeams : function(deathVolume) {
+		var kill = false;
 		$.each(this.get("teams_killed"), function(index, id) {
 			if (tid === id) {
 				// this is current team! don't do anything! :)
 			}
 			else {
 				teams[id].die(deathVolume);		
-				this.notified = true;		
+				kill = true;		
 			}
 		});
+
+		if( kill )
+			this.notified = true;
 	},
 
 	unlockResources : function() {
+		var unlock = false;
 		$.each(this.get("resources_unlocked"), function(index, name) {
 			resources[name].unlock();
 			logAction(logTypes.RESOURCE, "You unlocked " + name + "!");
-			this.notified = true;
+			unlock = true;
 		});
+
+		if ( unlock )
+			this.notified = true;
 	},
 
 
