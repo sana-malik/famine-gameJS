@@ -170,6 +170,11 @@ function getCurrentDateTimeString(format) {
 	var hours = currentTime.getHours();
 	var minutes = currentTime.getMinutes();
 	
+	if ( format == timeFormat.TWENTYFOUR )
+		if (hours < 10){
+			hours = "0" + hours
+		}
+
 	if (minutes < 10){
 		minutes = "0" + minutes
 	}
