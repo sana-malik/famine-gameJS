@@ -19,7 +19,7 @@
 	"wifi_description" : "",
 	"image_file" : "images/locations/fool_logo.jpg",
 	"map_file" : "images/maps/hains_map.png",
-	"puzzles" : ["Cornucopia Meta", "Test Puzzle 2"]
+	"puzzles" : ["Cornucopia"]
 },
 "George Mason Memorial" : {
 	"name" : "George Mason Memorial",
@@ -39,7 +39,7 @@
 	"wifi_description" : "Free Wifi",
 	"image_file" : "images/locations/fool_logo.jpg",
 	"map_file" : "images/maps/fool_map.png",
-	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+	"puzzles" : ["Blanket Weaving"]
 },
 "Thomas Jefferson Memorial" : {
 	"name" : "Thomas Jefferson Memorial",
@@ -59,7 +59,7 @@
 	"wifi_description" : "Free Wifi",
 	"image_file" : "images/locations/fool_logo.jpg",
 	"map_file" : "images/maps/fool_map.png",
-	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+	"puzzles" : ["Pen"]
 },
 "Roosevelt Island" : {
 	"name" : "Roosevelt Island",
@@ -79,7 +79,7 @@
 	"wifi_description" : "Free Wifi",
 	"image_file" : "images/locations/fool_logo.jpg",
 	"map_file" : "images/maps/fool_map.png",
-	"puzzles" : ["Test Puzzle", "Test Puzzle 2"]
+	"puzzles" : ["Lincoln Logs"]
 },
 "Navy Merchant Memorial at Columbia Island Marina" : {
 	"name" : "Navy Merchant Memorial at Columbia Island Marina",

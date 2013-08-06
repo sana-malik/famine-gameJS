@@ -1,14 +1,28 @@
 var MessageController = {
-	startTimers: function(puzzle) {
+	startTimers: function(puzzle, accelerate, offset) {
+		var latest_time = 0;
+
 		if (puzzle in messages) {
+			accelerate = typeof accelerate !== 'undefined' ? accelerate : false;
+			offset = typeof offset !== 'undefined' ? offset : 0;
+
 			var time_multiplyer = 60000;
+
+			if( accelerate )
+				time_multiplyer = 1000;
+
 			if ( debugActive() )
 				time_multiplyer /= parameters["debug_parameters"]["time_multiplyer"];
 
 			$.each(messages[puzzle], function(msgId, message) {
-				setTimeout(function() {MessageController.notify(message);}, message["time"]*time_multiplyer);
+				setTimeout(function() {MessageController.notify(message);}, (message["time"]+offset)*time_multiplyer);
+
+				if ( message["time"] > latest_time)
+					latest_time = message["time"];
 			});
 		}
+
+		return latest_time;
 	},
 
 	notify: function(message) {

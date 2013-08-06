@@ -159,7 +159,9 @@ function getCurrentDateTime() {
 	return date;
 }
 
-function getCurrentDateTimeString() {
+function getCurrentDateTimeString(format) {
+	format = typeof format !== 'undefined' ? format : timeFormat.TWELVE;
+
 	var currentTime = getCurrentDateTime();
 	var year = currentTime.getFullYear();
 	var day = currentTime.getDate();
@@ -171,12 +173,15 @@ function getCurrentDateTimeString() {
 		minutes = "0" + minutes
 	}
 	
-	var out = month + "/" + day + "/" + year + "  " + hours + ":" + minutes;
-	if(hours > 11){
-		out += "pm";
-	} else {
-		out += "am";
+	var out = month + "/" + day + "/" + year + " " + hours + ":" + minutes;
+	
+	if(format == timeFormat.TWELVE) {
+		if(hours > 11)
+			out += "pm";
+		else 
+			out += "am";
 	}
+		
 	
 	return out;
 }

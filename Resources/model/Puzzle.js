@@ -7,6 +7,7 @@ var Puzzle = Backbone.Model.extend({
 		});
 
 		this.set("hints",temp);
+		this.notified = false;
 	},
 
 	checkAnswer : function(entry) {
@@ -24,6 +25,7 @@ var Puzzle = Backbone.Model.extend({
 		}
 		else if (give_up || entry in this.get("answers")) {
 			if (give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
+
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
 
@@ -42,7 +44,13 @@ var Puzzle = Backbone.Model.extend({
 				session.set("lastSolved", this.get("name"));
 				this.killTeams();
 				this.unlockResources();
-				MessageController.startTimers(this.get("name")); 
+
+				var accelerate_messages = false;
+				var nextLoc = session.get("currentLocation") + 1;
+				if( nextLoc < locOrder.length )
+					accelerate_messages = locations[locOrder[nextLoc]].get("time_closed") < getCurrentDateTimeString(timeFormat.TWENTYFOUR);
+				
+				var latest_time = MessageController.startTimers(this.get("name"), accelerate_messages); 
 
 				// remove timer
 				clearInterval(stats[this.get("name")]["timerID"]);
@@ -52,7 +60,7 @@ var Puzzle = Backbone.Model.extend({
 					hint["status"] = hintStatus.REVEALED;
 				});
 
-				this.advanceLocation();
+				stats = this.advanceLocation(stats, latest_time);
 
 				// returning stats cause I don't know if javascript passes by reference here or not
 				stats = this.returnToParentView(stats);
@@ -61,6 +69,12 @@ var Puzzle = Backbone.Model.extend({
 				session.set("puzzleStats",stats);
 				// if this is a mini, increment the meta counter so it knows to refresh the activity view
 				session.set("renderMeta", session.get("renderMeta")+1);
+
+				// If you've received no notification of success, get a popup
+				/*  For some reason, this flag is not getting set appropriately so you get this message even if you unlock a resource.
+ 				if ( !this.notified )
+					showPopup("You have successfully made your way past " + this.get("name") + ".");
+				*/
 
 				// If server saving is not verbose, we need to at least save to the server when the answer is given
 				if( !debugActive("verbose_server"))
@@ -130,22 +144,15 @@ var Puzzle = Backbone.Model.extend({
 		return stats;
 	},
 
-	advanceLocation : function() {
+	advanceLocation : function(stats, offset) {
 		// advance location
 		if (this.get("advance_location")) {
 			var currentLoc = session.get("currentLocation") + 1;
-			var now = getCurrentDateTime();
-			var nowStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear() + " ";
-			if (now.getHours() < 10)
-				nowStr += "0";
-			nowStr += now.getHours() + ":";
-			if (now.getMinutes() < 10)
-				nowStr += "0";
-			nowStr += now.getMinutes();
 
-			while (locations[locOrder[currentLoc]].get("time_closed") < nowStr) {
-				currentLoc++;
+			while (locations[locOrder[currentLoc]].get("time_closed") < getCurrentDateTimeString(timeFormat.TWENTYFOUR)) {
 				// We need to skip over the puzzles appropriately as well, e.g. play cannon sounds for killed teams, show videos, etc.
+				stats = this.skipLocation(currentLoc, stats, offset);
+				currentLoc++;
 			}
 			session.set("currentLocation", currentLoc);
 
@@ -170,19 +177,58 @@ var Puzzle = Backbone.Model.extend({
 			// if they are too early for the current location, display an alert
 			var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
 
-			if (nowStr < locations[locOrder[currentLoc]].get("time_open")) {
+			if (getCurrentDateTimeString() < locations[locOrder[currentLoc]].get("time_open")) {
 				showAlert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
 			}
 		}
+
+		return stats;
 	},
 
-	killTeams : function() {
+	skipLocation : function(loc_index, stats, offset) {
+		offset = typeof offset !== 'undefined' ? offset : 0;
+
+	 	$.each( locations[locOrder[loc_index]].get("puzzles"), function(index, puzzle_name) {
+	 		if ( !(puzzle_name in puzzles) ) 
+	 			console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
+	 		else {
+	 			var puzzle = puzzles[puzzle_name]
+				// update status object
+				stats[puzzle.get("name")]["status"] = puzzleStatus.SOLVED;
+
+				// hide answer box
+				$("#"+nameToId(puzzle.get("name")) + " .answer_box").hide();
+				
+				logAction(logTypes.PUZZLE, "You were skipped over <span id=\"" + puzzle.get("name") + "\" class=\"puzzle_link clickable\">" + puzzle.get("name") + "</span><table class=\"history-table\"></table>");
+
+				// puzzle results
+				puzzle.killTeams(deathVolume.QUIET);
+				puzzle.unlockResources();
+				MessageController.startTimers(puzzle.get("name"), true, offset); 
+
+				// remove timer
+				clearInterval(stats[puzzle.get("name")]["timerID"]);
+				
+				// set all hints to revealed
+				$.each(stats[puzzle.get("name")]["hintStats"], function(hname, hint) {
+					hint["status"] = hintStatus.REVEALED;
+				});
+
+				if ( puzzle.notified ) 
+					this.notified = true;
+			}
+		});
+		return stats;
+	},
+
+	killTeams : function(deathVolume) {
 		$.each(this.get("teams_killed"), function(index, id) {
 			if (tid === id) {
 				// this is current team! don't do anything! :)
 			}
 			else {
-				teams[id].die();				
+				teams[id].die(deathVolume);		
+				this.notified = true;		
 			}
 		});
 	},
@@ -190,7 +236,8 @@ var Puzzle = Backbone.Model.extend({
 	unlockResources : function() {
 		$.each(this.get("resources_unlocked"), function(index, name) {
 			resources[name].unlock();
-			logAction(logTypes.RESOURCE, "You unlocked " + name + "!!!!!");
+			logAction(logTypes.RESOURCE, "You unlocked " + name + "!");
+			this.notified = true;
 		});
 	},
 

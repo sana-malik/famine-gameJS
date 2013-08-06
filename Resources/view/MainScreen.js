@@ -89,7 +89,7 @@ var MainView = Backbone.View.extend({
 			goToActivePuzzle(result);
 			
 		}
-		else {
+		else if (entry != "") {
 			$("#return_message").removeClass("hidden");
 			$("#return_message").html(entry + " is not a valid start code.");
 		}

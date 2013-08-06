@@ -16,11 +16,23 @@
 		}
 	},
 
-	"Cornucopia" : [{
-		"id" : "msg3",
-		"type" : "text",
-		"content" : "<b>meow meow Cornucopia</b>",
-		"time" : 1,
-		"sender" : "Haymitch"
-	}]
+	"Cornucopia" : {
+		"msg3" : {
+			"id" : "msg3",
+			"type" : "text",
+			"content" : "<b>meow meow Cornucopia</b>",
+			"time" : 1,
+			"sender" : "Haymitch"
+		}
+	},
+
+	"Blanket Weaving" : {
+		"msg4" : {
+			"id" : "msg4",
+			"type" : "text",
+			"content" : "<b>Skipped message.</b>",
+			"time" : 5,
+			"sender" : "The Skipper"
+		}
+	}
 }

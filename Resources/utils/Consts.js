@@ -7,6 +7,7 @@ var screenTypes = {MAIN: "main", PUZZLE: "puzzle"};
 var resourceStatus = {LOCKED: "locked", UNLOCKED: "unlocked"};
 var logTypes = {GAME: "game", PUZZLE: "puzzle", RESOURCE: "resource", KILL: "kill", MESSAGE: "message"};
 var deathVolume = {QUIET: true, LOUD: false}
+var timeFormat = {TWENTYFOUR: "twentyfour", TWELVE: "twelve"}
 
 var data_dir = "Resources/data/";
 
