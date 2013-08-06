@@ -1350,7 +1350,7 @@
 	}
 },
 "XBox" : {"name":"XBox",
-"start_code" : "achivement",
+"start_code" : "achievement",
 "max_fans" : 100,
 "flavor_text" : "This is the normal flavor text. ",
 "self_flavor_text" : "This is custom flavor text if it's your puzzle. ",

@@ -236,6 +236,16 @@ function saveLocalSession() {
  	}
 }
 
+function saveSession() {
+	if (!debugActive("ephemeral_session")) {
+		// If verbose, save whenever an answer is entered.  This updates logs, partial answers, and final answers.
+		if( debugActive("verbose_server"))
+			try { saveServerSession(session, tid); } catch (err) {}
+	
+		saveLocalSession();
+	}	
+}
+
 function playSound(soundfile, duration) {
 	var sound = Ti.Media.createSound("sounds/" + soundfile)
 	sound.play();

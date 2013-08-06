@@ -1,8 +1,12 @@
 var MessageController = {
 	startTimers: function(puzzle) {
 		if (puzzle in messages) {
+			var time_multiplyer = 60000;
+			if ( debugActive() )
+				time_multiplyer /= parameters["debug_parameters"]["time_multiplyer"];
+
 			$.each(messages[puzzle], function(msgId, message) {
-				setTimeout(function() {MessageController.notify(message);}, message["time"]*1000);
+				setTimeout(function() {MessageController.notify(message);}, message["time"]*time_multiplyer);
 			});
 		}
 	},
@@ -24,15 +28,8 @@ var MessageController = {
 		session.set("messageStats", stats);
 
 		logAction(logTypes.MESSAGE, "A message from " + message["sender"] + " - " + message["content"], message["id"]);
-
 	
  		// Save session
-		if (!debugActive("ephemeral_session")) {
-			// If verbose, save whenever an answer is entered.  This updates logs, partial answers, and final answers.
-			if( debugActive("verbose_server"))
-				try { saveServerSession(session, tid); } catch (err) {}
-		
-			saveLocalSession();
-		}	
+		saveSession();
 	}
 }

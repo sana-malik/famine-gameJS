@@ -111,14 +111,7 @@ var HintView = Backbone.View.extend({
 
 			this.model.set("puzzleStats",stats);
 
-			// Save session
-			if (!debugActive("ephemeral_session")) {
-				
-				if( debugActive("verbose_server"))
-					try { saveServerSession(session, tid); } catch (err) {}
-				
-				saveLocalSession();
-			}
+			saveSession();
 		}
 	},
 

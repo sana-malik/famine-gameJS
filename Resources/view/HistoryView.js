@@ -65,13 +65,6 @@ var HistoryView = Backbone.View.extend({
 			$('#tab_history').html('<a href="#">Activity</a>');
 		}
 
-		// Save session
-		if (!debugActive("ephemeral_session")) {
-			// If verbose, save whenever an answer is entered.  This updates logs, partial answers, and final answers.
-			if( debugActive("verbose_server"))
-				try { saveServerSession(session, tid); } catch (err) {}
-		
-			saveLocalSession();
-		}	
+		saveSession();
 	}
 });

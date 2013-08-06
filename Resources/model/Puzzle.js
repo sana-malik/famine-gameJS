@@ -50,76 +50,17 @@ var Puzzle = Backbone.Model.extend({
 					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+entry+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr></table>");
 				}
 
-				// advance location
-				if (this.get("advance_location")) {
-					var currentLoc = session.get("currentLocation") + 1;
-					var now = getCurrentDateTime();
-					var nowStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear() + " ";
-					if (now.getHours() < 10)
-						nowStr += "0";
-					nowStr += now.getHours() + ":";
-					if (now.getMinutes() < 10)
-						nowStr += "0";
-					nowStr += now.getMinutes();
+				this.advanceLocation();
 
-					while (locations[locOrder[currentLoc]].get("time_closed") < nowStr) {
-						currentLoc++;
-						// We need to skip over the puzzles appropriately as well, e.g. play cannon sounds for killed teams, show videos, etc.
-					}
-					session.set("currentLocation", currentLoc);
-
-					var loc_desc = locations[locOrder[currentLoc]].get("flavor_text")
-				 	var teams_killed = []
-				 	 
-				 	// Find all teams that get killed at next location
-				 	$.each( locations[locOrder[currentLoc]].get("puzzles"), function(index, puzzle) {
-				 		if (puzzle in puzzles) 
-				 			teams_killed = teams_killed.concat(puzzles[puzzle].get("teams_killed"));
-				 		else
-				 			console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
-				 	});
-			
-				 	// If active team gets killed at next location, change location description
-				 	if ( $.inArray(tid, teams_killed) != -1 )  
-				 		loc_desc = locations[locOrder[currentLoc]].get("self_flavor_text")
-				 	 
-				 	// Update location text
-				 	$("#main #main_screen .left-sidebar .content .location_description").html( loc_desc );
-
-					// if they are too early for the current location, display an alert
-					var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
-
-					if (nowStr < locations[locOrder[currentLoc]].get("time_open")) {
-						showAlert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
-					}
-				}
-
-				// go back to main or meta and change buttons if main
-				if (this.get("meta") || session.getActivePuzzles().length === 1) {
-					$('.main.active').removeClass('active');
-					$('#main_screen').addClass('active');
-					$('#start_code_box').show();
-					$("#start_input").focus();
-					$('#active_puzzle_button').hide();
-
-					// change unfinished puzzles to ARCHIVED?? -- solvable but not active
-					$.each(session.getActivePuzzles(), function(index, pname) {
-						stats[pname]["status"] = puzzleStatus.ARCHIVED;
-					});
-				}
-				else {
-					var meta = getMetaName(this.get("start_code"));
-					$('.main.active').removeClass('active');
-					$('.main#'+nameToId(meta)).addClass('active');
-				}
-
+				// returning stats cause I don't know if javascript passes by reference here or not
+				stats = this.returnToParentView(stats);
 
 				// update the stats
 				session.set("puzzleStats",stats);
 				// if this is a mini, increment the meta counter so it knows to refresh the activity view
 				session.set("renderMeta", session.get("renderMeta")+1);
 
-				// If server saving is not verbose, we need to at least save when the answer is given
+				// If server saving is not verbose, we need to at least save to the server when the answer is given
 				if( !debugActive("verbose_server"))
 					try { saveServerSession(session, tid); } catch (err) {}
 			}
@@ -150,7 +91,6 @@ var Puzzle = Backbone.Model.extend({
 						hint["remaining"] -= time_to_advance;
 				});
 
-
 				// update the stats
 				session.set("puzzleStats",stats);
 			}
@@ -162,14 +102,75 @@ var Puzzle = Backbone.Model.extend({
 		}
 		this.log(response);
 
-		// Save session
-		if (!debugActive("ephemeral_session")) {
-			
-			// If verbose, save whenever an answer is entered.  This updates logs, partial answers, and final answers.
-			if( debugActive("verbose_server"))
-				try { saveServerSession(session, tid); } catch (err) {}
-			
-			saveLocalSession();
+		saveSession();
+	},
+
+	returnToParentView : function(stats) {
+		// go back to main or meta and change buttons if main
+		if (this.get("meta") || session.getActivePuzzles().length === 1) {
+			$('.main.active').removeClass('active');
+			$('#main_screen').addClass('active');
+			$('#start_code_box').show();
+			$("#start_input").focus();
+			$('#active_puzzle_button').hide();
+
+			// change unfinished puzzles to ARCHIVED?? -- solvable but not active
+			$.each(session.getActivePuzzles(), function(index, pname) {
+				stats[pname]["status"] = puzzleStatus.ARCHIVED;
+			});
+		}
+		else {
+			var meta = getMetaName(this.get("start_code"));
+			$('.main.active').removeClass('active');
+			$('.main#'+nameToId(meta)).addClass('active');
+		}
+
+		return stats;
+	},
+
+	advanceLocation : function() {
+		// advance location
+		if (this.get("advance_location")) {
+			var currentLoc = session.get("currentLocation") + 1;
+			var now = getCurrentDateTime();
+			var nowStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear() + " ";
+			if (now.getHours() < 10)
+				nowStr += "0";
+			nowStr += now.getHours() + ":";
+			if (now.getMinutes() < 10)
+				nowStr += "0";
+			nowStr += now.getMinutes();
+
+			while (locations[locOrder[currentLoc]].get("time_closed") < nowStr) {
+				currentLoc++;
+				// We need to skip over the puzzles appropriately as well, e.g. play cannon sounds for killed teams, show videos, etc.
+			}
+			session.set("currentLocation", currentLoc);
+
+			var loc_desc = locations[locOrder[currentLoc]].get("flavor_text")
+		 	var teams_killed = []
+		 	 
+		 	// Find all teams that get killed at next location
+		 	$.each( locations[locOrder[currentLoc]].get("puzzles"), function(index, puzzle) {
+		 		if (puzzle in puzzles) 
+		 			teams_killed = teams_killed.concat(puzzles[puzzle].get("teams_killed"));
+		 		else
+		 			console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
+		 	});
+
+		 	// If active team gets killed at next location, change location description
+		 	if ( $.inArray(tid, teams_killed) != -1 )  
+		 		loc_desc = locations[locOrder[currentLoc]].get("self_flavor_text")
+		 	 
+		 	// Update location text
+		 	$("#main #main_screen .left-sidebar .content .location_description").html( loc_desc );
+
+			// if they are too early for the current location, display an alert
+			var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
+
+			if (nowStr < locations[locOrder[currentLoc]].get("time_open")) {
+				showAlert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
+			}
 		}
 	},
 
