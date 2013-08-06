@@ -167,7 +167,7 @@ var Puzzle = Backbone.Model.extend({
 		 	});
 
 		 	// If active team gets killed at next location, change location description
-		 	if ( $.inArray(tid, teams_killed) != -1 )  
+		 	if ( $.inArray(tid, teams_killed) != -1 && locations[locOrder[currentLoc]].get("self_flavor_text") != "")  
 		 		loc_desc = locations[locOrder[currentLoc]].get("self_flavor_text")
 		 	 
 		 	// Update location text
