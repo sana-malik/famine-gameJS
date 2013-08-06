@@ -129,6 +129,7 @@ function PuzzleTimer(puzzleId, interval){
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
 				stats[puzzleId]["hintStats"][name]["remaining"] -= timediff;
 				if (remaining <= 0) {
+					playSound("notify.wav", 1000);
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
 					stats[puzzleId]["hintStats"][name]["remaining"] = hint.get("end_time")*60;
 					changed = true;
@@ -243,7 +244,7 @@ function saveLocalSession() {
 
 function saveSession() {
 	if (!debugActive("ephemeral_session")) {
-		// If verbose, save whenever an answer is entered.  This updates logs, partial answers, and final answers.
+		// If verbose, save to server.  
 		if( debugActive("verbose_server"))
 			try { saveServerSession(session, tid); } catch (err) {}
 	
