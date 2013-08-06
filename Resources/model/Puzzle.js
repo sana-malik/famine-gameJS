@@ -25,6 +25,7 @@ var Puzzle = Backbone.Model.extend({
 		}
 		else if (give_up || entry in this.get("answers")) {
 			if (give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
+				var solve_text =  tid in this.get("teams_killed") ? this.get("self_solve_text") : this.get("solve_text");
 
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
@@ -35,7 +36,7 @@ var Puzzle = Backbone.Model.extend({
 				// allot fans & log
 				if (!give_up) {
 					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
-					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+entry+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr></table>");
+					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+entry+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr><tr></table>");
 				}
 				else
 					logAction(logTypes.PUZZLE, "Thresh helped you with <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"></table>");
@@ -71,10 +72,11 @@ var Puzzle = Backbone.Model.extend({
 				session.set("renderMeta", session.get("renderMeta")+1);
 
 				// If you've received no notification of success, get a popup
-				if ( !this.notified )
-					showPopup(this.get("answers")[entry]["response"]);
+				if ( !this.notified ) {
+					showPopup(solve_text);
+					logAction(logTypes.STORY, solve_text);
+				}
 				
-
 				// If server saving is not verbose, we need to at least save to the server when the answer is given
 				if( !debugActive("verbose_server"))
 					try { saveServerSession(session, tid); } catch (err) {}
