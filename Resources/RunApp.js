@@ -99,7 +99,7 @@ $(document).ready(function() {
     	  	  var element = $(this);
     	  	  if (element.is("[map]")) {
     	  	    var map_file = element.attr("map");
-    	  	    return "<img class='map' src='" + map_file + "'>";
+    	  	    return "<img class='map' src='/images/maps/" + map_file + "'>";
     	  	  }
     	  	  else if (element.is("[title]")) {
     	  	    return element.attr("title");
