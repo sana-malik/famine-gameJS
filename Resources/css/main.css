@@ -763,10 +763,10 @@ text-decoration: none;
 
 /* Let's try new fonts */
 body, #path, button {
-font-family: 'Open Sans';
+font-family: 'Open Sans', Arial,  sans-serif;
 letter-spacing: .06em;
 }
 
 #sidebar, ol#toc a, .hint_name, .puzzle_data, h2.puzzle_title {
-font-family: 'Orbitron';
+font-family: 'Orbitron', Verdana, sans-serif;
 }
