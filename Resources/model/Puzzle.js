@@ -26,7 +26,7 @@ var Puzzle = Backbone.Model.extend({
 		else if (give_up || entry in this.get("answers")) {
 			if (give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
 				var solve_text =  tid in this.get("teams_killed") ? this.get("self_solve_text") : this.get("solve_text");
-
+				
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
 
@@ -43,8 +43,10 @@ var Puzzle = Backbone.Model.extend({
 	
 				// puzzle results
 				session.set("lastSolved", this.get("name"));
+				logAction(logTypes.STORY, solve_text);
+
 				this.killTeams();
-				this.unlockResources();
+				this.unlockResources(solve_text);
 
 				var accelerate_messages = false;
 				var nextLoc = session.get("currentLocation") + 1;
@@ -74,7 +76,6 @@ var Puzzle = Backbone.Model.extend({
 				// If you've received no notification of success, get a popup
 				if ( !this.notified ) {
 					showPopup(solve_text);
-					logAction(logTypes.STORY, solve_text);
 				}
 				
 				// If server saving is not verbose, we need to at least save to the server when the answer is given
@@ -239,9 +240,10 @@ var Puzzle = Backbone.Model.extend({
 			this.notified = true;
 	},
 
-	unlockResources : function() {
+	unlockResources : function(solve_text) {
 		var unlock = false;
 		$.each(this.get("resources_unlocked"), function(index, name) {
+			showPopup(solve_text + "<br><br>")
 			resources[name].unlock();
 			logAction(logTypes.RESOURCE, "You unlocked " + name + "!");
 			unlock = true;

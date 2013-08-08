@@ -88,11 +88,9 @@ var Team = Backbone.Model.extend({
 		// default quiet to false
 		quiet = typeof quiet !== 'undefined' ? quiet : false;
 		
-		if(quiet) {
-			logAction(logTypes.KILL, "<span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + "</span> has been killed!");
-		} else {
-			logAction(logTypes.KILL, "You killed <span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + "</span>!");
-			
+		logAction(logTypes.KILL, "<span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + "</span> has been killed!");
+
+		if(!quiet) {
 			playSound('cannon.wav', 3000);
 
 			// show video
