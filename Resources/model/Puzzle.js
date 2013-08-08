@@ -200,7 +200,8 @@ var Puzzle = Backbone.Model.extend({
 				// hide answer box
 				$("#"+nameToId(puzzle.get("name")) + " .answer_box").hide();
 				
-				logAction(logTypes.PUZZLE, "You were skipped over <span id=\"" + puzzle.get("name") + "\" class=\"puzzle_link clickable\">" + puzzle.get("name") + "</span><table class=\"history-table\"></table>");
+				// Adds a log entry regarding the skipped puzzle.
+				//logAction(logTypes.PUZZLE, "You were skipped over <span id=\"" + puzzle.get("name") + "\" class=\"puzzle_link clickable\">" + puzzle.get("name") + "</span><table class=\"history-table\"></table>");
 
 				// puzzle results
 				puzzle.killTeams(deathVolume.QUIET);
