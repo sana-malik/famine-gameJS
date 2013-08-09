@@ -41,6 +41,9 @@ var Puzzle = Backbone.Model.extend({
 				else
 					logAction(logTypes.PUZZLE, "Thresh helped you with <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"></table>");
 	
+				// cnongrats message
+				showPopup(solve_text + "<br><br>");
+
 				// puzzle results
 				session.set("lastSolved", this.get("name"));
 				logAction(logTypes.STORY, solve_text);
@@ -73,11 +76,6 @@ var Puzzle = Backbone.Model.extend({
 				// if this is a mini, increment the meta counter so it knows to refresh the activity view
 				session.set("renderMeta", session.get("renderMeta")+1);
 
-				// If you've received no notification of success, get a popup
-				if ( !this.notified ) {
-					showPopup(solve_text);
-				}
-				
 				// If server saving is not verbose, we need to at least save to the server when the answer is given
 				if( !debugActive("verbose_server"))
 					try { saveServerSession(session, tid); } catch (err) {}
@@ -235,22 +233,15 @@ var Puzzle = Backbone.Model.extend({
 				kill = true;		
 			}
 		});
-
-		if( kill )
-			this.notified = true;
 	},
 
 	unlockResources : function(solve_text) {
 		var unlock = false;
 		$.each(this.get("resources_unlocked"), function(index, name) {
-			showPopup(solve_text + "<br><br>")
 			resources[name].unlock();
 			logAction(logTypes.RESOURCE, "You unlocked " + name + "!");
 			unlock = true;
 		});
-
-		if ( unlock )
-			this.notified = true;
 	},
 
 

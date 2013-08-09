@@ -539,6 +539,13 @@ display: block;
 	float: right;
 }
 
+#popup_content .content {
+	width: 480px;
+	height: 280px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
 /* ALERT */
 #alert_container {
 	position:relative;
