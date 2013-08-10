@@ -2611,7 +2611,7 @@
     }
 },
 "Propos" : {"name":"Propos",
-"start_code" : "inspiriation",
+"start_code" : "inspiration",
 "max_fans" : 1000,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
