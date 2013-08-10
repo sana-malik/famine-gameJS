@@ -3,20 +3,20 @@
 "teams" : {
 "1a" : {
 	"id" : "1a",
-	"name" : "Team Snout",
-	"bio" : "This team will currently be killed by the Muttations puzzle with the answer of Boxers",
+	"name" : "Team Awesome",
+	"bio" : "An awesome team of brave and heroic volunteers.",
 	"hometown" : "Portland, OR, San Francisco Bay Area, Norfolk, UK",
 	"photo" : "team photo",
 	"icon" : "team01.png",
 	"video" : "http://youtu.be/x6JJEvriEZU",
 	"mentor" : "Haymitch",
 	"talent" : "running a shitload of games",
-	"members" : ["Curtis Chen", "DeeAnn Sole", "Josh Ward", "Chris Nichols", "Karl Larson / Lisa Long", "Corby Anderson / Cary Roberts"]
+	"members" : ["Asher Walkover", "Benjamin de Bivort", "Ange Strom-Weber", "Matt Lahut"]
 },
 "1b" : {
 	"id" : "1b",
 	"name" : "The Hunger Dames",
-	"bio" : "This team will currently be killed by the Flexipuzzle puzzle with the answer of Hansen",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Los Angeles, CA",
 	"photo" : "team photo",
 	"icon" : "team02.png",
@@ -28,7 +28,7 @@
 "2a" : {
 	"id" : "2a",
 	"name" : "Bostucky Plugh",
-	"bio" : "This team will currently be killed by the Masonry Legos puzzle with the answer of Hit",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Kentucky, New Jersey, and Massachusetts",
 	"photo" : "team photo",
 	"icon" : "team03.png",
@@ -40,7 +40,7 @@
 "2b" : {
 	"id" : "2b",
 	"name" : "The Puzzle Underground",
-	"bio" : "This team will currently be killed by the Settlers Mini puzzle with the answer of Lie",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Portland, OR",
 	"photo" : "team photo",
 	"icon" : "team04.png",
@@ -52,7 +52,7 @@
 "3a" : {
 	"id" : "3a",
 	"name" : "Bloodshot",
-	"bio" : "This team will currently be killed by the Muttations puzzle with the answer of Boxers",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team05.png",
@@ -64,7 +64,7 @@
 "3b" : {
 	"id" : "3b",
 	"name" : "Death From Above",
-	"bio" : "This team will currently be killed by the Xbox puzzle with the answer of Red Ring of Death",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Boston, MA",
 	"photo" : "team photo",
 	"icon" : "team06.png",
@@ -76,7 +76,7 @@
 "4a" : {
 	"id" : "4a",
 	"name" : "Mystic Katfish",
-	"bio" : "This team will currently be killed by the Sushi Puzzle puzzle with the answer of Mercurialism",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "San Francisco Bay Area, Sacramento CA, Pittsburgh PA, Washington DC",
 	"photo" : "team photo",
 	"icon" : "team07.png",
@@ -88,7 +88,7 @@
 "4b" : {
 	"id" : "4b",
 	"name" : "This Space Intentionally Left Blank",
-	"bio" : "This team will currently be killed by the Cereal Meta puzzle with the answer of Crunch Their Capns",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Boston, MA",
 	"photo" : "team photo",
 	"icon" : "team08.png",
@@ -100,7 +100,7 @@
 "5a" : {
 	"id" : "5a",
 	"name" : "Apetitius Giganticus",
-	"bio" : "This team will currently be killed by the Sky Projection puzzle with the answer of TBR",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "America (Boston/Las Vegas/Providence/San Francisco/Seattle)",
 	"photo" : "team photo",
 	"icon" : "team09.png",
@@ -112,7 +112,7 @@
 "5b" : {
 	"id" : "5b",
 	"name" : "Occam's Unicorn",
-	"bio" : "This team will currently be killed by the Cereal Meta puzzle with the answer of Crunch Their Capns",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team10.png",
@@ -124,7 +124,7 @@
 "6a" : {
 	"id" : "6a",
 	"name" : "Briny Deep",
-	"bio" : "This team will currently be killed by the Transportation?? puzzle with the answer of TBD ",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.?? puzzle with the answer of TBD ",
 	"hometown" : "Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team11.png",
@@ -136,7 +136,7 @@
 "6b" : {
 	"id" : "6b",
 	"name" : "The Burninators",
-	"bio" : "This team will currently be killed by the Camouflage puzzle with the answer of Power Blender",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Palo Alto, CA",
 	"photo" : "team photo",
 	"icon" : "team12.png",
@@ -148,7 +148,7 @@
 "7a" : {
 	"id" : "7a",
 	"name" : "District Ubik",
-	"bio" : "This team will currently be killed by the Settlers Mini puzzle with the answer of Fist",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Washington, DC, Nashville, TN, San Francisco, CA",
 	"photo" : "team photo",
 	"icon" : "team13.png",
@@ -160,7 +160,7 @@
 "7b" : {
 	"id" : "7b",
 	"name" : "LXP",
-	"bio" : "This team will currently be killed by the Lincoln Logs puzzle with the answer of Ritual",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "CA, MA, MD, WA",
 	"photo" : "team photo",
 	"icon" : "team14.png",
@@ -172,7 +172,7 @@
 "8a" : {
 	"id" : "8a",
 	"name" : "Silly Jefes",
-	"bio" : "This team will currently be killed by the Blanket Weaving puzzle with the answer of Exposure",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Seattle, WA, New York, Virginia, North Carolina",
 	"photo" : "team photo",
 	"icon" : "team15.png",
@@ -184,7 +184,7 @@
 "8b" : {
 	"id" : "8b",
 	"name" : "XX-Rated",
-	"bio" : "This team will currently be killed by the Settlers Mini puzzle with the answer of Stun",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "San Francisco, CA, Chicago, IL, Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team16.png",
@@ -196,7 +196,7 @@
 "9a" : {
 	"id" : "9a",
 	"name" : "Disobedient Children",
-	"bio" : "This team will currently be killed by the Cereal Meta puzzle with the answer of Crunch their Capns",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Bay Area, CA and beyond",
 	"photo" : "team photo",
 	"icon" : "team17.png",
@@ -208,7 +208,7 @@
 "9b" : {
 	"id" : "9b",
 	"name" : "Revolution #9",
-	"bio" : "This team will currently be killed by the Settlers Mini puzzle with the answer of Hang",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Maryland",
 	"photo" : "team photo",
 	"icon" : "team18.png",
@@ -220,7 +220,7 @@
 "10a" : {
 	"id" : "10a",
 	"name" : "Golden SmokingJay",
-	"bio" : "This team will currently be killed by the Tracker Jackers puzzle with the answer of Skillful Buzzkill",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "San Francisco, East Bay, Los Angeles, CA",
 	"photo" : "team photo",
 	"icon" : "team19.png",
@@ -232,7 +232,7 @@
 "10b" : {
 	"id" : "10b",
 	"name" : "R.E.D.T.A.P.E.",
-	"bio" : "This team will currently be killed by the Animal Farm puzzle with the answer of Gory Cattle Prod Massacre",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team20.png",
@@ -244,7 +244,7 @@
 "11a" : {
 	"id" : "11a",
 	"name" : "CRANEA",
-	"bio" : "This team will currently be killed by the Plants vs. Zombies puzzle with the answer of Broccoli Spear",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.. Zombies puzzle with the answer of Broccoli Spear",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team21.png",
@@ -256,7 +256,7 @@
 "11b" : {
 	"id" : "11b",
 	"name" : "Here Be Dragons",
-	"bio" : "This team will currently be killed by the Mockingjay puzzle with the answer of Downer",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "Seattle/Washington, DC/San Francisco",
 	"photo" : "team photo",
 	"icon" : "team22.png",
@@ -268,7 +268,7 @@
 "12a" : {
 	"id" : "12a",
 	"name" : "12 Hangry Nerds",
-	"bio" : "This team will currently be killed by the Settlers Mini puzzle with the answer of Inn",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "South Bay, CA and Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team23.png",
@@ -280,7 +280,7 @@
 "12b" : {
 	"id" : "12b",
 	"name" : "Coeds on Fire",
-	"bio" : "This team will currently be killed by the Mining Cube puzzle with the answer of Block Lung",
+	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team24.png",

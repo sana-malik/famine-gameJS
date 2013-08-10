@@ -6,6 +6,13 @@
 			"content" : "<b>Teams, we begin to tire of your progress.  As we realize your hunger is likely slowing you down, we have coralled several animals at Oxon Hill Farm.</b>",
 			"time" : 5,
 			"sender" : "The Gamemakers"
+		},
+		"msg2" : {
+			"id" : "msg2",
+			"type" : "text",
+			"content" : "<b>Hey, watch yourselves.  Apparently those jerks from District 3 have left you a little surprise up ahead.</b>",
+			"time" : 2,
+			"sender" : "Haymitch"
 		}
 	}
 }
