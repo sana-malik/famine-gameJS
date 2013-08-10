@@ -15,8 +15,8 @@
 	"name" : "tape",
 	"icon" : "tape.png"
 },
-"clipboard" : {
-	"name" : "clipboard",
+"clipboards" : {
+	"name" : "clipboards",
 	"icon" : "clipboard_small.png"
 },
 "flashlight" : {

@@ -32,5 +32,14 @@
 			"time" : 4,
 			"sender" : "Haymitch"
 		}
+	},
+	"Mining Cube" : {
+		"msg5" : {
+			"id" : "msg5",
+			"type" : "text",
+			"content" : "<b>It's time to go on the offensive.</b>",
+			"time" : 2,
+			"sender" : "Haymitch"
+		}
 	}
 }

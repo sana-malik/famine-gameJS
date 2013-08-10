@@ -30,7 +30,7 @@ var MessageController = {
 		toastr.info('A message has arrived from ' + message["sender"] + '!');
 
 		// todo(sana): play a sound
-		playSound("pling.wav", 1000);
+		playSound("pling.wav", 500);
 
 		// increment activity tab counter
 		var unreadCount = session.get("unreadCount")+1;
