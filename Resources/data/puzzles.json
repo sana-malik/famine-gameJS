@@ -3185,7 +3185,7 @@
 "max_fans" : 2000,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Congratulations, you've solved the puzzle and saved Pangram from hunger and despair!  You will be remembered for millenia to come.",
 "self_solve_text" : "Congratulations, you've solved the puzzle!",
 "resources_unlocked" : [],
 "teams_killed" : [],
