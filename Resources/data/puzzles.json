@@ -258,7 +258,7 @@
 "max_fans" : 1000,
 "flavor_text" : "Ah, finally a pen!! Well, crap... this doesn't help!  Perhaps its contents can still help you somehow. ",
 "self_flavor_text" : "",
-"solve_text" : "Great work, now you have something to defend yourself with. ",
+"solve_text" : "Great work, now you have something to defend yourself with.",
 "self_solve_text" : "",
 "resources_unlocked" : ["writing utensils"],
 "teams_killed" : [],

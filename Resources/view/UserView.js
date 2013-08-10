@@ -13,12 +13,18 @@ var ResourceView = Backbone.View.extend({
 	render : function() {
 		var that = this;
 		$(that.el).empty()
+
+		var count = 0;
 		$.each(resources, function(name, resource) { 
 			$(that.el).append('<div class="resource_div" id="' + nameToId(name) + '"><img src="images/resources/' + resource.get("icon") + '" class="resource_img" title="' + name + '"></div>');
 
 			if (that.model.get("resourceStats")[name]["status"] == resourceStatus.LOCKED) {
 				$(".resource_div#"+nameToId(name), that.el).addClass("locked");
 			}
+
+			count = count + 1
+			if(count % 4 == 0 )
+				$(that.el).append("<br>")
 		});
 	}
 });

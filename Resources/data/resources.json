@@ -1,6 +1,6 @@
 {
-"pencil" : {
-	"name" : "pencil",
+"writing utensils" : {
+	"name" : "writing utensils",
 	"icon" : "pencil.png"
 },
 "paper" : {
@@ -14,5 +14,21 @@
 "tape" : {
 	"name" : "tape",
 	"icon" : "tape.png"
+},
+"clipboard" : {
+	"name" : "clipboard",
+	"icon" : "clipboard_small.png"
+},
+"flashlight" : {
+	"name" : "flashlight",
+	"icon" : "flashlight_small.png"
+},
+"internet research" : {
+	"name" : "internet research",
+	"icon" : "internet_small.png"
+},
+"solving apps and software" : {
+	"name" : "solving apps and software",
+	"icon" : "apps_small.png"
 }
 }

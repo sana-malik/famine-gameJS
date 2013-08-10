@@ -129,7 +129,7 @@ function PuzzleTimer(puzzleId, interval){
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
 				stats[puzzleId]["hintStats"][name]["remaining"] -= timediff;
 				if (remaining <= 0) {
-					playSound("notify.wav", 1000);
+					playSound("notify.wav", 500);
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
 					stats[puzzleId]["hintStats"][name]["remaining"] = hint.get("end_time")*60;
 					changed = true;
