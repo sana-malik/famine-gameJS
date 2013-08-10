@@ -2104,7 +2104,7 @@
 "solve_text" : "Congratulations, you've solved the puzzle!",
 "self_solve_text" : "Congratulations, you've solved the puzzle!",
 "resources_unlocked" : [],
-"teams_killed" : ["3a,1a"],
+"teams_killed" : ["3a", "1a"],
 "meta" : false,
 "advance_location" : true,
 "hints" : {
