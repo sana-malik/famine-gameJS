@@ -13,6 +13,21 @@
 			"content" : "<b>Hey, watch yourselves.  Apparently those jerks from District 3 have left you a little surprise up ahead.</b>",
 			"time" : 2,
 			"sender" : "Haymitch"
+		},
+		"msg3" : {
+			"id" : "msg3",
+			"type" : "text",
+			"content" : "<b>ANNOUNCEMENT: You may no longer win as a team.  Instead, you must fight and kill each other until only a single Tribute remains!  That is all.</b>",
+			"time" : 2,
+			"sender" : "The Gamemakers"
+		},
+		"msg4" : {
+			"id" : "msg4",
+			"type" : "text",
+			"content" : "<b>Go to the next location as instructed, but when you get there ignore the new rules.  It's important that you keep working together.</b>",
+			"time" : 4,
+			"sender" : "Haymitch"
 		}
+
 	}
 }
