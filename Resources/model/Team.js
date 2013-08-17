@@ -24,7 +24,7 @@ var Team = Backbone.Model.extend({
 				dis_specialty = "Transportation";
 				break;
 			case "7":
-				dis_specialty = "Power";
+				dis_specialty = "Lumber";
 				break;
 			case "8":
 				dis_specialty = "Textiles";
