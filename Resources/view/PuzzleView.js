@@ -208,7 +208,7 @@ var PuzzleView = Backbone.View.extend({
 		$("#" + nameToId(that.puzzleName) + " .hints").hide()
 		this.hints = {};
 		$.each(puzzles[this.puzzleName].get("hints"), function(name, hint) {
-			$("#" + nameToId(that.puzzleName) + " .hints").append("<div class=\"hint\" id=\"" + nameToId(name) + "\"></div>");
+			$("#" + nameToId(that.puzzleName) + " .hints").prepend("<div class=\"hint\" id=\"" + nameToId(name) + "\"></div>");
 			that.hints[name] = new HintView({el : '.main#' + nameToId(that.puzzleName) + " .hint#" + nameToId(name), hintName : name, puzzleName: that.puzzleName, model : session});
 		});
 

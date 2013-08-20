@@ -41,10 +41,17 @@ $(document).ready(function() {
   		"positionClass": "toast-top-right",
   		"onclick": null,
   		"fadeIn": 500,
-  		"fadeOut": 1500,
-  		"timeOut": 2000,
-  		"extendedTimeOut": 1000
-}
+  		"fadeOut": 1000,
+  		"timeOut": 0,
+  		"extendedTimeOut": 0,
+  		"onFadeOut": function() {
+			$("#toc > .current").removeClass("current");
+			$("#toc > #tab_history").addClass("current");
+
+			$("#main_container > .active.tab").removeClass("active");
+			$("#history.tab").addClass("active");
+  		}
+	}
 
 	// initialize puzzles that already exist
 	$.each(session.get("puzzleStats"), function(name, puzStat) {
@@ -108,6 +115,13 @@ $(document).ready(function() {
     	});
   	});
 });
+
+// hide popup div when outside click
+$(document).mouseup(function (e) {
+	var popup = $("#popup_content");
+
+	if (!popup.is(e.target) && popup.has(e.target).length == 0) hidePopup();
+})
 
 function loadParameters() {
 	var json = jsonToString(data_dir + 'parameters.json');
