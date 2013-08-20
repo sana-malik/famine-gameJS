@@ -528,40 +528,33 @@
 "hints" : {
     "Hint 1" : {
         "start_time" : 1,
-        "end_time" : 10,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "The three columns contain the encoded data for this puzzle.  The roof is there simply for flavor.  Do not remove the columns, however."
+        "text" : "Thinking about this thematic location might actually help you solve this puzzle. "
         },
     "Hint 2" : {
-        "start_time" : 10,
-        "end_time" : 20,
-        "start_cost" : 50,
-        "end_cost" : 0,
-        "text" : "Thinking about where you are might actually help you solve this puzzle. "
-        },
-    "Hint 3" : {
-        "start_time" : 20,
+        "start_time" : 15,
         "end_time" : 30,
         "start_cost" : 50,
         "end_cost" : 0,
         "text" : "To decipher the columns, you need to use an appropriate cipher (one which you might know by another name)."
         },
-    "Hint 4" : {
+    "Hint 3" : {
         "start_time" : 30,
         "end_time" : 40,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "This puzzle uses the Free Mason or Pigpen cipher.  But it does so in a way that isn't immediately apparent from eye level. "
+        "text" : "This puzzle uses the Free Mason or Pigpen cipher.  But it does so in a way that isn't immediately apparent from eye level. Also, there are multiple versions of this cipher.  Use the one starting with two tic tac toe grids."
         },
-    "Hint 5" : {
+    "Hint 4" : {
         "start_time" : 40,
         "end_time" : 50,
         "start_cost" : 50,
         "end_cost" : 0,
         "text" : "Each level is a Free Mason letter when viewed from above.  "
         },
-    "Hint 6" : {
+    "Hint 5" : {
         "start_time" : 50,
         "end_time" : 60,
         "start_cost" : 50,
@@ -581,7 +574,7 @@
         "type" : "partial",
         "text" : "buildfirstlettersofflavortext",
         "response" : "That message is correct. You're almost done. ",
-        "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3", "Hint 4", "Hint 5"]
+        "skipped_hints" : ["Hint 1", "Hint 2", "Hint 3", "Hint 4"]
         }
     }
 },
@@ -609,14 +602,14 @@
         "end_time" : 20,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "Each image can be found on single row of a single bench.  "
+        "text" : "Each image is also referenced on a single row of a single bench, and there will never be two or more images on the same row of a bench. "
         },
     "Hint 3" : {
         "start_time" : 20,
         "end_time" : 30,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "Those dots on the benches in your handout look interesting.  Perhaps you should note which images aren't well hidden (i.e. are sticking out)?"
+        "text" : "Those dots on the benches--can you see them?  Perhaps you could use them to mark which rows have images. "
         },
     "Hint 4" : {
         "start_time" : 30,
@@ -630,7 +623,7 @@
         "end_time" : 50,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "Each row of each bench should either be a bump (sticking out) or blank depending on whether or you have been given an image in that row. "
+        "text" : "Each row of each bench should either be a bump or blank depending on whether or you have been given an image in that row. "
         },
     "Hint 6" : {
         "start_time" : 50,
@@ -1015,9 +1008,9 @@
         }
     },
 "answers" : {
-    "hansen" : {
+    "hanson" : {
         "type" : "final",
-        "text" : "hansen",
+        "text" : "hanson",
         "response" : "Yay, you solved it and brutally murdered some people!",
         "self_response" : "Yay, you solved it and brutally defended yourself from some people!",
         "skipped_hints" : ["Yay, you solved it and brutally defended yourself from some people!"]
@@ -1120,39 +1113,46 @@
 "advance_location" : true,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
+        "start_time" : 1,
         "end_time" : 10,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "Each bird echoes either a high, medium, or low signal (except the third set of birds, god rest their souls).  "
         },
     "Hint 2" : {
         "start_time" : 10,
-        "end_time" : 15,
-        "start_cost" : 50,
-        "end_cost" : 0,
-        "text" : "hint"
-        },
-    "Hint 3" : {
-        "start_time" : 15,
         "end_time" : 20,
         "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
+        "end_cost" : 0,
+        "text" : "Birds should be paired by their colors.  And even though it may appear to be the case, Braille is not used in this puzzle."
         },
-    "Hint 4" : {
+    "Hint 3" : {
         "start_time" : 20,
-        "end_time" : 25,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 5" : {
-        "start_time" : 25,
         "end_time" : 30,
         "start_cost" : 50,
-        "end_cost" : 20,
-        "text" : "hint"
+        "end_cost" : 0,
+        "text" : "Each round, each pair of birds generates a single capital letter.  Within each pair, note that one and only one bird is singing. "
+        },
+    "Hint 4" : {
+        "start_time" : 30,
+        "end_time" : 40,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "Think of this as a connect the dots audio puzzle.  Show this hint to the staffer for free confirmation of your data."
+        },
+    "Hint 5" : {
+        "start_time" : 40,
+        "end_time" : 50,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "You're tracing out a letter point-by-point.  For example, if the left bird started low, and then the left bird sang high, you'd draw a vertical line on the left side.  By doing so, you'll be spelling some appropriate things... well, almost."
+        },
+    "Hint 6" : {
+        "start_time" : 50,
+        "end_time" : 60,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "Each round, the birds will be spelling a four-letter bird name.  To get your final answer, think about the letters the dead birds need to contribute."
         }
     },
 "answers" : {
@@ -1178,39 +1178,32 @@
 "advance_location" : true,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 30,
+        "end_time" : 50,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "There's a relationship between your answers and the gameboard itself."
         },
     "Hint 2" : {
-        "start_time" : 10,
-        "end_time" : 15,
+        "start_time" : 50,
+        "end_time" : 60,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "The answer to each puzzle has as many letters as its corresponding resource tile on the board.  This will help you lay out your final phrase."
         },
     "Hint 3" : {
-        "start_time" : 15,
-        "end_time" : 20,
+        "start_time" : 60,
+        "end_time" : 70,
         "start_cost" : 50,
         "end_cost" : 5,
-        "text" : "hint"
+        "text" : "When spelling out your 18-letter answer, the numbers on your meta sheet indicate the order to place each answer's letter."
         },
     "Hint 4" : {
-        "start_time" : 20,
-        "end_time" : 25,
+        "start_time" : 70,
+        "end_time" : 80,
         "start_cost" : 50,
         "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 5" : {
-        "start_time" : 25,
-        "end_time" : 30,
-        "start_cost" : 50,
-        "end_cost" : 20,
-        "text" : "hint"
+        "text" : "For example, if ore is 2,3,1, place the 2nd letter of the ore answer in the first ore slot, followed by the 3rd letter and then the 1st letter.  "
         }
     },
 "answers" : {
@@ -1236,39 +1229,18 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 20,
+        "end_time" : 50,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "These broken roads are symbolic of how messages used to travel across Pangram in the early days."
         },
     "Hint 2" : {
-        "start_time" : 10,
-        "end_time" : 15,
+        "start_time" : 50,
+        "end_time" : 60,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
-        },
-    "Hint 3" : {
-        "start_time" : 15,
-        "end_time" : 20,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 4" : {
-        "start_time" : 20,
-        "end_time" : 25,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 5" : {
-        "start_time" : 25,
-        "end_time" : 30,
-        "start_cost" : 50,
-        "end_cost" : 20,
-        "text" : "hint"
+        "text" : "The roads and settlements use a familiar encoding -- gaps in the chain are spaces between letters."
         }
     },
 "answers" : {
@@ -1294,18 +1266,18 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 20,
+        "end_time" : 50,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "The names and numbers of each player's cards are important to solve this puzzle."
         },
     "Hint 2" : {
-        "start_time" : 10,
-        "end_time" : 15,
+        "start_time" : 50,
+        "end_time" : 60,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "Your three-letter answer will be spelled by indexing into the card name by how many of that card there are."
         },
     "Hint 3" : {
         "start_time" : 15,
@@ -1352,39 +1324,18 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 20,
+        "end_time" : 50,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "In a Settlers game, having the right resources is often the path to victory!"
         },
     "Hint 2" : {
-        "start_time" : 10,
-        "end_time" : 15,
+        "start_time" : 50,
+        "end_time" : 60,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
-        },
-    "Hint 3" : {
-        "start_time" : 15,
-        "end_time" : 20,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 4" : {
-        "start_time" : 20,
-        "end_time" : 25,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 5" : {
-        "start_time" : 25,
-        "end_time" : 30,
-        "start_cost" : 50,
-        "end_cost" : 20,
-        "text" : "hint"
+        "text" : "Can you draw paths on the board using the order of each player's holdings?"
         }
     },
 "answers" : {
@@ -1410,39 +1361,32 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
-        "start_cost" : 50,
-        "end_cost" : 0,
-        "text" : "hint"
-        },
-    "Hint 2" : {
-        "start_time" : 10,
-        "end_time" : 15,
-        "start_cost" : 50,
-        "end_cost" : 0,
-        "text" : "hint"
-        },
-    "Hint 3" : {
-        "start_time" : 15,
-        "end_time" : 20,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 4" : {
         "start_time" : 20,
-        "end_time" : 25,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 5" : {
-        "start_time" : 25,
         "end_time" : 30,
         "start_cost" : 50,
-        "end_cost" : 20,
-        "text" : "hint"
+        "end_cost" : 0,
+        "text" : "Answers are in alphabetical order.  There's also additional information to get you initially started."
+        },
+    "Hint 2" : {
+        "start_time" : 30,
+        "end_time" : 40,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "The answers to the clues can each be mapped a single numbered disc."
+        },
+    "Hint 3" : {
+        "start_time" : 40,
+        "end_time" : 50,
+        "start_cost" : 50,
+        "end_cost" : 5,
+        "text" : "The large number on the disc indicates the length of the answer.  Match answers to the disc by their starting letter.   Given that, what could the dots mean?"
+        },
+    "Hint 4" : {
+        "start_time" : 50,
+        "end_time" : 60,
+        "start_cost" : 50,
+        "end_cost" : 5,
+        "text" : "Index into each answer by the number of dots on the disc.  Your letters (as read on the board) will yield a clue whose answer is three letters long."
         }
     },
 "answers" : {
@@ -1468,39 +1412,18 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 20,
+        "end_time" : 50,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "It's always good strategy to count how many cards are left."
         },
     "Hint 2" : {
-        "start_time" : 10,
-        "end_time" : 15,
+        "start_time" : 50,
+        "end_time" : 60,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
-        },
-    "Hint 3" : {
-        "start_time" : 15,
-        "end_time" : 20,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 4" : {
-        "start_time" : 20,
-        "end_time" : 25,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 5" : {
-        "start_time" : 25,
-        "end_time" : 30,
-        "start_cost" : 50,
-        "end_cost" : 20,
-        "text" : "hint"
+        "text" : "Your four-letter answer will be spelled by converting the number of resource cards in each pile"
         }
     },
 "answers" : {
@@ -1527,44 +1450,37 @@
 "hints" : {
     "Hint 1" : {
         "start_time" : 5,
-        "end_time" : 10,
-        "start_cost" : 50,
-        "end_cost" : 0,
-        "text" : "hint"
-        },
-    "Hint 2" : {
-        "start_time" : 10,
         "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "The fact that 12 tributes have died is interesting for two different reasons."
         },
-    "Hint 3" : {
+    "Hint 2" : {
         "start_time" : 15,
-        "end_time" : 20,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 4" : {
-        "start_time" : 20,
         "end_time" : 25,
         "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
+        "end_cost" : 0,
+        "text" : "As you're undoubtedly aware, Pangram tributes are very appropriately named.  Additionally, the fact that this puzzle is projected in the sky is also a clue as to how to solve it."
         },
-    "Hint 5" : {
+    "Hint 3" : {
         "start_time" : 25,
-        "end_time" : 30,
+        "end_time" : 35,
         "start_cost" : 50,
-        "end_cost" : 20,
-        "text" : "hint"
+        "end_cost" : 5,
+        "text" : "Each body position is a zodiac constellation and each cause of death refers to a different zodiac constellation.  Can't you see the difference?"
+        },
+    "Hint 4" : {
+        "start_time" : 35,
+        "end_time" : 45,
+        "start_cost" : 50,
+        "end_cost" : 5,
+        "text" : "Order the tributes by district, according to their names.  Then index into the name, by how far apart the two pertinent zodiac signs are."
         }
     },
 "answers" : {
-    "energysword" : {
+    "energyweapon" : {
         "type" : "final",
-        "text" : "energysword",
+        "text" : "energyweapon",
         "response" : "Congratulations, you have solved the puzzle.",
         "self_response" : "",
         "skipped_hints" : []
@@ -1620,7 +1536,7 @@
         },
     "Hint 6" : {
         "start_time" : 55,
-        "end_time" : 50,
+        "end_time" : 65,
         "start_cost" : 50,
         "end_cost" : 10,
         "text" : "Squirt water through holes and see where it comes out on the other side.  This should give you a letter to letter translation. "
@@ -2109,39 +2025,46 @@
 "advance_location" : true,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
+        "start_time" : 1,
         "end_time" : 10,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "In case you're not familiar with various creatures of Pangram, Muttations are dead tributes brought to life in the form of a mutated dog."
         },
     "Hint 2" : {
         "start_time" : 10,
-        "end_time" : 15,
-        "start_cost" : 50,
-        "end_cost" : 0,
-        "text" : "hint"
-        },
-    "Hint 3" : {
-        "start_time" : 15,
         "end_time" : 20,
         "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
+        "end_cost" : 0,
+        "text" : "Each of the 24 DNA strands contains two separate pieces of information.  However, there are also three \"mutations\"."
         },
-    "Hint 4" : {
+    "Hint 3" : {
         "start_time" : 20,
-        "end_time" : 25,
-        "start_cost" : 50,
-        "end_cost" : 5,
-        "text" : "hint"
-        },
-    "Hint 5" : {
-        "start_time" : 25,
         "end_time" : 30,
         "start_cost" : 50,
-        "end_cost" : 20,
-        "text" : "hint"
+        "end_cost" : 0,
+        "text" : "Each strand contains both a team name and a dog breed.  Both messages can be read in order.  Keep track of both the letters replaced and the newly mutated letters."
+        },
+    "Hint 4" : {
+        "start_time" : 30,
+        "end_time" : 40,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "The newly mutated letters are all from a very relevant quartet.  The replaced letters, when regrouped to fit the white and gray strand, will form a seventy-two letter instruction."
+        },
+    "Hint 5" : {
+        "start_time" : 40,
+        "end_time" : 50,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "The newly added letters should all be As,Cs,Gs, and Ts.  When taken in triplicate, they can be linked to amino acids."
+        },
+    "Hint 6" : {
+        "start_time" : 50,
+        "end_time" : 60,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "Amino acids have single letter abbreviations.  Using the order of the 72-letter message, you can spell out a 24-letter clue which will lead you to a six-letter answer."
         }
     },
 "answers" : {
@@ -2163,15 +2086,50 @@
 "self_solve_text" : "Congratulations, you've solved the puzzle!",
 "resources_unlocked" : [],
 "teams_killed" : [],
-"meta" : true,
+"meta" : false,
 "advance_location" : true,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
+        "start_time" : 1,
         "end_time" : 10,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "To help anchor your answers in the grid, look for something they all have in common."
+        },
+    "Hint 2" : {
+        "start_time" : 10,
+        "end_time" : 20,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "Each answer should be entered radially, terminating with the letter E in the center of the clock.  To find your thematic pairs, look in three concentric rings."
+        },
+    "Hint 3" : {
+        "start_time" : 20,
+        "end_time" : 30,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "How could these pairs of words be related?  Hurry up, time is ticking."
+        },
+    "Hint 4" : {
+        "start_time" : 30,
+        "end_time" : 40,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "Each pair either relates to hour, minute or second.  But we're still not going to hand you the answer."
+        },
+    "Hint 5" : {
+        "start_time" : 40,
+        "end_time" : 50,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "Each of the three-letter answers dictates a specific orientation of the clock's hands.  You don’t need to know the exact times.  Do we have to spell it out for you?"
+        },
+    "Hint 6" : {
+        "start_time" : 50,
+        "end_time" : 60,
+        "start_cost" : 50,
+        "end_cost" : 0,
+        "text" : "To make your eight-letter answer, position the hands of a clock to point at the specific letters in your 3-letter answers.  For example, for TLC, put the hour hand on the T, the minute hand on the L, and the second hand on the C.  These make letter shapes which will help you escape this horrible place."
         }
     },
 "answers" : {
@@ -2185,6 +2143,36 @@
     }
 },
 "Sentient AI" : {"name":"Sentient AI",
+"start_code" : "glados",
+"max_fans" : 250,
+"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"self_flavor_text" : "",
+"solve_text" : "Congratulations, you've solved the puzzle!",
+"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : false,
+"hints" : {
+    "Hint 1" : {
+        "start_time" : 1,
+        "end_time" : 15,
+        "start_cost" : 0,
+        "end_cost" : 0,
+        "text" : "To defeat Glados, you'll need to simultaneously close three separate circuits.  Some circuits require no people.  Other require several.  You'd be surprised at what can conduct electricity."
+        }
+    },
+"answers" : {
+    "glowpurple" : {
+        "type" : "final",
+        "text" : "glowpurple",
+        "response" : "Congratulations, you have solved the puzzle!",
+        "self_response" : "",
+        "skipped_hints" : []
+        }
+    }
+},
+"Paralyzing Fog" : {"name":"Paralyzing Fog",
 "start_code" : "ticktock",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
@@ -2197,11 +2185,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "Each group of items has one key thing in common"
         }
     },
 "answers" : {
@@ -2215,7 +2203,7 @@
     }
 },
 "Strangling Vines" : {"name":"Strangling Vines",
-"start_code" : "ticktock",
+"start_code" : "overgrown",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2227,11 +2215,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "You're tracing out letter shapes by connecting pairs of images to make the plants on your sheet in rebus form."
         }
     },
 "answers" : {
@@ -2245,7 +2233,7 @@
     }
 },
 "Deadly Beasts" : {"name":"Deadly Beasts",
-"start_code" : "ticktock",
+"start_code" : "roar",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2257,11 +2245,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "Aren't these animals cute?  After hugging them, maybe you'll be on a first-name basis.  You'll also need to know the order of each animal in the chain. "
         }
     },
 "answers" : {
@@ -2275,7 +2263,7 @@
     }
 },
 "Absolute Zero" : {"name":"Absolute Zero",
-"start_code" : "ticktock",
+"start_code" : "chill",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2287,11 +2275,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "Each snowflake gives you 1/12 of your final answer.  Note that you can either use a wedge or its reflection."
         }
     },
 "answers" : {
@@ -2304,8 +2292,8 @@
         }
     }
 },
-"Lighting and Thunder" : {"name":"Lighting and Thunder",
-"start_code" : "ticktock",
+"Lightning" : {"name":"Lightning",
+"start_code" : "flash",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2317,11 +2305,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "The lighning's six separate segments make a Braille pattern.   The things you're spelling out are another form of lightning."
         }
     },
 "answers" : {
@@ -2335,7 +2323,7 @@
     }
 },
 "Jabberjays" : {"name":"Jabberjays",
-"start_code" : "ticktock",
+"start_code" : "tweet",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2347,11 +2335,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "Some of these cries for help seem awfully familiar.  Looking them up will help you identify the person in distress."
         }
     },
 "answers" : {
@@ -2365,7 +2353,7 @@
     }
 },
 "Killer Robots" : {"name":"Killer Robots",
-"start_code" : "ticktock",
+"start_code" : "automaton",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2377,11 +2365,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "The five robots simultaneously team up to form letters (however, they're not in synch).  They will generate an 11-letter answer."
         }
     },
 "answers" : {
@@ -2395,7 +2383,7 @@
     }
 },
 "Blood Rain" : {"name":"Blood Rain",
-"start_code" : "ticktock",
+"start_code" : "drip",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2407,11 +2395,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "The patterns of the lights along with the letters you've received make up two drop quotes (google that puzzle type if you are unfamiliar with it).  Your answer will be spelled by the missing letters of the quote."
         }
     },
 "answers" : {
@@ -2425,7 +2413,7 @@
     }
 },
 "Tidal Wave" : {"name":"Tidal Wave",
-"start_code" : "ticktock",
+"start_code" : "drown",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2437,11 +2425,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "The answers (which are in alphabetical order) can be logically paired.  Four of the answers seem to be retaining water."
         }
     },
 "answers" : {
@@ -2455,7 +2443,7 @@
     }
 },
 "Monkey Muttations" : {"name":"Monkey Muttations",
-"start_code" : "ticktock",
+"start_code" : "primate",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2467,11 +2455,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "Each monkey mutation is a two-word phrase of which the longer word is the shorter word scrambled, plus one letter."
         }
     },
 "answers" : {
@@ -2485,7 +2473,7 @@
     }
 },
 "Insect Swarm" : {"name":"Insect Swarm",
-"start_code" : "ticktock",
+"start_code" : "bugs",
 "max_fans" : 250,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2497,11 +2485,11 @@
 "advance_location" : false,
 "hints" : {
     "Hint 1" : {
-        "start_time" : 5,
-        "end_time" : 10,
+        "start_time" : 1,
+        "end_time" : 15,
         "start_cost" : 50,
         "end_cost" : 0,
-        "text" : "hint"
+        "text" : "If you can't see what's missing from these insects, perhaps you can feel your way to the answer.  To make a complete set, one more insect needs to be added to each group."
         }
     },
 "answers" : {
@@ -3185,7 +3173,7 @@
 "max_fans" : 2000,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle and saved Pangram from hunger and despair!  You will be remembered for millenia to come.",
+"solve_text" : "Congratulations, you've solved the puzzle!",
 "self_solve_text" : "Congratulations, you've solved the puzzle!",
 "resources_unlocked" : [],
 "teams_killed" : [],
