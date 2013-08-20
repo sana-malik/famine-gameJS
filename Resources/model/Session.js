@@ -47,6 +47,7 @@ var Session = Backbone.Model.extend({
 			this.set("history",[[getCurrentDateTimeString(), logTypes.GAME, "Game Started!"]]);
 			this.set("messageStats", {});
 			this.set("unreadCount", 0);
+			this.set("lastStartCode","");
 		}
 		else {
 			this.set("fans", sessionObj["fans"]);
@@ -62,6 +63,7 @@ var Session = Backbone.Model.extend({
 			if (sessionObj["unreadCount"] > 0) {
 				$('#tab_history').html('<a href="#">Activity ('+sessionObj["unreadCount"]+")</a>");
 			}
+			this.set("lastStartCode",sessionObj["lastStartCode"]);
 		}
 	},
 
@@ -106,6 +108,7 @@ var Session = Backbone.Model.extend({
 		});
 		if (count > 0) {
 			that.set("puzzleStats", puzStats);
+			that.set("lastStartCode",start_code);
 			that.set("renderMeta",1);
 
 			saveSession();

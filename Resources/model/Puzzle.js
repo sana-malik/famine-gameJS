@@ -138,15 +138,17 @@ var Puzzle = Backbone.Model.extend({
 		else {
 			var meta = getMetaName(this.get("start_code"));
 			$('.main.active').removeClass('active');
-			$('.main#'+nameToId(meta)).addClass('active');
+			if (meta === "All Puzzles") $("#multipuzzle").addClass('active');
+			else $('.main#'+nameToId(meta)).addClass('active');
 		}
 
 		return stats;
 	},
 
 	advanceLocation : function(stats, offset) {
-		// advance location
-		if (this.get("advance_location")) {
+		// advance location if this is a location advancer puzzle
+		// also advance location if this is the last active puzzle
+		if (this.get("advance_location") || session.getActivePuzzles().length === 1) {
 			var currentLoc = session.get("currentLocation") + 1;
 
 			while (locations[locOrder[currentLoc]].get("time_closed") < getCurrentDateTimeString(timeFormat.TWENTYFOUR)) {

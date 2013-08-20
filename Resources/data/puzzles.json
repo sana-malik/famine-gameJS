@@ -9,7 +9,7 @@
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
-"advance_location" : true,
+"advance_location" : false,
 "hints" : {
     "Hint 1" : {
         "start_time" : 1,
@@ -44,7 +44,7 @@
     }
 },
 "Cornucopia - Techniques" : {"name":"Cornucopia - Techniques",
-"start_code" : "darts",
+"start_code" : "bloodbath",
 "max_fans" : 250,
 "flavor_text" : "",
 "self_flavor_text" : "",
@@ -53,7 +53,7 @@
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
-"advance_location" : true,
+"advance_location" : false,
 "hints" : {
     "Hint 1" : {
         "start_time" : 1,

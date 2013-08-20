@@ -27,7 +27,7 @@ var ActivePuzzlesView = Backbone.View.extend({
 
 		var count = 0;
 		$.each(that.model.get("puzzleStats"), function(name, puzzle) {
-			if (puzzles[name].get("start_code") === puzzles[that.puzzleName].get("start_code")) {
+			if (puzzles[name].get("start_code") === session.get("lastStartCode") || (that.puzzleName != "none" && puzzles[name].get("start_code") === puzzles[that.puzzleName].get("start_code"))) {
 				if ((puzzle["status"] === puzzleStatus.ACTIVE || puzzle["status"] === puzzleStatus.ARCHIVED) && !puzzles[name].get("meta")) {
 					$(that.el).append(that.template({puzzleID: nameToId(name), puzzleName: name}));
 					count += 1;
@@ -253,6 +253,30 @@ var PuzzleView = Backbone.View.extend({
 
 	go_to_meta : function() {
 		$('.main.active').removeClass('active');
-		$('.main#' + nameToId(getMetaName(puzzles[this.puzzleName].get("start_code")))).addClass('active');
+		var metaName = getMetaName(puzzles[this.puzzleName].get("start_code"))
+		if (metaName === "All Puzzles") $('.main#multipuzzle').addClass('active');
+		else $('.main#' + nameToId(metaName)).addClass('active');
+	}
+});
+
+var MultiPuzzleView = Backbone.View.extend({
+	template: _.template('<div class="left-sidebar"><div id="navigation-bar">\
+				<div id="path"><span id="mainbutton" class="clickable">Main</span> > All Puzzles</div>\
+			</div>\
+			<div class="content">\
+		</div></div>\
+		<div class="right-sidebar">\
+		<div id="right_sidebar_content_puzzle">\
+		not sure what to put here?\
+		</div>'),
+
+	initialize: function() {
+		_.bindAll(this, 'render');
+		this.render();
+		this.ActiveView = new ActivePuzzlesView({el : "#multipuzzle .content", model : this.model, puzzleName: "none"});
+	},
+
+	render: function() {
+		$(this.el).html(this.template());
 	}
 });

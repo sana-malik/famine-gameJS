@@ -10,14 +10,19 @@ var goToActivePuzzle = function(result) {
 	else {
 		var activePuzs = session.getActivePuzzles();
 		var activePuz = activePuzs[0];
+		var hasMeta = false;
 		$.each(activePuzs, function(index, puzzle) {
 			if (puzzles[puzzle].get("meta")) {
 				activePuz = puzzle;
+				hasMeta = true;
 				return false;
 			}
 		})
-		$(".puzzle#"+nameToId(activePuz)).addClass("active");
-		$("#" + nameToId(activePuz) + " .answer_input").focus();
+		if (hasMeta)  {
+			$(".puzzle#"+nameToId(activePuz)).addClass("active");
+			$("#" + nameToId(activePuz) + " .answer_input").focus();
+		}
+		else $("#multipuzzle").addClass("active");
 	}
 }
 

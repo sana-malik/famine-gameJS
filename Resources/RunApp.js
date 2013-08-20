@@ -41,16 +41,16 @@ $(document).ready(function() {
   		"positionClass": "toast-top-right",
   		"onclick": null,
   		"fadeIn": 500,
-  		"fadeOut": 1000,
+  		"fadeOut": 500,
   		"timeOut": 0,
-  		"extendedTimeOut": 0,
-  		"onFadeOut": function() {
+  		"extendedTimeOut": 0
+  		/*"onFadeOut": function() {
 			$("#toc > .current").removeClass("current");
 			$("#toc > #tab_history").addClass("current");
 
 			$("#main_container > .active.tab").removeClass("active");
 			$("#history.tab").addClass("active");
-  		}
+  		}*/ // todo(sana): add this function as option override at call site
 	}
 
 	// initialize puzzles that already exist
@@ -66,7 +66,7 @@ $(document).ready(function() {
 	var user = new UserView({el : "#sidebar", model : session});
 	var main = new MainView({el : "#main > #main_screen", model: session});
 	var history = new HistoryView({el : "#history", model: session});
-	//var multipuz = new MultiPuzzleView({el : "#main > #multipuzzle", model: session});
+	var multipuz = new MultiPuzzleView({el : "#main > #multipuzzle", model: session});
 
 
 	// Set up tab functionality
