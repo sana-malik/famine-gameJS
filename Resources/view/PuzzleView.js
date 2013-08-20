@@ -172,7 +172,7 @@ var PuzzleSessionView = Backbone.View.extend({
 		if ( debugActive() )
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
-		$(that.el).children('#elapsed_time').html( formatTime(elapsed, true) )
+		$("#elapsed_time", that.el).html( formatTime(elapsed, true) )
 	}
 
 });
