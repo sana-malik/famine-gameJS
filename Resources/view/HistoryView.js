@@ -3,13 +3,15 @@ var HistoryView = Backbone.View.extend({
 
 	initialize: function() {
 		_.bindAll(this, 'render');
-		this.model.bind("change",this.render)
+		this.model.bind("change:history",this.render)
 		this.render();
 	},
 
 	render: function() {
 		var that = this;
 		$(that.el).empty();
+
+		// history items
 		var history = that.model.get("history");
 		$.each(history, function(i, item) {
 			var unread = "";
@@ -18,15 +20,25 @@ var HistoryView = Backbone.View.extend({
 				unread = " unread";
 				id = ' id = "' + item[3] +'"';
 			}
-			$(that.el).prepend('<span class="log-item' + unread + '"' + id +'><h4 class="timestamp">'+item[0]+'</h4><p class="msg">'+item[2]+'</p></span>');
+			$(that.el).prepend('<span class="log-item' + unread + ' ' + item[1] + '"' + id +'><h4 class="timestamp">'+item[0]+'</h4><p class="msg">'+item[2]+'</p></span>');
 		});
+
+		// filters
+		$(that.el).prepend('<b>Filter:</b> <ul id="filters">\
+			<li id="kill" class="filter">Kills</li>\
+			<li id="resource" class="filter">Resources</li>\
+			<li id="message" class="filter">Messages</li>\
+			<li id="puzzle" class="filter">Puzzles</li>\
+			<li id="game" class="filter">The Game</li>\
+		</ul>');
 	},
 
 
 	events : {
 		'click .puzzle_link' : 'showPuzzleScreen', 
 		'click .vid_link' : 'playVideo',
-		'click .log-item' : 'markRead'
+		'click .log-item' : 'markRead',
+		'click li.filter' : 'filter'
 	},
 
 	showPuzzleScreen : function(e) {
@@ -66,5 +78,21 @@ var HistoryView = Backbone.View.extend({
 		}
 
 		saveSession();
+	},
+
+	filter: function(e) {
+		var id = $(e.currentTarget).attr("id");
+		var deselect = $("#filters li.selected#" + id).length > 0
+
+		// reset filter
+		$("#filters li.selected").removeClass("selected");
+		$('.log-item').show();
+
+		// select if not deselecting an item 
+		if (!deselect) {
+			$("#filters li#" + id).addClass("selected");
+			$('.log-item').hide();
+			$('.log-item.' + id).show();
+		} 
 	}
 });
