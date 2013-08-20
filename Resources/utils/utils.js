@@ -129,8 +129,11 @@ function PuzzleTimer(puzzleId, interval){
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
 				stats[puzzleId]["hintStats"][name]["remaining"] -= timediff;
 				if (remaining <= 0) {
-					playSound("notify.wav", 500);
-					toastr.info("New hint available for " + puzzles[puzzleId].get("name") + "!");
+					// only notify if active, not archived
+					if (stats[puzzleId]["status"] === puzzleStatus.ACTIVE) {
+						playSound("notify.wav", 500);
+						toastr.info("New hint available for " + puzzles[puzzleId].get("name") + "!");
+					}
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
 					stats[puzzleId]["hintStats"][name]["remaining"] = hint.get("end_time")*60;
 					changed = true;

@@ -61,10 +61,11 @@ var Puzzle = Backbone.Model.extend({
 				// remove timer
 				clearInterval(stats[this.get("name")]["timerID"]);
 				
-				// set all hints to revealed
+				// set all hints to revealed (does this need to be done for minis as well?)
 				$.each(stats[this.get("name")]["hintStats"], function(hname, hint) {
 					hint["status"] = hintStatus.REVEALED;
 				});
+
 
 				stats = this.advanceLocation(stats, latest_time);
 
