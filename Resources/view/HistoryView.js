@@ -26,6 +26,7 @@ var HistoryView = Backbone.View.extend({
 		// filters
 		$(that.el).prepend('<b>Filter:</b> <ul id="filters">\
 			<li id="kill" class="filter">Kills</li>\
+			<li id="story" class="filter">Story</li>\
 			<li id="resource" class="filter">Resources</li>\
 			<li id="message" class="filter">Messages</li>\
 			<li id="puzzle" class="filter">Puzzles</li>\
