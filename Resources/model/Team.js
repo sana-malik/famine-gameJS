@@ -105,6 +105,7 @@ var Team = Backbone.Model.extend({
 
 
 	showVideo : function() {
-		showPopup("<iframe width=\"560\" height=\"315\" src=\"" + this.get("video") + "\" frameborder=\"0\"></iframe>");
+		var movieFile = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDirectory(),"Resources/movies/"+this.get("video")).nativePath();
+		Ti.Platform.openApplication(movieFile);
 	}
 });
