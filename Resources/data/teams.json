@@ -3,291 +3,306 @@
 "teams" : {
 "1a" : {
 	"id" : "1a",
-	"name" : "Moose Eating Bat",
-	"bio" : "An awesome team of brave and heroic volunteers.",
+	"name" : "Team Snout",
+	"bio" : "We are not aardvarks.
+",
 	"hometown" : "Portland, OR, San Francisco Bay Area, Norfolk, UK",
 	"photo" : "team photo",
 	"icon" : "team01.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
-	"talent" : "running a shitload of games",
-	"members" : ["Asher Walkover", "Benjamin de Bivort", "Ange Strom-Weber", "Matt Lahut", "Ken", "Sir Not-Appearing-In-This-Film"]
+	"talent" : "being awesome",
+	"members" : ["Indigo (Cary Roberts)", "Bentley (Chris Nichols)", "Swank (Corby Anderson)", "Latinum (Curtis Chen)", "Cakewalk (DeeAnn Sole)", "Red (Josh Ward)", "Zaffro (Karl Larson)", "Scintillate (Lisa Long)"]
 },
 "1b" : {
 	"id" : "1b",
 	"name" : "The Hunger Dames",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "The Hunger Dames is a group of five brainy, beautiful women who are determined to show all of Pangram that females can play The Famine Game just as well as their male counterparts. Hailing from all across the nation, these ladies currently reside in District 1, specifically the quaint county of Los Angeles, where they are employed in various aspects of the industry of entertainment. The Dames are new to the Game-ing community, but you can plan on seeing a lot more of them in the future...provided they survive this fall, of course.",
 	"hometown" : "Los Angeles, CA",
 	"photo" : "team photo",
 	"icon" : "team02.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Summer Stevens", "Amy Smith", "Maggie Bandur", "Annie Terry", "Maia Peters"]
+	"members" : ["Amaretto (Amy Smith)", "Absinthe (Annie Terry)", "Mimosa (Maggie Bandur)", "MaiTai (Maia Peters)", "Sake (Summer Stevens)"]
 },
 "2a" : {
 	"id" : "2a",
 	"name" : "Bostucky Plugh",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Strong. Fast. Invincible. Deadly. These are the qualities that have inspired the Bostucky warriors' motto \"Armored Might\".",
 	"hometown" : "Kentucky, New Jersey, and Massachusetts",
 	"photo" : "team photo",
 	"icon" : "team03.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Antonius (Mark Halpin)", "Augustus (Nathan Fung)", "Numerius (Joseph DeVincentis)", "Camillus (Kevin Wald)", "Aemilius (Paul Melamud)"]
 },
 "2b" : {
 	"id" : "2b",
 	"name" : "The Puzzle Underground",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Hailing from District 2, The Puzzle Underground serves the Capitol through diligent logical efforts. When not traveling via penny farthing or rallying covert efforts to protest the exclusion of PBR from tesserae, The Puzzle Underground enjoys music, games and red-eye cross-continental flights.
+",
 	"hometown" : "Portland, OR",
 	"photo" : "team photo",
 	"icon" : "team04.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Pimento (Ana Roeszler)", "Anise (Rob Erickson)", "Cayenne (Katie Wylie)", "Saffron (Kate Petak)", "Coriander (Emily Wax)", "Turmeric (Matt Clienman)", "Mace (Victor Asteinza)"]
 },
 "3a" : {
 	"id" : "3a",
 	"name" : "Bloodshot",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Team Bloodshot is world famous for their ability to focus on complicated technical tasks for days on end without sleep. While during the day they appear to be just another group of techies, it is during the dark of night that they differentiate themselves with their endurance and staying power. The only evidence of their perennial sleeplessness can be found by staring them in the eye, where the condition for which their team is named becomes clear.
+",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team05.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["WOPR (Rich Bragg)", "Data (Dave Fisher)", "Jarvis (Mike Holzbaur)", "Bender (Bill Overall)", "Hal (Chris Roat)", "Watson (Bob Schaffer)"]
 },
 "3b" : {
 	"id" : "3b",
 	"name" : "Death From Above",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Death from Above hails from the technology district. After completing their time at the district's Masochistic Institute of Tributes (MIT), they are now excited to compete. Their name comes from their most famous tribute, Beetee, who famously cried out \"Death from Above!\" as he electrified the tributes (and the crowd!) and won his Hunger Games.
+
+District 3 hopes to transform these underdogs into winners by amplifying their chances. Will this crew be able to put up enough resistance to triumph? They certainly have the capacity. We're hopeful that this year, District 3 will be able to induct a new winner.",
 	"hometown" : "Boston, MA",
 	"photo" : "team photo",
 	"icon" : "team06.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Eeyore (Henry Wong)", "Yolo (James Douberley)", "Thursday (Paul Hlebowitsh)", "Kerbal (Pranjal Vachaspati)", "Boyscout (Samuel Duffley)", "Artisan (Teasha Feldman)"]
 },
 "4a" : {
 	"id" : "4a",
 	"name" : "Mystic Katfish",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Catch - no release.",
 	"hometown" : "San Francisco Bay Area, Sacramento CA, Pittsburgh PA, Washington DC",
 	"photo" : "team photo",
 	"icon" : "team07.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Tetra (Alexandra Dixon)", "Troll (Bruce Lin)", "Angle (David Walker)", "Jonah (Dwight Freund)", "Slick (Paul Chou)", "LoxMyth (Yossi Fendel)"]
 },
 "4b" : {
 	"id" : "4b",
 	"name" : "This Space Intentionally Left Blank",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "This Space Intentionally Left Blank is a soft-spoken team from District 4. While they obviously excel at things like fishing, swimming and kayaking, they also exhibit a few of their district’s lesser known talents such as jaywalking, aggressive driving, and a complete inability to pronounce the letter R. If they survive the arena they hope to be given jobs as Gamemakers.
+",
 	"hometown" : "Boston, MA",
 	"photo" : "team photo",
 	"icon" : "team08.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Seadragon (Sarah Leadbeater)", "Eel (Ross Corliss)", "Asdo (Mark Asdoorian)", "Siren (Elaine Kristant)", "Jammers (James Nelson)", "Pella (Heléne Andersson)"]
 },
 "5a" : {
 	"id" : "5a",
 	"name" : "Apetitius Giganticus",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "We have spent years toiling in the laboratories of District 5, underpaid and underfed, striving to develop new and efficient ways to bring light and power to the people of Pangram. Some of our coworkers wanted to use these Games as a platform, to make everyone aware of new innovations, and to help Pangram see that science and technology will lead us to a life of peace and prosperity.
+
+Then we were told there would be food. We really like food. We really liked our coworkers too, though they could have used a bit more salt.",
 	"hometown" : "America (Boston/Las Vegas/Providence/San Francisco/Seattle)",
 	"photo" : "team photo",
 	"icon" : "team09.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Laser (Dan Katz)", "Storm (Eric Berlin)", "Zap (Pavel Curtis)", "Elektra (Rachael Groynom)", "Thunder (Scott Purdy)", "Nitro (Tyler Hinman)"]
 },
 "5b" : {
 	"id" : "5b",
 	"name" : "Occam's Unicorn",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "The tributes of Occam's Unicorn bonded during long hours working the least complex jobs at the District 5 power plant. Don't mess with the 'corn, or you'll get the horn: straight in, quarter turn to the right, and straight out.",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team10.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Spark (Ellen Juhlin)", "Ohm (Rion Snow)", "Wattage (Stephanie Geerlings)", "Fuel (Joanna Bresee)", "Max (Erik Stuart)", "Amp (Brett Rogers)"]
 },
 "6a" : {
 	"id" : "6a",
 	"name" : "Briny Deep",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.?? puzzle with the answer of TBD ",
+	"bio" : "Avast, landlubber! Yer drawn' near to the Famine Games! Ye can't be from district 6 if ye still have a ship, and the reaping? Only fools and barnacles count on pure chance for their chances at plunder. Rig yer sails for the Capitol, where there be booty there be pirates! Briny Deep ahoy!",
 	"hometown" : "Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team11.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Scoundrel (Jeff Wallace)", "Matey (Andrew Ryder)", "Jack-Tar (Dann Webster)", "ScurvyDog (Dave Miller)", "BilgeRat (Kenny Young)", "Scallywag (Peter Sarrett)"]
 },
 "6b" : {
 	"id" : "6b",
 	"name" : "The Burninators",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "All kids love trains, and our team just never grew up. We're stoked to be actually taking a train to the Capitol to compete in the 75th Annual Famine Game! All aboard for fame and glory!",
 	"hometown" : "Palo Alto, CA",
 	"photo" : "team photo",
 	"icon" : "team12.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Derail (Daniel Egnor)", "Drag (Doug Zongker)", "Cylinder (Cynthia Wong)", "Kicker (Kekoa Proudfoot)", "Junction (Justin Graham)"]
 },
 "7a" : {
 	"id" : "7a",
 	"name" : "District Ubik",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "District UBIK — the team from anywhere and everywhere — has volunteered as tribute for District 7. From all indications, the team is expected to fell all competition in a style uniquely suited to their arboreous homeland.
+
+Reached for comment, the half-life of UBIK creator Philip K. Dick cryptically noted, \"Team UBIK has truly grasped that they can be sure of nothing in the world we narrowly call 'reality.'\"
+
+After considered reflection, Dick's metaphorical manifestation added, \"They do seem to love the forest, though.\"
+",
 	"hometown" : "Washington, DC, Nashville, TN, San Francisco, CA",
 	"photo" : "team photo",
 	"icon" : "team13.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Stanton (Rex Miller)", "Wendy (Sarah Barnum)", "Ray (William Coughlan)", "Ella (Anji Stinson)", "Joe (Alex Stinson)"]
 },
 "7b" : {
 	"id" : "7b",
-	"name" : "LXP",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"name" : "League of Extraordinary Puzzlemen",
+	"bio" : "The League of Extraordinary Puzzlemen (a.k.a. LXP) is a group of the finest puzzle champions in Pangram history. Having outwitted the competition at earlier Famine Games, these puzzlers have now volunteered as Tributes from District 7, looking to add a few more \"trophies\" to their shelves.",
 	"hometown" : "CA, MA, MD, WA",
 	"photo" : "team photo",
 	"icon" : "team14.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Machine (Thomas Snyder)", "Axe (Nick Baxter)", "Anomaly (Roger Barkan)", "Stem (Garrett Heffner)"]
 },
 "8a" : {
 	"id" : "8a",
 	"name" : "Silly Jefes",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Long known for their work in haberdashery and mexican wrestling circles - the Silly Jefes found a niche in District 8 making their distinctive headgear. But when rapidly changing capitol fashion trends left months of work unsellable, the team had to turn to tesserae to make ends meet. This made their entry into the famine games inevitable, and this year they will be able to prove just how dispensable they really are.",
 	"hometown" : "Seattle, WA, New York, Virginia, North Carolina",
 	"photo" : "team photo",
 	"icon" : "team15.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Chevron (Sergey Grankin)", "Houndstooth (Patrick Hanberry)", "Harlequin (Jett Jones)", "Plaid (Nikhil Manchanda)", "PolkaDot (Rena Morse)", "Paisley (Jeff Phillips)", "Ikat (Donna Whitlock)"]
 },
 "8b" : {
 	"id" : "8b",
 	"name" : "XX-Rated",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "XX-Rated is a creative, diverse yet tight-knit group of forward-thinking females. Using instinct and persistence, we won’t let anything stop us from having a good time or needling other teams. We’re excited to represent District 8 and weave a new thread in the story of the Famine Games!",
 	"hometown" : "San Francisco, CA, Chicago, IL, Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team16.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Lace (Rachel Petterson)", "Velvet (Nina Hinrichs)", "Pleather (Merrie Morris)", "Silk (Shelly Manber)", "Spandex (Julia Schwarz)", "Tulle (Stephanie Rosenthal)"]
 },
 "9a" : {
 	"id" : "9a",
 	"name" : "Disobedient Children",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "The Disobedient Children are a band of misfits and outcasts who have never quite adapted to the quiet rural ways of District 9, where unquestioning hard work and blind obedience are valued above all. They’re not bad kids, really; they just can’t stomach the incessant monotony of working the fields, and more tellingly can’t seem to stay out of minor scrapes with the District Mayor and his Peacekeepers. 
+
+They have managed to find creative ways to frequently avoid the field duty normally required of all District 9 residents - work orders go missing, miscommunications somehow occur between district officials, and so on. The Mayor had never been able to prove punishable offense on their part, but this year their luck ran out. He stumbled on a way to manipulate the putatively random Reaping process to ensure their names would be chosen. How would this team’s disobedient ways play out in the Games? We’ll have to wait and see...",
 	"hometown" : "Bay Area, CA and beyond",
 	"photo" : "team photo",
 	"icon" : "team17.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Combine (Darby Kimball)", "Teff (Thomas Lotze)", "Mulch (Kevin Schraith)", "Harvest (Heather Browning)", "Barley (Jeffrey Madsen)"]
 },
 "9b" : {
 	"id" : "9b",
 	"name" : "Revolution #9",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Given the recent disappointing performances from District 9, never having a tribute survive the first 10 minutes of the Games, the District council has assembled a team sure to outperform the prior tributes. The team has gone through intense psychological therapy designed to instill a deep-seated phobia of cornucopias. They may not win, but by God they will run.",
 	"hometown" : "Maryland",
 	"photo" : "team photo",
 	"icon" : "team18.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Teff (Alex Pearson)", "Amber (Donna Smith)", "Bran (Mike Korn)", "Grist (Dustin Foley)", "Rusk (Dave Tuller)"]
 },
 "10a" : {
 	"id" : "10a",
 	"name" : "Golden SmokingJay",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Golden SmokingJay is a rough-and-tumble posse from the Livestock District. We can go from tending our asses to kicking yours in a matter of minutes, and our stashes are always stocked with the finest shit around. Saddle up!",
 	"hometown" : "San Francisco, East Bay, Los Angeles, CA",
 	"photo" : "team photo",
 	"icon" : "team19.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Whiskey (Brent Holman)", "Keeper (Linda Holman)", "Gelder (David Andre)", "Smith (Jonathan McCue)", "Wesson (Jessen Yu)", "Tex (John Owens)"]
 },
 "10b" : {
 	"id" : "10b",
 	"name" : "R.E.D.T.A.P.E.",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "The administrative wonders of team REDTAPE have the esteem of district ten's citizens. That's the only explanation for the enthusiastic send-off they received. When they aren't busy enforcing important regulations, they like to relax with long walks amongst the pastures, only occasionally pausing to note violations of Fencing Ordinance #12a(rural/wooden).",
 	"hometown" : "Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team20.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Zwartbles (Ben Andrews)", "Lonk (Jamie Eckman)", "Dorper (Shane Lile)", "Qashqai (Jay McCleery)", "Meatmaster (Andy Rich)", "Kooka (Kim Vlcek)"]
 },
 "11a" : {
 	"id" : "11a",
 	"name" : "CRANEA",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.. Zombies puzzle with the answer of Broccoli Spear",
+	"bio" : "Born from the agricultural knowledge centers of District 11 (known as 'The Farm' in some circles), the College of Random Anomalies, Neuroses and Eccentricities in Agriculture is a collection of puzzlers who sort of get along and are known for their skills as traveling players on puzzling circuits worldwide. They have adopted a variety of occupations and manage to feed their families successfully virtually every harvest.",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team21.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Renovation (Eric Mayefsky)", "Fences (Jeremy Hoffman)", "Kernel (Mike Develin)", "Grit (Troy Steinmetz)", "Sow (Daniel Gibson)"]
 },
 "11b" : {
 	"id" : "11b",
-	"name" : "Here Be Dragons",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"name" : "Here Be Dragonfruit",
+	"bio" : "Representing District 11 (Agriculture), Here Be Dragonfruit isn't your typical group of apple polishers. They hail from the seedy part of town, and can't wait to have a field day squashing the other tributes in what's sure to be quite a rhubarb. Renowned cheaters, they've been juicing since their salad days, back when they were raw and green. But now that the all-time record for dirty play is within their grasp, these budding champions are determined to leave their competitors in a pulpy mess.",
 	"hometown" : "Seattle/Washington, DC/San Francisco",
 	"photo" : "team photo",
 	"icon" : "team22.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Undaground (Mark Gottlieb)", "Blackeye (Carl Gottlieb)", "Splitz (Sean Trowbridge)", "Stalker (Gaby Weidling)", "Hothead (Tanis O'Connor)", "Hardcore (Evan Davis)"]
 },
 "12a" : {
 	"id" : "12a",
 	"name" : "12 Hangry Nerds",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "12 Hangry Nerds. They started as a team of twelve, but they ate the other six.",
 	"hometown" : "South Bay, CA and Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team23.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Cuddles (Dan Alcantara)", "Ruthless (Ederlyn Lacson)", "Insecurity (Francis Hsu)", "Milquetoast (Jasmine Dao)", "Vanish (Richard Chiburis)", "Muscle (Yuan Niu)"]
 },
 "12b" : {
 	"id" : "12b",
 	"name" : "Coeds on Fire",
-	"bio" : "A dangerous team, not to be trifled with.  Tread lightly in their presence.",
+	"bio" : "Everyone on Coeds on Fire is a first-generation code miner; you can probably guess each of our specialties from our names. From years of working under mountains of data we have excellent tunnel vision that we’re expecting will give us an edge in the Famine Game.",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team24.png",
 	"video" : "kill-lxp.webm",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Member 1", "Member 2", "Member 3", "Member 4", "Member 5", "Member 6"]
+	"members" : ["Smore (Corin Anderson)", "Nyterra (Melinda Owens)", "Brainy (Dale Neal)", "IllBear (Linnsey Miller)", "Goldiana (Trisha Lantznester)", "Amosphere (Wei-Hwa Huang)"]
 }
 }
 }
