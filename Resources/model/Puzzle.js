@@ -25,7 +25,10 @@ var Puzzle = Backbone.Model.extend({
 		}
 		else if (give_up || entry in this.get("answers")) {
 			if (give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
-				var solve_text =  tid in this.get("teams_killed") ? this.get("self_solve_text") : this.get("solve_text");
+				// Set solve text appropriately if this puzzle would kill your team
+				var solve_text = this.get("solve_text");
+				if (this.get("self_solve_text") != "" && $.inArray(tid, this.get("teams_killed")) != -1 )
+					solve_text =  this.get("self_solve_text")
 				
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
