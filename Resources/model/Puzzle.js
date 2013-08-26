@@ -25,8 +25,12 @@ var Puzzle = Backbone.Model.extend({
 		}
 		else if (give_up || entry in this.get("answers")) {
 			if (give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
-				var solve_text =  tid in this.get("teams_killed") ? this.get("self_solve_text") : this.get("solve_text");
-				
+
+				var solve_text = this.get("solve_text");
+				if ($.inArray(tid, this.get("teams_killed"))) {
+					solve_text = this.get("self_solve_text");
+				}
+
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
 
@@ -149,7 +153,7 @@ var Puzzle = Backbone.Model.extend({
 	advanceLocation : function(stats, offset) {
 		// advance location if this is a location advancer puzzle
 		// also advance location if this is the last active puzzle
-		if (this.get("advance_location") || session.getActivePuzzles().length === 1) {
+		if (this.get("advance_location") || (session.getActivePuzzles().length === 1 && puzzlesWithStartCode(this.get("start_code")) > 1)) {
 			var currentLoc = session.get("currentLocation") + 1;
 
 			while (locations[locOrder[currentLoc]].get("time_closed") < getCurrentDateTimeString(timeFormat.TWENTYFOUR)) {
