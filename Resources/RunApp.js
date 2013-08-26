@@ -11,6 +11,11 @@ var messages;
  * Executes once the DOM is fully loaded. Essentially a "main" method
  */
 $(document).ready(function() {
+    var dateTest = new Date();
+    if (dateTest.getTimezoneOffset() != 240) {
+        alert("Please close the application and set\nyour computer to Eastern Daylight Time.");
+        return;
+    }
 	//Create the menu object
     var menu = Ti.UI.createMenu();
 
