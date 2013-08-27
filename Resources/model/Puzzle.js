@@ -26,8 +26,8 @@ var Puzzle = Backbone.Model.extend({
 		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "") { // puzzle already solved!
 			return;
 		}
-		else if (give_up || entry in this.get("answers")) {
-			if (give_up || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
+		else if (give_up || entry in this.get("answers") || miniSolve) {
+			if (give_up || miniSolve || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
 				// Set solve text appropriately if this puzzle would kill your team
 				var solve_text = this.get("solve_text");
 				if (this.get("self_solve_text") != "" && $.inArray(tid, this.get("teams_killed")) != -1 )
@@ -81,21 +81,20 @@ var Puzzle = Backbone.Model.extend({
 				session.set("puzzleStats",stats);
 			
 				// if this is a meta, solve all the active subpuzzles
-				if (this.get("meta")) {
+				if (!miniSolve && this.get("meta")) {
 					var active = session.getActivePuzzles();
 					$.each(active, function(index, pname) {
 						if (!puzzles[pname].get("meta")) {
-							var answer = puzzles[pname].getAnswer()
-							puzzles[pname].checkAnswer(answer, true);
+							puzzles[pname].checkAnswer("minisolvenoanswer", true);
 						}
 					});
 				}
 
 				// increment the meta counter so it knows to refresh the activity view
-				session.set("renderMeta", session.get("renderMeta")+1);
+				if (!miniSolve) session.set("renderMeta", session.get("renderMeta")+1);
 
 				// skin change after clock puzzle solved
-				if (this.get("name") === "The Clock") { // activate new skin
+				if (!miniSolve && this.get("name") === "The Clock") { // activate new skin
 					session.set("rebellionTheme", true);
 					$("head").append('<link rel="stylesheet" type="text/css" href="css/rebellion.css">');
 				}
@@ -104,9 +103,10 @@ var Puzzle = Backbone.Model.extend({
 				if( !debugActive("verbose_server"))
 					try { saveServerSession(session, tid); } catch (err) {}
 
-				toastr.clear();
-				
-				if (!miniSolve) this.returnToParentView();
+				if (!miniSolve) {
+					toastr.clear();
+					this.returnToParentView();
+				}
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer
 				// reveal skipped hints
@@ -138,8 +138,9 @@ var Puzzle = Backbone.Model.extend({
 				// update the stats
 				session.set("puzzleStats",stats);
 			}
-		
-			response += "<strong>" + entry + "</strong> - " + this.get("answers")[entry]["response"];
+
+			if (!miniSolve) response += "<strong>" + entry + "</strong> - " + this.get("answers")[entry]["response"] + "</div>";
+			else response += "You have solved the puzzle!</div>";
 		}
 		else {
 			response += "<strong>" + entry + "</strong> is not the answer.</div>"
@@ -168,7 +169,7 @@ var Puzzle = Backbone.Model.extend({
 
 	advanceLocation : function(stats, offset) {
 		// advance location if this is a location advancer puzzle
-		// also advance location if this is the last active puzzle
+		// also advance location if this is the last active puzzle in a non-meta chain
 		if (this.get("advance_location") || (session.getActivePuzzles().length === 1 && puzzlesWithStartCode(this.get("start_code")) > 1)) {
 			var currentLoc = session.get("currentLocation") + 1;
 
@@ -273,16 +274,5 @@ var Puzzle = Backbone.Model.extend({
 		var stats = $.extend(true, {}, session.get("puzzleStats"));
 		stats[this.get("name")]["log"].push(entry);
 		session.set("puzzleStats",stats);	
-	},
-
-	getAnswer : function() {
-		var answer;
-		$.each(this.get("answers"), function(entry, answerObj) {
-			if (answerObj["type"] === answerTypes.FINAL) {
-				answer = entry;
-				return false;
-			}
-		});
-		return answer;
-	}	
+	}
 });
