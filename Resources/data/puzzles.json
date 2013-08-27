@@ -1100,7 +1100,7 @@
 	}
 },
 "Settlers of Pangram" : {"name":"Settlers of Pangram",
-"start_code" : "boardgame",
+"start_code" : "victorypoints",
 "max_fans" : 1000,
 "flavor_text" : "This is the normal flavor text. ",
 "self_flavor_text" : "This is custom flavor text if it's your puzzle. ",
@@ -1155,9 +1155,9 @@
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"flhis" : {
+	"fisthanginnliestun" : {
 		"type" : "partial",
-		"text" : "flhis",
+		"text" : "fisthanginnliestun",
 		"response" : "You've advanced the hint timer for this puzzle. ",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2016,7 +2016,7 @@
 	}
 },
 "The Clock" : {"name":"The Clock",
-"start_code" : "ticktock",
+"start_code" : "witchinghour",
 "max_fans" : 1000,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -2099,7 +2099,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2120,6 +2120,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start12" : {
+		"type" : "partial",
+		"text" : "start12",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2136,7 +2142,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2151,12 +2157,18 @@
 		}
 	},
 "answers" : {
-	"glowpurple" : {
+	"badsmoke" : {
 		"type" : "final",
-		"text" : "glowpurple",
+		"text" : "badsmoke",
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start1" : {
+		"type" : "partial",
+		"text" : "start1",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2173,7 +2185,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2194,6 +2206,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start2" : {
+		"type" : "partial",
+		"text" : "start2",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2210,7 +2228,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2238,6 +2256,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start3" : {
+		"type" : "partial",
+		"text" : "start3",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2254,7 +2278,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2275,6 +2299,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start4" : {
+		"type" : "partial",
+		"text" : "start4",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2291,7 +2321,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2312,6 +2342,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start5" : {
+		"type" : "partial",
+		"text" : "start5",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2328,7 +2364,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2349,6 +2385,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start6" : {
+		"type" : "partial",
+		"text" : "start6",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2365,7 +2407,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2386,6 +2428,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start7" : {
+		"type" : "partial",
+		"text" : "start7",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2402,7 +2450,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2430,6 +2478,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start8" : {
+		"type" : "partial",
+		"text" : "start8",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2446,7 +2500,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2467,6 +2521,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start9" : {
+		"type" : "partial",
+		"text" : "start9",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2483,7 +2543,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2504,6 +2564,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start10" : {
+		"type" : "partial",
+		"text" : "start10",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2520,7 +2586,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2541,6 +2607,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start11" : {
+		"type" : "partial",
+		"text" : "start11",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },

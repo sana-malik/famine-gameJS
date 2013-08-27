@@ -1,5 +1,5 @@
 {
-"order" : ["GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Roosevelt Island", "Navy Merchant Memorial at Columbia Island Marina", "George Washington Masonic Memorial", "National Harbor", "Oxon Cove Park/Oxon Hill Farm", "Pine Ridge High School Site Park", "Great Falls Park", "Glen Echo Park", "Kennedy Center", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Road Residence", "Penwood Drive Residence", "Denny's", "Olde Towne Pet Resort", "GW Community School", "Courtyard Alexandria Old Town/Southwest", "The Motley Fool", "Iwo Jima/US Marine Corps War Memorial", "FDR Memorial", "Lincoln Memorial", "Air Force Memorial", "Freedom Park", "Metro Train", "Smithsonian Metro Exit", "National Mall", "National Mall, Part Two", "National Mall, Part Three", "National Mall, Part Four", "National Mall, Part Five", "Capitol", "The End"],
+"order" : ["GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Roosevelt Island", "Navy Merchant Memorial at Columbia Island Marina", "George Washington Masonic Memorial", "National Harbor", "Oxon Cove Park/Oxon Hill Farm", "Pine Ridge High School Site Park", "Great Falls Park", "Glen Echo Park", "Kennedy Center", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Road Residence", "Penwood Drive Residence", "Mining Artifact Location", "Denny's", "Olde Towne Pet Resort", "GW Community School", "Courtyard Alexandria Old Town/Southwest", "The Motley Fool", "Iwo Jima/US Marine Corps War Memorial", "FDR Memorial", "Lincoln Memorial", "Air Force Memorial", "Freedom Park", "Metro Train", "Smithsonian Metro Exit", "National Mall", "National Mall, Part Two", "National Mall, Part Three", "National Mall, Part Four", "National Mall, Part Five", "Capitol", "The End"],
 "locations" : {
 "GolfDC Academy" : {
 	"name" : "GolfDC Academy",
@@ -339,7 +339,27 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : ["The Fallen", "Mining Artifact"]
+	"puzzles" : ["The Fallen"]
+},
+"Mining Artifact Location" : {
+	"name" : "Mining Artifact Location",
+	"address" : "TBD",
+	"time_open" : "8/10/2013 9:00",
+	"time_closed" : "8/11/2013 1:00",
+	"flavor_text" : "TBD",
+	"self_flavor_text" : "",
+	"notes" : "Start code = coal",
+	"parking_status" : "Yes",
+	"parking_description" : "",
+	"restroom_status" : "",
+	"restroom_description" : "",
+	"food_status" : "",
+	"food_description" : "",
+	"wifi_status" : "",
+	"wifi_description" : "",
+	"image_file" : "",
+	"map_file" : "",
+	"puzzles" : ["Mining Artifact"]
 },
 "Denny's" : {
 	"name" : "Denny's",
@@ -563,13 +583,13 @@
 },
 "Metro Train" : {
 	"name" : "Metro Train",
-	"address" : "",
-	"time_open" : "",
-	"time_closed" : "",
-	"flavor_text" : "",
+	"address" : "On a metro train",
+	"time_open" : "8/10/2013 9:00",
+	"time_closed" : "8/11/2013 11:30",
+	"flavor_text" : "Enjoy the ride!",
 	"self_flavor_text" : "",
-	"notes" : "",
-	"parking_status" : "",
+	"notes" : "Start code = inspiration",
+	"parking_status" : "Yes",
 	"parking_description" : "",
 	"restroom_status" : "",
 	"restroom_description" : "",
