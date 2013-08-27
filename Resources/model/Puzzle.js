@@ -102,6 +102,8 @@ var Puzzle = Backbone.Model.extend({
 				if( !debugActive("verbose_server"))
 					try { saveServerSession(session, tid); } catch (err) {}
 
+				toastr.clear();
+				
 				if (!miniSolve) this.returnToParentView();
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer
