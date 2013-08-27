@@ -3,7 +3,8 @@ var HistoryView = Backbone.View.extend({
 
 	initialize: function() {
 		_.bindAll(this, 'render');
-		this.model.bind("change:history",this.render)
+		this.model.bind("change:history",this.render);
+		this.model.bind("change:messageStats", this.render);
 		this.render();
 	},
 

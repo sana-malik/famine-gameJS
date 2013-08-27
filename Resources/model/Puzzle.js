@@ -57,7 +57,7 @@ var Puzzle = Backbone.Model.extend({
 				logAction(logTypes.STORY, solve_text);
 
 				this.killTeams();
-				this.unlockResources(solve_text);
+				this.unlockResources();
 
 				var accelerate_messages = false;
 				var nextLoc = session.get("currentLocation") + 1;
@@ -258,7 +258,7 @@ var Puzzle = Backbone.Model.extend({
 		});
 	},
 
-	unlockResources : function(solve_text) {
+	unlockResources : function() {
 		var unlock = false;
 		$.each(this.get("resources_unlocked"), function(index, name) {
 			resources[name].unlock();
