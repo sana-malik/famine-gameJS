@@ -64,6 +64,8 @@ var HistoryView = Backbone.View.extend({
 	},
 
 	markRead: function(e) {
+		if ($(e.currentTarget).hasClass("message") === false) return;
+		
 		var id = $(e.currentTarget).attr("id");
 
 		var stats = $.extend(true, {}, session.get("messageStats"));

@@ -10,7 +10,10 @@ var Puzzle = Backbone.Model.extend({
 		this.notified = false;
 	},
 
-	checkAnswer : function(entry) {
+	checkAnswer : function(entry, miniSolve) {
+		if (arguments.length == 1) { 
+			miniSolve = false;
+		}
 		var stats = $.extend(true, {}, session.get("puzzleStats"));
 		var response = "<div class='log_time'>" + getCurrentDateTimeString() + ": </div><div class='log_content'>";
 		var give_up_code = "saveusthresh"
@@ -45,7 +48,7 @@ var Puzzle = Backbone.Model.extend({
 					logAction(logTypes.PUZZLE, "Thresh helped you with <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"></table>");
 	
 				// cnongrats message
-				showPopup(solve_text + "<br><br>");
+				if (!miniSolve) showPopup(solve_text + "<br><br>");
 
 				// puzzle results
 				session.set("lastSolved", this.get("name"));
@@ -64,7 +67,7 @@ var Puzzle = Backbone.Model.extend({
 				// remove timer
 				clearInterval(stats[this.get("name")]["timerID"]);
 				
-				// set all hints to revealed (does this need to be done for minis as well?)
+				// set all hints to revealed 
 				$.each(stats[this.get("name")]["hintStats"], function(hname, hint) {
 					hint["status"] = hintStatus.REVEALED;
 				});
@@ -72,12 +75,21 @@ var Puzzle = Backbone.Model.extend({
 
 				stats = this.advanceLocation(stats, latest_time);
 
-				// returning stats cause I don't know if javascript passes by reference here or not
-				stats = this.returnToParentView(stats);
-
 				// update the stats
 				session.set("puzzleStats",stats);
-				// if this is a mini, increment the meta counter so it knows to refresh the activity view
+			
+				// if this is a meta, solve all the active subpuzzles
+				if (this.get("meta")) {
+					var active = session.getActivePuzzles();
+					$.each(active, function(index, pname) {
+						if (!puzzles[pname].get("meta")) {
+							var answer = puzzles[pname].getAnswer()
+							puzzles[pname].checkAnswer(answer, true);
+						}
+					});
+				}
+
+				// increment the meta counter so it knows to refresh the activity view
 				session.set("renderMeta", session.get("renderMeta")+1);
 
 				// skin change after clock puzzle solved
@@ -89,6 +101,8 @@ var Puzzle = Backbone.Model.extend({
 				// If server saving is not verbose, we need to at least save to the server when the answer is given
 				if( !debugActive("verbose_server"))
 					try { saveServerSession(session, tid); } catch (err) {}
+
+				if (!miniSolve) this.returnToParentView();
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer
 				// reveal skipped hints
@@ -131,7 +145,7 @@ var Puzzle = Backbone.Model.extend({
 		saveSession();
 	},
 
-	returnToParentView : function(stats) {
+	returnToParentView : function() {
 		// go back to main or meta and change buttons if main
 		if (this.get("meta") || session.getActivePuzzles().length === 1) {
 			$('.main.active').removeClass('active');
@@ -139,11 +153,6 @@ var Puzzle = Backbone.Model.extend({
 			$('#start_code_box').show();
 			$("#start_input").focus();
 			$('#active_puzzle_button').hide();
-
-			// change unfinished puzzles to ARCHIVED?? -- solvable but not active
-			$.each(session.getActivePuzzles(), function(index, pname) {
-				stats[pname]["status"] = puzzleStatus.ARCHIVED;
-			});
 		}
 		else {
 			var meta = getMetaName(this.get("start_code"));
@@ -151,8 +160,6 @@ var Puzzle = Backbone.Model.extend({
 			if (meta === "All Puzzles") $("#multipuzzle").addClass('active');
 			else $('.main#'+nameToId(meta)).addClass('active');
 		}
-
-		return stats;
 	},
 
 	advanceLocation : function(stats, offset) {
@@ -262,5 +269,16 @@ var Puzzle = Backbone.Model.extend({
 		var stats = $.extend(true, {}, session.get("puzzleStats"));
 		stats[this.get("name")]["log"].push(entry);
 		session.set("puzzleStats",stats);	
-	}
+	},
+
+	getAnswer : function() {
+		var answer;
+		$.each(this.get("answers"), function(entry, answerObj) {
+			if (answerObj["type"] === answerTypes.FINAL) {
+				answer = entry;
+				return false;
+			}
+		});
+		return answer;
+	}	
 });
