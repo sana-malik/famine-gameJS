@@ -65,6 +65,11 @@ $(document).ready(function() {
 			var puzView = new PuzzleView({el : ".puzzle#"+nameToId(name), puzzleName : name});
 		}
 	});
+
+	// if rebellion theme is enabled, add it
+	if (session.get("rebellionTheme")) {
+		$("head").append('<link rel="stylesheet" type="text/css" href="css/rebellion.css">');
+	}
 	
 	// Set up views
 	var team = new TeamView({el : "#bottombar", model : session});
@@ -100,7 +105,7 @@ $(document).ready(function() {
 
 	// jquery tooltip
 	$(function() {
-    	$( document ).tooltip({track: true});
+    	$(document).tooltip({track: true});
 
   	});
   	$(function() {

@@ -80,6 +80,12 @@ var Puzzle = Backbone.Model.extend({
 				// if this is a mini, increment the meta counter so it knows to refresh the activity view
 				session.set("renderMeta", session.get("renderMeta")+1);
 
+				// skin change after clock puzzle solved
+				if (this.get("name") === "The Clock") { // activate new skin
+					session.set("rebellionTheme", true);
+					$("head").append('<link rel="stylesheet" type="text/css" href="css/rebellion.css">');
+				}
+
 				// If server saving is not verbose, we need to at least save to the server when the answer is given
 				if( !debugActive("verbose_server"))
 					try { saveServerSession(session, tid); } catch (err) {}

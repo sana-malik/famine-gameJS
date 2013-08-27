@@ -48,6 +48,7 @@ var Session = Backbone.Model.extend({
 			this.set("messageStats", {});
 			this.set("unreadCount", 0);
 			this.set("lastStartCode","");
+			this.set("rebellionTheme", false);
 		}
 		else {
 			this.set("fans", sessionObj["fans"]);
@@ -64,6 +65,7 @@ var Session = Backbone.Model.extend({
 				$('#tab_history').html('<a href="#">Activity ('+sessionObj["unreadCount"]+")</a>");
 			}
 			this.set("lastStartCode",sessionObj["lastStartCode"]);
+			this.set("rebellionTheme", sessionObj["rebellionTheme"]);
 		}
 	},
 
