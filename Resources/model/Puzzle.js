@@ -35,6 +35,7 @@ var Puzzle = Backbone.Model.extend({
 
 				// update status object
 				stats[this.get("name")]["status"] = puzzleStatus.SOLVED;
+				stats[this.get("name")]["end_time"] = getCurrentDateTime();
 
 				// hide answer box
 				$("#"+nameToId(this.get("name")) + " .answer_box").hide();
@@ -46,7 +47,8 @@ var Puzzle = Backbone.Model.extend({
 				}
 				else
 					logAction(logTypes.PUZZLE, "Thresh helped you with <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"></table>");
-	
+				stats[this.get("name")]["current_fans"] = session.get("fans");
+				
 				// cnongrats message
 				if (!miniSolve) showPopup(solve_text + "<br><br>");
 
