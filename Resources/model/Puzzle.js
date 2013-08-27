@@ -149,7 +149,7 @@ var Puzzle = Backbone.Model.extend({
 
 	returnToParentView : function() {
 		// go back to main or meta and change buttons if main
-		if (this.get("meta") || session.getActivePuzzles().length === 1) {
+		if (this.get("meta") || session.getActivePuzzles().length === 0) {
 			$('.main.active').removeClass('active');
 			$('#main_screen').addClass('active');
 			$('#start_code_box').show();
