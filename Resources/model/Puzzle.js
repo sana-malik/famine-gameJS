@@ -75,7 +75,7 @@ var Puzzle = Backbone.Model.extend({
 				});
 
 
-				stats = this.advanceLocation(stats, latest_time);
+				if (!miniSolve) stats = this.advanceLocation(stats, latest_time);
 
 				// update the stats
 				session.set("puzzleStats",stats);
