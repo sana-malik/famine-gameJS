@@ -114,20 +114,20 @@ function PuzzleTimer(puzzleId, interval){
 	}
 
 	var increment = function() {
-		var changed = false
 		var stats = $.extend(true,{},session.get("puzzleStats"));
 
 		var hints = puzzles[puzzleId].get("hints");
 
 		// go through hints & check for status changes
 		$.each(hints, function(name, hint) {
-			var remaining = stats[puzzleId]["hintStats"][name]["remaining"];
+			var elapsed = (getCurrentDateTime() - stats[puzzleId]["start_time"])/60000;
 			var timediff = 1;
 			if ( debugActive() )
 				timediff *= parameters["debug_parameters"]["time_multiplyer"];
 
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
-				stats[puzzleId]["hintStats"][name]["remaining"] -= timediff;
+				var remaining = hint.get("start_time")/timediff - elapsed;
+
 				if (remaining <= 0) {
 					// only notify if active, not archived
 					if (stats[puzzleId]["status"] === puzzleStatus.ACTIVE) {
@@ -135,19 +135,13 @@ function PuzzleTimer(puzzleId, interval){
 						toastr.info("New hint available for " + puzzles[puzzleId].get("name") + "!");
 					}
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
-					stats[puzzleId]["hintStats"][name]["remaining"] = hint.get("end_time")*60;
-					changed = true;
+					session.set("puzzleStats", stats);
 				}
-			}
-			else if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.AVAILABLE) {
-				stats[puzzleId]["hintStats"][name]["remaining"] -= timediff;
 			}
 			else {
 				return; // no need to display any timer/change any status
 			}
 		});
-
-		session.set("puzzleStats", stats);
 	}	
 
 	return setInterval(increment, interval);  // returns timer id	

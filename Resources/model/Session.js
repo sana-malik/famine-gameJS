@@ -37,7 +37,7 @@ var Session = Backbone.Model.extend({
 				};
 	
 				$.each(puzzle.get("hints"), function(hname, hint) {
-					temp[pname]["hintStats"][hname] = {"status" : hintStatus.LOCKED, "remaining" : hint.get("start_time")*60};
+					temp[pname]["hintStats"][hname] = {"status" : hintStatus.LOCKED};
 				});
 			});
 			this.set("puzzleStats", temp);
@@ -96,7 +96,6 @@ var Session = Backbone.Model.extend({
 		
 				var puzzObj = {
 					"status" : puzzleStatus.ACTIVE,
-					"sec_elapsed" : 0, // not used 
 					"timerID" : timerID, // need to keep this so we can destroy it when the puzzle is completed
 					"start_time" : startTime,
 					"log" : ["<div class='log_time'>" + getCurrentDateTimeString() + ":</div><div class='log_content'>Puzzle Started</div>"]

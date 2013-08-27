@@ -118,8 +118,6 @@ var HintView = Backbone.View.extend({
 	render: function() {
 		var that = this;
 		$(that.el).html(that.template({name : this.hintName}));
-
-		var remaining = session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["remaining"];
 		
 		var current_time = getCurrentDateTime();
 		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"])/1000;
@@ -130,7 +128,6 @@ var HintView = Backbone.View.extend({
 
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
 			$(that.el).hide();
-			$(that.el).children('.hint_text').html('Available in ' + formatTime(remaining));
 		}
 		else {
 			$(that.el).parent().show();	
