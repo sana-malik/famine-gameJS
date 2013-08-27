@@ -784,9 +784,14 @@ text-decoration: none;
 }
 
 /* TOOLTIP STUFF */
+[map], [title] {
+	font-weight: bold;
+}
+
 [map]:hover, [title]:hover {
 	cursor: default;
 }
+
 .map {
 	width: 300px;
 	height: 300px;
