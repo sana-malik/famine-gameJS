@@ -267,6 +267,15 @@ var MultiPuzzleView = Backbone.View.extend({
 		not sure what to put here?\
 		</div>'),
 
+	events : {
+		'click #mainbutton' : 'back_to_main',
+	},
+
+	back_to_main :function() {
+		$('.main.active').removeClass('active');
+		$('#main_screen').addClass('active');
+	},
+
 	initialize: function() {
 		_.bindAll(this, 'render');
 		this.render();
