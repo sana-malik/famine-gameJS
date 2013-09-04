@@ -94,7 +94,8 @@ var Team = Backbone.Model.extend({
 			playSound('cannon.wav', 3000);
 
 			// show video
-			this.showVideo();
+			if(debugActive("video_autoplay"))
+				this.showVideo();
 		}
 	
 		// update object

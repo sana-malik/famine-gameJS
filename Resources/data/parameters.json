@@ -12,7 +12,8 @@
     },
     
     "ephemeral_session" : true,
-    "verbose_server" : true
+    "verbose_server" : true,
+    "video_autoplay" : true
 }, 
 
 "self_defense_vid" : "movies/2b.html"

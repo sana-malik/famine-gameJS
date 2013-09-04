@@ -201,7 +201,7 @@ var Puzzle = Backbone.Model.extend({
 			// if they are too early for the current location, display an alert
 			var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
 
-			if (getCurrentDateTimeString(timeFormat.TWENTYFOUR) < locations[locOrder[currentLoc]].get("time_open")) {
+			if (!debugActive() && getCurrentDateTimeString(timeFormat.TWENTYFOUR) < locations[locOrder[currentLoc]].get("time_open")) {
 				showAlert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
 			}
 		}
@@ -255,6 +255,10 @@ var Puzzle = Backbone.Model.extend({
 			else {
 				teams[id].die(deathVolume);		
 				kill = true;		
+
+				if(!debugActive("video_autoplay"))
+					showPopup("<span id=\"" + id + "\" class=\"vid_link clickable\">View a message from the Capitol.</span><br><br>");
+
 			}
 		});
 	},

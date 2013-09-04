@@ -102,7 +102,11 @@ $(document).ready(function() {
 		$("#main_container > .active.tab").removeClass("active");
 		$("#info.tab").addClass("active");
 	});
-
+	
+	$("#popup_content").on("click", ".vid_link", function(e) { 
+		teams[$(e.currentTarget).attr("id")].showVideo();
+	});
+	
 	// jquery tooltip
 	$(function() {
     	$(document).tooltip({track: true});
