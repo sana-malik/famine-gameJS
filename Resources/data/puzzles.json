@@ -73,48 +73,11 @@
 		}
 	}
 },
-"Cornucopia - Bend the Rules" : {"name":"Cornucopia - Bend the Rules",
-"start_code" : "rules",
-"max_fans" : 250,
-"flavor_text" : "Nicely done, tribute.  But you've still got a little ways to go before things settle down. ",
-"self_flavor_text" : "Nicely done, tribute.  But you've still got a little ways to go before things settle down. ",
-"solve_text" : "Correct!  Head inside the cornucopia and use this answer to retrieve your next puzzle.",
-"self_solve_text" : "Correct!  Head inside the cornucopia and use this answer to retrieve your next puzzle.",
-"resources_unlocked" : [],
-"teams_killed" : [],
-"meta" : false,
-"advance_location" : false,
-"hints" : {
-	"Hint 1" : {
-		"start_time" : 1,
-		"end_time" : 10,
-		"start_cost" : 10,
-		"end_cost" : 0,
-		"text" : "Perhaps you should follow the arrows?"
-		},
-	"Hint 2" : {
-		"start_time" : 10,
-		"end_time" : 15,
-		"start_cost" : 10,
-		"end_cost" : 0,
-		"text" : "Draw five different letters by tracing a path according to the arrows. "
-		}
-	},
-"answers" : {
-	"taser" : {
-		"type" : "final",
-		"text" : "taser",
-		"response" : "Congratulations, you have solved the puzzle!",
-		"self_response" : "",
-		"skipped_hints" : []
-		}
-	}
-},
 "Cornucopia - Techniques" : {"name":"Cornucopia - Techniques",
 "start_code" : "fight",
 "max_fans" : 250,
-"flavor_text" : "You're almost done!  Just one more minipuzzle and you can start focusing on the final challenge. ",
-"self_flavor_text" : "You're almost done!  Just one more minipuzzle and you can start focusing on the final challenge. ",
+"flavor_text" : "Nicely done, tribute.  But you've still got a little ways to go before things settle down. ",
+"self_flavor_text" : "Nicely done, tribute.  But you've still got a little ways to go before things settle down. ",
 "solve_text" : "Correct!  Head inside the cornucopia and use this answer to retrieve your next puzzle.",
 "self_solve_text" : "Correct!  Head inside the cornucopia and use this answer to retrieve your next puzzle.",
 "resources_unlocked" : [],
@@ -148,6 +111,43 @@
 	"snake" : {
 		"type" : "final",
 		"text" : "snake",
+		"response" : "Congratulations, you have solved the puzzle!",
+		"self_response" : "",
+		"skipped_hints" : []
+		}
+	}
+},
+"Cornucopia - Bend the Rules" : {"name":"Cornucopia - Bend the Rules",
+"start_code" : "rules",
+"max_fans" : 250,
+"flavor_text" : "You're almost done!  Just one more minipuzzle and you can start focusing on the final challenge. ",
+"self_flavor_text" : "You're almost done!  Just one more minipuzzle and you can start focusing on the final challenge. ",
+"solve_text" : "Correct!  Head inside the cornucopia and use this answer to retrieve your next puzzle.",
+"self_solve_text" : "Correct!  Head inside the cornucopia and use this answer to retrieve your next puzzle.",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : false,
+"hints" : {
+	"Hint 1" : {
+		"start_time" : 1,
+		"end_time" : 10,
+		"start_cost" : 10,
+		"end_cost" : 0,
+		"text" : "Perhaps you should follow the arrows?"
+		},
+	"Hint 2" : {
+		"start_time" : 10,
+		"end_time" : 15,
+		"start_cost" : 10,
+		"end_cost" : 0,
+		"text" : "Draw five different letters by tracing a path according to the arrows. "
+		}
+	},
+"answers" : {
+	"taser" : {
+		"type" : "final",
+		"text" : "taser",
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
@@ -452,8 +452,8 @@
 "Vehicles" : {"name":"Vehicles",
 "start_code" : "traffic",
 "max_fans" : 1000,
-"flavor_text" : "This is the normal flavor text.  Note: enter TBD for answer",
-"self_flavor_text" : "This is custom flavor text.  Note: enter TBD for answer",
+"flavor_text" : "This is the normal flavor text. ",
+"self_flavor_text" : "This is custom flavor text.",
 "solve_text" : "Yay, you solved it and brutally murdered some people!",
 "self_solve_text" : "Yay, you solved it and brutally defended yourself from some people!",
 "resources_unlocked" : ["internet research"],
@@ -462,52 +462,52 @@
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
+		"start_time" : 5,
+		"end_time" : 20,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "hint"
+		},
+	"Hint 2" : {
 		"start_time" : 20,
 		"end_time" : 30,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "hint"
 		},
-	"Hint 2" : {
+	"Hint 3" : {
 		"start_time" : 30,
 		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "hint"
 		},
-	"Hint 3" : {
+	"Hint 4" : {
 		"start_time" : 40,
 		"end_time" : 50,
-		"start_cost" : 50,
-		"end_cost" : 0,
-		"text" : "hint"
-		},
-	"Hint 4" : {
-		"start_time" : 50,
-		"end_time" : 60,
 		"start_cost" : 50,
 		"end_cost" : 10,
 		"text" : "hint"
 		},
 	"Hint 5" : {
-		"start_time" : 60,
-		"end_time" : 70,
+		"start_time" : 50,
+		"end_time" : 60,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "hint"
 		},
 	"Hint 6" : {
-		"start_time" : 55,
-		"end_time" : 50,
+		"start_time" : 60,
+		"end_time" : 70,
 		"start_cost" : 50,
 		"end_cost" : 10,
 		"text" : "hint"
 		}
 	},
 "answers" : {
-	"tbd" : {
+	"motoriststrike" : {
 		"type" : "final",
-		"text" : "tbd",
+		"text" : "motoriststrike",
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
@@ -1102,8 +1102,8 @@
 "Settlers of Pangram" : {"name":"Settlers of Pangram",
 "start_code" : "boardgame",
 "max_fans" : 1000,
-"flavor_text" : "This is the normal flavor text. ",
-"self_flavor_text" : "This is custom flavor text if it's your puzzle. ",
+"flavor_text" : "This puzzle consists of five minipuzzles, entitled Brick, Ore, Wool, Lumber, and Grain. The names of the minipuzzles have nothing to do with how to solve them.<br><br>When you have a minipuzzle answer, you may enter it in the metapuzzle answer box.  After you have solved all five minipuzzles, contact the staffer to receive your metapuzzle.   ",
+"self_flavor_text" : "",
 "solve_text" : "Congratulations, you've solved the puzzle!",
 "self_solve_text" : "Congratulations, you've solved the puzzle!",
 "resources_unlocked" : [],
@@ -1112,36 +1112,36 @@
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 50,
-		"end_time" : 60,
+		"start_time" : 110,
+		"end_time" : 120,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "The hint timers are now advanced for this puzzle. "
 		},
 	"Hint 2" : {
-		"start_time" : 60,
-		"end_time" : 75,
+		"start_time" : 120,
+		"end_time" : 135,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "There's a relationship between your answers and the gameboard itself."
 		},
 	"Hint 3" : {
-		"start_time" : 75,
-		"end_time" : 85,
+		"start_time" : 135,
+		"end_time" : 145,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "The answer to each puzzle has as many letters as its corresponding resource tile on the board.  This will help you lay out your final phrase."
 		},
 	"Hint 4" : {
-		"start_time" : 85,
-		"end_time" : 95,
+		"start_time" : 145,
+		"end_time" : 155,
 		"start_cost" : 50,
 		"end_cost" : 5,
 		"text" : "When spelling out your 18-letter answer, the numbers on your meta sheet indicate the order to place each answer's letter."
 		},
 	"Hint 5" : {
-		"start_time" : 95,
-		"end_time" : 105,
+		"start_time" : 155,
+		"end_time" : 165,
 		"start_cost" : 50,
 		"end_cost" : 5,
 		"text" : "For example, if ore is 2,3,1, place the 2nd letter of the ore answer in the first ore slot, followed by the 3rd letter and then the 1st letter.  "
@@ -1155,9 +1155,15 @@
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"flhis" : {
+	"fisthanginnliestun" : {
 		"type" : "partial",
-		"text" : "flhis",
+		"text" : "fisthanginnliestun",
+		"response" : "You've advanced the hint timer for this puzzle. ",
+		"skipped_hints" : ["Hint 1"]
+		},
+	"endgame" : {
+		"type" : "partial",
+		"text" : "endgame",
 		"response" : "You've advanced the hint timer for this puzzle. ",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2017,7 +2023,7 @@
 },
 "The Clock" : {"name":"The Clock",
 "start_code" : "ticktock",
-"max_fans" : 1000,
+"max_fans" : 2000,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
 "solve_text" : "Congratulations, you've solved the puzzle!",
@@ -2027,45 +2033,52 @@
 "meta" : true,
 "advance_location" : true,
 "hints" : {
+	"Hint Clock Start" : {
+		"start_time" : 390,
+		"end_time" : 400,
+		"start_cost" : 0,
+		"end_cost" : 0,
+		"text" : "The hint clock has now started for this puzzle. "
+		},
 	"Hint 1" : {
-		"start_time" : 1,
-		"end_time" : 10,
-		"start_cost" : 50,
+		"start_time" : 400,
+		"end_time" : 410,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "To help place your answers in the grid, look for something they all have in common.  When you think you have the pairs, enter all six words in alphabetic order for confirmation. "
 		},
 	"Hint 2" : {
-		"start_time" : 10,
-		"end_time" : 25,
-		"start_cost" : 50,
+		"start_time" : 410,
+		"end_time" : 425,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "Each answer should be entered radially, terminating with a shared letter E in the center of the clock.  To find your thematic pairs, look in three concentric rings."
 		},
 	"Hint 3" : {
-		"start_time" : 25,
-		"end_time" : 35,
-		"start_cost" : 50,
+		"start_time" : 425,
+		"end_time" : 435,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "How could these pairs of words be related?  Hurry up, time is ticking."
 		},
 	"Hint 4" : {
-		"start_time" : 35,
-		"end_time" : 45,
-		"start_cost" : 50,
+		"start_time" : 435,
+		"end_time" : 445,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "Each pair either relates to hour, minute or second.  But we're still not going to hand you the answer."
 		},
 	"Hint 5" : {
-		"start_time" : 45,
-		"end_time" : 55,
-		"start_cost" : 50,
+		"start_time" : 445,
+		"end_time" : 455,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "Each of the three-letter answers dictates a specific configuration of the clock's hands. You don’t need to calculate the times, however.  "
 		},
 	"Hint 6" : {
-		"start_time" : 55,
-		"end_time" : 65,
-		"start_cost" : 50,
+		"start_time" : 455,
+		"end_time" : 465,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "To make your eight-letter answer, position the hands of a clock to point at the specific letters in your 3-letter answers.  For example, for TLC, put the hour hand on the T, the minute hand on the L, and the second hand on the C.  These make letter shapes which will help you escape this horrible place."
 		}
@@ -2082,7 +2095,13 @@
 		"type" : "partial",
 		"text" : "basecominghappyricerushwaltz",
 		"response" : "Those are the correct six words. ",
-		"skipped_hints" : ["Hint 1", "Hint 2"]
+		"skipped_hints" : ["Hint Clock Start", "Hint 1", "Hint 2"]
+		},
+	"witchinghour" : {
+		"type" : "partial",
+		"text" : "witchinghour",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint Clock Start"]
 		}
 	}
 },
@@ -2099,7 +2118,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2120,6 +2139,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start12" : {
+		"type" : "partial",
+		"text" : "start12",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2136,7 +2161,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2151,12 +2176,18 @@
 		}
 	},
 "answers" : {
-	"glowpurple" : {
+	"badsmoke" : {
 		"type" : "final",
-		"text" : "glowpurple",
+		"text" : "badsmoke",
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start1" : {
+		"type" : "partial",
+		"text" : "start1",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2173,7 +2204,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2194,6 +2225,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start2" : {
+		"type" : "partial",
+		"text" : "start2",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2210,7 +2247,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2238,6 +2275,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start3" : {
+		"type" : "partial",
+		"text" : "start3",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2254,7 +2297,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2275,6 +2318,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start4" : {
+		"type" : "partial",
+		"text" : "start4",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2291,7 +2340,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2302,7 +2351,7 @@
 		"end_time" : 315,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The lighning's segments are grouped into six distinct sets.  Does that look like a familiar pattern?  The things you're spelling out are another form of lightning."
+		"text" : "The lightning's segments are grouped into six distinct sets.  Does that look like a familiar pattern?  The things you're spelling out are another form of lightning."
 		}
 	},
 "answers" : {
@@ -2312,6 +2361,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start5" : {
+		"type" : "partial",
+		"text" : "start5",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2328,7 +2383,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2349,6 +2404,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start6" : {
+		"type" : "partial",
+		"text" : "start6",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2365,7 +2426,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2386,6 +2447,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start7" : {
+		"type" : "partial",
+		"text" : "start7",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2402,7 +2469,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2430,6 +2497,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start8" : {
+		"type" : "partial",
+		"text" : "start8",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2446,7 +2519,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2467,6 +2540,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start9" : {
+		"type" : "partial",
+		"text" : "start9",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2483,7 +2562,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2504,6 +2583,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start10" : {
+		"type" : "partial",
+		"text" : "start10",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -2520,7 +2605,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 300,
+		"start_time" : 290,
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
@@ -2541,6 +2626,12 @@
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
+		},
+	"start11" : {
+		"type" : "partial",
+		"text" : "start11",
+		"response" : "Your hint clock has now started for this puzzle.",
+		"skipped_hints" : ["Hint 1"]
 		}
 	}
 },
@@ -3040,8 +3131,8 @@
 		}
 	}
 },
-"Bomb District Two" : {"name":"Bomb District Two",
-"start_code" : "airforce",
+"District Two Recon" : {"name":"District Two Recon",
+"start_code" : "eyewitness",
 "max_fans" : 1000,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -3057,7 +3148,7 @@
 		"end_time" : 10,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "This location-based puzzle involves images around this area and the surrounding city, as well as a very interesting pattern on the ground."
+		"text" : "If you haven't already, you'll need to explore this location to find everything you need. "
 		},
 	"Hint 2" : {
 		"start_time" : 10,
@@ -3071,7 +3162,7 @@
 		"end_time" : 30,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Your key is in alphabetical order.  Generating one letter of your key might take the efforts of five eagle-eyed individuals."
+		"text" : "Generating one letter of your key might take the efforts of five eagle-eyed individuals. The star on the ground comes into play for both parts of this puzzle. "
 		},
 	"Hint 4" : {
 		"start_time" : 30,
@@ -3085,7 +3176,7 @@
 		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Generate letters for your key using 5-bit binary.  Stand on the tips of the white triangles and note whether or not you can see the object in question.  This will generate a message on the star puzzle that reads from top to bottom and left to right. "
+		"text" : "Generate letters for your key using 5-bit binary. The key is in alphabetical order.  Stand on the tips of the white triangles and note whether or not you can see the object in question.  This will generate a message on the star puzzle that reads from top to bottom and left to right. "
 		},
 	"Hint 6" : {
 		"start_time" : 50,
@@ -3406,8 +3497,8 @@
 		}
 	}
 },
-"Pod of Flesh Melting Beam of Energy" : {"name":"Pod of Flesh Melting Beam of Energy",
-"start_code" : "light",
+"Pod of Flesh Melting Beam" : {"name":"Pod of Flesh Melting Beam",
+"start_code" : "beam",
 "max_fans" : 750,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -3463,8 +3554,8 @@
 		}
 	}
 },
-"Pod of Addiction" : {"name":"Pod of Addiction",
-"start_code" : "apple",
+"iPod" : {"name":"iPod",
+"start_code" : "apps",
 "max_fans" : 750,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -3514,8 +3605,65 @@
 		}
 	}
 },
+"Pod of Black Liquid" : {"name":"Pod of Black Liquid",
+"start_code" : "traps",
+"max_fans" : 750,
+"flavor_text" : "As you approach this pod, it activates, releasing a huge wave of vile black liquid.  Can you disarm it before the wave of icky ooze kills your team?",
+"self_flavor_text" : "",
+"solve_text" : "You're able to create a makeshift raft out some metal roofing and are able traverse the deadly liquid.  Just before your raft completely dissolves, you are able to jump off and disarm the pod. ",
+"self_solve_text" : "",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : true,
+"hints" : {
+	"Hint 1" : {
+		"start_time" : 5,
+		"end_time" : 15,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "The beam mutates everything in its path, whether it be big or little, good or evil. "
+		},
+	"Hint 2" : {
+		"start_time" : 15,
+		"end_time" : 30,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Each card contains a word which has a common opposite.  Though the beam has mututated each word quite a bit, you can still spot what's changed. "
+		},
+	"Hint 3" : {
+		"start_time" : 30,
+		"end_time" : 40,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Match edges, placing words that are opposites next to each other. Keep track of the new letters. "
+		},
+	"Hint 4" : {
+		"start_time" : 40,
+		"end_time" : 50,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "To get your final answer, you'll need to take one more round of opposites. "
+		}
+	},
+"answers" : {
+	"raft" : {
+		"type" : "final",
+		"text" : "raft",
+		"response" : "Congratulations, you have solved the puzzle!",
+		"self_response" : "",
+		"skipped_hints" : []
+		},
+	"huckfinnsboat" : {
+		"type" : "partial",
+		"text" : "huckfinnsboat",
+		"response" : "That looks good. What type of boat did Huck ride?",
+		"skipped_hints" : ["Hint 1 ", "Hint 2", "Hint 3"]
+		}
+	}
+},
 "Pod of Poison Seeds" : {"name":"Pod of Poison Seeds",
-"start_code" : "fertilize",
+"start_code" : "traps",
 "max_fans" : 500,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -3566,7 +3714,7 @@
 	}
 },
 "Pod of Aquattations" : {"name":"Pod of Aquattations",
-"start_code" : "traps",
+"start_code" : "death",
 "max_fans" : 500,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -3610,7 +3758,7 @@
 	}
 },
 "Pod of Deadly Metal Darts" : {"name":"Pod of Deadly Metal Darts",
-"start_code" : "traps",
+"start_code" : "death",
 "max_fans" : 500,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
@@ -3661,7 +3809,7 @@
 	}
 },
 "Pod of Barbed Wire" : {"name":"Pod of Barbed Wire",
-"start_code" : "traps",
+"start_code" : "death",
 "max_fans" : 500,
 "flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
 "self_flavor_text" : "",
