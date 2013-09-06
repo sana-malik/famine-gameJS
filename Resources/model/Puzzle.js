@@ -50,7 +50,7 @@ var Puzzle = Backbone.Model.extend({
 				stats[this.get("name")]["current_fans"] = session.get("fans");
 				
 				// cnongrats message
-				if (!miniSolve) showPopup(solve_text + "<br><br>");
+				if (!miniSolve) showPopup("<div class=\"solve-popup\"><h1>CORRECT</h1><hr /><p class=\"solve-text\">" + solve_text + "</p></div><br><br>");
 
 				// puzzle results
 				session.set("lastSolved", this.get("name"));

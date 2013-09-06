@@ -47,7 +47,13 @@ var Team = Backbone.Model.extend({
 
 		var output = "<div class=\"team-popup-sidebar\">" + 
 			this.getIconHTML() +
-			"<h2 class=\"team-district\">District " + district + "<br />" + dis_specialty + "</h2>";
+			"<h3 class=\"team-popup-header\">Tributes:</h3><ul>";
+			
+			var members = this.get("members")
+			for( var index = 0; index < members.length; index++)
+				output = output + "<li>" + members[index] + "</li>" 
+				
+			output = output + "</ul>";
 			
 			var status;
 			if(session.get("teamStats")[this.get("id")]["status"] == teamStatus.DEAD)
@@ -55,17 +61,15 @@ var Team = Backbone.Model.extend({
 			else
 				status = "Alive";
 
-			output = output + "<h2 class=\"team-status\">Status:  " + status + "</h2><h2 class=\"team-status\">(123) 456-7890</h2></div><div class=\"team-popup-content\"><h1 class=\"team_title\">" + 
+			output = output + "</div><div class=\"team-popup-content\"><h1 class=\"team_title\">" + 
 			this.get("name") + 
-			"</h1><p class=\"team_bio\">" + 
+			"</h1><h2 class=\"team-district\">District " + district + " - " + dis_specialty + "</h2><h2 class=\"team-status\">Status:  " + status + "</h2><h2 class=\"team-status\">Contact: (123) 456-7890</h2><br /><h3 class=\"team-popup-header\">Team Bio:</h3><div class=\"team_bio\"><p>" + 
 			this.get("bio") + 
-			"</p><h3 class=\"team-popup-header\">Tributes:</h3><code><ul id=\"double\"><span class=\"code-comment\"></span>"
+			"</p></div>"
 			
-			var members = this.get("members")
-			for( var index = 0; index < members.length; index++)
-				output = output + "<li>" + members[index] + "</li>" 
+			
 
-			output = output + "</ul></code></div>";
+			output = output + "</div>";
 			
 		return output;
 	},

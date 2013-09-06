@@ -2,7 +2,7 @@ body {
 	text-shadow: 0px 0px 6px #fff;
 }
 
-.location_description, .content, #content, #stats, #icon, #resources, #toc li a, .log-item, #path, .right-sidebar div, .team_div {
+.location_description, .content, #content, #stats, #icon, #resources, #history, #toc li a,  #path, .right-sidebar div, .team_div, .toast-message {
   -webkit-transform:rotateY(180deg);
   -moz-transform:rotateY(180deg);
   -o-transform:rotateY(180deg);
@@ -17,7 +17,7 @@ body {
 }*/
 
 #main_container {
-	background: url("../images/gui/background-tj-simple.jpg");
+	background: url("../images/gui/gif3.gif");
 }
 
 #topbar {
