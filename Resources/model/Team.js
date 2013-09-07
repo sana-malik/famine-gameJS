@@ -61,14 +61,14 @@ var Team = Backbone.Model.extend({
 			else
 				status = "Alive";
 
-			output = output + "</div><div class=\"team-popup-content\"><h1 class=\"team_title\">" + 
-			this.get("name") + 
-			"</h1><h2 class=\"team-district\">District " + district + " - " + dis_specialty + "</h2><h2 class=\"team-status\">Status:  " + status + "</h2><h2 class=\"team-status\">Contact: (123) 456-7890</h2><br /><h3 class=\"team-popup-header\">Team Bio:</h3><div class=\"team_bio\"><p>" + 
-			this.get("bio") + 
-			"</p></div>"
-			
-			
+			output = output + "</div><div class=\"team-popup-content\"><h1 class=\"team_title\">" + this.get("name") + "</h1>";
+			output = output + "<h2 class=\"team-district\">District " + district + " - " + dis_specialty + "</h2>";
+			output = output + "<h2 class=\"team-status\">Status:  " + status;
 
+			if( status == "Dead" )
+				output = output + " - <span id=\"" + this.get("id") + "\" class=\"popup_vid_link clickable\">View News Coverage</span></h2>";
+
+			output = output + "<br /><h3 class=\"team-popup-header\">Team Bio:</h3><div class=\"team_bio\"><p>" + this.get("bio") + "</p></div>"
 			output = output + "</div>";
 			
 		return output;
