@@ -822,6 +822,6 @@ font-family: 'Open Sans', Arial,  sans-serif;
 letter-spacing: .06em;
 }
 
-#sidebar, ol#toc a, .hint_name, .puzzle_data, h2.puzzle_title, #filters, .solve-popup h1, h1.team_title, h3.location-name, #info h1, #info h2, #info h3, #history h1, #history h2, #history h3, {
+#sidebar, .hint_name, .puzzle_data, h2.puzzle_title, #filters, .solve-popup h1, h1.team_title, h3.location-name, #info h1, #info h2, #info h3, #history h1, #history h2, #history h3 {
 font-family: 'Orbitron', Verdana, sans-serif;
 }
