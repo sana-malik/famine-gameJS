@@ -529,6 +529,7 @@ margin: 0px;
 font-size: .9em;
 color: #444;
 font-weight: normal;
+margin-left: 20px;
 }
 
 .team-popup-sidebar .team-status, .team-popup-sidebar .team-district {
@@ -537,7 +538,7 @@ padding-bottom: 5px;
 
 .team_bio {
 width: 350px;
-height: 185px;
+height: 200px;
 display: block;
 overflow-y: auto;
 }
@@ -584,7 +585,7 @@ text-align: center;
 
 #popup_content .content {
 	width: 580px;
-	height: 330px;
+	height: 320px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
