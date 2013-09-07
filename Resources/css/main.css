@@ -515,6 +515,7 @@ padding-bottom: 0px;
 font-size: 1em;
 margin: 0px;
 padding: 0px;
+margin-top: -15px;
 }
 
 
@@ -528,7 +529,7 @@ margin: 0px;
 font-size: .9em;
 color: #444;
 font-weight: normal;
-margin-left: 10px;
+margin-left: 20px;
 }
 
 .team-popup-sidebar .team-status, .team-popup-sidebar .team-district {
@@ -822,6 +823,6 @@ font-family: 'Open Sans', Arial,  sans-serif;
 letter-spacing: .06em;
 }
 
-#sidebar, .hint_name, .puzzle_data, h2.puzzle_title, #filters, .solve-popup h1, h1.team_title, h3.location-name, #info h1, #info h2, #info h3, #history h1, #history h2, #history h3 {
+#sidebar, .hint_name, .puzzle_data, h2.puzzle_title, #filters, .solve-popup h1, h1.team_title {
 font-family: 'Orbitron', Verdana, sans-serif;
 }
