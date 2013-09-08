@@ -20,7 +20,10 @@ var Puzzle = Backbone.Model.extend({
 		var give_up = false
 
 		if (entry === give_up_code) {
-			give_up = confirm("Are you sure you want to give up on this puzzle? You will receive no fans if you choose to do so.")
+			if (!miniSolve)
+				give_up = confirm("Are you sure you want to give up on this puzzle? You will receive no fans if you choose to do so.")
+			else
+				give_up = true;
 		}
 
 		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "") { // puzzle already solved!
@@ -41,12 +44,9 @@ var Puzzle = Backbone.Model.extend({
 				$("#"+nameToId(this.get("name")) + " .answer_box").hide();
 				
 				// allot fans & log
-				if (!give_up && !miniSolve) {
+				if (!give_up) {
 					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
-					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+entry+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr><tr></table>");
-				}
-				else if (miniSolve) {
-					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span>.");	
+					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+getAnswerToPuzzle(this.get("name"))+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr><tr></table>");
 				}
 				else
 					logAction(logTypes.PUZZLE, "Thresh helped you with <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"></table>");
@@ -88,7 +88,7 @@ var Puzzle = Backbone.Model.extend({
 					var active = session.getActivePuzzles();
 					$.each(active, function(index, pname) {
 						if (!puzzles[pname].get("meta")) {
-							puzzles[pname].checkAnswer("minisolvenoanswer", true);
+							puzzles[pname].checkAnswer(entry, true);
 						}
 					});
 				}
@@ -143,9 +143,10 @@ var Puzzle = Backbone.Model.extend({
 			}
 
 			if (!miniSolve) response += "<strong>" + entry + "</strong> - " + this.get("answers")[entry]["response"] + "</div>";
+			else if (give_up) response += "Thresh helped you with this puzzle.</div>"
 			else response += "You have solved the puzzle!</div>";
 		}
-		else if (this.get("meta")) { // if this is a meta, check if it's in the answers for an active mini
+		else if (this.get("meta") && entry != give_up_code) { // if this is a meta, check if it's in the answers for an active mini
 			var minis = session.getActivePuzzles();
 			var that = this;
 			var found = false;
