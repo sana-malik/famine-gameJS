@@ -269,7 +269,7 @@ var MultiPuzzleView = Backbone.View.extend({
 		</div></div>\
 		<div class="right-sidebar">\
 		<div id="right_sidebar_content_puzzle">\
-		not sure what to put here?\
+		You have received a series of puzzles with no meta. To advance to the next location, you must first solve all active puzzles in any order.\
 		</div>'),
 
 	events : {
