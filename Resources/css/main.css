@@ -345,6 +345,10 @@ display: block;
 margin-left: 20px;
 }
 
+#mark_messages {
+	float: right;
+}
+
 
 
 h4.timestamp {
@@ -364,7 +368,7 @@ margin: 0px;
 	display: inline-block;
 }
 
-#filters li {
+#filters li, .filter {
 	display: inline-block;
 	text-transform: uppercase;
 	font-size: .75em;
@@ -375,7 +379,7 @@ margin: 0px;
 	border-radius: 5px;
 }
 
-#filters li:hover, #filters li.selected {
+#filters li:hover, #filters li.selected, .filter:hover {
 	cursor: pointer;
 	background: #8c909b;
 }

@@ -24,6 +24,10 @@ var HistoryView = Backbone.View.extend({
 			$(that.el).prepend('<span class="log-item' + unread + ' ' + item[1] + '"' + id +'><h4 class="timestamp">'+item[0]+'</h4><p class="msg">'+item[2]+'</p></span>');
 		});
 
+
+		// mark messages read button
+		$(that.el).prepend('<span id="mark_messages" class="filter">Mark All Read</span>');
+
 		// filters
 		$(that.el).prepend('<b>Filter:</b> <ul id="filters">\
 			<li id="kill" class="filter">Kills</li>\
@@ -40,7 +44,8 @@ var HistoryView = Backbone.View.extend({
 		'click .puzzle_link' : 'showPuzzleScreen', 
 		'click .vid_link' : 'playVideo',
 		'click .log-item' : 'markRead',
-		'click li.filter' : 'filter'
+		'click li.filter' : 'filter',
+		'click #mark_messages' : 'readAll'
 	},
 
 	showPuzzleScreen : function(e) {
@@ -80,6 +85,22 @@ var HistoryView = Backbone.View.extend({
 		} else {
 			$('#tab_history').html('<a href="#">Activity</a>');
 		}
+
+		saveSession();
+	},
+
+	readAll: function() {
+		var stats = $.extend(true, {}, session.get("messageStats"));
+
+		$.each(stats, function(name, mObj) {
+			if (mObj["status"] === "unread") {
+				mObj["status"] = "read";
+			}
+		});
+		session.set("messageStats", stats);
+
+		session.set("unreadCount", 0);
+		$('#tab_history').html('<a href="#">Activity</a>');
 
 		saveSession();
 	},
