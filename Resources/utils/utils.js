@@ -177,8 +177,12 @@ function getCurrentDateTimeString(format) {
 			day = "0" + day
 		}
 
-	if (minutes < 10){
-		minutes = "0" + minutes
+		if (month < 10){
+			month = "0" + month
+		}
+
+		if (minutes < 10){
+			minutes = "0" + minutes
 	}
 	
 	var out = month + "/" + day + "/" + year + " " + hours + ":" + minutes;
