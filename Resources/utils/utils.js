@@ -125,6 +125,7 @@ function PuzzleTimer(puzzleId, interval){
 		$(".main.puzzle#" + nameToId(puzzleId) + " #elapsed_time").html(formatTime(elapsed, true));
 
 		var hints = puzzles[puzzleId].get("hints");
+		var changed = false;
 		// go through hints & check for status changes
 		$.each(hints, function(name, hint) {
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
@@ -137,13 +138,11 @@ function PuzzleTimer(puzzleId, interval){
 						toastr.info("New hint available for " + puzzles[puzzleId].get("name") + "!");
 					}
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
-					session.set("puzzleStats", stats);
+					changed = true;
 				}
 			}
-			else {
-				return; // no need to display any timer/change any status
-			}
 		});
+		if (changed) session.set("puzzleStats", stats);
 	}	
 
 	return setInterval(increment, interval);  // returns timer id	
