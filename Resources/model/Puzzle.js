@@ -53,7 +53,7 @@ var Puzzle = Backbone.Model.extend({
 				stats[this.get("name")]["current_fans"] = session.get("fans");
 				
 				// congrats message
-				if (!miniSolve) showPopup(solve_text + "<br><br>");
+				if (!miniSolve) showPopup("<div class=\"solve-popup\"><h1>CORRECT!</h1><hr /><p class=\"solve-text\">" + solve_text + "</p></div><br><br>");
 
 				// puzzle results
 				session.set("lastSolved", this.get("name"));
@@ -204,7 +204,7 @@ var Puzzle = Backbone.Model.extend({
 			// if they are too early for the current location, display an alert
 			var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
 
-			if (getCurrentDateTimeString(timeFormat.TWENTYFOUR) < locations[locOrder[currentLoc]].get("time_open")) {
+			if (!debugActive() && getCurrentDateTimeString(timeFormat.TWENTYFOUR) < locations[locOrder[currentLoc]].get("time_open")) {
 				showAlert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
 			}
 		}
@@ -258,6 +258,9 @@ var Puzzle = Backbone.Model.extend({
 			else {
 				teams[id].die(deathVolume);		
 				kill = true;		
+
+				showPopup("<span id=\"" + id + "\" class=\"popup_vid_link clickable\">Breaking news from the Capitol!</span><br><br>");
+
 			}
 		});
 	},

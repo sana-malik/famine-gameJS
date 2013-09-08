@@ -20,6 +20,6 @@ var Resource = Backbone.Model.extend({
 		stats[this.get("name")] = {"status" : resourceStatus.UNLOCKED};
 		session.set("resourceStats",stats);
 
-		showPopup("You've unlocked " + this.get("name") + ".");
+		showPopup("You've unlocked " + this.get("name") + ".<br>");
 	}
 });

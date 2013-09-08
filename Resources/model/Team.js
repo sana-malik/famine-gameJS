@@ -47,25 +47,35 @@ var Team = Backbone.Model.extend({
 
 		var output = "<div class=\"team-popup-sidebar\">" + 
 			this.getIconHTML() +
-			"<h2 class=\"team-district\">District " + district + "<br />" + dis_specialty + "</h2>";
+			"<h3 class=\"team-popup-header\">Tributes:</h3><ul>";
+			
+			var members = this.get("members")
+			for( var index = 0; index < members.length; index++)
+				output = output + "<li>" + members[index] + "</li>" 
+				
+			output = output + "</ul>";
 			
 			var status;
 			if(session.get("teamStats")[this.get("id")]["status"] == teamStatus.DEAD)
 				status = "Dead";
 			else
 				status = "Alive";
+	
+			var hometown = this.get("hometown")
 
-			output = output + "<h2 class=\"team-status\">Status:  " + status + "</h2><h2 class=\"team-status\">(123) 456-7890</h2></div><div class=\"team-popup-content\"><h1 class=\"team_title\">" + 
-			this.get("name") + 
-			"</h1><p class=\"team_bio\">" + 
-			this.get("bio") + 
-			"</p><h3 class=\"team-popup-header\">Tributes:</h3><code><ul id=\"double\"><span class=\"code-comment\"></span>"
-			
-			var members = this.get("members")
-			for( var index = 0; index < members.length; index++)
-				output = output + "<li>" + members[index] + "</li>" 
+			output = output + "</div><div class=\"team-popup-content\"><h1 class=\"team_title\">" + this.get("name") + "</h1>";
+			output = output + "<h2 class=\"team-district\">District " + district + " - " + dis_specialty + "</h2>";
+			output = output + "<h2 class=\"team-status\">Hometown: " + hometown + "</h2>";
+			output = output + "<h2 class=\"team-status\">Status:  " + status;
 
-			output = output + "</ul></code></div>";
+			if( status == "Dead" )
+				output = output + " - <span id=\"" + this.get("id") + "\" class=\"popup_vid_link clickable\">View News Coverage</span>";
+
+			output = output + "</h2>";
+
+			output = output + "<br /><h3 class=\"team-popup-header\">Team Bio:</h3><div class=\"team_bio\"><p>" + this.get("bio") + "</p></div>"
+
+			output = output + "</div>";
 			
 		return output;
 	},
@@ -88,13 +98,17 @@ var Team = Backbone.Model.extend({
 		// default quiet to false
 		quiet = typeof quiet !== 'undefined' ? quiet : false;
 		
-		logAction(logTypes.KILL, "<span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + "</span> has been killed!");
+		logAction(logTypes.KILL, "<span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + " has been killed!</span>");
 
 		if(!quiet) {
 			playSound('cannon.wav', 3000);
 
+		/*  We've decided to not auto-play videos
+		
 			// show video
-			this.showVideo();
+			if(debugActive("video_autoplay"))
+				this.showVideo();
+		*/
 		}
 	
 		// update object

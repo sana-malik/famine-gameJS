@@ -62,6 +62,16 @@ cursor:hand;
     border-radius: 12px;
 }
 
+.team_bio::-webkit-scrollbar-track {
+background:rgba(0,0,0, 0.2);
+}
+
+.team_bio::-webkit-scrollbar-thumb {
+	background:rgba(255,255,255, 0.8);
+	border-radius: 0px;
+	border: 1px solid #ddd;
+}
+
 /** MAIN LAYOUT **/
 #main_container {
 	width: 1000px; height: 600px;
@@ -456,56 +466,43 @@ padding: 0px;
 
 /* TEAM POP-UPS */
 .team-popup-sidebar {
-width: 125px;
+width: 195px;
 float: left;
 font-size: .9em;
+text-align: center;
 }
+
 
 .team-popup-sidebar ul {
 margin: 0px;
 padding-left: 20px;
 font-size: .8em;
+text-align: left;
+}
+
+.team-popup-sidebar h3 {
+text-align: left;
 }
 
 img.team-popup-img {
-width: 111px;
-height: 132px;
+width: 142px;
+height: 169px;
 margin-bottom: 10px;
 }
 
+
 .team-popup-content {
 width: 350px;
+padding-left: 20px;
 float:right;
 font-size: .8em;
+border-left: 1px solid #ccc;
 }
-
-
 
 .team-popup-content h1, .team-popup-content h3 {
 margin-top: 0px;
 padding-top: 0px;
 }
-
-
-.team-popup-content <code>ul{
-  width: 100%;
-  margin-bottom:20px;
-  overflow:hidden;
-  margin-top: 0px;
-  padding-top: 0px;
-}
-.team-popup-content li {
-  line-height:1.5em;
-  float:left;
-  display:inline;
-  font-family: 'Open Sans';
-  font-size: 1em;
-}
-#double li  { 
-  width:50%; 
-  margin-left: -30px !important;
-  }
-
 
 .team-popup-content h3 {
 font-weight: bold;
@@ -513,6 +510,14 @@ font-size: 1em;
 margin-bottom: 0px;
 padding-bottom: 0px;
 }
+
+.team-popup-header {
+font-size: 1em;
+margin: 0px;
+padding: 0px;
+margin-top: -15px;
+}
+
 
 h1.team_title {
 font-size: 1.6em;
@@ -524,17 +529,41 @@ margin: 0px;
 font-size: .9em;
 color: #444;
 font-weight: normal;
-margin-left: 10px;
 }
 
 .team-popup-sidebar .team-status, .team-popup-sidebar .team-district {
 padding-bottom: 5px;
 }
 
-p.team_bio {
+.team_bio {
+width: 350px;
+height: 185px;
 display: block;
+overflow-y: auto;
 }
 
+.team_bio p {
+padding-right: 10px;
+}
+
+.solve-popup {
+padding: 5px 20px;
+}
+
+.solve-popup h1 {
+text-align: center;
+}
+
+.popup_vid_link.clickable {
+	color: #444;
+	text-decoration: underline;
+}
+
+.popup_vid_link:hover {
+	text-decoration: none;
+	cursor: hand;
+	color: #8c909b;
+}
 
 /* POPUP */
 #popup_container {
@@ -549,9 +578,9 @@ display: block;
 	position:absolute;
 	top: 50%; left: 50%;
 	background-color: #FFFFFF;
-	width: 500px;
-	height: 300px;
-	margin: -150px 0 0 -250px;
+	width: 600px;
+	height: 340px;
+	margin: -170px 0 0 -300px;
 	color: #000;
 	padding: 10px;		
 	background:rgba(255,255,255);
@@ -564,8 +593,8 @@ display: block;
 }
 
 #popup_content .content {
-	width: 480px;
-	height: 280px;
+	width: 580px;
+	height: 330px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
@@ -803,6 +832,6 @@ font-family: 'Open Sans', Arial,  sans-serif;
 letter-spacing: .06em;
 }
 
-#sidebar, ol#toc a, .hint_name, .puzzle_data, h2.puzzle_title, #filters {
+#sidebar, .hint_name, .puzzle_data, h2.puzzle_title, #filters, .solve-popup h1, h1.team_title {
 font-family: 'Orbitron', Verdana, sans-serif;
 }
