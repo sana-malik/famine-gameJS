@@ -99,7 +99,10 @@ var Puzzle = Backbone.Model.extend({
 				// skin change after clock puzzle solved
 				if (!miniSolve && this.get("name") === "The Clock") { // activate new skin
 					session.set("rebellionTheme", true);
-					$("head").append('<link rel="stylesheet" type="text/css" href="css/rebellion.css">');
+					$("head").append('<link rel="stylesheet" type="text/css" href="css/r.css">');
+				}
+				else if (!miniSolve && this.get("name") === "Tracker Jackers") {
+					$("head").append('<link rel="stylesheet" type="text/css" href="css/tj.css">')
 				}
 
 				// If server saving is not verbose, we need to at least save to the server when the answer is given

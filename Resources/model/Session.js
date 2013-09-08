@@ -90,6 +90,8 @@ var Session = Backbone.Model.extend({
 		var puzStats = $.extend(true, {}, this.get("puzzleStats"));
 		$.each(puzzles, function(name, puzzle) {
 			if (puzStats[name]["status"] == puzzleStatus.INACTIVE && puzzle.get("start_code") === start_code) {
+				// remove tracker jacker theme if its there
+				$('head > link[href="css/tj.css"]').remove();
 				var timerID = PuzzleTimer(name);
 
 				var startTime = getCurrentDateTime();
