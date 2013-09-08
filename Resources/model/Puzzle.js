@@ -145,6 +145,19 @@ var Puzzle = Backbone.Model.extend({
 			if (!miniSolve) response += "<strong>" + entry + "</strong> - " + this.get("answers")[entry]["response"] + "</div>";
 			else response += "You have solved the puzzle!</div>";
 		}
+		else if (this.get("meta")) { // if this is a meta, check if it's in the answers for an active mini
+			var minis = session.getActivePuzzles();
+			var that = this;
+			var found = false;
+			$.each(minis, function(index, name) {
+				if (entry in puzzles[name].get("answers") && that.get("name") != name) {
+					response += "Enter <strong>" + entry + "</strong> into the answer box for the mini: " + name + ".</div>";
+					found = true;
+					return false;
+				}
+			});
+			if (!found) response += "<strong>" + entry + "</strong> is not the answer.</div>";
+		}
 		else {
 			response += "<strong>" + entry + "</strong> is not the answer.</div>"
 		}
