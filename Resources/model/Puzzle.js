@@ -41,15 +41,18 @@ var Puzzle = Backbone.Model.extend({
 				$("#"+nameToId(this.get("name")) + " .answer_box").hide();
 				
 				// allot fans & log
-				if (!give_up) {
+				if (!give_up && !miniSolve) {
 					session.set("fans", session.get("fans") + stats[this.get("name")]["current_worth"]);
 					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"><tr><td>Answer:</td><td>"+entry+"</td></tr><tr><td>Solve Time:</td><td>" + Math.round((getCurrentDateTime()-session.get("puzzleStats")[this.get("name")]["start_time"])/60000) + " minutes</td></tr><tr><td>Fans Gained:</td><td>" + stats[this.get("name")]["current_worth"] + "</td></tr><tr></table>");
+				}
+				else if (miniSolve) {
+					logAction(logTypes.PUZZLE, "You solved <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span>.");	
 				}
 				else
 					logAction(logTypes.PUZZLE, "Thresh helped you with <span id=\"" + this.get("name") + "\" class=\"puzzle_link clickable\">" + this.get("name") + "</span><table class=\"history-table\"></table>");
 				stats[this.get("name")]["current_fans"] = session.get("fans");
 				
-				// cnongrats message
+				// congrats message
 				if (!miniSolve) showPopup(solve_text + "<br><br>");
 
 				// puzzle results
