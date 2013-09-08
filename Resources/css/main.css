@@ -554,6 +554,16 @@ padding: 5px 20px;
 text-align: center;
 }
 
+.popup_vid_link.clickable {
+	color: #444;
+	text-decoration: underline;
+}
+
+.popup_vid_link:hover {
+	text-decoration: none;
+	cursor: hand;
+	color: #8c909b;
+}
 
 /* POPUP */
 #popup_container {
