@@ -98,7 +98,7 @@ var Team = Backbone.Model.extend({
 		// default quiet to false
 		quiet = typeof quiet !== 'undefined' ? quiet : false;
 		
-		logAction(logTypes.KILL, "<span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + "</span> has been killed!");
+		logAction(logTypes.KILL, "<span id=\"" + this.get("id") + "\" class=\"vid_link clickable\">" + this.get("name") + " has been killed!</span>");
 
 		if(!quiet) {
 			playSound('cannon.wav', 3000);
