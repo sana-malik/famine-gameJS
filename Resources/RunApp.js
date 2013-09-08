@@ -103,7 +103,7 @@ $(document).ready(function() {
 		$("#info.tab").addClass("active");
 	});
 	
-	$("#popup_content").on("click", ".vid_link", function(e) { 
+	$("#popup_content").on("click", ".popup_vid_link", function(e) { 
 		teams[$(e.currentTarget).attr("id")].showVideo();
 	});
 	

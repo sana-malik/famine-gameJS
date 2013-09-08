@@ -256,8 +256,7 @@ var Puzzle = Backbone.Model.extend({
 				teams[id].die(deathVolume);		
 				kill = true;		
 
-				if(!debugActive("video_autoplay"))
-					showPopup("<span id=\"" + id + "\" class=\"vid_link clickable\">View a message from the Capitol.</span><br><br>");
+				showPopup("<span id=\"" + id + "\" class=\"popup_vid_link clickable\">Breaking news from the Capitol!</span><br><br>");
 
 			}
 		});
