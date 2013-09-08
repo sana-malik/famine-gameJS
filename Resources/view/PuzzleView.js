@@ -165,7 +165,12 @@ var PuzzleSessionView = Backbone.View.extend({
 		var stat = this.model.get("puzzleStats")[this.puzzleName];	
 		$(that.el).html(that.template(stat));
 		var current_time = getCurrentDateTime();
+
 		var elapsed = (current_time-session.get("puzzleStats")[this.puzzleName]["start_time"])/1000;
+		if ("end_time" in session.get("puzzleStats")[this.puzzleName]) {
+			elapsed = (session.get("puzzleStats")[this.puzzleName]["end_time"] - session.get("puzzleStats")[this.puzzleName]["start_time"])/1000;
+		}
+		
 		if ( debugActive() )
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 

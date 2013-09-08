@@ -58,9 +58,24 @@ $(document).ready(function() {
   		}*/ // todo(sana): add this function as option override at call site
 	}
 
-	// initialize puzzles that already exist
+	// initialize puzzles that already exist + their timers
 	$.each(session.get("puzzleStats"), function(name, puzStat) {
 		if (puzStat["status"] != puzzleStatus.INACTIVE) {
+			// fix start and end strings to objects
+			var start = puzStat["start_time"];
+			puzStat["start_time"] = parseDateTimeString(start);
+
+			if ("end_time" in puzStat) {
+				var end = puzStat["end_time"];
+				puzStat["end_time"] = parseDateTimeString(end);
+			}
+
+			// create timers for active puzzles
+			if (puzStat["status"] == puzzleStatus.ACTIVE) {
+				puzStat["timerID"] = PuzzleTimer(name);
+			}
+
+			// create div for the puzzle
 			$("#main").append("<div class=\"main puzzle\" id=\""+nameToId(name) + "\"></div>");
 			var puzView = new PuzzleView({el : ".puzzle#"+nameToId(name), puzzleName : name});
 		}

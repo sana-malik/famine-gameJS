@@ -116,17 +116,19 @@ function PuzzleTimer(puzzleId, interval){
 	var increment = function() {
 		var stats = $.extend(true,{},session.get("puzzleStats"));
 
-		var hints = puzzles[puzzleId].get("hints");
+		var timediff = 1;
+		if ( debugActive() )
+			timediff *= parameters["debug_parameters"]["time_multiplyer"];
+		var elapsed = timediff*(getCurrentDateTime() - stats[puzzleId]["start_time"])/1000;
+		
+		// update elapsed time in view
+		$(".main.puzzle#" + nameToId(puzzleId) + " #elapsed_time").html(formatTime(elapsed, true));
 
+		var hints = puzzles[puzzleId].get("hints");
 		// go through hints & check for status changes
 		$.each(hints, function(name, hint) {
-			var elapsed = (getCurrentDateTime() - stats[puzzleId]["start_time"])/60000;
-			var timediff = 1;
-			if ( debugActive() )
-				timediff *= parameters["debug_parameters"]["time_multiplyer"];
-
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
-				var remaining = hint.get("start_time")/timediff - elapsed;
+				var remaining = hint.get("start_time") - elapsed/60;
 
 				if (remaining <= 0) {
 					// only notify if active, not archived
@@ -150,8 +152,8 @@ function PuzzleTimer(puzzleId, interval){
 function getCurrentDateTime() {
 	var date = new Date().valueOf();
 
-	if ( debugActive() )
-		date += parameters.time_diff;
+	/*if ( debugActive() )
+		date += parameters.time_diff;*/
 
 	date = new Date(date);
 	
@@ -196,6 +198,20 @@ function getCurrentDateTimeString(format) {
 		
 	
 	return out;
+}
+
+function parseDateTimeString(str) { // in format year-month-dayThour:minute:secondsZ
+	str = str.replace(/[TZ:-]/g," ")
+	var date = str.split(" ");
+	var year = date[0];
+	var month = date[1] - 1; // because JS is weird and uses 0 - 11 for months not 1 - 12
+	var day = date[2];
+	var hour = date[3] - 4; // to account for EDT (GMT-4)
+	var minutes = date[4];
+	var seconds = date[5];
+
+	return new Date(year, month, day, hour, minutes, seconds);
+
 }
 
 function saveServerSession(mySession, myTeam) {
