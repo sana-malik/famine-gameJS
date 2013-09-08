@@ -106,7 +106,7 @@ var Team = Backbone.Model.extend({
 		/*  We've decided to not auto-play videos
 		
 			// show video
-			if(debugActive("video_autoplay"))
+			if(debugActive("video_autoplay") && !quiet)
 				this.showVideo();
 		*/
 		}

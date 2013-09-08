@@ -263,17 +263,15 @@ var Puzzle = Backbone.Model.extend({
 	},
 
 	killTeams : function(deathVolume) {
-		var kill = false;
 		$.each(this.get("teams_killed"), function(index, id) {
 			if (tid === id) {
 				// this is current team! don't do anything! :)
 			}
 			else {
 				teams[id].die(deathVolume);		
-				kill = true;		
+				if (!deathVolume) showPopup("<span id=\"" + id + "\" class=\"popup_vid_link clickable\">Breaking news from the Capitol!</span><br><br>");
 
-				showPopup("<span id=\"" + id + "\" class=\"popup_vid_link clickable\">Breaking news from the Capitol!</span><br><br>");
-
+				deathVolume = true;	
 			}
 		});
 	},
