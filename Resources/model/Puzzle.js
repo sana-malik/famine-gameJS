@@ -69,7 +69,7 @@ var Puzzle = Backbone.Model.extend({
 				this.unlockResources();
 
 				// sounds!
-				if (this.get("teams_killed").length === 0) {
+				if (!miniSolve && this.get("teams_killed").length === 0) {
 					playSound("nokillanswer.wav", 5000);
 				}
 
