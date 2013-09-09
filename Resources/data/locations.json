@@ -39,7 +39,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : ["Cornucopia- Know Thy Enemy", "Cornucopia- Techniques", "Cornucopia- Bend the Rules", "Cornucopia- Finishing Move"]
+	"puzzles" : ["Cornucopia - Know Thy Enemy", "Cornucopia - Techniques", "Cornucopia - Bend the Rules", "Cornucopia - Finishing Move"]
 },
 "George Mason Memorial" : {
 	"name" : "George Mason Memorial",
