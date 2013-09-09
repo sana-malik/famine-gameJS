@@ -151,8 +151,10 @@ function PuzzleTimer(puzzleId, interval){
 function getCurrentDateTime() {
 	var date = new Date().valueOf();
 
-	/*if ( debugActive() )
-		date += parameters.time_diff;*/
+	if ( debugActive() ) {
+		if (typeof session !== 'undefined') date += session.get("debug.timediff");
+		else date += parameters.start_time - new Date();
+	}
 
 	date = new Date(date);
 	

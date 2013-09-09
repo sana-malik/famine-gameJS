@@ -167,7 +167,6 @@ function loadParameters() {
 			);
 
 	params.start_time = start_time;
-	params.time_diff = start_time - new Date();
 	
 	return params;
 }

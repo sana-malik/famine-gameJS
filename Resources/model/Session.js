@@ -49,6 +49,7 @@ var Session = Backbone.Model.extend({
 			this.set("unreadCount", 0);
 			this.set("lastStartCode","");
 			this.set("rebellionTheme", false);
+			this.set("debug.timediff", parameters.start_time - new Date())
 		}
 		else {
 			this.set("fans", sessionObj["fans"]);
@@ -66,6 +67,7 @@ var Session = Backbone.Model.extend({
 			}
 			this.set("lastStartCode",sessionObj["lastStartCode"]);
 			this.set("rebellionTheme", sessionObj["rebellionTheme"]);
+			this.set("debug.timediff", sessionObj["debug.timediff"])
 		}
 	},
 
