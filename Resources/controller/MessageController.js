@@ -1,28 +1,21 @@
 var MessageController = {
-	startTimers: function(puzzle, accelerate, offset) {
-		var latest_time = 0;
-
+	enqueue: function(puzzle) {
 		if (puzzle in messages) {
-			accelerate = typeof accelerate !== 'undefined' ? accelerate : false;
-			offset = typeof offset !== 'undefined' ? offset : 0;
-
-			var time_multiplyer = 60000;
-
-			if( accelerate )
-				time_multiplyer = 1000;
-
-			if ( debugActive() )
-				time_multiplyer /= parameters["debug_parameters"]["time_multiplyer"];
+			var queue = session.get("messageQueue");
+			var latest = 0;
+			$.each(queue, function(index, message) {
+				if (message["time"] > latest) latest = message["time"];
+			});
 
 			$.each(messages[puzzle], function(msgId, message) {
-				setTimeout(function() {MessageController.notify(message);}, (message["time"]+offset)*time_multiplyer);
-
-				if ( message["time"] > latest_time)
-					latest_time = message["time"];
+				message["time"] = latest + message["time"];
+				queue.push(message);
 			});
-		}
 
-		return latest_time;
+			session.set("messageQueue", queue);
+
+			saveSession();
+		}
 	},
 
 	notify: function(message) {
@@ -45,6 +38,32 @@ var MessageController = {
 		logAction(logTypes.MESSAGE, "A message from " + message["sender"] + " - " + message["content"], message["id"]);
 	
  		// Save session
+		saveSession();
+	},
+
+	checkQueue: function() {
+		if (typeof session.get("lastSolved") === "undefined") return;
+	
+		var lastSolveTime = session.get("puzzleStats")[session.get("lastSolved")]["end_time"];
+		var elapsedMin = parameters["debug_parameters"]["time_multiplyer"]*(getCurrentDateTime() - lastSolveTime)/60000;
+		
+		var queue = session.get("messageQueue");
+		var toRemove = [];
+		$.each(queue, function(index, message) {
+			if (message["time"] <= elapsedMin) {
+				MessageController.notify(message);
+				toRemove.push(index);
+			} 
+		});
+	
+		var offset = 0;
+		$.each(toRemove, function(index, i) {
+			queue.splice(i-offset, 1);
+			offset += 1;
+		});
+
+		session.set("messageQueue", queue);
+
 		saveSession();
 	}
 }

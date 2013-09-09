@@ -73,7 +73,7 @@ var Puzzle = Backbone.Model.extend({
 				if( nextLoc < locOrder.length )
 					accelerate_messages = locations[locOrder[nextLoc]].get("time_closed") < getCurrentDateTimeString(timeFormat.TWENTYFOUR);
 				
-				var latest_time = MessageController.startTimers(this.get("name"), accelerate_messages); 
+				MessageController.enqueue(this.get("name")); 
 
 				// remove timer
 				clearInterval(stats[this.get("name")]["timerID"]);
@@ -84,7 +84,7 @@ var Puzzle = Backbone.Model.extend({
 				});
 
 
-				if (!miniSolve) stats = this.advanceLocation(stats, latest_time);
+				if (!miniSolve) stats = this.advanceLocation(stats);
 
 				// update the stats
 				session.set("puzzleStats",stats);
@@ -195,7 +195,7 @@ var Puzzle = Backbone.Model.extend({
 		}
 	},
 
-	advanceLocation : function(stats, offset) {
+	advanceLocation : function(stats) {
 		// advance location if this is a location advancer puzzle
 		// also advance location if this is the last active puzzle in a non-meta chain
 		if (this.get("advance_location") || (session.getActivePuzzles().length === 1 && puzzlesWithStartCode(this.get("start_code")) > 1)) {
@@ -203,7 +203,7 @@ var Puzzle = Backbone.Model.extend({
 
 			while (locations[locOrder[currentLoc]].get("time_closed") < getCurrentDateTimeString(timeFormat.TWENTYFOUR)) {
 				// We need to skip over the puzzles appropriately as well, e.g. play cannon sounds for killed teams, show videos, etc.
-				stats = this.skipLocation(currentLoc, stats, offset);
+				stats = this.skipLocation(currentLoc, stats);
 				currentLoc++;
 			}
 			session.set("currentLocation", currentLoc);
@@ -237,9 +237,7 @@ var Puzzle = Backbone.Model.extend({
 		return stats;
 	},
 
-	skipLocation : function(loc_index, stats, offset) {
-		offset = typeof offset !== 'undefined' ? offset : 0;
-
+	skipLocation : function(loc_index, stats) {
 	 	$.each( locations[locOrder[loc_index]].get("puzzles"), function(index, puzzle_name) {
 	 		if ( !(puzzle_name in puzzles) ) 
 	 			console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
@@ -257,7 +255,7 @@ var Puzzle = Backbone.Model.extend({
 				// puzzle results
 				puzzle.killTeams(deathVolume.QUIET);
 				puzzle.unlockResources();
-				offset = offset + MessageController.startTimers(puzzle.get("name"), true, offset); 
+				MessageController.enqueue(puzzle.get("name")); 
 
 				// remove timer
 				clearInterval(stats[puzzle.get("name")]["timerID"]);

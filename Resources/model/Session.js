@@ -50,6 +50,8 @@ var Session = Backbone.Model.extend({
 			this.set("lastStartCode","");
 			this.set("rebellionTheme", false);
 			this.set("debug.timediff", parameters.start_time - new Date())
+			this.set("messageQueue", []);
+			this.set("lastSolved", undefined);
 		}
 		else {
 			this.set("fans", sessionObj["fans"]);
@@ -67,7 +69,9 @@ var Session = Backbone.Model.extend({
 			}
 			this.set("lastStartCode",sessionObj["lastStartCode"]);
 			this.set("rebellionTheme", sessionObj["rebellionTheme"]);
-			this.set("debug.timediff", sessionObj["debug.timediff"])
+			this.set("debug.timediff", sessionObj["debug.timediff"]);
+			this.set("messageQueue", sessionObj["messageQueue"]);
+			this.set("lastSolved", sessionObj["lastSolved"]);
 		}
 	},
 

@@ -81,6 +81,9 @@ $(document).ready(function() {
 		}
 	});
 
+	// set up message controller
+	setInterval(MessageController.checkQueue, 1000);
+
 	// if rebellion theme is enabled, add it
 	if (session.get("rebellionTheme")) {
 		$("head").append('<link rel="stylesheet" type="text/css" href="css/rebellion.css">');
