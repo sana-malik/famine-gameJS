@@ -68,6 +68,11 @@ var Puzzle = Backbone.Model.extend({
 				this.killTeams();
 				this.unlockResources();
 
+				// sounds!
+				if (this.get("teams_killed").length === 0) {
+					playSound("nokillanswer.wav", 5000);
+				}
+
 				var accelerate_messages = false;
 				var nextLoc = session.get("currentLocation") + 1;
 				if( nextLoc < locOrder.length )
