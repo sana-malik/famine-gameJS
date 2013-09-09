@@ -122,15 +122,16 @@ var Puzzle = Backbone.Model.extend({
 			}
 			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer
 				// reveal skipped hints
-				puzzle = this;
+				var puzzle = this;
 				hints_to_skip = puzzle.get("answers")[entry]["skipped_hints"];
 				var time_to_advance = 0;
 
+				var elapsedMin = parameters["debug_parameters"]["time_multiplyer"]*(getCurrentDateTime() - stats[puzzle.get("name")]["start_time"])/60000;
 				$.each(hints_to_skip, function(index, hint_name)  {
 					if (hint_name in puzzle.get("hints")) {
 						if ( stats[puzzle.get("name")]["hintStats"][hint_name]["status"] != hintStatus.REVEALED ) {
 							stats[puzzle.get("name")]["hintStats"][hint_name]["status"] = hintStatus.SKIPPED;
-							var time_remaining = stats[puzzle.get("name")]["hintStats"][hint_name]["remaining"];
+							var time_remaining = puzzle.get("hints")[hint_name].get("start_time") - elapsedMin;
 							if (time_remaining > time_to_advance) {
 								time_to_advance = time_remaining;
 							}
@@ -142,9 +143,11 @@ var Puzzle = Backbone.Model.extend({
 				});
 
 				// advance timers for unskipped hints
-				$.each(stats[this.get("name")]["hintStats"], function(hname, hint) {
-					if ( !(hint["name"] in hints_to_skip) )
-						hint["remaining"] -= time_to_advance;
+				$.each(puzzle.get("hints"), function(hname, hint) {
+					if ( !(hname in hints_to_skip) ) {
+						hint.set("start_time", hint.get("start_time") - time_to_advance);
+						hint.set("end_time", hint.get("end_time") - time_to_advance);
+					}
 				});
 
 				// update the stats
