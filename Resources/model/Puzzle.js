@@ -135,7 +135,7 @@ var Puzzle = Backbone.Model.extend({
 					if (hint_name in puzzle.get("hints")) {
 						if ( stats[puzzle.get("name")]["hintStats"][hint_name]["status"] != hintStatus.REVEALED ) {
 							stats[puzzle.get("name")]["hintStats"][hint_name]["status"] = hintStatus.SKIPPED;
-							var time_remaining = puzzle.get("hints")[hint_name].get("start_time");
+							var time_remaining = puzzle.get("hints")[hint_name].get("end_time");
 							if (time_remaining > time_to_advance) {
 								time_to_advance = time_remaining;
 							}
