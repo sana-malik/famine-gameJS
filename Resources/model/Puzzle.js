@@ -56,8 +56,8 @@ var Puzzle = Backbone.Model.extend({
 				if (!miniSolve) {
 					var title = "CORRECT!";
 					if (give_up) title = "Saved by Thresh!";
-
-					showPopup("<div class=\"solve-popup\"><h1 id=\"popup_solve_text\">" + title + "</h1><hr /><p class=\"solve-text\">" + solve_text + "</p></div><br><br>");
+					$('#popup_body').addClass('solve-popup');
+					showPopup("<h1 id=\"popup_solve_text\">" + title + "</h1><hr /><p>" + solve_text + "</p>");
 					
 				}
 
@@ -284,7 +284,7 @@ var Puzzle = Backbone.Model.extend({
 			}
 			else {
 				teams[id].die(deathVolume);		
-				if (!deathVolume) showPopup("<span id=\"" + id + "\" class=\"popup_vid_link clickable\">Breaking news from the Capitol!</span><br><br>");
+				if (!deathVolume) showPopup("<div id=\"" + id + "\" class=\"video-alert popup_vid_link\"><img src=\"../images/gui/video_icon.png\"><p>Click to view video coverage of this gruesome kill!</p></div>");
 
 				deathVolume = true;	
 			}
