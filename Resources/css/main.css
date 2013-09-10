@@ -97,7 +97,7 @@ background:rgba(0,0,0, 0.2);
 #sidebar {
 	position:absolute;
 	left: 10px; top:70px;
-	width: 225px; height: 345px;
+	width: 225px; height: 350px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 10px;
@@ -375,7 +375,7 @@ margin: 0px;
 	background-color: rgba(255,255,255,.2);
 	color: #FFFFFF;
 	padding: 5px;
-	margin: 0px 2px;
+	margin: 0px 1px;
 	border-radius: 5px;
 }
 
@@ -666,6 +666,7 @@ font-size: 1em;
 margin-bottom: 0px;
 padding-bottom: 0px;
 margin-left: 10px;
+letter-spacing: 2px;
 }
 
 .hint_text {
@@ -836,6 +837,6 @@ font-family: 'Open Sans', Arial,  sans-serif;
 letter-spacing: .06em;
 }
 
-#sidebar, .hint_name, .puzzle_data, h2.puzzle_title, #filters, .solve-popup h1, h1.team_title {
+#sidebar, .hint_name, .puzzle_data, h2.puzzle_title, .filter, .solve-popup h1, h1.team_title {
 font-family: 'Orbitron', Verdana, sans-serif;
 }

@@ -11,13 +11,8 @@ body {
   direction:rtl;
 }
 
-/*
 #main_container {
-	background: url("../images/gui/background-tj.jpg");
-}*/
-
-#main_container {
-	background: url("../images/gui/gif3.gif");
+	background: url("../images/gui/background-tj.gif");
 }
 
 #topbar {
