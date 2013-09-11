@@ -707,13 +707,14 @@ padding-bottom: 30px;
 font-size: 1em;
 margin-bottom: 0px;
 padding-bottom: 0px;
-margin-left: 10px;
 letter-spacing: 2px;
 }
 
 .hint_text {
 margin-top: 5px;
+margin-left: 20px;
 }
+
 
 .puzzle_data {
 /*font-family: 'Orbitron', 'Bank Gothic';*/
