@@ -57,7 +57,6 @@ function getMetaName(start) {
 function showPopup(content) {
 	$("#popup_container").show();
 	$("#popup_content > .content").append(content);
-	$('#popup_body').removeClass('solve-popup');
 	$("#close_popup").click(hidePopup);
 }
 
@@ -70,6 +69,7 @@ function showAlert(content) {
 function hidePopup() {
 	$("#popup_content > .content").empty();
 	$("#popup_container").hide();
+	$('#popup_body').removeClass('solve-popup');
 	$("#start_input").focus();
 }
 
