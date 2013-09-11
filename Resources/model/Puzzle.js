@@ -206,10 +206,12 @@ var Puzzle = Backbone.Model.extend({
 		if (this.get("advance_location") || (session.getActivePuzzles().length === 1 && puzzlesWithStartCode(this.get("start_code")) > 1)) {
 			var currentLoc = session.get("currentLocation") + 1;
 
+			var showSkipTitle = true;
 			while (locations[locOrder[currentLoc]].get("time_closed") < getCurrentDateTimeString(timeFormat.TWENTYFOUR)) {
 				// We need to skip over the puzzles appropriately as well, e.g. play cannon sounds for killed teams, show videos, etc.
-				stats = this.skipLocation(currentLoc, stats);
+				stats = this.skipLocation(currentLoc, stats, showSkipTitle);
 				currentLoc++;
+				showSkipTitle = false;
 			}
 			session.set("currentLocation", currentLoc);
 
@@ -242,7 +244,8 @@ var Puzzle = Backbone.Model.extend({
 		return stats;
 	},
 
-	skipLocation : function(loc_index, stats) {
+	skipLocation : function(loc_index, stats, displayTitle) {
+		if (displayTitle) showPopup("While you were occupied, the following also happened in the arena: ");
 	 	$.each( locations[locOrder[loc_index]].get("puzzles"), function(index, puzzle_name) {
 	 		if ( !(puzzle_name in puzzles) ) 
 	 			console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
@@ -278,15 +281,17 @@ var Puzzle = Backbone.Model.extend({
 	},
 
 	killTeams : function(deathVolume) {
+		var showpopup = true;
 		$.each(this.get("teams_killed"), function(index, id) {
 			if (tid === id) {
 				// this is current team! don't do anything! :)
 			}
 			else {
 				teams[id].die(deathVolume);		
-				if (!deathVolume) showPopup("<div id=\"" + id + "\" class=\"video-alert popup_vid_link\"><img src=\"../images/gui/video_icon.png\"><p>Click to view video coverage of this gruesome kill!</p></div>");
+				if (showpopup) showPopup("<div id=\"" + id + "\" class=\"video-alert popup_vid_link\"><img src=\"../images/gui/video_icon.png\"><p>Click to view video coverage of this gruesome kill!</p></div>");
 
 				deathVolume = true;	
+				showpopup = false;
 			}
 		});
 	},
