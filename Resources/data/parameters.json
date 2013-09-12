@@ -13,7 +13,8 @@
     
     "ephemeral_session" : true,
     "verbose_server" : true,
-    "video_autoplay" : true
+    "video_autoplay" : true,
+    "enable_encryption" : true
 }, 
 
 "self_defense_vid" : "movies/2b.html"

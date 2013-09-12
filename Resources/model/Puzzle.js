@@ -26,11 +26,19 @@ var Puzzle = Backbone.Model.extend({
 				give_up = true;
 		}
 
+		var encryptedEntry = "";
+		if (entry !== "")
+			encryptedEntry = MD5(entry);
+
 		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "") { // puzzle already solved!
 			return;
 		}
-		else if (give_up || entry in this.get("answers") || miniSolve) {
-			if (give_up || miniSolve || this.get("answers")[entry]["type"] === answerTypes.FINAL) { // answer is correct final answer
+		else if (give_up || entry in this.get("answers") || encryptedEntry in this.get("answers") || miniSolve) {
+			var finala = (this.get("answers")[encryptedEntry] && this.get("answers")[encryptedEntry]["type"] === answerTypes.FINAL);
+                        finala = finala || (this.get("answers")[entry] && this.get("answers")[entry]["type"] === answerTypes.FINAL);
+                        var partial = (this.get("answers")[encryptedEntry] && this.get("answers")[encryptedEntry]["type"] === answerTypes.PARTIAL);
+			partial = partial || (this.get("answers")[entry] && this.get("answers")[entry]["type"] === answerTypes.PARTIAL);
+			if (give_up || miniSolve || finala) { // answer is correct final answer
 				// Set solve text appropriately if this puzzle would kill your team
 				var solve_text = this.get("solve_text");
 				if (this.get("self_solve_text") != "" && $.inArray(tid, this.get("teams_killed")) != -1 )
@@ -100,6 +108,8 @@ var Puzzle = Backbone.Model.extend({
 					$.each(active, function(index, pname) {
 						if (!puzzles[pname].get("meta")) {
 							puzzles[pname].checkAnswer(entry, true);
+							// TODO: test the line below -- I'm not sure it's right
+							puzzles[pname].checkAnswer(encryptedEntry, true);
 						}
 					});
 				}
@@ -125,10 +135,13 @@ var Puzzle = Backbone.Model.extend({
 					this.returnToParentView();
 				}
 			}
-			else if (this.get("answers")[entry]["type"] === answerTypes.PARTIAL) { // answer is correct partial answer
+			else if (partial) { // answer is correct partial answer
 				// reveal skipped hints
 				var puzzle = this;
-				hints_to_skip = puzzle.get("answers")[entry]["skipped_hints"];
+				if (puzzle.get("answers")[entry])
+					hints_to_skip = puzzle.get("answers")[entry]["skipped_hints"];
+				else
+					hints_to_skip = puzzle.get("answers")[encryptedEntry]["skipped_hints"];
 				var time_to_advance = 0;
 
 				$.each(hints_to_skip, function(index, hint_name)  {
@@ -157,8 +170,12 @@ var Puzzle = Backbone.Model.extend({
 				// update the stats
 				session.set("puzzleStats",stats);
 			}
-
-			if (!miniSolve) response += "<strong>" + entry + "</strong> - " + this.get("answers")[entry]["response"] + "</div>";
+			if (!miniSolve) {
+				if (this.get("answers")[encryptedEntry]) // TODO: test this also -- wasn't sure when it gets called
+					response += "<strong>" + entry + "</strong> - " + this.get("answers")[encryptedEntry]["response"] + "</div>";
+				else
+					response += "<strong>" + entry + "</strong> - " + this.get("answers")[entry]["response"] + "</div>";
+			}
 			else if (give_up) response += "Thresh helped you with this puzzle.</div>"
 			else response += "You have solved the puzzle!</div>";
 		}
@@ -167,7 +184,7 @@ var Puzzle = Backbone.Model.extend({
 			var that = this;
 			var found = false;
 			$.each(minis, function(index, name) {
-				if (entry in puzzles[name].get("answers") && that.get("name") != name) {
+				if ((entry in puzzles[name].get("answers") || encryptedEntry in puzzles[name].get("answers")) && that.get("name") != name) {
 					response += "Enter <strong>" + entry + "</strong> into the answer box for the mini: " + name + ".</div>";
 					found = true;
 					return false;

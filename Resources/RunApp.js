@@ -33,9 +33,9 @@ $(document).ready(function() {
 
 	// Set up models
 	teams = populateTeams();
-	locations = populateLocations(); 
+	locations = populateLocations(parameters["debug_parameters"].enable_encryption); 
 	resources = populateResources();
-	puzzles = populatePuzzles();
+	puzzles = populatePuzzles(parameters["debug_parameters"].enable_encryption);
 	messages = populateMessages();
 
 	session = initSession();
@@ -191,8 +191,13 @@ function populateTeams() {
 	return teams;
 }
 
-function populatePuzzles() {
-	var json = jsonToString(data_dir + 'puzzles.json');
+function populatePuzzles(encryption) {
+	var json;
+
+	if (!encryption)
+		json = jsonToString(data_dir + 'puzzles.json');
+	else
+		json = Base64.decode(rot13(jsonToString(data_dir + 'puzzles_e.json')));
 
 	var puzzles = {};
 	var puzObjs = Ti.JSON.parse(json);
@@ -222,10 +227,16 @@ function populateMessages() {
 	return Ti.JSON.parse(json);
 }
 
-function populateLocations() {
-	var json = jsonToString(data_dir + 'locations.json')
+function populateLocations(encryption) {
+	var json;
+
+	if (!encryption)
+		json = jsonToString(data_dir + 'locations.json');
+	else
+		json = Base64.decode(rot13(jsonToString(data_dir + 'locations_e.json')));
+
 	var locObjs = Ti.JSON.parse(json);
-	
+
 	// Order of locations needs to be extracted first
 	locOrder = locObjs.order;
 	
