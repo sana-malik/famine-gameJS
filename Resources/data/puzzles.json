@@ -410,7 +410,7 @@
 		}
 	},
 "answers" : {
-	"ce9060fbe1c563dd84a898d8b6a37bfb" : {
+	"ritual" : {
 		"type" : "final",
 		"text" : "ritual",
 		"response" : "Congratulations, you have solved the puzzle!",
