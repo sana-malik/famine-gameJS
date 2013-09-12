@@ -189,6 +189,7 @@ var PuzzleView = Backbone.View.extend({
 			</div>\
 			<div class="content"><h2 class="puzzle_title"><%= name %></h2>\
 		<span class="flavor_text"><%= flavor_text %></span>\
+		<span class="solution_text"></span>\
 		<div class="hints"></div>\
 		</div></div>\
 		<div class="right-sidebar">\
@@ -227,6 +228,15 @@ var PuzzleView = Backbone.View.extend({
 		var self_text = puzzles[this.puzzleName].get("self_flavor_text")
 		if (self_text != "" && $.inArray(tid, puzzles[this.puzzleName].get("teams_killed")) != -1 )
 			$("#" + nameToId(this.puzzleName) + " .flavor_text").html(self_text)
+
+		var solution = ""
+		$.each(puzzles[this.puzzleName].get("answers"), function(name, answer) {
+			if(answer["type"] == "final")
+				solution = answer["text"]
+		});
+
+		if( debugActive("show_solutions") )
+			$("#" + nameToId(this.puzzleName) + " .solution_text").html("<br><br>Solution:\t" + solution)
 	},
 
 	render: function() {

@@ -248,6 +248,16 @@ var Puzzle = Backbone.Model.extend({
 		 		loc_desc = locations[locOrder[currentLoc]].get("self_flavor_text")
 		 	 
 		 	// Update location text
+		 	var location_text = locations[locOrder[currentLoc]].get("flavor_text")
+
+		 	if( debugActive("show_solutions") ) {
+		 		loc_desc = loc_desc + "<br>"
+				$.each( locations[locOrder[currentLoc]].get("puzzles"), function(index, puzzle) {
+					var start_code = puzzles[puzzle].get("start_code")
+					loc_desc = loc_desc + "<br>Start Code:\t" + start_code
+				});
+			}
+		 	
 		 	$("#main #main_screen .left-sidebar .content .location_description").html( loc_desc );
 
 			// if they are too early for the current location, display an alert
