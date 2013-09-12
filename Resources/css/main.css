@@ -601,6 +601,11 @@ padding-right: 10px;
 	overflow-y: auto;
 }
 
+.too_fast {
+	color: #FF0000;
+	font-weight: bold;
+}
+
 #popup_body.solve-popup{
 position: relative;
 top:15px;
