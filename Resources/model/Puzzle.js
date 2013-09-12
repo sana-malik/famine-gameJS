@@ -78,7 +78,7 @@ var Puzzle = Backbone.Model.extend({
 
 				// sounds!
 				if (!miniSolve && this.get("teams_killed").length === 0) {
-					playSound("nokillanswer.wav", 5000);
+					playSound("nokillanswer.wav", 4000);
 				}
 
 				var accelerate_messages = false;
