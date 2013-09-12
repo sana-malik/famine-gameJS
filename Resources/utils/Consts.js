@@ -1,7 +1,7 @@
 var puzzleStatus = {ACTIVE: "active", SKIPPED: "skipped", SOLVED: "solved", INACTIVE: "inactive", ARCHIVED: "archived"};
 var teamStatus = {DEAD: "dead"};
 var locationStatus = {VISITED: "visited", SKIPPED: "skipped", CURRENT: "current", UNVISITED: "unvisited"};
-var hintStatus = {LOCKED: "locked", AVAILABLE: "available", REVEALED: "revealed", SKIPPED: "skipped"};
+var hintStatus = {LOCKED: "locked", AVAILABLE: "available", REVEALED: "revealed", SKIPPED: "skipped", FREE: "free"};
 var answerTypes = {FINAL: "final", PARTIAL: "partial"};
 var screenTypes = {MAIN: "main", PUZZLE: "puzzle"}; 
 var resourceStatus = {LOCKED: "locked", UNLOCKED: "unlocked"};

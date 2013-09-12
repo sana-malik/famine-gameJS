@@ -127,23 +127,31 @@ function PuzzleTimer(puzzleId, interval){
 
 		var hints = puzzles[puzzleId].get("hints");
 		var changed = false;
+		var newHintFree = false;
 		// go through hints & check for status changes
 		$.each(hints, function(name, hint) {
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
 				var remaining = hint.get("start_time") - elapsed/60;
 
 				if (remaining <= 0) {
-					// only notify if active, not archived
-					if (stats[puzzleId]["status"] === puzzleStatus.ACTIVE) {
-						playSound("notify.wav", 500);
-						toastr.info("New hint available for " + puzzles[puzzleId].get("name") + "!");
-					}
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
 					changed = true;
+				}
+			} else if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.AVAILABLE) {
+				var remaining = hint.get("end_time") - elapsed/60;
+
+				if (remaining <= 0) { // hint is now free
+					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.FREE;
+					changed = true;
+					newHintFree = true;
 				}
 			}
 		});
 		if (changed) session.set("puzzleStats", stats);
+		if (newHintFree && stats[puzzleId]["status"] === puzzleStatus.ACTIVE) {
+			playSound("notify.wav", 500);
+			toastr.info("New hints available for " + puzzles[puzzleId].get("name") + "!");
+		}
 	}	
 
 	return setInterval(increment, interval);  // returns timer id	

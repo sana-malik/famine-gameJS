@@ -132,16 +132,12 @@ var HintView = Backbone.View.extend({
 		else {
 			$(that.el).parent().show();	
 			$(that.el).show();
-			if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.AVAILABLE) {
-				var button_text = 'Purchase Hint';
-				if (cost <= 0)
-					button_text = 'Reveal Free Hint';
-				var hint_html = '<button id=\"hint_button\">' + button_text + '</button>';
-				if (cost > 0)
-					hint_html += '<br /><span class="hint-cost">Cost: ' + cost + ' viewers</span>';
+			var status = session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"];
+			if (status === hintStatus.AVAILABLE) {
+				var hint_html = '<button id=\"hint_button\">Purchase Hint</button><br /><span class="hint-cost">Cost: ' + cost + ' viewers</span>';
 				$(that.el).children('.hint_text').html(hint_html);
 			}
-			else if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.SKIPPED) {
+			else if (status === hintStatus.SKIPPED || status === hintStatus.FREE) {
 				$(that.el).children('.hint_text').html('<button id=\"hint_button\">Reveal Free Hint</button>');
 			}
 			else {
