@@ -254,7 +254,7 @@ var Puzzle = Backbone.Model.extend({
 			var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
 
 			if (!debugActive() && getCurrentDateTimeString(timeFormat.TWENTYFOUR) < locations[locOrder[currentLoc]].get("time_open")) {
-				showAlert("oops! you're so fast. go reward yourself with a burger until " + locations[locOrder[currentLoc]].get("time_open"))
+				showPopup('<div class="too_fast">Please call the Gamemakers at (XXX) XXX-XXXX before proceeding to the next location.</div>')
 			}
 		}
 
