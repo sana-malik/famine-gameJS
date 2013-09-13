@@ -20,7 +20,17 @@ var MessageController = {
 
 	notify: function(message) {
 		// show toast notification
-		toastr.info('A message has arrived from ' + message["sender"] + '!');
+		toastr.info('A message has arrived from ' + message["sender"] + '!',"",
+			{onclick: function(e) {
+				$("#toc > .current").removeClass("current");
+				$("#toc > #tab_history").addClass("current");
+
+				$("#main_container > .active.tab").removeClass("active");
+				$("#history.tab").addClass("active");
+
+				toastr.clear($('.toast:contains("A message has arrived from")'));
+			}
+		});
 
 		// todo(sana): play a sound
 		playSound("pling.wav", 500);

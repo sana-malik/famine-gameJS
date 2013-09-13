@@ -149,8 +149,16 @@ function PuzzleTimer(puzzleId, interval){
 		});
 		if (changed) session.set("puzzleStats", stats);
 		if (newHintFree && stats[puzzleId]["status"] === puzzleStatus.ACTIVE) {
-			playSound("notify.wav", 500);
-			toastr.info("New hints available for " + puzzles[puzzleId].get("name") + "!");
+			if ($('.toast-message:contains("' + puzzles[puzzleId].get("name") + '")').length === 0) { // if a notification isn't already shown for this puzzle
+				playSound("notify.wav", 500);
+				toastr.info("New hints available for " + puzzles[puzzleId].get("name") + "!","",
+					{onclick: function(e) {
+						$(".main.active").removeClass("active");
+						$(".main#"+nameToId(puzzleId)).addClass("active");
+						toastr.clear($('.toast:contains("' + puzzles[puzzleId].get("name") + '")'));
+					}
+				});
+			}
 		}
 	}	
 
