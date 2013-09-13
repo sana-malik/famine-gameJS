@@ -30,11 +30,12 @@ var ResourceView = Backbone.View.extend({
 });
 
 var UserView = Backbone.View.extend({
-	template : _.template('<h3 class="fan_count"><%= fans %></h3><h3 class="fans">Fans</h3>'),
+	template : _.template('<h3 class="fan_count"><%= fans %></h3><h3 class="fans"></h3>'),
 
 	initialize: function() {
 		_.bindAll(this, 'render');
 		this.model.bind("change:fans",this.render);
+		this.model.bind("change:rebellionTheme",this.render);
 		this.icon = new BigTeamIconView({el : "#sidebar > #icon", model:teams[tid]});
 		this.render();
 	},
@@ -42,7 +43,8 @@ var UserView = Backbone.View.extend({
 	render : function() {
 		var that = this;
 		$(that.el).children('#stats').html(this.template(this.model.toJSON()));
-
+		if (session.get("rebellionTheme")) $(".fans", that.el).text("Revolutionaries");
+		else $(".fans", that.el).text("Fans");
 		var resources = new ResourceView({el: "#sidebar > #resources", model: this.model});
 	}
 });

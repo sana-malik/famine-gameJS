@@ -7,3 +7,7 @@
 #topbar {
 	background: url("../images/gui/logo-r.jpg") 20 10 no-repeat;
 }
+
+h3.fans {
+	font-size: 1.2em;
+}
