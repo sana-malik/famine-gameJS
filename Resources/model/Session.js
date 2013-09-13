@@ -44,7 +44,7 @@ var Session = Backbone.Model.extend({
 			this.set("renderMeta", 0);
 
 			// history
-			this.set("history",[[getCurrentDateTimeString(), logTypes.GAME, "Game Started!"]]);
+			this.set("history",[]);
 			this.set("messageStats", {});
 			this.set("unreadCount", 0);
 			this.set("lastStartCode","");

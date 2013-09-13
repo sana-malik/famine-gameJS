@@ -34,8 +34,7 @@ var HistoryView = Backbone.View.extend({
 			<li id="story" class="filter">Story</li>\
 			<li id="resource" class="filter">Resources</li>\
 			<li id="message" class="filter">Messages</li>\
-			<li id="puzzle" class="filter">Puzzles</li>\
-			<li id="game" class="filter">The Game</li>\
+			<li id="puzzle" class="filter">Puzzles</li>
 		</ul>');
 	},
 

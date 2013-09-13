@@ -45,6 +45,9 @@ var UserView = Backbone.View.extend({
 		$(that.el).children('#stats').html(this.template(this.model.toJSON()));
 		if (session.get("rebellionTheme")) $(".fans", that.el).text("Revolutionaries");
 		else $(".fans", that.el).text("Fans");
-		var resources = new ResourceView({el: "#sidebar > #resources", model: this.model});
+
+		if (getCurrentDateTimeString(timeFormat.TWENTYFOUR) >= "09/28/2013 08:00") {
+			var resources = new ResourceView({el: "#sidebar > #resources", model: this.model});
+		}
 	}
 });
