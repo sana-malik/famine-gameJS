@@ -14,7 +14,7 @@
     "ephemeral_session" : true,
     "verbose_server" : true,
     "video_autoplay" : true,
-    "enable_encryption" : true,
+    "enable_encryption" : false,
     "show_solutions" : true
 }, 
 

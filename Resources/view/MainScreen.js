@@ -123,10 +123,14 @@ var MainView = Backbone.View.extend({
 		$(this.el).addClass('active')
 
 		var location_text = locations[locOrder[session.get("currentLocation")]].get("flavor_text")
-		var puzzle = locations[locOrder[session.get("currentLocation")]].get("puzzles")
-		var start_code = puzzles[puzzle].get("start_code")
-		if( debugActive("show_solutions") )
-			location_text = location_text + "<br><br>Start Code:\t" + start_code
+		
+		if( debugActive("show_solutions") ) {
+			location_text = location_text + "<br>"
+			$.each( locations[locOrder[session.get("currentLocation")]].get("puzzles"), function(index, puzzle) {
+				var start_code = puzzles[puzzle].get("start_code")
+				location_text = location_text + "<br>Start Code:\t" + start_code
+			});
+		}
 		
 		$("#main #main_screen .left-sidebar .content .location_description").html( location_text );
 		this.LocationView = new LocationView({el : "#main_screen > .right-sidebar > #right_sidebar_content", model : this.model});

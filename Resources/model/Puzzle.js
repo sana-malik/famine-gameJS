@@ -315,7 +315,7 @@ var Puzzle = Backbone.Model.extend({
 			}
 			else {
 				teams[id].die(deathVolume);		
-				if (showpopup) showPopup("<div id=\"" + id + "\" class=\"video-alert popup_vid_link\"><img src=\"../images/gui/video_icon.png\"><p>Click to view video coverage of this gruesome kill!</p></div>");
+				if (showpopup) showPopup("<div id=\"" + id + "\" class=\"video-alert popup_vid_link\"><img src=\"../images/gui/video_icon.png\"><p>Click to view video coverage of this gruesome death!</p></div>");
 
 				deathVolume = true;	
 				showpopup = false;
