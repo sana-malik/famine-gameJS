@@ -34,7 +34,7 @@ var HistoryView = Backbone.View.extend({
 			<li id="story" class="filter">Story</li>\
 			<li id="resource" class="filter">Resources</li>\
 			<li id="message" class="filter">Messages</li>\
-			<li id="puzzle" class="filter">Puzzles</li>
+			<li id="puzzle" class="filter">Puzzles</li>\
 		</ul>');
 	},
 
@@ -106,16 +106,14 @@ var HistoryView = Backbone.View.extend({
 
 	filter: function(e) {
 		var id = $(e.currentTarget).attr("id");
-		var deselect = $("#filters li.selected#" + id).length > 0
 
-		// reset filter
-		$("#filters li.selected").removeClass("selected");
-		$('.log-item').show();
-
-		// select if not deselecting an item 
-		if (!deselect) {
+		if ($("#filters li.selected#" + id).length > 0) { // deselect this
+			$("#filters li.selected#" + id).removeClass("selected");
+			$('.log-item.' + id).hide();
+			if ($("#filters li.selected").length === 0) $('.log-item').show(); // if nothing is now selected, show everything
+		} else { // select something new
 			$("#filters li#" + id).addClass("selected");
-			$('.log-item').hide();
+			if ($("#filters li.selected").length === 1) $('.log-item').hide(); // if only this is selected, hide everything first
 			$('.log-item.' + id).show();
 		} 
 	}
