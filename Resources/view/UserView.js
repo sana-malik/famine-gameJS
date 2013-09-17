@@ -46,7 +46,7 @@ var UserView = Backbone.View.extend({
 		if (session.get("rebellionTheme")) $(".fans", that.el).text("Revolutionaries");
 		else $(".fans", that.el).text("Fans");
 
-		if (getCurrentDateTimeString(timeFormat.TWENTYFOUR) >= "09/28/2013 08:00") {
+		if (getCurrentDateTimeString(timeFormat.TWENTYFOUR) >= "09/27/2013 20:00") {
 			var resources = new ResourceView({el: "#sidebar > #resources", model: this.model});
 		}
 	}
