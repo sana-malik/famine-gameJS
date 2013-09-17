@@ -90,7 +90,7 @@ var HintView = Backbone.View.extend({
 		if ( debugActive() )
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
-		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60); 
+		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60, this.puzzleName, this.hintName); 
 		var status = stats[this.puzzleName]["hintStats"][this.hintName]["status"];
 		var reveal = true;
 
@@ -133,7 +133,7 @@ var HintView = Backbone.View.extend({
 		if ( debugActive() )
 				elapsed *= parameters["debug_parameters"]["time_multiplyer"];
 
-		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60);
+		var cost = puzzles[this.puzzleName].get("hints")[this.hintName].getCost(elapsed/60, this.puzzleName, this.hintName);
 
 		if (session.get("puzzleStats")[that.puzzleName]["hintStats"][that.hintName]["status"] === hintStatus.LOCKED) {
 			$(that.el).hide();
