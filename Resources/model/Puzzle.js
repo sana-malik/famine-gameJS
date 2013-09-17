@@ -165,7 +165,7 @@ var Puzzle = Backbone.Model.extend({
 
 				// advance timers for unskipped hints
 				$.each(puzzle.get("hints"), function(hname, hint) {
-					if (hint.get("end_time") > elapsed) {
+					if (stats[puzzle.get("name")]["hintStats"][hname]["status"] === hintStatus.LOCKED) {
 						stats[puzzle.get("name")]["hintStats"][hname]["start_time"] -= (time_to_advance - elapsed);
 						stats[puzzle.get("name")]["hintStats"][hname]["end_time"] -= (time_to_advance - elapsed);
 					}

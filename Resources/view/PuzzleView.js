@@ -109,6 +109,15 @@ var HintView = Backbone.View.extend({
 
 			stats[this.puzzleName]["hintStats"][this.hintName]["status"] = hintStatus.REVEALED;
 
+			// advanced the rest of the hint timers
+			var time_to_reduce = stats[this.puzzleName]["hintStats"][this.hintName]["end_time"] - Math.floor(elapsed/60);
+			var that = this;
+			$.each(puzzles[this.puzzleName].get("hints"), function(hname, hint) {
+				//if (stats[that.puzzleName]["hintStats"][hname]["status"] === hintStatus.LOCKED)
+				stats[that.puzzleName]["hintStats"][hname]["start_time"] -= time_to_reduce;
+				stats[that.puzzleName]["hintStats"][hname]["end_time"] -= time_to_reduce;
+			})
+
 			this.model.set("puzzleStats",stats);
 
 			saveSession();
