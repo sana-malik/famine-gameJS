@@ -136,13 +136,17 @@ var Puzzle = Backbone.Model.extend({
 				}
 			}
 			else if (partial) { // answer is correct partial answer
+				var timediff = 1;
+				if ( debugActive() )
+					timediff *= parameters["debug_parameters"]["time_multiplyer"];
+				var elapsed = Math.floor(timediff*(getCurrentDateTime() - stats[this.get("name")]["start_time"])/60000);
 				// reveal skipped hints
 				var puzzle = this;
 				if (puzzle.get("answers")[entry])
 					hints_to_skip = puzzle.get("answers")[entry]["skipped_hints"];
 				else
 					hints_to_skip = puzzle.get("answers")[encryptedEntry]["skipped_hints"];
-				var time_to_advance = 0;
+				var time_to_advance = elapsed;
 
 				$.each(hints_to_skip, function(index, hint_name)  {
 					if (hint_name in puzzle.get("hints")) {
@@ -162,8 +166,8 @@ var Puzzle = Backbone.Model.extend({
 				// advance timers for unskipped hints
 				$.each(puzzle.get("hints"), function(hname, hint) {
 					if ( !(hname in hints_to_skip) ) {
-						hint.set("start_time", hint.get("start_time") - time_to_advance);
-						hint.set("end_time", hint.get("end_time") - time_to_advance);
+						hint.set("start_time", hint.get("start_time") - time_to_advance + elapsed);
+						hint.set("end_time", hint.get("end_time") - time_to_advance + elapsed);
 					}
 				});
 
@@ -272,7 +276,7 @@ var Puzzle = Backbone.Model.extend({
 	},
 
 	skipLocation : function(loc_index, stats, displayTitle) {
-		if (displayTitle) showPopup("While you were occupied, the following also happened in the arena: ");
+		if (displayTitle && !session.get("rebellionTheme")) showPopup("While you were occupied, the following also happened in the arena: ");
 	 	$.each( locations[locOrder[loc_index]].get("puzzles"), function(index, puzzle_name) {
 	 		if ( !(puzzle_name in puzzles) ) 
 	 			console.log("Tried to access a puzzle that doesn't exist: " + puzzle)
