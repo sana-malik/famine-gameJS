@@ -152,7 +152,7 @@ var Puzzle = Backbone.Model.extend({
 					if (hint_name in puzzle.get("hints")) {
 						if ( stats[puzzle.get("name")]["hintStats"][hint_name]["status"] != hintStatus.REVEALED ) {
 							stats[puzzle.get("name")]["hintStats"][hint_name]["status"] = hintStatus.SKIPPED;
-							var time_remaining = puzzle.get("hints")[hint_name].get("end_time");
+							var time_remaining = stats[puzzle.get("name")]["hintStats"][hint_name]["end_time"];
 							if (time_remaining > time_to_advance) {
 								time_to_advance = time_remaining;
 							}
@@ -165,9 +165,9 @@ var Puzzle = Backbone.Model.extend({
 
 				// advance timers for unskipped hints
 				$.each(puzzle.get("hints"), function(hname, hint) {
-					if ( !(hname in hints_to_skip) ) {
-						hint.set("start_time", hint.get("start_time") - time_to_advance + elapsed);
-						hint.set("end_time", hint.get("end_time") - time_to_advance + elapsed);
+					if (hint.get("end_time") > elapsed) {
+						stats[puzzle.get("name")]["hintStats"][hname]["start_time"] -= (time_to_advance - elapsed);
+						stats[puzzle.get("name")]["hintStats"][hname]["end_time"] -= (time_to_advance - elapsed);
 					}
 				});
 

@@ -37,7 +37,7 @@ var Session = Backbone.Model.extend({
 				};
 	
 				$.each(puzzle.get("hints"), function(hname, hint) {
-					temp[pname]["hintStats"][hname] = {"status" : hintStatus.LOCKED};
+					temp[pname]["hintStats"][hname] = {"status" : hintStatus.LOCKED, "start_time" : hint.get("start_time"), "end_time" : hint.get("end_time")};
 				});
 			});
 			this.set("puzzleStats", temp);

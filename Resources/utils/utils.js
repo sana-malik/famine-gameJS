@@ -131,14 +131,14 @@ function PuzzleTimer(puzzleId, interval){
 		// go through hints & check for status changes
 		$.each(hints, function(name, hint) {
 			if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.LOCKED) {
-				var remaining = hint.get("start_time") - elapsed/60;
+				var remaining = stats[puzzleId]["hintStats"][name]["start_time"] - elapsed/60;
 
 				if (remaining <= 0) {
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.AVAILABLE;
 					changed = true;
 				}
 			} else if (stats[puzzleId]["hintStats"][name]["status"] === hintStatus.AVAILABLE) {
-				var remaining = hint.get("end_time") - elapsed/60;
+				var remaining = stats[puzzleId]["hintStats"][name]["end_time"] - elapsed/60;
 
 				if (remaining <= 0) { // hint is now free
 					stats[puzzleId]["hintStats"][name]["status"] = hintStatus.FREE;
