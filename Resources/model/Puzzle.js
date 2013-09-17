@@ -331,7 +331,7 @@ var Puzzle = Backbone.Model.extend({
 		var unlock = false;
 		$.each(this.get("resources_unlocked"), function(index, name) {
 			resources[name].unlock();
-			logAction(logTypes.RESOURCE, "You unlocked " + name + "!");
+			logAction(logTypes.RESOURCE, "You acquired " + name + "!");
 			unlock = true;
 		});
 	},
