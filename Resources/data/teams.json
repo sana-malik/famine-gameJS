@@ -1,5 +1,5 @@
 {
-"activeTeam" : "2b",
+"activeTeam" : "1a",
 "teams" : {
 "1a" : {
 	"id" : "1a",
@@ -44,7 +44,7 @@
 	"hometown" : "Portland, OR",
 	"photo" : "team photo",
 	"icon" : "team04.png",
-	"video" : "kill-bloodsnout.mov",
+	"video" : "kill-multiteams.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Pimento (Ana Roeszler)", "Anise (Rob Erickson)", "Cayenne (Katie Wylie)", "Saffron (Kate Petak)", "Coriander (Emily Wax)", "Turmeric (Matt Clienman)", "Mace (Victor Asteinza)"]
@@ -152,7 +152,7 @@
 	"hometown" : "Washington, DC, Nashville, TN, San Francisco, CA",
 	"photo" : "team photo",
 	"icon" : "team13.png",
-	"video" : "kill-bloodsnout.mov",
+	"video" : "kill-multiteams.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Stanton (Rex Miller)", "Wendy (Sarah Barnum)", "Ray (William Coughlan)", "Ella (Anji Stinson)", "Joe (Alex Stinson)"]
@@ -188,7 +188,7 @@
 	"hometown" : "San Francisco, CA, Chicago, IL, Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team16.png",
-	"video" : "kill-bloodsnout.mov",
+	"video" : "kill-multiteams.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Lace (Rachel Petterson)", "Velvet (Nina Hinrichs)", "Pleather (Merrie Morris)", "Silk (Shelly Manber)", "Spandex (Julia Schwarz)", "Tulle (Stephanie Rosenthal)"]
@@ -212,7 +212,7 @@
 	"hometown" : "Maryland",
 	"photo" : "team photo",
 	"icon" : "team18.png",
-	"video" : "kill-bloodsnout.mov",
+	"video" : "kill-multiteams.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Teff (Alex Pearson)", "Amber (Donna Smith)", "Bran (Mike Korn)", "Grist (Dustin Foley)", "Rusk (Dave Tuller)"]
@@ -272,7 +272,7 @@
 	"hometown" : "South Bay, CA and Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team23.png",
-	"video" : "kill-bloodsnout.mov",
+	"video" : "kill-multiteams.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Cuddles (Dan Alcantara)", "Ruthless (Ederlyn Lacson)", "Insecurity (Francis Hsu)", "Milquetoast (Jasmine Dao)", "Vanish (Richard Chiburis)", "Muscle (Yuan Niu)"]
