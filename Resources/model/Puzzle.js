@@ -150,7 +150,7 @@ var Puzzle = Backbone.Model.extend({
 
 				$.each(hints_to_skip, function(index, hint_name)  {
 					if (hint_name in puzzle.get("hints")) {
-						if ( stats[puzzle.get("name")]["hintStats"][hint_name]["status"] != hintStatus.REVEALED ) {
+						if (stats[puzzle.get("name")]["hintStats"][hint_name]["status"] != hintStatus.REVEALED) {
 							stats[puzzle.get("name")]["hintStats"][hint_name]["status"] = hintStatus.SKIPPED;
 							var time_remaining = stats[puzzle.get("name")]["hintStats"][hint_name]["end_time"];
 							if (time_remaining > time_to_advance) {
@@ -174,6 +174,7 @@ var Puzzle = Backbone.Model.extend({
 				// update the stats
 				session.set("puzzleStats",stats);
 			}
+
 			if (!miniSolve) {
 				if (this.get("answers")[encryptedEntry]) // TODO: test this also -- wasn't sure when it gets called
 					response += "<strong>" + entry + "</strong> - " + this.get("answers")[encryptedEntry]["response"] + "</div>";
