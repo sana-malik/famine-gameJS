@@ -314,9 +314,11 @@ var Puzzle = Backbone.Model.extend({
 
 	killTeams : function(deathVolume) {
 		var showpopup = true;
+		var selfKill = false;
 		$.each(this.get("teams_killed"), function(index, id) {
 			if (tid === id) {
 				// this is current team! don't do anything! :)
+				selfKill = true;
 			}
 			else {
 				teams[id].die(deathVolume);		
@@ -326,6 +328,10 @@ var Puzzle = Backbone.Model.extend({
 				showpopup = false;
 			}
 		});
+
+		if (selfKill && showPopup) {
+			playSound("nokillanswer.wav", 5500);
+		}
 	},
 
 	unlockResources : function() {
