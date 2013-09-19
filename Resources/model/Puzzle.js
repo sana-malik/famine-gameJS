@@ -30,7 +30,7 @@ var Puzzle = Backbone.Model.extend({
 		if (entry !== "")
 			encryptedEntry = MD5(entry);
 
-		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "") { // puzzle already solved!
+		if (stats[this.get("name")]["status"] === puzzleStatus.SOLVED || entry === "" || stats[this.get("name")]["log"].join().indexOf("<strong>"+entry+"</strong>") >= 0) { // puzzle already solved!
 			return;
 		}
 		else if (give_up || entry in this.get("answers") || encryptedEntry in this.get("answers") || miniSolve) {
@@ -163,7 +163,7 @@ var Puzzle = Backbone.Model.extend({
 					}
 				});
 
-				// advance timers for unskipped hints
+				// advance timers for unskipped hints if hints are skipped
 				$.each(puzzle.get("hints"), function(hname, hint) {
 					if (stats[puzzle.get("name")]["hintStats"][hname]["status"] === hintStatus.LOCKED) {
 						stats[puzzle.get("name")]["hintStats"][hname]["start_time"] -= (time_to_advance - elapsed);
