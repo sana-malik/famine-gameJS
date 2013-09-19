@@ -18,7 +18,7 @@
 	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "Golf DC Map.png",
+	"map_file" : "",
 	"puzzles" : ["Test Puzzle", "Starting Location"]
 },
 "GolfDC Academy" : {

@@ -31,11 +31,11 @@ var LocationView = Backbone.View.extend({
 		<p class="location-address"><%= address %></p>\
 		<h4 class="location-header">Location Details</h4>\
 		<table class="location-info">\
-			<td class="location-item">Map: </td><td class="location-status" map="<%= map_file %>">View</td></tr>\
-			<tr><td class="location-item">Parking: </td><td class="location-status" title="<%= parking_description %>"><%= parking_status %></td></tr>\
-			<tr><td class="location-item">Restrooms: </td><td class="location-status" title="<%= restroom_description %>"><%= restroom_status %></td></tr>\
-			<tr><td class="location-item">Wi-Fi: </td><td class="location-status" title="<%= wifi_description %>"><%= wifi_status %></td></tr><tr>\
-			<td class="location-item">Food: </td><td class="location-status" title="<%= food_description %>"><%= food_status %></td></tr>\
+			<td class="location-item">Map: </td><td class="location-status" <% if (map_file) { %>map="<%= map_file %>">View<%} else {%>> N/A <% } %></td></tr>\
+			<tr><td class="location-item">Parking: </td><td class="location-status" <% if (parking_description) { %> title="<%= parking_description %>"<% } %>><%= parking_status %></td></tr>\
+			<tr><td class="location-item">Restrooms: </td><td class="location-status" <% if (restroom_description) { %> title="<%= restroom_description %>"<% } %>><%= restroom_status %></td></tr>\
+			<tr><td class="location-item">Wi-Fi: </td><td class="location-status" <% if (wifi_description) { %> title="<%= wifi_description %>" <% } %>><%= wifi_status %></td></tr><tr>\
+			<td class="location-item">Food: </td><td class="location-status" <% if (food_description) { %>title="<%= food_description %>"<% } %>><%= food_status %></td></tr>\
 		</table>'),
 
 	initialize: function() {

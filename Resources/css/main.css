@@ -867,10 +867,12 @@ text-decoration: none;
 /* TOOLTIP STUFF */
 [map], [title] {
 	font-weight: bold;
+	color: #F0C753;
 }
 
 [map]:hover, [title]:hover {
 	cursor: default;
+	color: #FFFFFF;
 }
 
 .map {
