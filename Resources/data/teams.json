@@ -1,15 +1,14 @@
 {
-"activeTeam" : "1a",
+"activeTeam" : "2b",
 "teams" : {
 "1a" : {
 	"id" : "1a",
 	"name" : "Team Snout",
-	"bio" : "We are not aardvarks.
-",
+	"bio" : "We are not aardvarks.",
 	"hometown" : "Portland, OR, San Francisco Bay Area, Norfolk, UK",
 	"photo" : "team photo",
 	"icon" : "team01.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-bloodsnout.mov",
 	"mentor" : "Haymitch",
 	"talent" : "being awesome",
 	"members" : ["Indigo (Cary Roberts)", "Bentley (Chris Nichols)", "Swank (Corby Anderson)", "Latinum (Curtis Chen)", "Cakewalk (DeeAnn Sole)", "Red (Josh Ward)", "Zaffro (Karl Larson)", "Scintillate (Lisa Long)"]
@@ -21,7 +20,7 @@
 	"hometown" : "Los Angeles, CA",
 	"photo" : "team photo",
 	"icon" : "team02.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-thehungerdames.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Amaretto (Amy Smith)", "Absinthe (Annie Terry)", "Mimosa (Maggie Bandur)", "MaiTai (Maia Peters)", "Sake (Summer Stevens)"]
@@ -33,7 +32,7 @@
 	"hometown" : "Kentucky, New Jersey, and Massachusetts",
 	"photo" : "team photo",
 	"icon" : "team03.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-bostuckyplugh.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Antonius (Mark Halpin)", "Augustus (Nathan Fung)", "Numerius (Joseph DeVincentis)", "Camillus (Kevin Wald)", "Aemilius (Paul Melamud)"]
@@ -41,12 +40,11 @@
 "2b" : {
 	"id" : "2b",
 	"name" : "The Puzzle Underground",
-	"bio" : "Hailing from District 2, The Puzzle Underground serves the Capitol through diligent logical efforts. When not traveling via penny farthing or rallying covert efforts to protest the exclusion of PBR from tesserae, The Puzzle Underground enjoys music, games and red-eye cross-continental flights.
-",
+	"bio" : "Hailing from District 2, The Puzzle Underground serves the Capitol through diligent logical efforts. When not traveling via penny farthing or rallying covert efforts to protest the exclusion of PBR from tesserae, The Puzzle Underground enjoys music, games and red-eye cross-continental flights.",
 	"hometown" : "Portland, OR",
 	"photo" : "team photo",
 	"icon" : "team04.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-bloodsnout.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Pimento (Ana Roeszler)", "Anise (Rob Erickson)", "Cayenne (Katie Wylie)", "Saffron (Kate Petak)", "Coriander (Emily Wax)", "Turmeric (Matt Clienman)", "Mace (Victor Asteinza)"]
@@ -54,12 +52,11 @@
 "3a" : {
 	"id" : "3a",
 	"name" : "Bloodshot",
-	"bio" : "Team Bloodshot is world famous for their ability to focus on complicated technical tasks for days on end without sleep. While during the day they appear to be just another group of techies, it is during the dark of night that they differentiate themselves with their endurance and staying power. The only evidence of their perennial sleeplessness can be found by staring them in the eye, where the condition for which their team is named becomes clear.
-",
+	"bio" : "Team Bloodshot is world famous for their ability to focus on complicated technical tasks for days on end without sleep. While during the day they appear to be just another group of techies, it is during the dark of night that they differentiate themselves with their endurance and staying power. The only evidence of their perennial sleeplessness can be found by staring them in the eye, where the condition for which their team is named becomes clear.",
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team05.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-bloodsnout.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["WOPR (Rich Bragg)", "Data (Dave Fisher)", "Jarvis (Mike Holzbaur)", "Bender (Bill Overall)", "Hal (Chris Roat)", "Watson (Bob Schaffer)"]
@@ -67,13 +64,11 @@
 "3b" : {
 	"id" : "3b",
 	"name" : "Death From Above",
-	"bio" : "Death from Above hails from the technology district. After completing their time at the district's Masochistic Institute of Tributes (MIT), they are now excited to compete. Their name comes from their most famous tribute, Beetee, who famously cried out \"Death from Above!\" as he electrified the tributes (and the crowd!) and won his Hunger Games.
-
-District 3 hopes to transform these underdogs into winners by amplifying their chances. Will this crew be able to put up enough resistance to triumph? They certainly have the capacity. We're hopeful that this year, District 3 will be able to induct a new winner.",
+	"bio" : "Death from Above hails from the technology district. After completing their time at the district's Masochistic Institute of Tributes (MIT), they are now excited to compete. Their name comes from their most famous tribute, Beetee, who famously cried out \"Death from Above!\" as he electrified the tributes (and the crowd!) and won his Hunger Games.<p>District 3 hopes to transform these underdogs into winners by amplifying their chances. Will this crew be able to put up enough resistance to triumph? They certainly have the capacity. We're hopeful that this year, District 3 will be able to induct a new winner.",
 	"hometown" : "Boston, MA",
 	"photo" : "team photo",
 	"icon" : "team06.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-deathfromabove.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Eeyore (Henry Wong)", "Yolo (James Douberley)", "Thursday (Paul Hlebowitsh)", "Kerbal (Pranjal Vachaspati)", "Boyscout (Samuel Duffley)", "Artisan (Teasha Feldman)"]
@@ -85,7 +80,7 @@ District 3 hopes to transform these underdogs into winners by amplifying their c
 	"hometown" : "San Francisco Bay Area, Sacramento CA, Pittsburgh PA, Washington DC",
 	"photo" : "team photo",
 	"icon" : "team07.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-mystickatfish.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Tetra (Alexandra Dixon)", "Troll (Bruce Lin)", "Angle (David Walker)", "Jonah (Dwight Freund)", "Finn (Paul Chou)", "LoxMyth (Yossi Fendel)"]
@@ -93,12 +88,11 @@ District 3 hopes to transform these underdogs into winners by amplifying their c
 "4b" : {
 	"id" : "4b",
 	"name" : "This Space Intentionally Left Blank",
-	"bio" : "This Space Intentionally Left Blank is a soft-spoken team from District 4. While they obviously excel at things like fishing, swimming and kayaking, they also exhibit a few of their district’s lesser known talents such as jaywalking, aggressive driving, and a complete inability to pronounce the letter R. If they survive the arena they hope to be given jobs as Gamemakers.
-",
+	"bio" : "This Space Intentionally Left Blank is a soft-spoken team from District 4. While they obviously excel at things like fishing, swimming and kayaking, they also exhibit a few of their district’s lesser known talents such as jaywalking, aggressive driving, and a complete inability to pronounce the letter R. If they survive the arena they hope to be given jobs as Gamemakers.",
 	"hometown" : "Boston, MA",
 	"photo" : "team photo",
 	"icon" : "team08.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-captains.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Seadragon (Sarah Leadbeater)", "Eel (Ross Corliss)", "Asdo (Mark Asdoorian)", "Siren (Elaine Kristant)", "Jammers (James Nelson)", "Pella (Heléne Andersson)"]
@@ -106,13 +100,11 @@ District 3 hopes to transform these underdogs into winners by amplifying their c
 "5a" : {
 	"id" : "5a",
 	"name" : "Apetitius Giganticus",
-	"bio" : "We have spent years toiling in the laboratories of District 5, underpaid and underfed, striving to develop new and efficient ways to bring light and power to the people of Pangram. Some of our coworkers wanted to use these Games as a platform, to make everyone aware of new innovations, and to help Pangram see that science and technology will lead us to a life of peace and prosperity.
-
-Then we were told there would be food. We really like food. We really liked our coworkers too, though they could have used a bit more salt.",
+	"bio" : "We have spent years toiling in the laboratories of District 5, underpaid and underfed, striving to develop new and efficient ways to bring light and power to the people of Pangram. Some of our coworkers wanted to use these Games as a platform, to make everyone aware of new innovations, and to help Pangram see that science and technology will lead us to a life of peace and prosperity.<p>Then we were told there would be food. We really like food. We really liked our coworkers too, though they could have used a bit more salt.",
 	"hometown" : "America (Boston/Las Vegas/Providence/San Francisco/Seattle)",
 	"photo" : "team photo",
 	"icon" : "team09.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-apetitiusgiganticus.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Laser (Dan Katz)", "Storm (Eric Berlin)", "Zap (Pavel Curtis)", "Elektra (Rachael Groynom)", "Thunder (Scott Purdy)", "Nitro (Tyler Hinman)"]
@@ -124,7 +116,7 @@ Then we were told there would be food. We really like food. We really liked our 
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team10.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-captains.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Spark (Ellen Juhlin)", "Ohm (Rion Snow)", "Wattage (Stephanie Geerlings)", "Fuel (Joanna Bresee)", "Max (Erik Stuart)", "Amp (Brett Rogers)"]
@@ -136,7 +128,7 @@ Then we were told there would be food. We really like food. We really liked our 
 	"hometown" : "Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team11.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-brinydeep.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Scoundrel (Jeff Wallace)", "Matey (Andrew Ryder)", "Jack-Tar (Dann Webster)", "ScurvyDog (Dave Miller)", "BilgeRat (Kenny Young)", "Scallywag (Peter Sarrett)"]
@@ -148,7 +140,7 @@ Then we were told there would be food. We really like food. We really liked our 
 	"hometown" : "Palo Alto, CA",
 	"photo" : "team photo",
 	"icon" : "team12.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-burninators.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Derail (Daniel Egnor)", "Drag (Doug Zongker)", "Cylinder (Cynthia Wong)", "Kicker (Kekoa Proudfoot)", "Junction (Justin Graham)"]
@@ -156,16 +148,11 @@ Then we were told there would be food. We really like food. We really liked our 
 "7a" : {
 	"id" : "7a",
 	"name" : "District Ubik",
-	"bio" : "District UBIK — the team from anywhere and everywhere — has volunteered as tribute for District 7. From all indications, the team is expected to fell all competition in a style uniquely suited to their arboreous homeland.
-
-Reached for comment, the half-life of UBIK creator Philip K. Dick cryptically noted, \"Team UBIK has truly grasped that they can be sure of nothing in the world we narrowly call 'reality.'\"
-
-After considered reflection, Dick's metaphorical manifestation added, \"They do seem to love the forest, though.\"
-",
+	"bio" : "District UBIK — the team from anywhere and everywhere — has volunteered as tribute for District 7. From all indications, the team is expected to fell all competition in a style uniquely suited to their arboreous homeland.<p>Reached for comment, the half-life of UBIK creator Philip K. Dick cryptically noted, \"Team UBIK has truly grasped that they can be sure of nothing in the world we narrowly call 'reality.'\"<p>After considered reflection, Dick's metaphorical manifestation added, \"They do seem to love the forest, though.\"",
 	"hometown" : "Washington, DC, Nashville, TN, San Francisco, CA",
 	"photo" : "team photo",
 	"icon" : "team13.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-bloodsnout.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Stanton (Rex Miller)", "Wendy (Sarah Barnum)", "Ray (William Coughlan)", "Ella (Anji Stinson)", "Joe (Alex Stinson)"]
@@ -177,7 +164,7 @@ After considered reflection, Dick's metaphorical manifestation added, \"They do 
 	"hometown" : "CA, MA, MD, WA",
 	"photo" : "team photo",
 	"icon" : "team14.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-lxp.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Machine (Thomas Snyder)", "Axe (Nick Baxter)", "Anomaly (Roger Barkan)", "Stem (Garrett Heffner)"]
@@ -189,7 +176,7 @@ After considered reflection, Dick's metaphorical manifestation added, \"They do 
 	"hometown" : "Seattle, WA, New York, Virginia, North Carolina",
 	"photo" : "team photo",
 	"icon" : "team15.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-sillyjefes.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Chevron (Sergey Grankin)", "Houndstooth (Patrick Hanberry)", "Harlequin (Jett Jones)", "Plaid (Nikhil Manchanda)", "PolkaDot (Rena Morse)", "Paisley (Jeff Phillips)", "Ikat (Donna Whitlock)"]
@@ -201,7 +188,7 @@ After considered reflection, Dick's metaphorical manifestation added, \"They do 
 	"hometown" : "San Francisco, CA, Chicago, IL, Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team16.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-bloodsnout.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Lace (Rachel Petterson)", "Velvet (Nina Hinrichs)", "Pleather (Merrie Morris)", "Silk (Shelly Manber)", "Spandex (Julia Schwarz)", "Tulle (Stephanie Rosenthal)"]
@@ -209,13 +196,11 @@ After considered reflection, Dick's metaphorical manifestation added, \"They do 
 "9a" : {
 	"id" : "9a",
 	"name" : "Disobedient Children",
-	"bio" : "The Disobedient Children are a band of misfits and outcasts who have never quite adapted to the quiet rural ways of District 9, where unquestioning hard work and blind obedience are valued above all. They’re not bad kids, really; they just can’t stomach the incessant monotony of working the fields, and more tellingly can’t seem to stay out of minor scrapes with the District Mayor and his Peacekeepers. 
-
-They have managed to find creative ways to frequently avoid the field duty normally required of all District 9 residents - work orders go missing, miscommunications somehow occur between district officials, and so on. The Mayor had never been able to prove punishable offense on their part, but this year their luck ran out. He stumbled on a way to manipulate the putatively random Reaping process to ensure their names would be chosen. How would this team’s disobedient ways play out in the Games? We’ll have to wait and see...",
+	"bio" : "The Disobedient Children are a band of misfits and outcasts who have never quite adapted to the quiet rural ways of District 9, where unquestioning hard work and blind obedience are valued above all. They’re not bad kids, really; they just can’t stomach the incessant monotony of working the fields, and more tellingly can’t seem to stay out of minor scrapes with the District Mayor and his Peacekeepers.<p>They have managed to find creative ways to frequently avoid the field duty normally required of all District 9 residents - work orders go missing, miscommunications somehow occur between district officials, and so on. The Mayor had never been able to prove punishable offense on their part, but this year their luck ran out. He stumbled on a way to manipulate the putatively random Reaping process to ensure their names would be chosen. How would this team’s disobedient ways play out in the Games? We’ll have to wait and see...",
 	"hometown" : "Bay Area, CA and beyond",
 	"photo" : "team photo",
 	"icon" : "team17.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-captains.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Combine (Darby Kimball)", "Teff (Thomas Lotze)", "Mulch (Kevin Schraith)", "Harvest (Heather Browning)", "Barley (Jeffrey Madsen)"]
@@ -227,7 +212,7 @@ They have managed to find creative ways to frequently avoid the field duty norma
 	"hometown" : "Maryland",
 	"photo" : "team photo",
 	"icon" : "team18.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-bloodsnout.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Teff (Alex Pearson)", "Amber (Donna Smith)", "Bran (Mike Korn)", "Grist (Dustin Foley)", "Rusk (Dave Tuller)"]
@@ -239,7 +224,7 @@ They have managed to find creative ways to frequently avoid the field duty norma
 	"hometown" : "San Francisco, East Bay, Los Angeles, CA",
 	"photo" : "team photo",
 	"icon" : "team19.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-goldensmokingjay.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Whiskey (Brent Holman)", "Keeper (Linda Holman)", "Gelder (David Andre)", "Smith (Jonathan McCue)", "Wesson (Jessen Yu)", "Tex (John Owens)"]
@@ -251,7 +236,7 @@ They have managed to find creative ways to frequently avoid the field duty norma
 	"hometown" : "Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team20.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-redtape.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Zwartbles (Ben Andrews)", "Lonk (Jamie Eckman)", "Dorper (Shane Lile)", "Qashqai (Jay McCleery)", "Meatmaster (Andy Rich)", "Kooka (Kim Vlcek)"]
@@ -263,7 +248,7 @@ They have managed to find creative ways to frequently avoid the field duty norma
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team21.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-cranea.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Renovation (Eric Mayefsky)", "Fences (Jeremy Hoffman)", "Kernel (Mike Develin)", "Grit (Troy Steinmetz)", "Sow (Daniel Gibson)"]
@@ -275,10 +260,10 @@ They have managed to find creative ways to frequently avoid the field duty norma
 	"hometown" : "Seattle/Washington, DC/San Francisco",
 	"photo" : "team photo",
 	"icon" : "team22.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-herebedragonfruit.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
-	"members" : ["Undaground (Mark Gottlieb)", "Blackeye (Carl Gottlieb)", "Splitz (Sean Trowbridge)", "Stalker (Gaby Weidling)", "Hothead (Tanis O'Connor)", "Hardcore (Evan Davis)"]
+	"members" : ["Undaground (Carl Gottlieb)", "Blackeye (Evan Davis)", "Splitz (Sean Trowbridge)", "Stalker (Gaby Weidling)", "Hothead (Tanis O'Connor)", "Hardcore (Mark Gottlieb)"]
 },
 "12a" : {
 	"id" : "12a",
@@ -287,7 +272,7 @@ They have managed to find creative ways to frequently avoid the field duty norma
 	"hometown" : "South Bay, CA and Seattle, WA",
 	"photo" : "team photo",
 	"icon" : "team23.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-bloodsnout.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Cuddles (Dan Alcantara)", "Ruthless (Ederlyn Lacson)", "Insecurity (Francis Hsu)", "Milquetoast (Jasmine Dao)", "Vanish (Richard Chiburis)", "Muscle (Yuan Niu)"]
@@ -299,7 +284,7 @@ They have managed to find creative ways to frequently avoid the field duty norma
 	"hometown" : "San Francisco Bay Area",
 	"photo" : "team photo",
 	"icon" : "team24.png",
-	"video" : "kill-lxp.webm",
+	"video" : "kill-coedsonfire.mov",
 	"mentor" : "Haymitch",
 	"talent" : "basket weaving",
 	"members" : ["Smore (Corin Anderson)", "Nyterra (Melinda Owens)", "Brainy (Dale Neal)", "IllBear (Linnsey Miller)", "Goldiana (Trisha Lantznester)", "Amosphere (Wei-Hwa Huang)"]

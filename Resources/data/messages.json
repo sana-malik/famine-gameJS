@@ -1,45 +1,113 @@
 {
-	"Camouflage" : {
+	"Cornucopia - Finishing Move" : {
 		"msg1" : {
 			"id" : "msg1",
 			"type" : "text",
-			"content" : "<b>Teams, we begin to tire of your progress.  As we realize your hunger is likely slowing you down, we have coralled several animals at Oxon Hill Farm.</b>",
-			"time" : 10,
+			"content" : "<b>Good job not getting mixed up in that mess. You've avoided dying in what is traditionally the bloodiest portion of the Games.<br><br>Oh, one more thing. Word is that the Gamemakers have constructed various challenges throughout the arena. According to my sources, these traps are modeled after the various districts of Pangram. In order to defeat your opponents you may have to outsmart them at their own game.<br><br>Now get out there and keep not dying!</b>",
+			"time" : 2,
+			"sender" : "Haymitch"
+		}
+	},
+	"Vehicles" : {
+		"msg2" : {
+			"id" : "msg2",
+			"type" : "text",
+			"content" : "<b>This will be Haymitch video two.</b>",
+			"time" : 2,
+			"sender" : "Haymitch"
+		}
+	},
+	"Camouflage" : {
+		"msg3" : {
+			"id" : "msg3",
+			"type" : "text",
+			"content" : "<b>Attention tributes! As we realize your hunger is likely slowing you down, we will be holding a Feast where we have a wide variety of animals for you to hunt.</b></b>",
+			"time" : 2,
 			"sender" : "The Gamemakers"
 		}
 	},
 	"Sushi" : {
-		"msg2" : {
-			"id" : "msg2",
-			"type" : "text",
-			"content" : "<b>Hey, watch yourselves.  Apparently those jerks from District 3 have left you a little surprise up ahead.</b>",
-			"time" : 2,
-			"sender" : "Haymitch"
-		}
-	},
-	"Muttations" : {
-		"msg3" : {
-			"id" : "msg3",
-			"type" : "text",
-			"content" : "<b>ANNOUNCEMENT: You may no longer win as a team.  Instead, you must fight and kill each other until only a single Tribute remains!  That is all.</b>",
-			"time" : 2,
-			"sender" : "The Gamemakers"
-		},
 		"msg4" : {
 			"id" : "msg4",
 			"type" : "text",
-			"content" : "<b>Go to the next location as instructed, but when you get there ignore the new rules.  It's important that you keep working together.</b>",
-			"time" : 4,
+			"content" : "<b>Be careful. I've heard rumors of a suspicious device that has been causing a strange string of deaths.</b>",
+			"time" : 2,
 			"sender" : "Haymitch"
 		}
 	},
-	"Mining Cube" : {
+	"XBox" : {
 		"msg5" : {
 			"id" : "msg5",
 			"type" : "text",
-			"content" : "<b>It's time to go on the offensive.</b>",
+			"content" : "<b>I have some information for you. Come meet me at the Kennedy Center.</b>",
+			"time" : 2,
+			"sender" : "A Wealthy Sponsor"
+		}
+	},
+	"Tracker Jackers" : {
+		"msg6" : {
+			"id" : "msg6",
+			"type" : "text",
+			"content" : "<b>Pork belly, wigwam! Pour eggnog in Sasquatch's underwear and shiv Wonder Woman in the kidneys. Monkey farts!</b>",
+			"time" : 2,
+			"sender" : "Heffalump Uncle Sam"
+		}
+	},
+	"Settlers of Pangram" : {
+		"msg7" : {
+			"id" : "msg7",
+			"type" : "text",
+			"content" : "<b>Multi-kill video message placeholder.</b>",
 			"time" : 2,
 			"sender" : "Haymitch"
+		}
+	},
+	"The Fallen" : {
+		"msg8" : {
+			"id" : "msg8",
+			"type" : "text",
+			"content" : "<b>Wait, that team grabbed a lightsaber from the Cornucopia and all you got was a clipboard?!  What were you thinking?  You could've had a friggin' lightsaber!  A LIGHTSABER!!! </b>",
+			"time" : 2,
+			"sender" : "Haymitch"
+		}
+	},
+	"Cereal" : {
+		"msg9" : {
+			"id" : "msg9",
+			"type" : "text",
+			"content" : "<b>Maybe we should start calling you the Cereal Killers.  Right?  Right? No?  Fine, whatever.</b>",
+			"time" : 2,
+			"sender" : "Haymitch"
+		},
+		"msg7" : {
+			"id" : "msg7",
+			"type" : "text",
+			"content" : "<b>With so few teams left, the Capitol is looking to bring the Games to a close. They're going to release their ungodly creations into the Arena to hunt you down.  I know where they're being kept though, and if you head there and figure out how these creations were made you may be able to defeat them. We preprogrammed the location into your App, so you should be heading there now. <b>You'll meet a contact there who will help you, but you may need to be a little creative when attempting to communicate with him.</b>",
+			"time" : 2,
+			"sender" : "Anonymous"
+		}
+	},
+	"Muttations" : {
+		"msg7" : {
+			"id" : "msg7",
+			"type" : "text",
+			"content" : "You've won video placeholder",
+			"time" : 2,
+			"sender" : "Caesar Flickerman"
+		},
+		"msg7" : {
+			"id" : "msg7",
+			"type" : "text",
+			"content" : "<b>ANNOUNCEMENT: You may no longer win as a team.  Instead, you must fight and kill each other until only a single Tribute remains!  That is all.</b>",
+			"time" : 3,
+			"sender" : "The Gamemakers"
+		},
+		"msg7" : {
+			"id" : "msg7",
+			"type" : "text",
+			"content" : "<b>ANNOUNCEMENT: You may no longer win as a team.  Instead, you must fight and kill each other until only a single Tribute remains!  That is all.</b>",
+			"time" : 4,
+			"sender" : "The Gamemakers"
 		}
 	}
 }
