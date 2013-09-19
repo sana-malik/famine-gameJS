@@ -99,7 +99,7 @@ var HintView = Backbone.View.extend({
 			reveal=confirm("If you take this hint, " + cost + " viewers will lose interest in your progress.  Are you sure you want to do this?");
 		
 		if (reveal) {
-			if (stats[this.puzzleName]["hintStats"][this.hintName]["status"] != hintStatus.SKIPPED) {	
+			if (stats[this.puzzleName]["hintStats"][this.hintName]["status"] != hintStatus.FREE) {	
 				stats[this.puzzleName]["current_worth"] -= cost;
 				
 				if (stats[this.puzzleName]["current_worth"] < 0)
@@ -107,10 +107,11 @@ var HintView = Backbone.View.extend({
 
 			}
 
+			var oldStatus = stats[this.puzzleName]["hintStats"][this.hintName]["status"];
 			stats[this.puzzleName]["hintStats"][this.hintName]["status"] = hintStatus.REVEALED;
 
 			// advanced the rest of the hint timers if this hint was purchased
-			if (cost > 0) {
+			if (oldStatus != hintStatus.FREE) {
 				var time_to_reduce = stats[this.puzzleName]["hintStats"][this.hintName]["end_time"] - Math.floor(elapsed/60);
 				var that = this;
 				$.each(puzzles[this.puzzleName].get("hints"), function(hname, hint) {
@@ -149,7 +150,7 @@ var HintView = Backbone.View.extend({
 				var hint_html = '<button id=\"hint_button\">Purchase Hint</button><br /><span class="hint-cost">Cost: ' + cost + ' viewers</span>';
 				$(that.el).children('.hint_text').html(hint_html);
 			}
-			else if (status === hintStatus.SKIPPED || status === hintStatus.FREE) {
+			else if (status === hintStatus.FREE) {
 				$(that.el).children('.hint_text').html('<button id=\"hint_button\">Reveal Free Hint</button>');
 			}
 			else {
