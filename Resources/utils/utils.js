@@ -147,7 +147,9 @@ function PuzzleTimer(puzzleId, interval){
 				}
 			}
 
-			$(".main.puzzle#" + nameToId(puzzleId) + " .hints .hint#" + nameToId(name) + " .hint-cost").text("Cost: " + hint.getCost(elapsed/60, puzzleId, name) + " viewers");
+			var cost = hint.getCost(elapsed/60, puzzleId, name);
+			if (cost < 0) cost = 0;
+			$(".main.puzzle#" + nameToId(puzzleId) + " .hints .hint#" + nameToId(name) + " .hint-cost").text("Cost: " + cost + " viewers");
 		});
 		if (changed) session.set("puzzleStats", stats);
 		if (newHintFree && stats[puzzleId]["status"] === puzzleStatus.ACTIVE) {
