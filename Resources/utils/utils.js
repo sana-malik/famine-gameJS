@@ -146,6 +146,8 @@ function PuzzleTimer(puzzleId, interval){
 					newHintFree = true;
 				}
 			}
+
+			$(".main.puzzle#" + nameToId(puzzleId) + " .hints .hint#" + nameToId(name) + " .hint-cost").text("Cost: " + hint.getCost(elapsed/60, puzzleId, name) + " viewers");
 		});
 		if (changed) session.set("puzzleStats", stats);
 		if (newHintFree && stats[puzzleId]["status"] === puzzleStatus.ACTIVE) {
