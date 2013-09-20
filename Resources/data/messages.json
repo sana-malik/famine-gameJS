@@ -26,7 +26,7 @@
 			"sender" : "The Gamemakers"
 		}
 	},
-	"Sushi" : {
+	"Plants vs Zombies" : {
 		"msg4" : {
 			"id" : "msg4",
 			"type" : "text",
@@ -79,8 +79,8 @@
 			"time" : 2,
 			"sender" : "Haymitch"
 		},
-		"msg7" : {
-			"id" : "msg7",
+		"msg10" : {
+			"id" : "msg10",
 			"type" : "text",
 			"content" : "<b>With so few teams left, the Capitol is looking to bring the Games to a close. They're going to release their ungodly creations into the Arena to hunt you down.  I know where they're being kept though, and if you head there and figure out how these creations were made you may be able to defeat them. We preprogrammed the location into your App, so you should be heading there now. <b>You'll meet a contact there who will help you, but you may need to be a little creative when attempting to communicate with him.</b>",
 			"time" : 2,
@@ -88,26 +88,26 @@
 		}
 	},
 	"Muttations" : {
-		"msg7" : {
-			"id" : "msg7",
+		"msg11" : {
+			"id" : "msg11",
 			"type" : "text",
 			"content" : "You've won video placeholder",
 			"time" : 2,
 			"sender" : "Caesar Flickerman"
 		},
-		"msg7" : {
-			"id" : "msg7",
+		"msg12" : {
+			"id" : "msg12",
 			"type" : "text",
 			"content" : "<b>ANNOUNCEMENT: You may no longer win as a team.  Instead, you must fight and kill each other until only a single Tribute remains!  That is all.</b>",
 			"time" : 3,
-			"sender" : "The Gamemakers"
+			"sender" : "President Snow"
 		},
-		"msg7" : {
-			"id" : "msg7",
+		"msg13" : {
+			"id" : "msg13",
 			"type" : "text",
-			"content" : "<b>ANNOUNCEMENT: You may no longer win as a team.  Instead, you must fight and kill each other until only a single Tribute remains!  That is all.</b>",
+			"content" : "<b>Go to the next location as instructed, but when you get there ignore the new rules. It's imperative that you keep working together. Don't worry, we have a plan.</b>",
 			"time" : 4,
-			"sender" : "The Gamemakers"
+			"sender" : "Anonymous"
 		}
 	}
 }

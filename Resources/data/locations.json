@@ -1,5 +1,5 @@
 {
-"order" : ["Artisphere Ballroom", "GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Thomas Jefferson Memorial, Part Two", "Roosevelt Island", "George Washington Masonic Memorial", "National Harbor, Awakening Statue", "Lake Accotink Park, Picnic Area 3", "Pine Ridge High School Site Park", "Glen Echo Park, Ballroom Cafe", "Kennedy Center, Upper Balcony", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Drive Residence", "Sushi Location", "Penwood Drive Residence", "Mining Artifact Location", "Dennys", "Olde Towne Pet Resort", "GW Community School", "Courtyard Marriott Alexandria Old Town", "Motley Fool", "Motley Fool, Part Two", "Motley Fool, Part Three", "Crystal City Shuttle to Lincoln Memorial", "Martin Luther King Jr. Memorial", "FDR Memorial", "FDR Memorial, Part Two", "Air Force Memorial", "Iwo Jima Memorial", "Freedom Park", "National Museum of the American Indian", "U.S. Capitol, West of Reflecting Pool", "U.S. Capitol, South of Reflecting Pool", "U.S. Capitol, East of Reflecting Pool", "U.S. Capitol, Southwest Entrance Ramp", "U.S. Capitol, West Lawn", "U.S. Capitol", "Nando's Peri Peri Restaurant"],
+"order" : ["Artisphere Ballroom", "GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Thomas Jefferson Memorial, Part Two", "Roosevelt Island", "George Washington Masonic Memorial", "National Harbor, Awakening Statue", "Lake Accotink Park, Picnic Area 3", "Pine Ridge High School Site Park", "Glen Echo Park, Ballroom Cafe", "Kennedy Center, Upper Balcony", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Drive Residence", "Sushi Location", "Penwood Drive Residence", "Mining Artifact Location", "Dennys", "Olde Towne Pet Resort", "GW Community School", "Courtyard Marriott Alexandria Old Town", "Motley Fool", "Motley Fool, Part Two", "Motley Fool, Part Three", "Crystal City Shuttle to Lincoln Memorial", "Martin Luther King Jr. Memorial", "FDR Memorial", "FDR Memorial, Part Two", "Air Force Memorial", "Iwo Jima Memorial (Marine Corps War Memorial)", "Freedom Park", "National Museum of the American Indian", "U.S. Capitol, West of Reflecting Pool", "U.S. Capitol, South of Reflecting Pool", "U.S. Capitol, East of Reflecting Pool", "U.S. Capitol, Southwest Entrance Ramp", "U.S. Capitol, West Lawn", "U.S. Capitol", "Nando's Peri Peri Restaurant"],
 "locations" : {
 "Artisphere Ballroom" : {
 	"name" : "Artisphere Ballroom",
@@ -18,7 +18,7 @@
 	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "Golf DC Map.png",
 	"puzzles" : ["Test Puzzle", "Starting Location"]
 },
 "GolfDC Academy" : {
@@ -126,7 +126,7 @@
 	"address" : " George Washington Memorial Parkway",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
-	"flavor_text" : "Unfortunately, killing off Briny Deep totaled your vehicle. And even though you have a blanket, you're not going to last long without building a fire.  Make your way north to a wooded island where hopefully you'll find some materials you can use.<br><br><b>Head to Roosevelt Island in Virginia.  Be alert because it's easy to screw up navigation here.  The entrance is to the right off the George Washington Parkway.  If you miss it, you'll have quite a ways to double back. After you've entered the lot and parked your vehicle, walk across the bridge to Roosevelt Island and make your way to the center of the island near the large statue. </b>",
+	"flavor_text" : "Even though you have a blanket, you're not going to last long without building a fire.  Make your way north to a wooded island where hopefully you'll find some materials you can use.<br><br><b>Head to Roosevelt Island in Virginia.  Be alert because it's easy to screw up navigation here.  The entrance is to the right off the George Washington Parkway.  If you miss it, you'll have quite a ways to double back. After you've entered the lot and parked your vehicle, walk across the bridge to Roosevelt Island and make your way to the center of the island near the large statue. </b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = kindling",
 	"parking_status" : "Yes",
@@ -146,7 +146,7 @@
 	"address" : "101 Callahan Dr, Alexandria, VA 22301",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
-	"flavor_text" : "Oh no! The career teams have spotted the smoke from your fire too and are headed your way. You need to run! Head south along the river to help hide your tracks and find a place to hide.  Maybe amongst those old stone ruins you can see in the distance.  <br><br><b>To get to this location, you'll need to turn right out of the parking lot, head north, and U-turn back south after a mile or so. </b>",
+	"flavor_text" : "Oh no! The career teams have spotted the smoke from your fire too and are headed your way. You need to run! Head south along the river to help hide your tracks and find a place to hide.  Maybe amongst those old stone ruins you can see in the distance.  <br><br><b>To start navigating to this location, you'll need to turn right out of the parking lot, drive north, take the N Spout Run exit, and then U-turn back south on the GW Parkway after a mile or so. </b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = cornerstone",
 	"parking_status" : "Yes",
@@ -186,7 +186,7 @@
 	"address" : "7500 Accotink Park Rd, Springfield, VA 22150",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/28/2013 16:00",
-	"flavor_text" : "As the adrenaline from your last encounter begins to fade, you start to finally notice how hungry you really are.   You're starting to feel weak and listless.  You won't last much longer without finding something to eat.  You can see the open pasture up to the north where the Feast is about to begin. And while you realize that the Capitol often announces Feasts simply to lure teams out of hiding, you're also getting desperate.",
+	"flavor_text" : "As the adrenaline from your last encounter begins to fade, you start to finally notice how hungry you really are.   You're starting to feel weak and listless.  You won't last much longer without finding something to eat.  You can see the open pasture up to the north where the Feast is about to begin. And while you realize that the Capitol often announces Feasts simply to lure teams out of hiding, you're also getting desperate.<br><br>Warning:  many GPS and navigation tools will may direct you to the wrong part of the lake. You want to enter on the south side of the lake, by taking Highland Street, and then bearing right on Accotink Rd. If your directions are taking you to the north side of the lake (via something like Braddock Rd.), you won't be able to get to the right place.<br><br>When you arrive at the park, head away from the water into the woods to reach Picnic Area 3. </b>",
 	"self_flavor_text" : "",
 	"notes" : "Start codes = roe, branded",
 	"parking_status" : "Yes",
@@ -226,7 +226,7 @@
 	"address" : "7300 MacArthur Blvd, Glen Echo, MD 20812",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/28/2013 23:59",
-	"flavor_text" : "You're finally starting to feel better.  You're well fed, and you haven't actually died yet, which is a definite plus. You head up a hill and find what appears to be a run-down amusement park.<br><br><b>Park in the public lot and make your way into the park. Head past the carousel and look for a Piecekeeper inside the small cafe.</b>",
+	"flavor_text" : "You're finally starting to feel better.  You're well fed, and you haven't actually died yet, which is a definite plus. You head up a hill and find what appears to be a run-down amusement park.<br><br><b>Park in the public lot and make your way into the park. Head past the carousel and look for a Piecekeeper inside the small cafe adjacent to the ballroom.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = achievement",
 	"parking_status" : "Yes",
@@ -246,7 +246,7 @@
 	"address" : "2700 F St NW, Washington, DC 20566",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/28/2013 20:30",
-	"flavor_text" : "During each Famine Game, the Capitol holds an exclusive gala for its most influential citizens.  It's probably in your best interest to try and curry favor with someone powerful.  Head there now and start rubbing elbows.  Warning: as this portion of the Arena allows for contact between Tributes and Capitol citizens, you will need to be on your best behavior or face swift \"disqualification\".  Do not disturb the citizens!<br><br><b>Depending on the height of your vehicle, you may not be able to park in the Kennedy Center lot.  We suggest you XXXXXX.  When you arrive, make your way up to the upper balcony exit towards the Potomac River, and find your sponsor.</b>",
+	"flavor_text" : "During each Famine Game, the Capitol holds an exclusive gala for its most influential citizens.  It's probably in your best interest to try and curry favor with someone powerful.  Head there now and start rubbing elbows.  Warning: as this portion of the Arena allows for contact between Tributes and Capitol citizens, you will need to be on your best behavior or face swift \"disqualification\".  Do not disturb the citizens!<br><br><b>We have been told that the parking garage can accommodate vehicles up to 8 feet in clearance.  Make sure to park in the C lot on the south side. Use the envelope in your survival kit marked \"Parking\" to pay. When you arrive, make your way up to the upper balcony exit towards the Potomac River, and find your sponsor.<br><br>If you arrive after 8PM, there's a chance that the lot for larger vans may not have a cashier.  In that case you can look for street parking or let some of your team run in and retrieve the clue.  We hope that your entire team can participate as you'll have a cool view and you'll have some character interaction, but at the same time, we don't wait you to waste time trying to park.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = bend",
 	"parking_status" : "Yes",
@@ -407,7 +407,7 @@
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 04:00",
 	"flavor_text" : "Now there are only two careers teams left.  Time to go on the offensive and hunt them down.",
-	"self_flavor_text" : "Holy Pangram!  There is only one careers team left. Time to go on the offensive and hunt them down.",
+	"self_flavor_text" : "Holy Pangram!  There is only one career team left. Time to go on the offensive and hunt them down.",
 	"notes" : "Start code = kennel",
 	"parking_status" : "??",
 	"parking_description" : "",
@@ -621,8 +621,8 @@
 	"map_file" : "",
 	"puzzles" : ["District Two Recon"]
 },
-"Iwo Jima Memorial (Marine Corps War Memorial) " : {
-	"name" : "Iwo Jima Memorial (Marine Corps War Memorial) ",
+"Iwo Jima Memorial (Marine Corps War Memorial)" : {
+	"name" : "Iwo Jima Memorial (Marine Corps War Memorial)",
 	"address" : "Arlington, VA 22209",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 13:30",

@@ -19,8 +19,8 @@
 	"name" : "clipboards",
 	"icon" : "clipboard_small.png"
 },
-"flashlight" : {
-	"name" : "flashlight",
+"flashlights" : {
+	"name" : "flashlights",
 	"icon" : "flashlight_small.png"
 },
 "internet research" : {
