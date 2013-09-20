@@ -65,7 +65,10 @@ var MessageController = {
 		if (typeof session.get("lastSolved") === "undefined") return;
 	
 		var lastSolveTime = session.get("puzzleStats")[session.get("lastSolved")]["end_time"];
-		var elapsedMin = parameters["debug_parameters"]["time_multiplyer"]*(getCurrentDateTime() - lastSolveTime)/60000;
+		var time_multiplyer = 1;
+		if (debugActive())
+			time_multiplyer = parameters["debug_parameters"]["time_multiplyer"];
+		var elapsedMin = time_multiplyer*(getCurrentDateTime() - lastSolveTime)/60000;
 		
 		var queue = session.get("messageQueue");
 		var toRemove = [];
