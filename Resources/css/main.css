@@ -867,7 +867,7 @@ text-decoration: none;
 /* TOOLTIP STUFF */
 [map], [title] {
 	font-weight: bold;
-	color: #F0C753;
+	color: #AAA;
 }
 
 [map]:hover, [title]:hover {
