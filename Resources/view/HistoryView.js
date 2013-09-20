@@ -17,8 +17,8 @@ var HistoryView = Backbone.View.extend({
 		$.each(history, function(i, item) {
 			var unread = "";
 			var id = "";
-			if (item[1] === logTypes.MESSAGE && session.get("messageStats")[item[3]]["status"] === "unread") {
-				unread = " unread";
+			if (item[1] === logTypes.MESSAGE) {
+				if (session.get("messageStats")[item[3]]["status"] === "unread") unread = " unread";
 				id = ' id = "' + item[3] +'"';
 			}
 			$(that.el).prepend('<span class="log-item' + unread + ' ' + item[1] + '"' + id +'><h4 class="timestamp">'+item[0]+'</h4><p class="msg">'+item[2]+'</p></span>');
