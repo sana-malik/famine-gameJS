@@ -41,10 +41,11 @@ var HistoryView = Backbone.View.extend({
 
 	events : {
 		'click .puzzle_link' : 'showPuzzleScreen', 
-		'click .vid_link' : 'playVideo',
+		'click .vid_link' : 'playTeamVideo',
 		'click .log-item' : 'markRead',
 		'click li.filter' : 'filter',
-		'click #mark_messages' : 'readAll'
+		'click #mark_messages' : 'readAll',
+		'click .vid_message' : 'playVideo'
 	},
 
 	showPuzzleScreen : function(e) {
@@ -61,11 +62,22 @@ var HistoryView = Backbone.View.extend({
   		$('div.puzzle#' + nameToId(name)).addClass('active');
 	},
 
-	playVideo : function(e) {
+	playTeamVideo : function(e) {
 		var clickedEl = $(e.currentTarget);
   		var id = clickedEl.attr("id");
 
   		teams[id].showVideo();
+	},
+
+	playVideo : function(e) {
+		alert("play video")
+		var clickedEl = $(e.currentTarget);
+  		var vid = clickedEl.attr("id");
+
+		var movieFile = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDirectory(),"Resources/movies/"+vid).nativePath();
+		alert(vid)
+		alert(movieFile)
+		Ti.Platform.openApplication(movieFile);
 	},
 
 	markRead: function(e) {

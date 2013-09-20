@@ -45,7 +45,17 @@ var MessageController = {
 		stats[message["id"]] = {"status" : "unread"};
 		session.set("messageStats", stats);
 
-		logAction(logTypes.MESSAGE, "A message from " + message["sender"] + " - " + message["content"], message["id"]);
+		switch( message["type"] ) {
+			case "text" :
+				logAction(logTypes.MESSAGE, "A message from " + message["sender"] + " - " + message["content"], message["id"]);
+				break;
+			case "video" :
+				logAction(logTypes.MESSAGE, "A video message from " + message["sender"] + " - <div id=\"" + message["content"] + "\" class=\"vid_message clickable\">Click to view message.</div>", message["id"]);
+				alert(message["content"])
+				break;
+			default:
+				console.log("Encountered a message of unknown type \"" + message["type"] + "\"");
+		}
 	
  		// Save session
 		saveSession();
