@@ -2204,10 +2204,10 @@
 "Sentient AI" : {"name":"Sentient AI",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "You hear the cries of computer as it shuts down. You've survived 12 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2218,7 +2218,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has now started for this puzzle."
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2239,7 +2239,7 @@
 	"start12" : {
 		"type" : "partial",
 		"text" : "start12",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 12:00 section of the clock is controlled by a maniacal computer who not only is intent on seeking your demise but coldly taunts you all the while. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2247,10 +2247,11 @@
 "Paralyzing Fog" : {"name":"Paralyzing Fog",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "The mist slowly dissipates. You've 
+survived 1 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2261,7 +2262,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2282,7 +2283,7 @@
 	"start1" : {
 		"type" : "partial",
 		"text" : "start1",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 1:00 section of the clock is filled with an acrid mist. You soon discover that this fog invades your nervous system and prevents the use of your extremities. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2290,10 +2291,11 @@
 "Strangling Vines" : {"name":"Strangling Vines",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "The vines retract, and you're reunited with your teammates. You've 
+survived 2 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2304,7 +2306,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2325,7 +2327,7 @@
 	"start2" : {
 		"type" : "partial",
 		"text" : "start2",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 2:00 section of the clock is filled with dense vegetation, so thick that you lose sight of many of your teammates. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2333,10 +2335,11 @@
 "Deadly Beasts" : {"name":"Deadly Beasts",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "You learned the secret to defeating these beasts.  Strike first!  You've 
+survived 3 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2347,7 +2350,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2375,7 +2378,7 @@
 	"start3" : {
 		"type" : "partial",
 		"text" : "start3",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 3:00 section of the clock contains a wide variety of animals that seem innocent and playful, but deep down you know that they will probably rip you to shreds if you stay in here too long. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2383,10 +2386,11 @@
 "Snowstorm" : {"name":"Snowstorm",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Slowly the freezing ice begins to melt. You've 
+survived 4 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2397,7 +2401,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2418,7 +2422,7 @@
 	"start4" : {
 		"type" : "partial",
 		"text" : "start4",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 4:00 section is so cold you can barely stand it, which is strange because most of your surrondings have been surprisingly temperate.  Giant snowflakes slowly fall onto the ground, crushing anything they land on. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2426,10 +2430,11 @@
 "Lightning Bolt" : {"name":"Lightning Bolt",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "You rig a metal rod to harmlessly divert the lightning into the ground. You've 
+survived 5 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2440,7 +2445,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2461,7 +2466,7 @@
 	"start5" : {
 		"type" : "partial",
 		"text" : "start5",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 5:00 section is about what you would expect from your typical arena.  However, every so often a massive bolt of lightning strikes this wedge, electrifying everything within its striking radius. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		},
 	"brush" : {
@@ -2499,10 +2504,11 @@
 "Jabberjays" : {"name":"Jabberjays",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "You didn't so much as defeat the jabberjays as you lived through the madness. You've 
+survived 6 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2513,7 +2519,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2534,7 +2540,8 @@
 	"start6" : {
 		"type" : "partial",
 		"text" : "start6",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 6:00 section of the clock is quite tormeting. While you can't see anything out of the ordinary, what you hear is maddening, for in this wedge lies the cruel jabberjays, birds that have been trained to mimic the cries of loved ones in distress.
+Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2542,10 +2549,11 @@
 "Killer Robots" : {"name":"Killer Robots",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Moving and dodging quickly, you allow the robots to take out each other. You've 
+survived 7 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2556,7 +2564,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2577,7 +2585,7 @@
 	"start7" : {
 		"type" : "partial",
 		"text" : "start7",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 7:00 section of the clock contains countless robots that are designed to melt anything in their path using their deadly laser focus eyes. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2585,10 +2593,11 @@
 "Blood Rain" : {"name":"Blood Rain",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Finding a small cave, you hide in there until the rain goes away. You've 
+survived 8 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2599,7 +2608,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2627,7 +2636,7 @@
 	"start8" : {
 		"type" : "partial",
 		"text" : "start8",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "You can't wait to leave the 8:00 section of the clock, as it appears to be raining blood, which is so thick and hot, that it's a struggle to even breathe. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		},
 	"anemic" : {
@@ -2647,10 +2656,11 @@
 "Flash Flood" : {"name":"Flash Flood",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "You've learned the timings of the waves, so you can easily avoid them in the future. You've 
+survived 9 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2661,7 +2671,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2682,7 +2692,7 @@
 	"start9" : {
 		"type" : "partial",
 		"text" : "start9",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 9:00 section of the clock seems innocent enough.  However, every so often, after a rumbling in the distance, the entire wedge is flooded by a massive wave forcing you to survive underwater for an ungodly amount of time.  Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2690,10 +2700,11 @@
 "Monkey Muttations" : {"name":"Monkey Muttations",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "What horrible things have the Piecekeepers done to these innocent monkeys?",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Because each of the monkeys seems to lack one of their crucial senses, you are able to trick them into attacking each other. You've 
+survived 10 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2704,7 +2715,8 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has started for this puzzle. "
+		"text" : "Your hint clock has now started for this puzzle.
+"
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2732,7 +2744,8 @@
 	"start10" : {
 		"type" : "partial",
 		"text" : "start10",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 10:00 section of the clock is teeming with ferocious monkeys that appeared to have been grotesquely mutated by the Capitol. Your hint clock has now started for this puzzle.
+",
 		"skipped_hints" : ["Hint 1"]
 		},
 	"gene" : {
@@ -2758,10 +2771,10 @@
 "Insect Swarm" : {"name":"Insect Swarm",
 "start_code" : "ticktock",
 "max_fans" : 250,
-"flavor_text" : "Upon entering the room, you see a gelatinous cube before you.",
+"flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Good thing you remembered to grab that bug spray from the cornucopia. You've survived 11 o' clock!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -2772,7 +2785,7 @@
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "The hint clock has now started for this puzzle "
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2793,7 +2806,8 @@
 	"start11" : {
 		"type" : "partial",
 		"text" : "start11",
-		"response" : "Your hint clock has now started for this puzzle.",
+		"response" : "The 11:00 section of the clock is filled with swarming insects who dive repeatedly at your face, arms, and anything else exposed.  You won't live in here for very long, as their stings are surely deadly.
+Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2819,63 +2833,63 @@
 		},
 	"Hint 2" : {
 		"start_time" : 20,
-		"end_time" : 30,
-		"start_cost" : 100,
+		"end_time" : 40,
+		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Decode five separate messages in the upper left box to give you hints on the five different other parts of the code sheet. "
+		"text" : "Decode five separate messages in the upper left box to give you hints on the five different other parts of the code sheet. Your final message will read in order from left to right. "
 		},
 	"Keyboard Hint" : {
-		"start_time" : 30,
-		"end_time" : 45,
+		"start_time" : 40,
+		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Type the word EXODUS.  How would that look on a normal keyboard?  "
 		},
 	"Morse Hint" : {
-		"start_time" : 30,
-		"end_time" : 45,
+		"start_time" : 40,
+		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Look at the morse for the letters in PIQUANCY.  They all share one thing in common. "
 		},
 	"Braille Hint" : {
-		"start_time" : 30,
-		"end_time" : 45,
+		"start_time" : 40,
+		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Think of each group of Braille dots as a single Tetris piece. "
 		},
 	"Binary Hint" : {
-		"start_time" : 30,
-		"end_time" : 45,
+		"start_time" : 40,
+		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "This is a maze with an entrance and exit.  Keep track of what letters are involved in your path. "
 		},
 	"Semaphore Hint" : {
-		"start_time" : 30,
-		"end_time" : 45,
+		"start_time" : 40,
+		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Each semaphore letter is only half correct which gives you half of what you need. "
 		},
 	"Meta Hint 1" : {
-		"start_time" : 45,
-		"end_time" : 60,
+		"start_time" : 40,
+		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Your final instruction involves reusing two sections of your code sheet. "
 		},
 	"Meta Hint 2" : {
-		"start_time" : 60,
-		"end_time" : 70,
+		"start_time" : 50,
+		"end_time" : 60,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "You may need to do some altering of your code sheet. Have you checked your survival kit?"
 		},
 	"Meta Hint 2" : {
-		"start_time" : 70,
-		"end_time" : 80,
+		"start_time" : 60,
+		"end_time" : 70,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Cut out your keyboard, punch out a certain six letters, and overlay it onto a similarly shaped area to reveal the pass code. "
