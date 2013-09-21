@@ -56,7 +56,7 @@ var Session = Backbone.Model.extend({
 		else {
 			this.set("fans", sessionObj["fans"]);
 			this.set("locationStats", sessionObj["locationStats"]);
-			this.set("currentLocaion", sessionObj["currentLocation"]);
+			this.set("currentLocation", sessionObj["currentLocation"]);
 			this.set("resourceStats", sessionObj["resourceStats"]);
 			this.set("teamStats", sessionObj["teamStats"]);
 			this.set("puzzleStats", sessionObj["puzzleStats"]);
