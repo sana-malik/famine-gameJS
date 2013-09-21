@@ -1,5 +1,5 @@
 {
-"order" : ["Artisphere Ballroom", "GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Thomas Jefferson Memorial, Part Two", "Roosevelt Island", "George Washington Masonic Memorial", "National Harbor, Awakening Statue", "Lake Accotink Park, Picnic Area 3", "Pine Ridge High School Site Park", "Glen Echo Park, Ballroom Cafe", "Kennedy Center, Upper Balcony", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Drive Residence", "Sushi Location", "Penwood Drive Residence", "Mining Artifact Location", "Dennys", "Olde Towne Pet Resort", "GW Community School", "Courtyard Marriott Alexandria Old Town", "Motley Fool", "Motley Fool, Part Two", "Motley Fool, Part Three", "Crystal City Shuttle to Lincoln Memorial", "Martin Luther King Jr. Memorial", "FDR Memorial", "FDR Memorial, Part Two", "Air Force Memorial", "Iwo Jima Memorial (Marine Corps War Memorial)", "Freedom Park", "National Museum of the American Indian", "U.S. Capitol, West of Reflecting Pool", "U.S. Capitol, South of Reflecting Pool", "U.S. Capitol, East of Reflecting Pool", "U.S. Capitol, Southwest Entrance Ramp", "U.S. Capitol, West Lawn", "U.S. Capitol", "Nando's Peri Peri Restaurant"],
+"order" : ["Artisphere Ballroom", "GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Thomas Jefferson Memorial, Part Two", "Roosevelt Island", "George Washington Masonic Memorial", "National Harbor, Awakening Statue", "Lake Accotink Park, Picnic Area 3", "Pine Ridge High School Site Park", "Glen Echo Park, Ballroom Cafe", "Kennedy Center, Upper Balcony", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Drive Residence", "Sushi Location", "Penwood Drive Residence", "Mining Artifact Location", "Dennys", "Olde Towne Pet Resort", "GW Community School", "Courtyard Marriott Alexandria Old Town", "Motley Fool", "Motley Fool, Part Two", "Motley Fool, Part Three", "Crystal City Shuttle to Lincoln Memorial", "Martin Luther King Jr. Memorial", "FDR Memorial", "FDR Memorial, Part Two", "Air Force Memorial", "Iwo Jima Memorial (Marine Corps War Memorial) ", "Freedom Park", "National Museum of the American Indian", "U.S. Capitol, West of Reflecting Pool", "U.S. Capitol, South of Reflecting Pool", "U.S. Capitol, East of Reflecting Pool", "U.S. Capitol, Southwest Entrance Ramp", "U.S. Capitol, West Lawn", "U.S. Capitol", "Nando's Peri Peri Restaurant"],
 "locations" : {
 "Artisphere Ballroom" : {
 	"name" : "Artisphere Ballroom",
@@ -186,7 +186,7 @@
 	"address" : "7500 Accotink Park Rd, Springfield, VA 22150",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/28/2013 16:00",
-	"flavor_text" : "As the adrenaline from your last encounter begins to fade, you start to finally notice how hungry you really are.   You're starting to feel weak and listless.  You won't last much longer without finding something to eat.  You can see the open pasture up to the north where the Feast is about to begin. And while you realize that the Capitol often announces Feasts simply to lure teams out of hiding, you're also getting desperate.<br><br>Warning:  many GPS and navigation tools will may direct you to the wrong part of the lake. You want to enter on the south side of the lake, by taking Highland Street, and then bearing right on Accotink Rd. If your directions are taking you to the north side of the lake (via something like Braddock Rd.), you won't be able to get to the right place.<br><br>When you arrive at the park, head away from the water into the woods to reach Picnic Area 3. </b>",
+	"flavor_text" : "As the adrenaline from your last encounter begins to fade, you start to finally notice how hungry you really are.   You're starting to feel weak and listless.  You won't last much longer without finding something to eat.  You can see the open pasture up to the north where the Feast is about to begin. And while you realize that the Capitol often announces Feasts simply to lure teams out of hiding, you're also getting desperate.<br><br><b>Warning:  many GPS and navigation tools may direct you to the wrong part of the lake. You want to enter on the south side of the lake, by taking Highland Street, and then bearing right on Accotink Park Rd. If your directions are taking you to the north side of the lake (via something like Braddock Rd.), you won't be able to get to the right place.<br><br>When you arrive at the park, head away from the water into the woods to reach Picnic Area 3. </b>",
 	"self_flavor_text" : "",
 	"notes" : "Start codes = roe, branded",
 	"parking_status" : "Yes",
@@ -199,7 +199,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : ["Animal Farm"]
+	"puzzles" : ["The Feast"]
 },
 "Pine Ridge High School Site Park" : {
 	"name" : "Pine Ridge High School Site Park",
@@ -246,7 +246,7 @@
 	"address" : "2700 F St NW, Washington, DC 20566",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/28/2013 20:30",
-	"flavor_text" : "During each Famine Game, the Capitol holds an exclusive gala for its most influential citizens.  It's probably in your best interest to try and curry favor with someone powerful.  Head there now and start rubbing elbows.  Warning: as this portion of the Arena allows for contact between Tributes and Capitol citizens, you will need to be on your best behavior or face swift \"disqualification\".  Do not disturb the citizens!<br><br><b>We have been told that the parking garage can accommodate vehicles up to 8 feet in clearance.  Make sure to park in the C lot on the south side. Use the envelope in your survival kit marked \"Parking\" to pay. When you arrive, make your way up to the upper balcony exit towards the Potomac River, and find your sponsor.<br><br>If you arrive after 8PM, there's a chance that the lot for larger vans may not have a cashier.  In that case you can look for street parking or let some of your team run in and retrieve the clue.  We hope that your entire team can participate as you'll have a cool view and you'll have some character interaction, but at the same time, we don't wait you to waste time trying to park.</b>",
+	"flavor_text" : "During each Famine Game, the Capitol holds an exclusive gala for its most influential citizens.  It's probably in your best interest to try and curry favor with someone powerful.  Head there now and start rubbing elbows.  Warning: as this portion of the Arena allows for contact between Tributes and Capitol citizens, you will need to be on your best behavior or face swift \"disqualification\".  Do not disturb the citizens!<br><br><b>We have been told that one of the parking garages can accommodate vehicles up to 8 feet in clearance.  Make sure to park in the C lot on the south side. Use the envelope in your survival kit marked \"Parking\" to pay. When you arrive, make your way up to the upper balcony exit towards the Potomac River, and find your sponsor.<br><br>If you arrive after 8PM, there's a chance that the lot for larger vans may not have a cashier.  In that case you can look for street parking or let some of your team run in and retrieve the clue.  We hope that your entire team can participate as you'll have a cool view and you'll have some character interaction, but at the same time, we don't wait you to waste time trying to park.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = bend",
 	"parking_status" : "Yes",
@@ -306,7 +306,7 @@
 	"address" : "2319 N. Nottingham Arlington VA 22205",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
-	"flavor_text" : "Now that that grisly business is done, it's time to once again move on.  Perhaps if you head into the modern day labyrinth of Suburbia you can shake any potential teams stalking you.<br><br>A word of caution: in such a dense urban environment, danger could be waiting to ambush you around any corner.<br><br><b>Please be as quiet as possible as you're going to be in a residential area (people may be trying to sleep).<br><br>Drive to the address listed, park on the street, and make your way around the left side of the house to the back yard.</b>",
+	"flavor_text" : "After making it through that grisly ordeal, it's time to once again move on.  Perhaps if you head into the modern day labyrinth of Suburbia you can shake any potential teams stalking you.<br><br>A word of caution: in such a dense urban environment, danger could be waiting to ambush you around any corner.<br><br><b>Please be as quiet as possible as you're going to be in a residential area (people may be trying to sleep).<br><br>Drive to the address listed, park on the street, and make your way around the left side of the house to the back yard.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = songbird",
 	"parking_status" : "Yes",
@@ -346,7 +346,7 @@
 	"address" : "4502 Penwood Dr.",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
-	"flavor_text" : "Perhaps you need to find a safe place to collect your thoughts.  So far you've been left relatively alone in the suburban environs.  But, as common wisdom dictates, you shouldn't stay in one spot for very long.<br><br><b>Head south.  You will find yourself in another residential location. Again, park on the street and if after hours, please remain as quiet as possible.  Be cautious of van door slamming, loud chatter, etc. </b>",
+	"flavor_text" : "Perhaps you need to find a safe place to collect your thoughts.  So far you've been left relatively alone in the suburban environs.  But, as common wisdom dictates, you shouldn't stay in one spot for very long.<br><br><b>You will be driving to another residential location. Again, park on the street and if after hours, please remain as quiet as possible.  Be cautious of van door slamming, loud chatter, etc. </b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = faces",
 	"parking_status" : "Yes",
@@ -361,18 +361,19 @@
 	"map_file" : "",
 	"puzzles" : ["The Fallen"]
 },
-"Mining Artifact Location" : {
-	"name" : "Mining Artifact Location",
-	"address" : "TBD",
+"Bush Hill Presbyterian Church" : {
+	"name" : "Bush Hill Presbyterian Church",
+	"address" : "4916 Franconia Road Alexandria, VA 22310
+",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 01:00",
-	"flavor_text" : "It's getting late.  You're tired, you've been through so much, and you're not sure how much more you can take.  Despite this, though, you're in surprisingly high spirits.  Who would've thought you would make it this far, relatively unscathed?  Only about 1/4th of the teams remain and you're in a pretty good position to keep going strong.  Maybe you'll survive this yet.",
+	"flavor_text" : "It's getting late.  You're tired, you've been through so much, and you're not sure how much more you can take.  Despite this, though, you're in surprisingly high spirits.  Who would've thought you would make it this far, relatively unscathed?  Only about 1/4th of the teams remain and you're in a pretty good position to keep going strong.  Maybe you'll survive this yet.<br><br><b>Park in the lot behind the church, and head into the small wooded area behind the church. Once again, please be respectful of sleeping neighbors!!</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = coal",
 	"parking_status" : "Yes",
-	"parking_description" : "",
-	"restroom_status" : "",
-	"restroom_description" : "",
+	"parking_description" : "Free lot behind the church",
+	"restroom_status" : "Yes, in the church pre-school. ",
+	"restroom_description" : "Possibly some tiny toddler toilets!",
 	"food_status" : "",
 	"food_description" : "",
 	"wifi_status" : "",
@@ -387,7 +388,7 @@
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
 	"flavor_text" : "There's only one major alliance of teams left.  They've been hoarding a big cache of grain. If you destroy their supplies, they'll be weak and disoriented enough that they shouldn't prove too much of a challenge.<br><br><b>Park, make your way inside, and get a table. If you're going to solve this puzzle on location, please order some food.  Also Denny's management stressed to us that late night is often very busy for them with regular guests.  They've been gracious enough to accommodate our large numbers, but they said to please be patient, as the servers might not be able to get to teams right away.</b>",
-	"self_flavor_text" : "",
+	"self_flavor_text" : "Two teams have allied with each other, and they've been hoarding a big cache of grain. If you destroy their supplies, they'll be weak and disoriented enough that they shouldn't prove too much of a challenge.<br><br><b>Park, make your way inside, and get a table. If you're going to solve this puzzle on location, please order some food.  Also Denny's management stressed to us that late night is often very busy for them with regular guests.  They've been gracious enough to accommodate our large numbers, but they said to please be patient, as the servers might not be able to get to teams right away.</b>",
 	"notes" : "Start code = breakfast",
 	"parking_status" : "Yes",
 	"parking_description" : "Free lot",
@@ -406,8 +407,8 @@
 	"address" : "Springfield 8101 Alban Road, Springfield VA 22150",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 04:00",
-	"flavor_text" : "Now there are only two careers teams left.  Time to go on the offensive and hunt them down.",
-	"self_flavor_text" : "Holy Pangram!  There is only one career team left. Time to go on the offensive and hunt them down.",
+	"flavor_text" : "Now there are only two career teams left. Time to go on the offensive and hunt them down.",
+	"self_flavor_text" : "Holy Pangram!  There is only one other team left. Time to go on the offensive and hunt them down.",
 	"notes" : "Start code = kennel",
 	"parking_status" : "??",
 	"parking_description" : "",
@@ -526,7 +527,7 @@
 	"address" : "2 Lincoln Memorial Cir NW, Washington, DC 20037",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 10:00",
-	"flavor_text" : "You've won the hearts of so many across Pangram, but the Resistance is still skeptical of your loyalty and usefulness. As a test, they want to send you on a secret mission into the Capitol.<br><br><b>Park your car in the free lot. A member of the resistance should be there to shuttle your team into the city. </b>",
+	"flavor_text" : "You've won the hearts of so many across Pangram, but the Resistance is still skeptical of your loyalty and usefulness. As a test, they want to send you on a secret mission into the Capitol.<br><br><b>Don't leave just yet! Come back to the adminstrator's desk and let them know that you're ready for your secret mission in the Capitol. We will let you know the best course of action as to getting into the Capitol.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = memorial",
 	"parking_status" : "N/A",
@@ -586,7 +587,7 @@
 	"address" : "1850 West Basin Dr SW, Washington, DC 20242",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 09:00",
-	"flavor_text" : "With the Capitol busy scrambling to repair their security trenches, you realize they're more vulnerable than ever.<b>Return to the Piecekeeper and tell them you'd like to infiltrate the stock market. </b>",
+	"flavor_text" : "With the Capitol busy scrambling to repair their security trenches, you realize they're more vulnerable than ever.<br><br><b>Return to the Piecekeeper and tell them you'd like to infiltrate the stock market. </b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = flood",
 	"parking_status" : "N/A",
@@ -606,7 +607,7 @@
 	"address" : "1 Air Force Memorial Dr, Arlington, VA 22204",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 11:00",
-	"flavor_text" : "Now that we've got the Capitol disoriented, we'd like to take their biggest asset: District 2.  In order to do so, we'll need some good recon.  Head to this lookout point, and get the intel we need. <br><br><b>Drive to the Air Force memorial and park in the adjacent lot. Enter the memorial and look for the Piecekeeper who awaits you. </b>",
+	"flavor_text" : "Now that we've got the Capitol disoriented, we'd like to take their biggest asset: District 2.  In order to do so, we'll need some good recon.  Head to this lookout point, and get the intel we need. <br><br><b>Drive to the Air Force memorial and park in the on-site lot. Enter the memorial and look for the Piecekeeper who awaits you. </b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = air force",
 	"parking_status" : "Yes",
@@ -646,7 +647,7 @@
 	"address" : "1687 N. Lynn Street, Arlington, VA 22209",
 	"time_open" : "09/29/2013 07:00",
 	"time_closed" : "09/29/2013 13:00",
-	"flavor_text" : "While you were occupied taking District 2, the Capitol has taken its own steps to end this war.  Showing a complete lack of compunction, Capitol troops have raided a children's hospital, taking hundreds of patients hostage. This will not stand. You need to mount a rescue mission immediately or our revolution ends here.<br><br><b>Freedom Park is an elevated park. The main entrance is on N. Lynn Street. From the Iwo Jima Memorial, you can either drive and look for lot or street parking or walk (about 1/3 mi.).<br><br>When you enter the park on street level, proceed up the ramp and then make a hard U-Turn to the left.  On your right, look for the mural of 7 colorful mosaics in a small plaza.</b>",
+	"flavor_text" : "While you were occupied taking District 2, the Capitol has taken its own steps to end this war.  Showing a complete lack of compunction, Capitol troops have raided a children's hospital, taking hundreds of patients hostage. This will not stand. You need to mount a rescue mission immediately or our revolution ends here.<br><br><b>Freedom Park is an elevated park. The main entrance is on N. Lynn Street. From the Iwo Jima Memorial, you can either drive and look for lot or street parking or walk (about 1/3 mi.).  If you choose to walk, just follow Meade St north until it turns into N. Lynn. Entrance will be on your right. br><br>When you enter the park on street level, proceed up the ramp and then make a hard U-Turn to the left.  On your right, look for the mural of 7 colorful mosaics in a small plaza.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = mural",
 	"parking_status" : "??",
@@ -666,7 +667,7 @@
 	"address" : "Fourth Street & Independence Ave., S.W.",
 	"time_open" : "09/29/2013 07:00",
 	"time_closed" : "09/30/2013 18:00",
-	"flavor_text" : "Now that you've shorn up your numbers with new Resistance members, it's finally time to infiltrate the Capitol!<b>Head into DC and look for the Piecekeeper at the SE corner of the American Indian museum.<br><br>To park in DC is often a puzzle in itself. You can always chance it and try to find street parking, which might not be that bad on a Sunday. If you wish to have a less variable drive time, and you have a minivan or SUV less than 6' 6\" clearance, there is a Colonial Parking garage on 6th St, SW in between C and D Streets. You'll have about a 4.5-block walk to the museum.<br><br>For those of you with full-size vans, limo-buses, tanks, duckboat, etc. you can either chance it with street parking or take the orange or blue line Metro from Virginia into DC, exiting at the Federal Center Metro Station. Trains run from Rosslyn (1850 N. Moore Street, Arlington, VA) every 8 minutes and the ride takes approx. 14 minutes. You'll then exit and walk north about 3 blocks.  Whew!  Good luck, tributes.</b>",
+	"flavor_text" : "Now that you've shorn up your numbers with new Resistance members, it's finally time to infiltrate the Capitol!<br><br><b>Head into DC and look for the Piecekeeper at the SE corner of the American Indian museum.<br><br>Parking in DC is often a puzzle in itself. You can always chance it and try to find street parking, which might not be that bad on a Sunday. If you wish to have a less variable drive time, and you have a minivan or SUV less than 6' 6\" clearance, there is a Colonial Parking garage on 6th St, SW in between C and D Streets. You'll have about a 4.5-block walk to the museum.<br><br>For those of you with full-size vans, limo-buses, tanks, duckboat, etc. you can either chance it with street parking or take the orange or blue line Metro from Virginia into DC, exiting at the Federal Center Metro Station. Trains run from Rosslyn (1850 N. Moore Street, Arlington, VA) every 8 minutes and the ride takes approx. 14 minutes. You'll then exit and walk north about 3 blocks.  Whew!  Good luck, tributes.</b>",
 	"self_flavor_text" : "",
 	"notes" : "",
 	"parking_status" : "",
@@ -699,7 +700,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : []
+	"puzzles" : ["Propos Video"]
 },
 "U.S. Capitol, West of Reflecting Pool" : {
 	"name" : "U.S. Capitol, West of Reflecting Pool",
@@ -719,7 +720,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : ["Propos Video"]
+	"puzzles" : ["Defense Grid"]
 },
 "U.S. Capitol, South of Reflecting Pool" : {
 	"name" : "U.S. Capitol, South of Reflecting Pool",
@@ -739,7 +740,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : ["Defense Grid"]
+	"puzzles" : ["Pod of Flesh Melting Beam"]
 },
 "U.S. Capitol, East of Reflecting Pool" : {
 	"name" : "U.S. Capitol, East of Reflecting Pool",
@@ -759,14 +760,14 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : ["Pod of Flesh Melting Beam"]
+	"puzzles" : ["iPod"]
 },
 "U.S. Capitol, Southwest Entrance Ramp" : {
 	"name" : "U.S. Capitol, Southwest Entrance Ramp",
 	"address" : "Washington, DC",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 15:30",
-	"flavor_text" : "As you continue to approach the Capitol building, you are joined by more and more members of the Resistance. Still you must proceed with caution, as pods have been known to wipe out thousands in an instant. <br><br><b>Head SE to the base of the walkway leading up to the Capitol.  Look for the Piecekeeper in between the two stone pedestal.</b>",
+	"flavor_text" : "As you continue to approach the Capitol building, you are joined by more and more members of the Resistance. Still you must proceed with caution, as pods have been known to wipe out thousands in an instant. <br><br><b>Head SE to the base of the walkway leading up to the Capitol.  Look for the Piecekeeper in between the two stone pedestals.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = apple",
 	"parking_status" : "N/A",
@@ -779,7 +780,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : ["iPod"]
+	"puzzles" : ["Pod of Black Ooze", "Pod of Lightning Seeds"]
 },
 "U.S. Capitol, West Lawn" : {
 	"name" : "U.S. Capitol, West Lawn",
@@ -799,7 +800,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "",
-	"puzzles" : ["Pod of Black Ooze", "Pod of Lightning Seeds"]
+	"puzzles" : ["Pod of Powers", "Pod Deadly Metal Darts", "Whale Pod", "Pod of Arrows", "Pod of Encircling Muttations", "Pod of Distracting Noise", "Pod of Hard Labor", "Pod of Barbed Wire", "Pod of Ambiguity"]
 },
 "U.S. Capitol" : {
 	"name" : "U.S. Capitol",
