@@ -86,7 +86,7 @@ $(document).ready(function() {
 
 	// if rebellion theme is enabled, add it
 	if (session.get("rebellionTheme")) {
-		$("head").append('<link rel="stylesheet" type="text/css" href="css/rebellion.css">');
+		$("head").append('<link rel="stylesheet" type="text/css" href="css/r.css">');
 	}
 	
 	// Set up views
