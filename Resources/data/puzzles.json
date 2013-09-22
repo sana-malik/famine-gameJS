@@ -4458,7 +4458,7 @@ Your hint clock has now started for this puzzle.",
 	}
 },
 "Finale" : {"name":"Finale",
-"start_code" : "finale",
+"start_code" : "snowblows",
 "max_fans" : 2000,
 "flavor_text" : "You see before you one last pod.  Though smaller than the others, it seems somehow more menacing.  As you approach, you see a mass of cables connected to its base and, with a sudden horrific understanding, realize that each one snakes out and connects to one of the pods you just encountered.  With a terrible hum, each of these pods reactivates, surrounding you in a deadly web of machinery.  If you act fast, you may be able to destroy this pod before it's too late.  It's your only hope.",
 "self_flavor_text" : "",

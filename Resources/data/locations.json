@@ -645,7 +645,7 @@
 "Freedom Park" : {
 	"name" : "Freedom Park",
 	"address" : "1687 N. Lynn Street, Arlington, VA 22209",
-	"time_open" : "09/29/2013 07:00",
+	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 13:00",
 	"flavor_text" : "While you were occupied taking District 2, the Capitol has taken its own steps to end this war.  Showing a complete lack of compunction, Capitol troops have raided a children's hospital, taking hundreds of patients hostage. This will not stand. You need to mount a rescue mission immediately or our revolution ends here.<br><br><b>Freedom Park is an elevated park. The main entrance is on N. Lynn Street. From the Iwo Jima Memorial, you can either drive and look for lot or street parking or walk (about 1/3 mi.).  If you choose to walk, just follow Meade St north until it turns into N. Lynn. Entrance will be on your right. br><br>When you enter the park on street level, proceed up the ramp and then make a hard U-Turn to the left.  On your right, look for the mural of 7 colorful mosaics in a small plaza.</b>",
 	"self_flavor_text" : "",
@@ -665,7 +665,7 @@
 "National Museum of the American Indian" : {
 	"name" : "National Museum of the American Indian",
 	"address" : "Fourth Street & Independence Ave., S.W.",
-	"time_open" : "09/29/2013 07:00",
+	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
 	"flavor_text" : "Now that you've shorn up your numbers with new Resistance members, it's finally time to infiltrate the Capitol!<br><br><b>Head into DC and look for the Piecekeeper at the SE corner of the American Indian museum.<br><br>Parking in DC is often a puzzle in itself. You can always chance it and try to find street parking, which might not be that bad on a Sunday. If you wish to have a less variable drive time, and you have a minivan or SUV less than 6' 6\" clearance, there is a Colonial Parking garage on 6th St, SW in between C and D Streets. You'll have about a 4.5-block walk to the museum.<br><br>For those of you with full-size vans, limo-buses, tanks, duckboat, etc. you can either chance it with street parking or take the orange or blue line Metro from Virginia into DC, exiting at the Federal Center Metro Station. Trains run from Rosslyn (1850 N. Moore Street, Arlington, VA) every 8 minutes and the ride takes approx. 14 minutes. You'll then exit and walk north about 3 blocks.  Whew!  Good luck, tributes.</b>",
 	"self_flavor_text" : "",
@@ -685,7 +685,7 @@
 "National Museum of the American Indian, Solve Propos" : {
 	"name" : "National Museum of the American Indian, Solve Propos",
 	"address" : "Fourth Street & Independence Ave., S.W.",
-	"time_open" : "09/29/2013 07:00",
+	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 14:00",
 	"flavor_text" : "<b>Return to the Piecekeeper at this location for further instructions. </b>",
 	"self_flavor_text" : "",
