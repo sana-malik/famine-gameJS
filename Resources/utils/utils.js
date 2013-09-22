@@ -154,7 +154,7 @@ function PuzzleTimer(puzzleId, interval){
 		if (changed) session.set("puzzleStats", stats);
 		if (newHintFree && stats[puzzleId]["status"] === puzzleStatus.ACTIVE) {
 			if ($('.toast-message:contains("' + puzzles[puzzleId].get("name") + '")').length === 0) { // if a notification isn't already shown for this puzzle
-				playSound("notify.wav", 500);
+				playSound("pling.wav", 750);
 				toastr.info("New hints available for " + puzzles[puzzleId].get("name") + "!","",
 					{onclick: function(e) {
 						$(".main.active").removeClass("active");

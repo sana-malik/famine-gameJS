@@ -33,7 +33,7 @@ var MessageController = {
 		});
 
 		// todo(sana): play a sound
-		playSound("pling.wav", 1000);
+		playSound("pling.wav", 750);
 
 		// increment activity tab counter
 		var unreadCount = session.get("unreadCount")+1;
