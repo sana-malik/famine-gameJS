@@ -97,7 +97,7 @@ var HistoryView = Backbone.View.extend({
 		} else {
 			$('#tab_history').html('<a href="#">Activity</a>');
 		}
-
+		toastr.clear();
 		saveSession();
 	},
 
@@ -113,7 +113,7 @@ var HistoryView = Backbone.View.extend({
 
 		session.set("unreadCount", 0);
 		$('#tab_history').html('<a href="#">Activity</a>');
-
+		toastr.clear();
 		saveSession();
 	},
 
