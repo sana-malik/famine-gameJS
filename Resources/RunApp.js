@@ -62,8 +62,10 @@ $(document).ready(function() {
 	$.each(session.get("puzzleStats"), function(name, puzStat) {
 		if (puzStat["status"] != puzzleStatus.INACTIVE) {
 			// fix start and end strings to objects
-			var start = puzStat["start_time"];
-			puzStat["start_time"] = parseDateTimeString(start);
+			if ("start_time" in puzStat) {
+				var start = puzStat["start_time"];
+				puzStat["start_time"] = parseDateTimeString(start);
+			}
 
 			if ("end_time" in puzStat) {
 				var end = puzStat["end_time"];

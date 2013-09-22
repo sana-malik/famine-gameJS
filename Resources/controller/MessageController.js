@@ -37,7 +37,7 @@ var MessageController = {
 
 		// increment activity tab counter
 		var unreadCount = session.get("unreadCount")+1;
-		$('#tab_history').html('<a href="#">Activity ('+unreadCount+")</a>");
+		if (unreadCount > 0) $('#tab_history').html('<a href="#">Activity ('+unreadCount+")</a>");
 		session.set("unreadCount", unreadCount);
 
 		// add in activty tab

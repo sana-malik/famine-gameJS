@@ -90,6 +90,7 @@ var HistoryView = Backbone.View.extend({
 		session.set("messageStats", stats);
 
 		var unreadCount = session.get("unreadCount")-1;
+		if (unreadCount < 0) unreadCount = 0;
 		session.set("unreadCount", unreadCount);
 		if (unreadCount > 0) {
 	 		$('#tab_history').html('<a href="#">Activity ('+unreadCount+')</a>');
