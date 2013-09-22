@@ -235,6 +235,10 @@ var Puzzle = Backbone.Model.extend({
 				currentLoc++;
 				showSkipTitle = false;
 			}
+
+			if ($(".skip_title").length > 0 && ($(".skip_title").next(".video-alert").length === 0 && $(".skip_title").next(".resource-alert").length === 0) ) { // check if there is anything after the skip title.. if no, remove it
+				$(".skip_title").remove();
+			}
 			session.set("currentLocation", currentLoc);
 
 			var loc_desc = locations[locOrder[currentLoc]].get("flavor_text")
@@ -277,7 +281,7 @@ var Puzzle = Backbone.Model.extend({
 	},
 
 	skipLocation : function(loc_index, stats, displayTitle) {
-		if (displayTitle && !session.get("rebellionTheme")) showPopup("While you were occupied, the following also happened in the arena: ");
+		if (displayTitle && !session.get("rebellionTheme")) showPopup('<div class="skip_title">While you were occupied, the following also happened in the arena: </div>');
 	 	$.each( locations[locOrder[loc_index]].get("puzzles"), function(index, puzzle_name) {
 	 		if ( !(puzzle_name in puzzles) ) 
 	 			console.log("Tried to access a puzzle that doesn't exist: " + puzzle)

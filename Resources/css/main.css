@@ -625,6 +625,10 @@ margin: 0px;
 margin-bottom: 10px;
 }
 
+.skip_title {
+	margin-top: 5px;
+}
+
 .video-alert, .resource-alert {
 font-size: 1em;
 background: #37374d;
