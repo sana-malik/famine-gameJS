@@ -11,14 +11,14 @@
 	"notes" : "Start code = test puzzle",
 	"parking_status" : "Yes",
 	"parking_description" : "Free parking",
-	"restroom_status" : "No",
+	"restroom_status" : "Yes",
 	"restroom_description" : "",
-	"food_status" : "??",
+	"food_status" : "Yes",
 	"food_description" : "",
-	"wifi_status" : "No",
+	"wifi_status" : "Yes",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "Golf DC Map.png",
+	"map_file" : "artisphere_map.png",
 	"puzzles" : ["Test Puzzle", "Starting Location"]
 },
 "GolfDC Academy" : {
@@ -31,14 +31,14 @@
 	"notes" : "Start code = intro",
 	"parking_status" : "Yes",
 	"parking_description" : "Free parking",
-	"restroom_status" : "No",
+	"restroom_status" : "??",
 	"restroom_description" : "",
 	"food_status" : "??",
 	"food_description" : "",
-	"wifi_status" : "No",
+	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "Golf DC Map.png",
+	"map_file" : "golf_dc_map.png",
 	"puzzles" : ["The Procession"]
 },
 "Hains Point" : {
@@ -51,14 +51,14 @@
 	"notes" : "Start codes = bloodbath, rules, fight, finish",
 	"parking_status" : "Yes",
 	"parking_description" : "Park in the large lot at the southern tip of the peninsula. ",
-	"restroom_status" : "Yes",
+	"restroom_status" : "No",
 	"restroom_description" : "",
-	"food_status" : "",
+	"food_status" : "No",
 	"food_description" : "",
-	"wifi_status" : "",
+	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "golf_dc_map.png",
 	"puzzles" : ["Cornucopia - Know Thy Enemy", "Cornucopia - Techniques", "Cornucopia - Bend the Rules", "Cornucopia - Finishing Move"]
 },
 "George Mason Memorial" : {
@@ -73,12 +73,12 @@
 	"parking_description" : "Memorial Lots A, B, C are a 5 minute walk to the memorial. A is your closest option. ",
 	"restroom_status" : "Yes",
 	"restroom_description" : "Restrooms are nearby at the Jefferson Memorial",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
 	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "george_mason_memorial_map.png",
 	"puzzles" : ["Blanket Weaving"]
 },
 "Thomas Jefferson Memorial" : {
@@ -89,16 +89,16 @@
 	"flavor_text" : "Don't return to your vehicles just yet!  You need to find some sort of weapon to defend yourself.  Head to the memorial of Jamesson Hoffert, one of the founders of Pangram, and find something to create a makeshift weapon.  Anything will do, even a sharpened stick! <br><br><b>Walk northeast to the Jefferson Memorial. </b> ",
 	"self_flavor_text" : "",
 	"notes" : "Start codes = traffic",
-	"parking_status" : "Yes",
-	"parking_description" : "Memorial Lots A, B, C are a 5 minute walk to the memorial. A is your closest option. ",
+	"parking_status" : "No",
+	"parking_description" : "Walk here from the George Mason Memorial.",
 	"restroom_status" : "Yes",
 	"restroom_description" : "Restrooms are beneath the Jefferson Memorial",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
 	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "jefferson_memorial_map.png",
 	"puzzles" : ["Pen"]
 },
 "Thomas Jefferson Memorial, Part Two" : {
@@ -109,16 +109,16 @@
 	"flavor_text" : "You need to stay mobile, so it might be a good time to think about transportation. Looking around, you marvel at the wide variety of options.  Man-powered boats in the water, planes flying overhead, and cars all around you.  Perhaps one of those will help. <br><br><b>Return to the Piecekeepers and tell them you need a ride.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start codes = quill",
-	"parking_status" : "Yes",
+	"parking_status" : "No",
 	"parking_description" : "Memorial Lots A, B, C are a 5 minute walk to the memorial. A is your closest option. ",
 	"restroom_status" : "Yes",
 	"restroom_description" : "Restrooms are beneath the Jefferson Memorial",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
 	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "jefferson_memorial_map.png",
 	"puzzles" : ["Vehicles"]
 },
 "Roosevelt Island" : {
@@ -133,12 +133,12 @@
 	"parking_description" : "There is a small parking lot on the east side of the street.  This parking lot only has one entrance.",
 	"restroom_status" : "Yes",
 	"restroom_description" : "There is a portable toilet at the end of the parking lot.",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
 	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "?? todo -- show parking",
 	"puzzles" : ["Lincoln Logs"]
 },
 "George Washington Masonic Memorial" : {
@@ -153,12 +153,12 @@
 	"parking_description" : "There are free lots right next to the Memorial.  ",
 	"restroom_status" : "Yes",
 	"restroom_description" : "Inside the Memorial, ask the staff for precise directions",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "washington_masonic_memorial.png",
 	"puzzles" : ["Legos"]
 },
 "National Harbor, Awakening Statue" : {
@@ -170,15 +170,15 @@
 	"self_flavor_text" : "",
 	"notes" : "Start code = peeta",
 	"parking_status" : "Yes",
-	"parking_description" : "Paid lots ",
+	"parking_description" : "Pay to park.",
 	"restroom_status" : "Yes",
 	"restroom_description" : "There are restrooms in many of the restaurants in the harbor. ",
-	"food_status" : "??",
+	"food_status" : "Yes",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "national_harbor.png",
 	"puzzles" : ["Camouflage"]
 },
 "Lake Accotink Park, Picnic Area 3" : {
@@ -198,7 +198,7 @@
 	"wifi_status" : "",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "lake_accotink_map.png",
 	"puzzles" : ["The Feast"]
 },
 "Pine Ridge High School Site Park" : {
@@ -213,12 +213,12 @@
 	"parking_description" : "There is a large gravel lot that is free to park in.",
 	"restroom_status" : "Yes",
 	"restroom_description" : "There is a portable toilet at the end of the parking lot.",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "pine_ridge_map.png",
 	"puzzles" : ["Plants vs Zombies"]
 },
 "Glen Echo Park, Ballroom Cafe" : {
@@ -231,14 +231,14 @@
 	"notes" : "Start code = achievement",
 	"parking_status" : "Yes",
 	"parking_description" : "A free parking lot for Glen Echo Park is located just off MacArthur Boulevard on Oxford Road, across from the Glen Echo Shopping Center. From the parking lot, follow the foot-bridge across the Minnehaha Creek to enter the Park.",
-	"restroom_status" : "??",
+	"restroom_status" : "Yes",
 	"restroom_description" : "",
-	"food_status" : "??",
-	"food_description" : "",
-	"wifi_status" : "??",
+	"food_status" : "Yes",
+	"food_description" : "There is a restaurant and a cafe.",
+	"wifi_status" : "Yes",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "glen_echo_map.png",
 	"puzzles" : ["XBox"]
 },
 "Kennedy Center, Upper Balcony" : {
@@ -253,12 +253,12 @@
 	"parking_description" : "You can park in the Kennedy Center garage if there's space, but it costs $20. Additionally, there is nearby street parking, though it may be hard to find.",
 	"restroom_status" : "Yes",
 	"restroom_description" : "",
-	"food_status" : "??",
-	"food_description" : "",
-	"wifi_status" : "??",
+	"food_status" : "Yes",
+	"food_description" : "Snackbar",
+	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "kennedy_center_map.png",
 	"puzzles" : ["Strange Bracelet"]
 },
 "Dawson Terrace Community Center" : {
@@ -271,14 +271,14 @@
 	"notes" : "Start code = hive",
 	"parking_status" : "Yes",
 	"parking_description" : "Park on the street near the community center. ",
-	"restroom_status" : "??",
+	"restroom_status" : "No",
 	"restroom_description" : "",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "dawson_terrace_map.png",
 	"puzzles" : ["Tracker Jackers"]
 },
 "Victory Comics" : {
@@ -298,7 +298,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "victory_comics_map.png",
 	"puzzles" : ["Settlers of Pangram", "Ore", "Brick", "Wheat", "Lumber", "Wool"]
 },
 "Nottingham Drive Residence" : {
@@ -311,14 +311,14 @@
 	"notes" : "Start code = songbird",
 	"parking_status" : "Yes",
 	"parking_description" : "Free street parking",
-	"restroom_status" : "??",
+	"restroom_status" : "Yes",
 	"restroom_description" : "",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "Yes",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "nottingham_map.png",
 	"puzzles" : ["Mockingjays"]
 },
 "Sushi Location" : {
@@ -343,7 +343,7 @@
 },
 "Penwood Drive Residence" : {
 	"name" : "Penwood Drive Residence",
-	"address" : "4502 Penwood Dr.",
+	"address" : "4502 Penwood Dr., Alexandria, VA 22310",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
 	"flavor_text" : "Perhaps you need to find a safe place to collect your thoughts.  So far you've been left relatively alone in the suburban environs.  But, as common wisdom dictates, you shouldn't stay in one spot for very long.<br><br><b>You will be driving to another residential location. Again, park on the street and if after hours, please remain as quiet as possible.  Be cautious of van door slamming, loud chatter, etc. </b>",
@@ -358,7 +358,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "penwood_map.png",
 	"puzzles" : ["The Fallen"]
 },
 "Bush Hill Presbyterian Church" : {
@@ -372,19 +372,19 @@
 	"notes" : "Start code = coal",
 	"parking_status" : "Yes",
 	"parking_description" : "Free lot behind the church",
-	"restroom_status" : "Yes, in the church pre-school. ",
-	"restroom_description" : "Possibly some tiny toddler toilets!",
-	"food_status" : "",
+	"restroom_status" : "Yes",
+	"restroom_description" : "In the church pre-school. Possibly some tiny toddler toilets!",
+	"food_status" : "??",
 	"food_description" : "",
-	"wifi_status" : "",
+	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "bush_hill_map.png",
 	"puzzles" : ["Mining Artifact"]
 },
-"Dennys" : {
-	"name" : "Dennys",
-	"address" : "7694 Richmond Highway Alexandria, VA 22306-2843",
+"Denny's" : {
+	"name" : "Denny's",
+	"address" : "7214 Richmond Highway Alexandria, VA 22306-2843",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
 	"flavor_text" : "There's only one major alliance of teams left.  They've been hoarding a big cache of grain. If you destroy their supplies, they'll be weak and disoriented enough that they shouldn't prove too much of a challenge.<br><br><b>Park, make your way inside, and get a table. If you're going to solve this puzzle on location, please order some food.  Also Denny's management stressed to us that late night is often very busy for them with regular guests.  They've been gracious enough to accommodate our large numbers, but they said to please be patient, as the servers might not be able to get to teams right away.</b>",
@@ -394,12 +394,12 @@
 	"parking_description" : "Free lot",
 	"restroom_status" : "Yes",
 	"restroom_description" : "",
-	"food_status" : "??",
+	"food_status" : "Yes",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "Yes",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "dennys_map.png",
 	"puzzles" : ["Cereal", "Froot Loops", "Trix", "Alpha Bits", "Honeycomb", "Lucky Charms"]
 },
 "Olde Towne Pet Resort" : {
@@ -419,7 +419,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "pet_resort_map.png",
 	"puzzles" : ["Muttations"]
 },
 "GW Community School" : {
@@ -436,10 +436,10 @@
 	"restroom_description" : "",
 	"food_status" : "??",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "Yes",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "gw_school_map.png",
 	"puzzles" : ["The Clock"]
 },
 "Courtyard Marriott Alexandria Old Town" : {
@@ -459,7 +459,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "courtyard_map.png",
 	"puzzles" : ["Code Sheet"]
 },
 "Motley Fool" : {
@@ -470,16 +470,16 @@
 	"flavor_text" : "So the rumors were true, District 13 really does exist!  Now you just need to make your way there and figure out what's really going on.  <br><br><b>Park on the street and go to the front of the building.  Security is tight, so you'll need to be escorted in by a Piecekeeper.  Don't worry, they're just as sick of the Capitol's abuses as we are and have been working with us for a while now.  Call the number posted on the door and give them the passcode \"fort\".</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = skin",
-	"parking_status" : "??",
-	"parking_description" : "",
+	"parking_status" : "Yes",
+	"parking_description" : "Free street parking",
 	"restroom_status" : "Yes",
 	"restroom_description" : "",
 	"food_status" : "??",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "Yes",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "mootley_fool_map.png",
 	"puzzles" : ["Tattoo Schedule"]
 },
 "Motley Fool, Part Two" : {
@@ -490,16 +490,16 @@
 	"flavor_text" : "If we want the revolution to succeed, we'll need to win the hearts and the minds of the people.  <br><br><b>Return to the administrator's desk, and get them to show you where the studio is.</b>",
 	"self_flavor_text" : "",
 	"notes" : "",
-	"parking_status" : "",
-	"parking_description" : "",
-	"restroom_status" : "",
+	"parking_status" : "Yes",
+	"parking_description" : "Free street parking",
+	"restroom_status" : "Yes",
 	"restroom_description" : "",
-	"food_status" : "",
+	"food_status" : "??",
 	"food_description" : "",
-	"wifi_status" : "",
+	"wifi_status" : "Yes",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "mootley_fool_map.png",
 	"puzzles" : ["Film Propos"]
 },
 "Motley Fool, Part Three" : {
@@ -510,16 +510,16 @@
 	"flavor_text" : "Return to the administrator's desk. Apparently there's someone who would like to meet you. ",
 	"self_flavor_text" : "",
 	"notes" : "",
-	"parking_status" : "",
-	"parking_description" : "",
-	"restroom_status" : "",
+	"parking_status" : "Yes",
+	"parking_description" : "Free street parking",
+	"restroom_status" : "Yes",
 	"restroom_description" : "",
-	"food_status" : "",
+	"food_status" : "??",
 	"food_description" : "",
-	"wifi_status" : "",
+	"wifi_status" : "Yes",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "mootley_fool_map.png",
 	"puzzles" : ["Avox Training"]
 },
 "Crystal City Shuttle to Lincoln Memorial" : {
@@ -539,7 +539,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "lincoln_memorial_map.png",
 	"puzzles" : ["States"]
 },
 "Martin Luther King Jr. Memorial" : {
@@ -559,7 +559,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "mlk_map.png",
 	"puzzles" : ["Sobriety Test"]
 },
 "FDR Memorial" : {
@@ -572,14 +572,14 @@
 	"notes" : "Start code = flood",
 	"parking_status" : "N/A",
 	"parking_description" : "",
-	"restroom_status" : "??",
+	"restroom_status" : "Yes",
 	"restroom_description" : "",
 	"food_status" : "??",
 	"food_description" : "",
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "fdr_map.png",
 	"puzzles" : ["Open the Floodgates"]
 },
 "FDR Memorial, Part Two" : {
@@ -592,14 +592,14 @@
 	"notes" : "Start code = flood",
 	"parking_status" : "N/A",
 	"parking_description" : "",
-	"restroom_status" : "??",
+	"restroom_status" : "Yes",
 	"restroom_description" : "",
 	"food_status" : "??",
 	"food_description" : "",
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "fdr_map.png",
 	"puzzles" : ["Cripple the Economy"]
 },
 "Air Force Memorial" : {
@@ -612,14 +612,14 @@
 	"notes" : "Start code = air force",
 	"parking_status" : "Yes",
 	"parking_description" : "Free public lot",
-	"restroom_status" : "??",
+	"restroom_status" : "Yes",
 	"restroom_description" : "",
 	"food_status" : "??",
 	"food_description" : "",
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "air_force_logo.png",
-	"map_file" : "",
+	"map_file" : "air_force_map.png",
 	"puzzles" : ["District Two Recon"]
 },
 "Iwo Jima Memorial (Marine Corps War Memorial)" : {
@@ -632,14 +632,14 @@
 	"notes" : "Start code = rally",
 	"parking_status" : "Yes",
 	"parking_description" : "Free public lot",
-	"restroom_status" : "??",
+	"restroom_status" : "No",
 	"restroom_description" : "",
-	"food_status" : "??",
+	"food_status" : "No",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "iwo_jima_map.png",
 	"puzzles" : ["Raise the Flag"]
 },
 "Freedom Park" : {
@@ -659,7 +659,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "freedom_park_map.png",
 	"puzzles" : ["Freedom for the Children"]
 },
 "National Museum of the American Indian" : {
@@ -679,7 +679,7 @@
 	"wifi_status" : "",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "american_indian_map.png",
 	"puzzles" : []
 },
 "National Museum of the American Indian, Solve Propos" : {
@@ -699,7 +699,7 @@
 	"wifi_status" : "",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "american_indian_map.png",
 	"puzzles" : ["Propos Video"]
 },
 "U.S. Capitol, West of Reflecting Pool" : {
@@ -719,7 +719,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "west_capitol_map.png",
 	"puzzles" : ["Defense Grid"]
 },
 "U.S. Capitol, South of Reflecting Pool" : {
@@ -739,7 +739,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "south_capitol_map.png",
 	"puzzles" : ["Pod of Flesh Melting Beam"]
 },
 "U.S. Capitol, East of Reflecting Pool" : {
@@ -759,7 +759,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "east_capitol_map.png",
 	"puzzles" : ["iPod"]
 },
 "U.S. Capitol, Southwest Entrance Ramp" : {
@@ -779,7 +779,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "capitol_sw_map.png",
 	"puzzles" : ["Pod of Black Ooze", "Pod of Lightning Seeds"]
 },
 "U.S. Capitol, West Lawn" : {
@@ -799,7 +799,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "capitol_lawn_map.png",
 	"puzzles" : ["Pod of Powers", "Pod Deadly Metal Darts", "Whale Pod", "Pod of Arrows", "Pod of Encircling Muttations", "Pod of Distracting Noise", "Pod of Hard Labor", "Pod of Barbed Wire", "Pod of Ambiguity"]
 },
 "U.S. Capitol" : {
@@ -819,7 +819,7 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "capitol_map.png",
 	"puzzles" : ["Finale"]
 },
 "Nando's Peri Peri Restaurant" : {
@@ -839,9 +839,8 @@
 	"wifi_status" : "??",
 	"wifi_description" : "",
 	"image_file" : "",
-	"map_file" : "",
+	"map_file" : "nandos_map.png",
 	"puzzles" : []
 }
 }
 }
-
