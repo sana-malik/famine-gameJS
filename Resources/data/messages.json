@@ -66,7 +66,7 @@
 		"msg8" : {
 			"id" : "msg8",
 			"type" : "video",
-			"content" : "<b>hay3.mov</b>",
+			"content" : "hay3.mov",
 			"time" : 2,
 			"sender" : "Haymitch"
 		}
@@ -100,19 +100,12 @@
 		"msg12" : {
 			"id" : "msg12",
 			"type" : "video",
-			"content" : "hay4.mov",
+			"content" : "caesarannounce.mov",
 			"time" : 2,
 			"sender" : "Caesar Flickerman"
 		},
 		"msg13" : {
 			"id" : "msg13",
-			"type" : "text",
-			"content" : "<b>ANNOUNCEMENT: You may no longer win as a team.  Instead, you must fight and kill each other until only a single Tribute remains!  That is all.</b>",
-			"time" : 3,
-			"sender" : "President Snow"
-		},
-		"msg14" : {
-			"id" : "msg14",
 			"type" : "video",
 			"content" : "hay4.mov",
 			"time" : 4,
