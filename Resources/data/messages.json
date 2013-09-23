@@ -114,7 +114,7 @@
 		"msg14" : {
 			"id" : "msg14",
 			"type" : "video",
-			"content" : "hay4.mov</b>",
+			"content" : "hay4.mov",
 			"time" : 4,
 			"sender" : "Haymitch"
 		}

@@ -70,13 +70,10 @@ var HistoryView = Backbone.View.extend({
 	},
 
 	playVideo : function(e) {
-		alert("play video")
 		var clickedEl = $(e.currentTarget);
   		var vid = clickedEl.attr("id");
 
 		var movieFile = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDirectory(),"Resources/movies/"+vid).nativePath();
-		alert(vid)
-		alert(movieFile)
 		Ti.Platform.openApplication(movieFile);
 	},
 
