@@ -1,6 +1,6 @@
 {
 "debug_parameters" : {
-    "debug" : false,
+    "debug" : true,
     "time_multiplyer" : 30,
     "start_time" : {
         "active" : true,
