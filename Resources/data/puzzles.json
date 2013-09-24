@@ -2,7 +2,7 @@
 "Test Puzzle" : {"name":"Test Puzzle",
 "start_code" : "tutorial",
 "max_fans" : 25,
-"flavor_text" : "Nice work. You have succesfully figured out how to begin an Arena challenge.",
+"flavor_text" : "Nice work. You have successfully figured out how to begin an Arena challenge.",
 "self_flavor_text" : "",
 "solve_text" : "And now you have successfully solved a challenge.  Good for you!",
 "self_solve_text" : "",
@@ -92,7 +92,7 @@
 "Cornucopia - Know Thy Enemy" : {"name":"Cornucopia - Know Thy Enemy",
 "start_code" : "bloodbath",
 "max_fans" : 250,
-"flavor_text" : "Let the Game begin!  All of Pangram is watching. Can you survive what is traditionally the deadliest part of The Famine Game?",
+"flavor_text" : "Let the Game begin!  All of Pangram is watching. Can you survive what is traditionally the deadliest part of The Famine Game?<br><br><b>The Cornucopia consists of three mini-puzzles followed by a final puzzle.  Each time you solve a mini-puzzle, enter your answer into the app and then head into the cornucopia, using your answer word to retrieve your next puzzle. When you get a new puzzle, make sure to enter its start code. Additionally, you will also be collecting a set of 24 discs, handed out eight at a time. The final puzzle uses all 24 discs. Good luck, tributes!",
 "self_flavor_text" : "",
 "solve_text" : "Head inside the cornucopia, and use this answer to retrieve your next puzzle.",
 "self_solve_text" : "",
@@ -219,7 +219,7 @@
 "max_fans" : 1000,
 "flavor_text" : "Teams are running around everywhere.  Things are getting quite chaotic.  Do you have what it takes to survive this final step?",
 "self_flavor_text" : "",
-"solve_text" : "You've safely escaped the Cornucopia without succumbing to the usual bloodbath!  Make sure you grabbed your survival kit!",
+"solve_text" : "You safely escape the Cornucopia without succumbing to the usual bloodbath!  As you make your way out of the area, you spot a pack of flat wooden objects with metal clips attached.  Perhaps these will come in handy! <br><br><b>Also, make sure you grabbed your survival pouch before you leave!</b>",
 "self_solve_text" : "",
 "resources_unlocked" : ["clipboards"],
 "teams_killed" : [],
@@ -351,7 +351,7 @@
 		"type" : "partial",
 		"text" : "holdunderheat",
 		"response" : "Close. But you're overlapping those two words incorrectly. ",
-		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3", "Hint 4", "Hint 5"]
 		}
 	}
 },
@@ -1767,21 +1767,21 @@
 		"end_cost" : 0,
 		"text" : "You might want to look closely at the flavor text of the clues if you haven't already.   Also, did you notice that many of the answers feature an interesting letter?"
 		},
-	"Hint 6" : {
+	"Hint 5" : {
 		"start_time" : 60,
 		"end_time" : 70,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Count up the trix pieces, do those three numbers follow a certain pattern?"
 		},
-	"Hint 7" : {
+	"Hint 6" : {
 		"start_time" : 70,
 		"end_time" : 80,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "This puzzle could easily be renamed Tri-X"
 		},
-	"Hint 8" : {
+	"Hint 7" : {
 		"start_time" : 80,
 		"end_time" : 90,
 		"start_cost" : 50,
@@ -2236,9 +2236,9 @@
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start12" : {
+	"turing" : {
 		"type" : "partial",
-		"text" : "start12",
+		"text" : "turing",
 		"response" : "The 12:00 section of the clock is controlled by a maniacal computer who not only is intent on seeking your demise but coldly taunts you all the while. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2280,9 +2280,9 @@ survived 1 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start1" : {
+	"peasoup" : {
 		"type" : "partial",
-		"text" : "start1",
+		"text" : "peasoup",
 		"response" : "The 1:00 section of the clock is filled with an acrid mist. You soon discover that this fog invades your nervous system and prevents the use of your extremities. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2324,9 +2324,9 @@ survived 2 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start2" : {
+	"overgrown" : {
 		"type" : "partial",
-		"text" : "start2",
+		"text" : "overgrown",
 		"response" : "The 2:00 section of the clock is filled with dense vegetation, so thick that you lose sight of many of your teammates. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2375,9 +2375,9 @@ survived 3 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start3" : {
+	"venom" : {
 		"type" : "partial",
-		"text" : "start3",
+		"text" : "venom",
 		"response" : "The 3:00 section of the clock contains a wide variety of animals that seem innocent and playful, but deep down you know that they will probably rip you to shreds if you stay in here too long. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2419,9 +2419,9 @@ survived 4 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start4" : {
+	"sherpa" : {
 		"type" : "partial",
-		"text" : "start4",
+		"text" : "sherpa",
 		"response" : "The 4:00 section is so cold you can barely stand it, which is strange because most of your surrondings have been surprisingly temperate.  Giant snowflakes slowly fall onto the ground, crushing anything they land on. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2463,9 +2463,9 @@ survived 5 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start5" : {
+	"thor" : {
 		"type" : "partial",
-		"text" : "start5",
+		"text" : "thor",
 		"response" : "The 5:00 section is about what you would expect from your typical arena.  However, every so often a massive bolt of lightning strikes this wedge, electrifying everything within its striking radius. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		},
@@ -2537,9 +2537,9 @@ survived 6 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start6" : {
+	"torment" : {
 		"type" : "partial",
-		"text" : "start6",
+		"text" : "torment",
 		"response" : "The 6:00 section of the clock is quite tormeting. While you can't see anything out of the ordinary, what you hear is maddening, for in this wedge lies the cruel jabberjays, birds that have been trained to mimic the cries of loved ones in distress.
 Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
@@ -2582,9 +2582,9 @@ survived 7 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start7" : {
+	"electriceye" : {
 		"type" : "partial",
-		"text" : "start7",
+		"text" : "electriceye",
 		"response" : "The 7:00 section of the clock contains countless robots that are designed to melt anything in their path using their deadly laser focus eyes. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2633,9 +2633,9 @@ survived 8 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start8" : {
+	"dripdrip" : {
 		"type" : "partial",
-		"text" : "start8",
+		"text" : "dripdrip",
 		"response" : "You can't wait to leave the 8:00 section of the clock, as it appears to be raining blood, which is so thick and hot, that it's a struggle to even breathe. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		},
@@ -2689,9 +2689,9 @@ survived 9 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start9" : {
+	"tsunami" : {
 		"type" : "partial",
-		"text" : "start9",
+		"text" : "tsunami",
 		"response" : "The 9:00 section of the clock seems innocent enough.  However, every so often, after a rumbling in the distance, the entire wedge is flooded by a massive wave forcing you to survive underwater for an ungodly amount of time.  Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2741,9 +2741,9 @@ survived 10 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start10" : {
+	"kingkong" : {
 		"type" : "partial",
-		"text" : "start10",
+		"text" : "kingkong",
 		"response" : "The 10:00 section of the clock is teeming with ferocious monkeys that appeared to have been grotesquely mutated by the Capitol. Your hint clock has now started for this puzzle.
 ",
 		"skipped_hints" : ["Hint 1"]
@@ -2803,9 +2803,9 @@ survived 10 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start11" : {
+	"deet" : {
 		"type" : "partial",
-		"text" : "start11",
+		"text" : "deet",
 		"response" : "The 11:00 section of the clock is filled with swarming insects who dive repeatedly at your face, arms, and anything else exposed.  You won't live in here for very long, as their stings are surely deadly.
 Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
@@ -2843,7 +2843,7 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Type the word EXODUS.  How would that look on a normal keyboard?  "
+		"text" : "Keyboard: Type the word EXODUS.  How would that look on a normal keyboard? "
 		},
 	"Morse Hint" : {
 		"start_time" : 40,
@@ -3034,12 +3034,6 @@ Your hint clock has now started for this puzzle.",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"roomforcreationofvids" : {
-		"type" : "partial",
-		"text" : "roomforcreationofvids",
-		"response" : "That phrase looks good.  What room might that be?",
-		"skipped_hints" : ["Hint 1", "Hint 2 ", "Hint 3", "Hint 4", "Hint 5"]
-		},
 	"roomfor" : {
 		"type" : "partial",
 		"text" : "roomfor",
@@ -3056,6 +3050,12 @@ Your hint clock has now started for this puzzle.",
 		"type" : "partial",
 		"text" : "yttrium",
 		"response" : "You've gone one step to far.  We're looking for a room on the poster. ",
+		"skipped_hints" : ["Hint 1", "Hint 2 ", "Hint 3", "Hint 4", "Hint 5"]
+		},
+	"roomforcreationofvids" : {
+		"type" : "partial",
+		"text" : "roomforcreationofvids",
+		"response" : "That phrase looks good.  What room might that be?",
 		"skipped_hints" : ["Hint 1", "Hint 2 ", "Hint 3", "Hint 4", "Hint 5"]
 		}
 	}
@@ -3192,12 +3192,12 @@ Your hint clock has now started for this puzzle.",
 		}
 	}
 },
-"Sobriety Test" : {"name":"Sobriety Test",
-"start_code" : "dui",
+"Fighting for Justice" : {"name":"Fighting for Justice",
+"start_code" : "freeatlast",
 "max_fans" : 1000,
-"flavor_text" : "Resistance leaders are happy with the way your propaganda film is coming along.  You're projecting a good strong image for the Resistance, but we're afraid the pressure may be too much, and we wouldn't want you following in your mentor's footsteps.  The last thing the Resistance needs is another drunk running around giving them a bad name.  They've requested that you take the following field sobriety test.",
+"flavor_text" : "You've learned that the Capitol has imprisoned hundreds of innocent citizens. It's time to set things straight. ",
 "self_flavor_text" : "",
-"solve_text" : "At least they didn't make you stand on one foot and breathe into a bag. Looks like you're sober!",
+"solve_text" : "Your mission was successful! Many individuals who were wronged by the Capitol have now gained their freedom.  Well done. ",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -3329,16 +3329,16 @@ Your hint clock has now started for this puzzle.",
 		}
 	},
 "answers" : {
-	"bleached" : {
+	"bleach" : {
 		"type" : "final",
-		"text" : "bleached",
+		"text" : "bleach",
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"removedcolorfromchemically" : {
+	"removecolorfromchemically" : {
 		"type" : "partial",
-		"text" : "removedcolorfromchemically",
+		"text" : "removecolorfromchemically",
 		"response" : "That looks good. What word is defined by that phrase?",
 		"skipped_hints" : []
 		}
@@ -3612,6 +3612,71 @@ Your hint clock has now started for this puzzle.",
 		"text" : "narrowplacesfear",
 		"response" : "That message looks correct!  However, the answer isn't what you likely think it might be.",
 		"skipped_hints" : ["Hint 1 ", "Hint 2", "Hint 3"]
+		}
+	}
+},
+"Infiltrate the Capital" : {"name":"Infiltrate the Capital",
+"start_code" : "conquer",
+"max_fans" : 100,
+"flavor_text" : "You've secretly made your way into the city, undetected for now.  Enter the answer ONWARDS to get your next mission. ",
+"self_flavor_text" : "",
+"solve_text" : "Nicely done. Hopefully the Capitol doesn't know how deeply you've made it behind their front lines. ",
+"self_solve_text" : "",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : true,
+"hints" : {
+	"Hint 1" : {
+		"start_time" : 1,
+		"end_time" : 10,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Have you tried typing ONWARDS into the answer box?"
+		},
+	"Hint 2" : {
+		"start_time" : 10,
+		"end_time" : 20,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "This is pretty straightforward.  Just type the word ONWARDS. There's no puzzle here.  The answer is ONWARDS."
+		},
+	"Hint 3" : {
+		"start_time" : 20,
+		"end_time" : 30,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Why haven't you solved this yet?  You're totally wasting your time.  Just type the answer one letter at a time starting with an O.  Holy crap. "
+		},
+	"Hint 4" : {
+		"start_time" : 30,
+		"end_time" : 40,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Have you tried semaphore yet?  Of course you haven't, cause there's no fucking puzzle here.  OMG, how the hell did you make it this far?  Haymitch could have solved this and he's been passed out since the clock puzzle. "
+		},
+	"Hint 5" : {
+		"start_time" : 40,
+		"end_time" : 50,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Alright, you want this to be a puzzle? Fine. Opposite of OFF + WARDS.  Could that be a push in the right direction? "
+		},
+	"Hint 6" : {
+		"start_time" : 50,
+		"end_time" : 60,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Type SAVE ME THRESH into the answer box. "
+		}
+	},
+"answers" : {
+	"onwards" : {
+		"type" : "final",
+		"text" : "onwards",
+		"response" : "Congratulations, you have solved the puzzle!",
+		"self_response" : "",
+		"skipped_hints" : []
 		}
 	}
 },

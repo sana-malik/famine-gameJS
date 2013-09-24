@@ -1,5 +1,5 @@
 {
-"order" : ["Artisphere Ballroom", "GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Thomas Jefferson Memorial, Part Two", "Roosevelt Island", "George Washington Masonic Memorial", "National Harbor, Awakening Statue", "Lake Accotink Park, Picnic Area 3", "Pine Ridge High School Site Park", "Glen Echo Park, Ballroom Cafe", "Kennedy Center, Upper Balcony", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Drive Residence", "Sushi Location", "Penwood Drive Residence", "Mining Artifact Location", "Dennys", "Olde Towne Pet Resort", "GW Community School", "Courtyard Marriott Alexandria Old Town", "Motley Fool", "Motley Fool, Part Two", "Motley Fool, Part Three", "Crystal City Shuttle to Lincoln Memorial", "Martin Luther King Jr. Memorial", "FDR Memorial", "FDR Memorial, Part Two", "Air Force Memorial", "Iwo Jima Memorial (Marine Corps War Memorial) ", "Freedom Park", "National Museum of the American Indian", "U.S. Capitol, West of Reflecting Pool", "U.S. Capitol, South of Reflecting Pool", "U.S. Capitol, East of Reflecting Pool", "U.S. Capitol, Southwest Entrance Ramp", "U.S. Capitol, West Lawn", "U.S. Capitol", "Nando's Peri Peri Restaurant"],
+"order" : ["Artisphere Ballroom", "GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Thomas Jefferson Memorial, Part Two", "Roosevelt Island", "George Washington Masonic Memorial", "National Harbor, Awakening Statue", "Lake Accotink Park, Picnic Area 3", "Pine Ridge High School Site Park", "Glen Echo Park, Ballroom Cafe", "Kennedy Center, Upper Balcony", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Drive Residence", "Sushi Location", "Penwood Drive Residence", "Bush Hill Presbyterian Church", "Dennys", "Olde Towne Pet Resort", "GW Community School", "Courtyard Marriott Alexandria Old Town", "Motley Fool", "Motley Fool, Part Two", "Motley Fool, Part Three", "Crystal City Shuttle to Lincoln Memorial", "Martin Luther King Jr. Memorial", "FDR Memorial", "FDR Memorial, Part Two", "Air Force Memorial", "Iwo Jima Memorial (Marine Corps War Memorial) ", "Freedom Park", "National Museum of the American Indian", "U.S. Capitol, West of Reflecting Pool", "U.S. Capitol, South of Reflecting Pool", "U.S. Capitol, East of Reflecting Pool", "U.S. Capitol, Southwest Entrance Ramp", "U.S. Capitol, West Lawn", "U.S. Capitol", "Nando's Peri Peri Restaurant"],
 "locations" : {
 "Artisphere Ballroom" : {
 	"name" : "Artisphere Ballroom",
@@ -21,6 +21,26 @@
 	"map_file" : "artisphere_map.png",
 	"puzzles" : ["Test Puzzle", "Starting Location"]
 },
+"Check Date Time" : {
+	"name" : "Check Date Time",
+	"address" : "National Harbor, MD",
+	"time_open" : "09/25/2013 18:00",
+	"time_closed" : "09/06/2013 18:00",
+	"flavor_text" : "If you're seeing this message then something is wrong with your computer's date and time.  Please see the Gamemaker to remedy this situation",
+	"self_flavor_text" : "",
+	"notes" : "This is to test skipping",
+	"parking_status" : "Yes",
+	"parking_description" : "Free parking",
+	"restroom_status" : "Yes",
+	"restroom_description" : "",
+	"food_status" : "Yes",
+	"food_description" : "",
+	"wifi_status" : "Yes",
+	"wifi_description" : "",
+	"image_file" : "",
+	"map_file" : "artisphere_map.png",
+	"puzzles" : ["Date and Time Check"]
+},
 "GolfDC Academy" : {
 	"name" : "GolfDC Academy",
 	"address" : "972 Ohio Dr SW, Washington, DC 20024",
@@ -31,11 +51,11 @@
 	"notes" : "Start code = intro",
 	"parking_status" : "Yes",
 	"parking_description" : "Free parking",
-	"restroom_status" : "??",
-	"restroom_description" : "",
-	"food_status" : "??",
+	"restroom_status" : "Yes",
+	"restroom_description" : "Inside the clubhouse",
+	"food_status" : "Yes",
 	"food_description" : "",
-	"wifi_status" : "??",
+	"wifi_status" : "No",
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "golf_dc_map.png",
@@ -106,7 +126,7 @@
 	"address" : "900 Ohio Dr SW, Washington, DC 20242",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/30/2013 18:00",
-	"flavor_text" : "You need to stay mobile, so it might be a good time to think about transportation. Looking around, you marvel at the wide variety of options.  Man-powered boats in the water, planes flying overhead, and cars all around you.  Perhaps one of those will help. <br><br><b>Return to the Piecekeepers and tell them you need a ride.</b>",
+	"flavor_text" : "You need to stay mobile, so it might be a good time to think about transportation. Looking around, you marvel at the wide variety of options.  Man-powered boats in the water, planes flying overhead, and cars all around you.  Perhaps one of those will help. <br><br><b>Return to the Piecekeepers, and tell them you're interested in transportation.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start codes = quill",
 	"parking_status" : "No",
@@ -246,7 +266,7 @@
 	"address" : "2700 F St NW, Washington, DC 20566",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/28/2013 20:30",
-	"flavor_text" : "During each Famine Game, the Capitol holds an exclusive gala for its most influential citizens.  It's probably in your best interest to try and curry favor with someone powerful.  Head there now and start rubbing elbows.  Warning: as this portion of the Arena allows for contact between Tributes and Capitol citizens, you will need to be on your best behavior or face swift \"disqualification\".  Do not disturb the citizens!<br><br><b>We have been told that one of the parking garages can accommodate vehicles up to 8 feet in clearance.  Make sure to park in the C lot on the south side. Use the envelope in your survival kit marked \"Parking\" to pay. When you arrive, make your way up to the upper balcony exit towards the Potomac River, and find your sponsor.<br><br>If you arrive after 8PM, there's a chance that the lot for larger vans may not have a cashier.  In that case you can look for street parking or let some of your team run in and retrieve the clue.  We hope that your entire team can participate as you'll have a cool view and you'll have some character interaction, but at the same time, we don't wait you to waste time trying to park.</b>",
+	"flavor_text" : "During each Famine Game, the Capitol holds an exclusive gala for its most influential citizens.  It's probably in your best interest to try and curry favor with someone powerful.  Head there now and start rubbing elbows.  Warning: as this portion of the Arena allows for contact between Tributes and Capitol citizens, you will need to be on your best behavior or face swift \"disqualification\".  Do not disturb the citizens!<br><br><b>We have been told that one of the parking garages can accommodate vehicles up to 8 feet in clearance.  Make sure to park in the C lot on the south side. Use the envelope in your survival kit marked \"Parking\" to pay. When you arrive, make your way up to the upper balcony exit towards the Potomac River, and find your sponsor.<br><br>If you arrive after 8PM, there's a chance that the lot for larger vans may not have a cashier.  In that case you can look for street parking or let some of your team run in and retrieve the clue.  We hope that your entire team can participate as you'll have a cool view and you'll have some character interaction, but at the same time, we don't want you to waste time trying to park.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = bend",
 	"parking_status" : "Yes",
@@ -547,7 +567,7 @@
 	"address" : "1964 Independence Ave SW, Washington, DC 20003",
 	"time_open" : "09/28/2013 09:00",
 	"time_closed" : "09/29/2013 09:00",
-	"flavor_text" : "Walk south and visit a large stone structure commemorating the time inspirational leader Thrumkitjin Garner broke free from Capitol oppression.<br><br><b>The memorial is located to the south, and it will be on your left, near the Tidal Basin. </b>",
+	"flavor_text" : "Head south and visit a large stone structure commemorating the time inspirational leader Thrumkitjin Garner broke free from Capitol oppression.<br><br><b>The memorial is located to the southeast of the Lincoln Memorial, bordering the Tidal Basin. If you wish to drive, park in the blue or purple areas on your parking handout.</b>",
 	"self_flavor_text" : "",
 	"notes" : "Start code = prison",
 	"parking_status" : "N/A",
@@ -560,7 +580,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "mlk_map.png",
-	"puzzles" : ["Sobriety Test"]
+	"puzzles" : ["Fighting for Justice"]
 },
 "FDR Memorial" : {
 	"name" : "FDR Memorial",
@@ -680,7 +700,7 @@
 	"wifi_description" : "",
 	"image_file" : "",
 	"map_file" : "american_indian_map.png",
-	"puzzles" : []
+	"puzzles" : ["Infiltrate the Capitol"]
 },
 "National Museum of the American Indian, Solve Propos" : {
 	"name" : "National Museum of the American Indian, Solve Propos",
@@ -844,3 +864,4 @@
 }
 }
 }
+

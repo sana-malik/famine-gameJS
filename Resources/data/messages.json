@@ -4,7 +4,7 @@
 			"id" : "msg1",
 			"type" : "video",
 			"content" : "hay1.mov",
-			"time" : 2,
+			"time" : 10,
 			"sender" : "Haymitch"
 		}
 	},
@@ -13,7 +13,7 @@
 			"id" : "msg2",
 			"type" : "text",
 			"content" : "<b>Good job not getting mixed up in that mess. You've avoided dying in what is traditionally the bloodiest portion of the Games.<br><br>Oh, one more thing. Word is that the Gamemakers have constructed various challenges throughout the arena. According to my sources, these traps are modeled after the various districts of Pangram. In order to defeat your opponents you may have to outsmart them at their own game.<br><br>Now get out there and keep not dying!</b>",
-			"time" : 2,
+			"time" : 1,
 			"sender" : "Haymitch"
 		}
 	},
@@ -31,7 +31,7 @@
 			"id" : "msg4",
 			"type" : "text",
 			"content" : "<b>Attention tributes! As we realize your hunger is likely slowing you down, we will be holding a Feast where we have a wide variety of animals for you to hunt.</b></b>",
-			"time" : 2,
+			"time" : 3,
 			"sender" : "The Gamemakers"
 		}
 	},
@@ -40,7 +40,7 @@
 			"id" : "msg5",
 			"type" : "text",
 			"content" : "<b>Be careful. I've heard rumors of a suspicious device that has been causing a strange string of deaths.</b>",
-			"time" : 2,
+			"time" : 4,
 			"sender" : "Haymitch"
 		}
 	},
@@ -81,17 +81,10 @@
 		}
 	},
 	"Cereal" : {
-		"msg10" : {
-			"id" : "msg10",
-			"type" : "text",
-			"content" : "<b>Maybe we should start calling you the Cereal Killers.  Right?  Right? No?  Fine, whatever.</b>",
-			"time" : 2,
-			"sender" : "Haymitch"
-		},
 		"msg11" : {
 			"id" : "msg11",
 			"type" : "text",
-			"content" : "<b>With so few teams left, the Capitol is looking to bring the Games to a close. They're going to release their ungodly creations into the Arena to hunt you down.  I know where they're being kept though, and if you head there and figure out how these creations were made you may be able to defeat them. We preprogrammed the location into your App, so you should be heading there now. <b>You'll meet a contact there who will help you, but you may need to be a little creative when attempting to communicate with him.</b>",
+			"content" : "<b>Maybe we should start calling you the Cereal Killers.  Right?  Right? No?  Fine, whatever. With so few teams left, the Capitol is looking to bring the Games to a close. They're going to release their ungodly creations into the Arena to hunt you down.  I know where they're being kept though, and if you head there and figure out how these creations were made you may be able to defeat them. We preprogrammed the location into your App, so you should be heading there now. <b>You'll meet a contact there who will help you, but you may need to be a little creative when attempting to communicate with him.</b>",
 			"time" : 2,
 			"sender" : "Haymitch"
 		}
@@ -108,7 +101,7 @@
 			"id" : "msg13",
 			"type" : "video",
 			"content" : "hay4.mov",
-			"time" : 4,
+			"time" : 5,
 			"sender" : "Haymitch"
 		}
 	}
