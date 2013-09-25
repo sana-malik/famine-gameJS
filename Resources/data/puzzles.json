@@ -2120,7 +2120,7 @@
 "The Clock" : {"name":"The Clock",
 "start_code" : "ticktock",
 "max_fans" : 2000,
-"flavor_text" : "It was a lie. A big damn lie. There was never going to be a winning team. <br><br>As your eyes adjust to your new surroundings, you can see spread out around you, twelve distinct areas coming off of the central hub where you are currently standing. You're not sure what new horrors await you, but your only hope now is to trust your mysterious contact, and try to get through this together.",
+"flavor_text" : "It was a lie. A big damn lie. There was never going to be a winning team. <br><br>As your eyes adjust to your new surroundings, you can see spread out around you, twelve distinct areas coming off of the central hub where you are currently standing. You're not sure what new horrors await you, but your only hope now is to trust Haymitch and try to get through this together.",
 "self_flavor_text" : "",
 "solve_text" : "When the metal touchplates were struck by lightning, it electrified the flash flood, sending the deadly beasts, monkeys, and insects into a frenzy, causing the killer robots to disembowel the jabber jays, and uh… yeah, well... hey, you've broken out of the clock arena!<br><br>Discreetly make your way into the hall.  Across from the double glass doors you will see a door marked \"Capitol Employees Only.\"  Go through it, but don't let anybody see you.  Make your way up the stairs to the second floor and enter the hallway. Turn left, and go out the glass door at the end of the hall.",
 "self_solve_text" : "",
@@ -2249,8 +2249,7 @@
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "The mist slowly dissipates. You've 
-survived 1 o' clock!",
+"solve_text" : "The mist slowly dissipates. You've survived 1 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2293,8 +2292,7 @@ survived 1 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "The vines retract, and you're reunited with your teammates. You've 
-survived 2 o' clock!",
+"solve_text" : "The vines retract, and you're reunited with your teammates. You've survived 2 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2337,8 +2335,7 @@ survived 2 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "You learned the secret to defeating these beasts.  Strike first!  You've 
-survived 3 o' clock!",
+"solve_text" : "You learned the secret to defeating these beasts.  Strike first!  You've survived 3 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2360,7 +2357,7 @@ survived 3 o' clock!",
 		"text" : "Even though these animals may look deadly, they're actually quite huggable. "
 		},
 	"Hint 3" : {
-		"start_time" : 308,
+		"start_time" : 307,
 		"end_time" : 315,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -2388,8 +2385,7 @@ survived 3 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Slowly the freezing ice begins to melt. You've 
-survived 4 o' clock!",
+"solve_text" : "Slowly the freezing ice begins to melt. You've survived 4 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2432,8 +2428,7 @@ survived 4 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "You rig a metal rod to harmlessly divert the lightning into the ground. You've 
-survived 5 o' clock!",
+"solve_text" : "You rig a metal rod to harmlessly divert the lightning into the ground. You've survived 5 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2452,7 +2447,7 @@ survived 5 o' clock!",
 		"end_time" : 315,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The lightning segments are grouped into six distinct sets.  Does that look like a familiar pattern?  The words you're spelling come in two groups (there's a longer break in the pattern when the divide occurs) and are all indirectly linked somehow. "
+		"text" : "The lightning segments are grouped into six distinct sets.  Does that look like a familiar pattern?  The words you're spelling come in two groups (there's a longer break in the pattern when the divide occurs)."
 		}
 	},
 "answers" : {
@@ -2506,8 +2501,7 @@ survived 5 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "You didn't so much as defeat the jabberjays as you lived through the madness. You've 
-survived 6 o' clock!",
+"solve_text" : "You didn't so much as defeat the jabberjays as you lived through the madness. You've survived 6 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2540,8 +2534,7 @@ survived 6 o' clock!",
 	"torment" : {
 		"type" : "partial",
 		"text" : "torment",
-		"response" : "The 6:00 section of the clock is quite tormeting. While you can't see anything out of the ordinary, what you hear is maddening, for in this wedge lies the cruel jabberjays, birds that have been trained to mimic the cries of loved ones in distress.
-Your hint clock has now started for this puzzle.",
+		"response" : "The 6:00 section of the clock is quite tormeting. While you can't see anything out of the ordinary, what you hear is maddening, for in this wedge lies the cruel jabberjays, birds that have been trained to mimic the cries of loved ones in distress. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2551,8 +2544,7 @@ Your hint clock has now started for this puzzle.",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Moving and dodging quickly, you allow the robots to take out each other. You've 
-survived 7 o' clock!",
+"solve_text" : "Moving and dodging quickly, you allow the robots to take out each other. You've survived 7 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2571,7 +2563,7 @@ survived 7 o' clock!",
 		"end_time" : 315,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The five robots simultaneously team up to form letters (however, they're not in synch).  They will generate an 11-letter answer."
+		"text" : "The five robots simultaneously aren't in synch with each other, but they team up to form an 11-letter answer."
 		}
 	},
 "answers" : {
@@ -2595,8 +2587,7 @@ survived 7 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Finding a small cave, you hide in there until the rain goes away. You've 
-survived 8 o' clock!",
+"solve_text" : "Finding a small cave, you hide in there until the rain goes away. You've survived 8 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2658,8 +2649,7 @@ survived 8 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "You've learned the timings of the waves, so you can easily avoid them in the future. You've 
-survived 9 o' clock!",
+"solve_text" : "You've learned the timings of the waves, so you can easily avoid them in the future. You've survived 9 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2702,8 +2692,7 @@ survived 9 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Because each of the monkeys seems to lack one of their crucial senses, you are able to trick them into attacking each other. You've 
-survived 10 o' clock!",
+"solve_text" : "Because each of the monkeys seems to lack one of their crucial senses, you are able to trick them into attacking each other. You've survived 10 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2715,8 +2704,7 @@ survived 10 o' clock!",
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "Your hint clock has now started for this puzzle.
-"
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
@@ -2744,8 +2732,7 @@ survived 10 o' clock!",
 	"kingkong" : {
 		"type" : "partial",
 		"text" : "kingkong",
-		"response" : "The 10:00 section of the clock is teeming with ferocious monkeys that appeared to have been grotesquely mutated by the Capitol. Your hint clock has now started for this puzzle.
-",
+		"response" : "The 10:00 section of the clock is teeming with ferocious monkeys that appeared to have been grotesquely mutated by the Capitol. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		},
 	"gene" : {
@@ -2806,8 +2793,7 @@ survived 10 o' clock!",
 	"deet" : {
 		"type" : "partial",
 		"text" : "deet",
-		"response" : "The 11:00 section of the clock is filled with swarming insects who dive repeatedly at your face, arms, and anything else exposed.  You won't live in here for very long, as their stings are surely deadly.
-Your hint clock has now started for this puzzle.",
+		"response" : "The 11:00 section of the clock is filled with swarming insects who dive repeatedly at your face, arms, and anything else exposed.  You won't live in here for very long, as their stings are surely deadly. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
