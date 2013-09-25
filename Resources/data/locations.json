@@ -1,5 +1,5 @@
 {
-"order" : ["Artisphere Ballroom", "GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Thomas Jefferson Memorial, Part Two", "Roosevelt Island", "George Washington Masonic Memorial", "National Harbor, Awakening Statue", "Lake Accotink Park, Picnic Area 3", "Pine Ridge High School Site Park", "Glen Echo Park, Ballroom Cafe", "Kennedy Center, Upper Balcony", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Drive Residence", "Miso Cafe Japanese Restaurant", "Penwood Drive Residence", "Bush Hill Presbyterian Church", "Denny's", "Olde Towne Pet Resort", "GW Community School", "Courtyard Marriott Alexandria Old Town", "Motley Fool", "Motley Fool, Part Two", "Motley Fool, Part Three", "Crystal City Shuttle to Lincoln Memorial", "Martin Luther King Jr. Memorial", "FDR Memorial", "FDR Memorial, Part Two", "Air Force Memorial", "Iwo Jima Memorial (Marine Corps War Memorial)", "Freedom Park", "National Museum of the American Indian", "U.S. Capitol, West of Reflecting Pool", "U.S. Capitol, South of Reflecting Pool", "U.S. Capitol, East of Reflecting Pool", "U.S. Capitol, Southwest Entrance Ramp", "U.S. Capitol, West Lawn", "U.S. Capitol", "Nando's Peri Peri Restaurant"],
+"order" : ["Artisphere Ballroom", "GolfDC Academy", "Hains Point", "George Mason Memorial", "Thomas Jefferson Memorial", "Thomas Jefferson Memorial, Part Two", "Roosevelt Island", "George Washington Masonic Memorial", "National Harbor, Awakening Statue", "Lake Accotink Park, Picnic Area 3", "Pine Ridge High School Site Park", "Glen Echo Park, Ballroom Cafe", "Kennedy Center, Upper Balcony", "Dawson Terrace Community Center", "Victory Comics", "Nottingham Drive Residence", "Miso Cafe Japanese Restaurant", "Penwood Drive Residence", "Bush Hill Presbyterian Church", "Denny's", "Olde Towne Pet Resort", "GW Community School", "Courtyard Marriott Alexandria Old Town", "Motley Fool", "Motley Fool, Part Two", "Motley Fool, Part Three", "Lincoln Memorial", "Martin Luther King Jr. Memorial", "FDR Memorial", "FDR Memorial, Part Two", "Air Force Memorial", "Iwo Jima Memorial (Marine Corps War Memorial)", "Freedom Park", "National Museum of the American Indian", "U.S. Capitol, West of Reflecting Pool", "U.S. Capitol, South of Reflecting Pool", "U.S. Capitol, East of Reflecting Pool", "U.S. Capitol, Southwest Entrance Ramp", "U.S. Capitol, West Lawn", "U.S. Capitol", "Nando's Peri Peri Restaurant"],
 "locations" : {
 "Artisphere Ballroom" : {
 	"name" : "Artisphere Ballroom",
@@ -520,26 +520,6 @@
 	"image_file" : "",
 	"map_file" : "mootley_fool_map.png",
 	"puzzles" : ["Avox Training"]
-},
-"Crystal City Shuttle to Lincoln Memorial" : {
-	"name" : "Crystal City Shuttle to Lincoln Memorial",
-	"address" : "PLACE HOLDER",
-	"time_open" : "09/28/2013 09:00",
-	"time_closed" : "09/29/2013 10:00",
-	"flavor_text" : "PLACE HOLDER",
-	"self_flavor_text" : "",
-	"notes" : "",
-	"parking_status" : "PLACE HOLDER",
-	"parking_description" : "",
-	"restroom_status" : "PLACE HOLDER",
-	"restroom_description" : "",
-	"food_status" : "PLACE HOLDER",
-	"food_description" : "",
-	"wifi_status" : "PLACE HOLDER",
-	"wifi_description" : "",
-	"image_file" : "",
-	"map_file" : "lincoln_memorial_map.png",
-	"puzzles" : [""]
 },
 "Lincoln Memorial" : {
 	"name" : "Lincoln Memorial",
