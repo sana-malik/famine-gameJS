@@ -3601,7 +3601,7 @@
 		}
 	}
 },
-"Infiltrate the Capital" : {"name":"Infiltrate the Capital",
+"Infiltrate the Capitol" : {"name":"Infiltrate the Capitol",
 "start_code" : "conquer",
 "max_fans" : 100,
 "flavor_text" : "You've secretly made your way into the city, undetected for now.  Enter the answer ONWARDS to get your next mission. ",

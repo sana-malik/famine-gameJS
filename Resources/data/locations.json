@@ -521,6 +521,26 @@
 	"map_file" : "mootley_fool_map.png",
 	"puzzles" : ["Avox Training"]
 },
+"Crystal City Shuttle to Lincoln Memorial" : {
+	"name" : "Crystal City Shuttle to Lincoln Memorial",
+	"address" : "2 Lincoln Memorial Cir NW, Washington, DC 20037",
+	"time_open" : "09/28/2013 09:00",
+	"time_closed" : "09/29/2013 10:00",
+	"flavor_text" : "You've won the hearts of so many across Pangram, but the Resistance is still skeptical of your loyalty and usefulness. As a test, they want to send you on a secret mission into the Capitol.<br><br><b>Don't leave just yet! Come back to the adminstrator's desk and let them know that you're ready for your secret mission in the Capitol. We will let you know the best course of action as to getting into the Capitol.</b>",
+	"self_flavor_text" : "",
+	"notes" : "",
+	"parking_status" : "N/A",
+	"parking_description" : "",
+	"restroom_status" : "Yes",
+	"restroom_description" : "Look for the door to the left of the stairs as you're facing the monument from the reflecting pool.",
+	"food_status" : "No",
+	"food_description" : "",
+	"wifi_status" : "No",
+	"wifi_description" : "",
+	"image_file" : "",
+	"map_file" : "lincoln_memorial_map.png",
+	"puzzles" : ["States"]
+},
 "Lincoln Memorial" : {
 	"name" : "Lincoln Memorial",
 	"address" : "2 Lincoln Memorial Cir NW, Washington, DC 20037",
