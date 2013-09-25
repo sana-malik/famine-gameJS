@@ -33,9 +33,9 @@ $(document).ready(function() {
 
 	// Set up models
 	teams = populateTeams();
-	locations = populateLocations(parameters["debug_parameters"].enable_encryption); 
+	locations = populateLocations(parameters["debug_parameters"].enable_encryption || true); 
 	resources = populateResources();
-	puzzles = populatePuzzles(parameters["debug_parameters"].enable_encryption);
+	puzzles = populatePuzzles(parameters["debug_parameters"].enable_encryption || true);
 	messages = populateMessages();
 
 	session = initSession();
