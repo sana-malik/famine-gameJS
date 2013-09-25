@@ -439,7 +439,7 @@
 	"wifi_description" : "Password is bdetfl1s",
 	"image_file" : "",
 	"map_file" : "gw_school_map.png",
-	"puzzles" : ["The Clock"]
+	"puzzles" : ["The Clock", "Sentient AI", "Paralyzing Fog", "Strangling Vines", "Deadly Beasts", "Snowstorm", "Lightning Bolt", "Jabberjays", "Killer Robots", "Blood Rain", "Flash Flood", "Monkey Muttations", "Insect Swarm"]
 },
 "Courtyard Marriott Alexandria Old Town" : {
 	"name" : "Courtyard Marriott Alexandria Old Town",

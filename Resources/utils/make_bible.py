@@ -92,28 +92,35 @@ def printPuzzle(puzzle, level):
 	
 	if len(puzzle["teams_killed"]) > 0:
 		writeln("Teams Killed By This Puzzle:", level+1)
+		
 	for team in puzzle["teams_killed"]: 
 		writeln( team, level+2 )
 	
 	writeln( "Meta: " + str(puzzle["meta"]), level+1 )
 	writeln( "Advance Location: " + str(puzzle["advance_location"]), level+1 )
+	writeln("")
 	
 	hints = puzzle["hints"]
-	writeln("Hints:", level+1)
+	writeln("Hints", level+1)
 	for hint in hints:
 		printHint(hint, hints[hint], level + 2)
 
-	writeln("How To Solve The Puzzle:", level+1)
+	writeln("Answers", level+1)
+	for answer in puzzle["answers"]:
+		printAnswer(puzzle["answers"][answer], level + 2)
+
+	writeln("How To Solve The Puzzle", level+1)
 	tabs = ""
 	for x in range(0, level+2):
 		tabs = tabs + "\t"
 
-	writeln(solutions[puzzle["name"]].replace("\n", "\n" + tabs), level+2)
+	writeln(solutions[puzzle["name"]]["solution"].replace("\n", "\n" + tabs), level+2)
 	writeln("")
 
-	writeln("Answers:", level+1)
-	for answer in puzzle["answers"]:
-		printAnswer(puzzle["answers"][answer], level + 2)
+	if solutions[puzzle["name"]]["notes"] != "":
+		writeln("Volunteer Notes", level+1)
+		writeln(solutions[puzzle["name"]]["notes"].replace("\n", "\n" + tabs), level+2)
+		writeln("")
 
 def printHint(name, hint, level):
 	writeln( name, level )
@@ -157,3 +164,8 @@ writeln("Index")
 writeln("Location Numbers")
 writeln("These numbers are to be used to manually change a teams location in the app.  Simply go to the \"currentLocation\" parameter in the session.json and change it to the appropriate number.")
 writeLocationOrder()
+
+locations_file.close()
+puzzles_file.close()
+solutions_file.close()
+bible.close()
