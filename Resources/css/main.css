@@ -430,6 +430,11 @@ margin: 0px;
 padding: 0px;
 }
 
+h4.section-name {
+margin: 0px;
+padding: 0px;
+}
+
 /* BOTTOM BAR */
 #bottombar {
 	position:absolute;
