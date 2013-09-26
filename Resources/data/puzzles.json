@@ -92,7 +92,7 @@
 "Cornucopia - Know Thy Enemy" : {"name":"Cornucopia - Know Thy Enemy",
 "start_code" : "bloodbath",
 "max_fans" : 250,
-"flavor_text" : "Let the Game begin!  All of Pangram is watching. Can you survive what is traditionally the deadliest part of The Famine Game?<br><br><b>The Cornucopia consists of three mini-puzzles followed by a final puzzle.  Each time you solve a mini-puzzle, enter your answer into the app and then head into the cornucopia, using your answer word to retrieve your next puzzle. When you get a new puzzle, make sure to enter its start code. Additionally, you will also be collecting a set of 24 discs, handed out eight at a time. The final puzzle uses all 24 discs. Good luck, tributes!",
+"flavor_text" : "Let the Game begin!  All of Pangram is watching. Can you survive what is traditionally the deadliest part of The Famine Game?<br><br><b>The Cornucopia consists of three mini-puzzles followed by a final puzzle.  Each time you solve a mini-puzzle, enter your answer into the app and then head into the cornucopia, using your answer word to retrieve your next puzzle. When you get a new puzzle, make sure to enter its start code. Additionally, you will also be collecting a set of 24 discs, handed out eight at a time. The final puzzle uses all 24 discs. Good luck, tributes!<br><br>One final note: DO NOT take or move any of the items on the ground.  If you do that, you will explode.</b>",
 "self_flavor_text" : "",
 "solve_text" : "Head inside the cornucopia, and use this answer to retrieve your next puzzle.",
 "self_solve_text" : "",
@@ -464,7 +464,7 @@
 		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Your 42-letter message should suggest a famous phrase from American history.  How could that code apply to all three types of vehicles in your grid?  Show this hint to the staffer to receive two vehicles of your choice. "
+		"text" : "Your 42-letter message should suggest a famous phrase from American history.  How could that code apply to all three types of vehicles in your grid?  Show this hint to the staffer to receive two vehicle phrases of your choice. "
 		},
 	"Hint 5" : {
 		"start_time" : 50,
@@ -1136,12 +1136,12 @@
 		}
 	}
 },
-"Wool" : {"name":"Wool",
+"Ore" : {"name":"Ore",
 "start_code" : "boardgame",
 "max_fans" : 250,
-"flavor_text" : "This is the wool mini-puzzle of Settlers of Pangram. ",
+"flavor_text" : "This is the ore mini-puzzle of Settlers of Pangram. ",
 "self_flavor_text" : "",
-"solve_text" : "You've solved the wool puzzle!",
+"solve_text" : "You've solved the ore puzzle!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -1247,12 +1247,12 @@
 		}
 	}
 },
-"Ore" : {"name":"Ore",
+"Wool" : {"name":"Wool",
 "start_code" : "boardgame",
 "max_fans" : 250,
-"flavor_text" : "This is the ore mini-puzzle of Settlers of Pangram. ",
+"flavor_text" : "This is the wool mini-puzzle of Settlers of Pangram. ",
 "self_flavor_text" : "",
-"solve_text" : "You've solved the ore puzzle!",
+"solve_text" : "You've solved the wool puzzle!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2044,7 +2044,7 @@
 "start_code" : "kennel",
 "max_fans" : 1500,
 "flavor_text" : "How horrible.  Just when you thought the Capitol could go no further.  Now this. Such cute cuddly creatures mutated into killing machines. <br><br><b>Note: One small piece of data in this puzzle has changed since the time of printing.  When you understand the main gimmick of how the puzzle works, come tell the Piecekeepers and they will tell you the element that has changed. ",
-"self_flavor_text" : "How horrible.  Just when you thought the Capitol could go no further.  Now this. Such cute cuddly creatures mutated into killing machines. No time to think about that... only two teams left and you're one of them! Can you make it past one final team? <br><br><b>Note: One small piece of data in this puzzle has changed since the time of printing.  When you understand the main gimmick of how the puzzle works, come tell the Piecekeepers and they will tell you the element that has changed. ",
+"self_flavor_text" : "How horrible.  Just when you thought the Capitol could go no further.  Now this. Such cute cuddly creatures mutated into killing machines. No time to think about that... only two teams left and you're one of them! Can you make it past one final team? <br><br><b>Note: One small piece of data in this puzzle has changed since the time of printing.  When you understand the main gimmick of how the puzzle works, come tell the Piecekeepers and they will tell you the element that has changed. </b>",
 "solve_text" : "As Team Snout and Bloodshot succumb to the snarling boxers and the sweaty boxers, you realize that it's finally over.  You've won.  You survived the arena, you're the last team alive, and you have won the Famine Game!",
 "self_solve_text" : "Surrounded by boxers, you and your opponent begin to be pummelled by boxers, bitten by boxers, and boxed by a giant f-ing box. What will the Capitol think of next? <br><br>Trapped under the box, wresting with the enemy tributes, a grey goateed muttation dives for your throat. You recognize the dog as a reincarnated Whiskey, the annoying tribute from Golden Smokingjay. Reacting quickly, you turn over and watch the dog sink its teeth into the carotid artery of your opponent. Suddenly, the box is lifted by an unseen force, and you realize that it's finally over. You've won! You survived the arena, you're the last team alive, and you have won the Famine Game!",
 "resources_unlocked" : [],
@@ -2967,7 +2967,7 @@
 "Tattoo Schedule" : {"name":"Tattoo Schedule",
 "start_code" : "skin",
 "max_fans" : 1000,
-"flavor_text" : "You've got your schedule.  Now you just need to figure out where to go and what you're supposed to be doing.<br><br><b>Maybe you should look around this room a little.</b>",
+"flavor_text" : "You've got your schedule.  Now you just need to figure out where to go and what you're supposed to be doing.",
 "self_flavor_text" : "",
 "solve_text" : "Ah, so THAT'S what you're supposed to be doing.  Why couldn't they just tell you that?  Operational security, I guess.",
 "self_solve_text" : "",
@@ -3333,7 +3333,7 @@
 "District Two Recon" : {"name":"District Two Recon",
 "start_code" : "eyewitness",
 "max_fans" : 1000,
-"flavor_text" : "From up here you've got a great view of the surrounding landscape. It should be a simple matter to find your targets and prepare for the upcoming insurrection.",
+"flavor_text" : "From up here you've got a great view of the surrounding landscape. It should be a simple matter to find your targets and prepare for the upcoming insurrection.<br><br><b>Note: Scaffolding was added to the the Washington Monument after the printing of this puzzle.  </b>",
 "self_flavor_text" : "",
 "solve_text" : "Your recon of this area has given your airmen the opportunity they needed to bomb District 2 in preparation for a ground assault. ",
 "self_solve_text" : "",
@@ -3958,7 +3958,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4009,7 +4009,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4060,7 +4060,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4111,7 +4111,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4172,15 +4172,15 @@
 "max_fans" : 250,
 "flavor_text" : "Suddenly hundreds of arrows rise high into the air and then sharply descend towards your helpless party. ",
 "self_flavor_text" : "",
-"solve_text" : "",
-"self_solve_text" : "Fortunately the arrows burst into flames in the nick of time. ",
+"solve_text" : "Fortunately the arrows burst into flames in the nick of time. ",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4238,7 +4238,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4301,7 +4301,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4382,7 +4382,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4426,7 +4426,7 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
@@ -4470,25 +4470,25 @@
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
 		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Hint 1"
+		"text" : "That's not much of a pod -- looks like only half. Or is the other half also included?"
 		},
 	"Hint 2" : {
 		"start_time" : 10,
 		"end_time" : 20,
 		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Hint 2"
+		"text" : "This pod might make your head spin."
 		},
 	"Hint 3" : {
 		"start_time" : 20,
 		"end_time" : 30,
 		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Hint 3"
+		"text" : "This is a stylized ambigram. Read the image, then read it upside-down; you'll get a six letter word that can mean \"indivisible\"."
 		}
 	},
 "answers" : {

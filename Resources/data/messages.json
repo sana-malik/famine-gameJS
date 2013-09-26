@@ -104,5 +104,32 @@
 			"time" : 5,
 			"sender" : "Haymitch"
 		}
+	},
+	"Raise the Flag" : {
+		"msg14" : {
+			"id" : "msg14",
+			"type" : "video",
+			"content" : "coin1.mov",
+			"time" : 2,
+			"sender" : "Coin"
+		}
+	},
+	"Infiltrate the Capitol" : {
+		"msg15" : {
+			"id" : "msg15",
+			"type" : "video",
+			"content" : "snow.mov",
+			"time" : 2,
+			"sender" : "President Snow"
+		}
+	},
+	"Finale" : {
+		"msg16" : {
+			"id" : "msg16",
+			"type" : "video",
+			"content" : "coin3.mov",
+			"time" : 2,
+			"sender" : "Coin"
+		}
 	}
 }

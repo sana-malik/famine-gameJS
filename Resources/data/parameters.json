@@ -1,13 +1,13 @@
 {
 "debug_parameters" : {
-    "debug" : false,
+    "debug" : true,
     "time_multiplyer" : 30,
     "start_time" : {
         "active" : true,
         "year" : 2013,
         "month" : 9,
         "day" : 28,
-        "hour" : 9,
+        "hour" : 16,
         "minute" : 15
     },
     
