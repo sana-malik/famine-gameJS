@@ -4,7 +4,7 @@
 			"id" : "msg1",
 			"type" : "video",
 			"content" : "hay1.mov",
-			"time" : 10,
+			"time" : 5,
 			"sender" : "Haymitch"
 		}
 	},
