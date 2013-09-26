@@ -26,15 +26,6 @@
 			"sender" : "Haymitch"
 		}
 	},
-	"Camouflage" : {
-		"msg4" : {
-			"id" : "msg4",
-			"type" : "text",
-			"content" : "<b>Attention tributes! As we realize your hunger is likely slowing you down, we will be holding a Feast where we have a wide variety of animals for you to hunt.</b></b>",
-			"time" : 3,
-			"sender" : "The Gamemakers"
-		}
-	},
 	"Plants vs Zombies" : {
 		"msg5" : {
 			"id" : "msg5",
