@@ -84,7 +84,7 @@
 		"msg11" : {
 			"id" : "msg11",
 			"type" : "text",
-			"content" : "<b>Maybe we should start calling you the Cereal Killers.  Right?  Right? No?  Fine, whatever. With so few teams left, the Capitol is looking to bring the Games to a close. They're going to release their ungodly creations into the Arena to hunt you down.  I know where they're being kept though, and if you head there and figure out how these creations were made you may be able to defeat them. We preprogrammed the location into your App, so you should be heading there now. <b>You'll meet a contact there who will help you, but you may need to be a little creative when attempting to communicate with him.</b>",
+			"content" : "<b>Maybe we should start calling you the Cereal Killers.  Right?  Right? No?  Fine, whatever. <br><br>With so few teams left, the Capitol is looking to bring the Games to a close. They're going to release their ungodly creations into the Arena to hunt you down.  I know where they're being kept though, and if you head there and figure out how these creations were made you may be able to defeat them. We preprogrammed the location into your App, so you should be heading there now. <b>You'll meet a contact there who will help you, but you may need to be a little creative when attempting to communicate with him.</b>",
 			"time" : 2,
 			"sender" : "Haymitch"
 		}
