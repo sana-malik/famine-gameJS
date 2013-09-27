@@ -316,8 +316,7 @@
 	"food_status" : "No",
 	"food_description" : "",
 	"wifi_status" : "Yes",
-	"wifi_description" : "Ssid: faminegame Wpa2: justeatalready
-",
+	"wifi_description" : "Ssid: faminegame Wpa2: justeatalready",
 	"image_file" : "",
 	"map_file" : "nottingham_map.png",
 	"puzzles" : ["Mockingjays"]
