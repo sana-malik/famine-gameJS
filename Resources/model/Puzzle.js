@@ -273,7 +273,7 @@ var Puzzle = Backbone.Model.extend({
 			var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
 
 			if (!debugActive() && getCurrentDateTimeString(timeFormat.TWENTYFOUR) < locations[locOrder[currentLoc]].get("time_open")) {
-				showPopup('<div class="too_fast">Please call the Gamemakers at (XXX) XXX-XXXX before proceeding to the next location.</div>')
+				showPopup('<div class="too_fast">Please call the Gamemakers at (703) 637-9800 before proceeding to the next location.</div>')
 			}
 		}
 
