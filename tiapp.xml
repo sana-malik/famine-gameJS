@@ -6,7 +6,7 @@
 <version>1.0</version>
 <publisher>Famine Game Control</publisher>
 <url>www.faminegame.org</url>
-<icon>default_app_logo.png</icon>
+<icon>app_logo.png</icon>
 <copyright>2013 by Famina Game Control</copyright>
 <!-- Window Definition - these values can be edited -->
 <window>
