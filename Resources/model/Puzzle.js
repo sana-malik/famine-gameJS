@@ -149,8 +149,8 @@ var Puzzle = Backbone.Model.extend({
 				var time_to_advance = elapsed;
 
 				$.each(hints_to_skip, function(index, hint_name)  {
-					if (hint_name in puzzle.get("hints")) {
-						if (stats[puzzle.get("name")]["hintStats"][hint_name]["status"] != hintStatus.REVEALED) {
+					if (hint_name in puzzle.get("hints") ) {
+						if (stats[puzzle.get("name")]["hintStats"][hint_name]["status"] != hintStatus.REVEALED && stats[puzzle.get("name")]["hintStats"][hint_name]["status"] != hintStatus.FREE) {
 							stats[puzzle.get("name")]["hintStats"][hint_name]["status"] = hintStatus.FREE;
 							var time_remaining = stats[puzzle.get("name")]["hintStats"][hint_name]["end_time"];
 							if (time_remaining > time_to_advance) {
@@ -273,7 +273,7 @@ var Puzzle = Backbone.Model.extend({
 			var time_open = new Date(locations[locOrder[currentLoc]].get("time_open"));
 
 			if (!debugActive() && getCurrentDateTimeString(timeFormat.TWENTYFOUR) < locations[locOrder[currentLoc]].get("time_open")) {
-				showPopup('<div class="too_fast">Please call the Gamemakers at (XXX) XXX-XXXX before proceeding to the next location.</div>')
+				showPopup('<div class="too_fast">Please call the Gamemakers at (703) 637-9800 before proceeding to the next location.</div>')
 			}
 		}
 

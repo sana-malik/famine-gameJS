@@ -2,7 +2,7 @@
 "Test Puzzle" : {"name":"Test Puzzle",
 "start_code" : "tutorial",
 "max_fans" : 25,
-"flavor_text" : "Nice work. You have succesfully figured out how to begin an Arena challenge.",
+"flavor_text" : "Nice work. You have successfully figured out how to begin an Arena challenge.",
 "self_flavor_text" : "",
 "solve_text" : "And now you have successfully solved a challenge.  Good for you!",
 "self_solve_text" : "",
@@ -62,7 +62,7 @@
 "The Procession" : {"name":"The Procession",
 "start_code" : "intro",
 "max_fans" : 100,
-"flavor_text" : "It's time to start the 75th Famine Game.  Get in your vehicles and drive south to the southern tip of the peninsula.  Park your vehicle and remain in the lot for further instructions. ",
+"flavor_text" : "It's time to start the 75th Famine Game.  Get in your vehicles, turn right out of the parking lot, and drive south to the southern tip of the peninsula.  Park your vehicle in the public lot or on the spaces on the side of the road.  Look for the Piecekeepers there who will give you instructions on what to do next. ",
 "self_flavor_text" : "",
 "solve_text" : "It's almost time for the big event!  In just a few moments, Piecekeepers will escort you to the arena.  Please be patient.",
 "self_solve_text" : "",
@@ -92,7 +92,7 @@
 "Cornucopia - Know Thy Enemy" : {"name":"Cornucopia - Know Thy Enemy",
 "start_code" : "bloodbath",
 "max_fans" : 250,
-"flavor_text" : "Let the Game begin!  All of Pangram is watching. Can you survive what is traditionally the deadliest part of The Famine Game?",
+"flavor_text" : "Let the Game begin!  All of Pangram is watching. Can you survive what is traditionally the deadliest part of The Famine Game?<br><br><b>The Cornucopia consists of three mini-puzzles followed by a final puzzle.  Each time you solve a mini-puzzle, enter your answer into the app and then head into the cornucopia, using your answer word to retrieve your next puzzle. When you get a new puzzle, make sure to enter its start code. Additionally, you will also be collecting a set of 24 discs, handed out eight at a time. The final puzzle uses all 24 discs. Good luck, tributes!<br><br>One final note: DO NOT take or move any of the items on the ground.  If you do that, you will explode.</b>",
 "self_flavor_text" : "",
 "solve_text" : "Head inside the cornucopia, and use this answer to retrieve your next puzzle.",
 "self_solve_text" : "",
@@ -157,7 +157,7 @@
 		"end_time" : 15,
 		"start_cost" : 10,
 		"end_cost" : 0,
-		"text" : "Form five fighting different fighting styles phonetically by the combining the various photos and place them in the blanks below. "
+		"text" : "Form five different fighting styles phonetically by the combining the various photos and place them in the blanks below. "
 		},
 	"Hint 3" : {
 		"start_time" : 15,
@@ -219,7 +219,7 @@
 "max_fans" : 1000,
 "flavor_text" : "Teams are running around everywhere.  Things are getting quite chaotic.  Do you have what it takes to survive this final step?",
 "self_flavor_text" : "",
-"solve_text" : "You've safely escaped the Cornucopia without succumbing to the usual bloodbath!  Make sure you grabbed your survival kit!",
+"solve_text" : "You safely escape the Cornucopia without succumbing to the usual bloodbath!  As you make your way out here, you spot a pack of flat, rectangular wooden objects with metal clips attached.  Perhaps these will come in handy! <br><br><b>Also, make sure you grabbed your survival pouch before you leave!</b>",
 "self_solve_text" : "",
 "resources_unlocked" : ["clipboards"],
 "teams_killed" : [],
@@ -278,7 +278,7 @@
 "flavor_text" : "It seems that this portion of the Arena has wildly fluctuating weather.  While it was scorching hot a second ago, you can see a blizzard approaching on the horizon.  Luckily, your sponsors have provided you with some strips of a durable, lightweight fabric. <br><br><b>It seems like you're supposed to weave this into a blanket. But they gave no instructions on how to do it.  Or did they?</b>",
 "self_flavor_text" : "",
 "solve_text" : "Nicely done. Your blanket is enough to protect you from the ensuing storm.  Silly Jefes, it seems, were not quite as fortunate and froze to death.",
-"self_solve_text" : "Nicely done, Silly Jefes! Your expertly blanket is enough to protect you from the ensuing storm. Your knowledge of textiles proved to be life-saving. ",
+"self_solve_text" : "Nicely done, Silly Jefes! Your expertly woven blanket is enough to protect you from the ensuing storm. Your knowledge of textiles proved to be life-saving. ",
 "resources_unlocked" : [],
 "teams_killed" : ["8a"],
 "meta" : false,
@@ -289,7 +289,7 @@
 		"end_time" : 10,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "You need to make an overlapping weave with the strips. But don't assume that they alternate like a normal weave pattern. "
+		"text" : "You need to make an alternating weave with the strips."
 		},
 	"Hint 2" : {
 		"start_time" : 10,
@@ -344,20 +344,20 @@
 	"holdoverheat" : {
 		"type" : "partial",
 		"text" : "holdoverheat",
-		"response" : "Yes, you're very close! Perhaps you should actually try that.  ",
+		"response" : "Yes, you're very close! Perhaps you should actually try that.  But be careful and be discreet. ",
 		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3", "Hint 4", "Hint 5"]
 		},
 	"holdunderheat" : {
 		"type" : "partial",
 		"text" : "holdunderheat",
 		"response" : "Close. But you're overlapping those two words incorrectly. ",
-		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3", "Hint 4", "Hint 5"]
 		}
 	}
 },
 "Pen" : {"name":"Pen",
 "start_code" : "quill",
-"max_fans" : 1000,
+"max_fans" : 500,
 "flavor_text" : "Ah, finally a pen!  Maybe things aren't so hopeless after all.",
 "self_flavor_text" : "",
 "solve_text" : "Great work! Now you have something to defend yourself with. ",
@@ -369,35 +369,35 @@
 "hints" : {
 	"Hint 1" : {
 		"start_time" : 1,
-		"end_time" : 15,
+		"end_time" : 10,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "POE was a great POET, wasn't he?"
 		},
 	"Hint 2" : {
-		"start_time" : 15,
-		"end_time" : 30,
+		"start_time" : 10,
+		"end_time" : 20,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Each row of the poem hints at a set of three answers, which consists of a root word, root word + extra letter, root word + 2 extra letters.  Answers will always increase in length within each line. "
 		},
 	"Hint 3" : {
-		"start_time" : 30,
-		"end_time" : 40,
+		"start_time" : 20,
+		"end_time" : 30,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "The extra letters (two per row) will spell out a message that will guide you to the answer. "
 		},
 	"Hint 4" : {
-		"start_time" : 40,
-		"end_time" : 50,
+		"start_time" : 30,
+		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Show this hint to the staffer and they will give you answers to two lines of your choice. "
 		},
 	"Hint 5" : {
-		"start_time" : 50,
-		"end_time" : 60,
+		"start_time" : 40,
+		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "Your final answer involves a reference to a poem by Edward Bulwer-Lytton."
@@ -432,14 +432,14 @@
 "flavor_text" : "Wow... so many options to choose from! Most of them are in severe disrepair, but you might be able to find something useful if you search hard enough.",
 "self_flavor_text" : "",
 "solve_text" : "You finally find a car that, while obviously old, looks promising. As you attempt to get it started, a bloodcurling shout grabs your attention.  You look up and see Team Briny Deep charging at you yelling \"ARRRRRR!\"  ",
-"self_solve_text" : "Another team managed to hotwire an automobile and tried to run you down with their car!  However, thanks to your transportation expertise, you were able to jump into the driver's window, kick the other tributes out and drive out of this area unharmed. ARRRRR! Nice work, pirates!",
+"self_solve_text" : "Another team managed to hotwire an automobile and tried to run you down with their car!  However, thanks to your transportation expertise, you were able to jump into the driver's window, kick the other tributes out, and drive out of this area unharmed. ARRRRR! Nice work, pirates!",
 "resources_unlocked" : ["internet research"],
 "teams_killed" : ["6a"],
 "meta" : false,
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 5,
+		"start_time" : 1,
 		"end_time" : 15,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -464,7 +464,7 @@
 		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Your 42-letter message should suggest a famous phrase from American history.  How could that code apply to all three types of vehicles in your grid?  Show this hint to the staffer to receive two vehicles of your choice. "
+		"text" : "Your 42-letter message should suggest a famous phrase from American history.  How could that code apply to all three types of vehicles in your grid?  Show this hint to the staffer to receive two vehicle phrases of your choice. "
 		},
 	"Hint 5" : {
 		"start_time" : 50,
@@ -520,7 +520,7 @@
 "max_fans" : 1000,
 "flavor_text" : "You wisely choose to abandon your vehicle, knowing that the other tributes will easily be able to track your trail. And even though the blizzard has passed, it's still ridiculously cold.  You need to get your fire lit right now if you are to have any hope of survival.",
 "self_flavor_text" : "",
-"solve_text" : "Because of the precise layout of the wood, you're able to build a roaring fire just in time.  Huddled down with your emergency blanket in the warmth of your fire, you feel quite pleased with yourself.  The League of Extraordinary Puzzlemen, however, were not as lucky. While they did get their fire lit, a couple of the career teams spotted the smoke, used it to find them, and, in honor of their first kills, slew them in a grisly ritual.",
+"solve_text" : "Thanks to the precise layout of the wood, you're able to build a roaring fire just in time.  Huddled down with your emergency blanket in the warmth of your fire, you feel quite pleased with yourself.  The League of Extraordinary Puzzlemen, however, were not as lucky. While they did get their fire lit, a couple of the career teams spotted the smoke, used it to find them, and, in honor of their first kills, slew them in a grisly ritual.",
 "self_solve_text" : "Well done, Puzzlemen!  It's pretty clear that a team from the Lumber District would have no problem building a simple fire.  ",
 "resources_unlocked" : ["paper"],
 "teams_killed" : ["7b"],
@@ -528,7 +528,7 @@
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 5,
+		"start_time" : 1,
 		"end_time" : 15,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -594,13 +594,13 @@
 		"type" : "partial",
 		"text" : "cherryolivechestnutgumashapple",
 		"response" : "Those are the correct woods, but you're not done just yet. ",
-		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3", "Hint 4"]
 		},
 	"appleashgumchestnutolivecherry" : {
 		"type" : "partial",
 		"text" : "appleashgumchestnutolivecherry",
 		"response" : "Looks like you've got your woods in reverse order. ",
-		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3"]
+		"skipped_hints" : ["Hint 1", "Hint 2", "Hint 3", "Hint 4"]
 		},
 	"trees" : {
 		"type" : "partial",
@@ -613,10 +613,10 @@
 "Legos" : {"name":"Legos",
 "start_code" : "cornerstone",
 "max_fans" : 1000,
-"flavor_text" : "Look out! Bostucky Plugh was lying in ambush, waiting for you to approach the ruins.  If you can understand the layout of this arrangement of bricks, then maybe you can gain some sort of advantage.",
+"flavor_text" : "Look out! Bostucky Plugh was lying in ambush, waiting for you to approach the crumbling ruins.  If you can understand the layout of this arrangement of bricks, then maybe you can gain some sort of advantage.",
 "self_flavor_text" : "Look out! Another team was lying in ambush, waiting for you to approach the crumbling ruins.  If you can understand the layout of this arrangement of bricks, then maybe you can gain get out of here alive.",
 "solve_text" : "As Bostucky Plugh chases you around the ruins, you begin to gain a better understanding of the structure. You're able to use this knowledge to stay ahead of your killers, ducking into unseen alcoves and leading them down confusing, labyrinthine sections of tunnel, all the while making sure to avoid the now obvious weak portions of the structure.  In the ensuing scuffle, Bostucky Plugh is caught unaware as a large chunk of the ruin breaks off.  ",
-"self_solve_text" : "Well done, Bostucky Plugh!  Just as the building was about to collapse and HIT you on the head, you drew upon your Masonry expertise, took some quick drying cement, and \"plughed\" the faulty cracks in the structure.  ",
+"self_solve_text" : "Well done, Bostucky Plugh!  Just as the building was about to collapse and HIT you on the head, you drew upon your masonry expertise, took some quick drying cement, and \"plughed\" the faulty cracks in the structure.  ",
 "resources_unlocked" : [],
 "teams_killed" : ["2a"],
 "meta" : false,
@@ -641,14 +641,14 @@
 		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "This puzzle uses the Free Mason or Pigpen cipher.  But it does so in a way that isn't immediately apparent from eye level. Also, there are multiple versions of this cipher.  Use the one starting with two tic tac toe grids."
+		"text" : "This puzzle uses the Free Mason or Pigpen cipher.  But it does so in a way that isn't immediately apparent from eye level. Also, there are multiple versions of this cipher.  Use the one starting with two tic-tac-toe grids."
 		},
 	"Hint 4" : {
 		"start_time" : 40,
 		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Each level is a Free Mason letter when viewed from above.  "
+		"text" : "Each level is a Free Mason encoding when viewed from above.  "
 		},
 	"Hint 5" : {
 		"start_time" : 50,
@@ -680,7 +680,7 @@
 "flavor_text" : "You gleefully dip your face into the cool water and feel instant relief as it fills your parched mouth.   Though your spirits have been lifted, your reverie is cut short as you hear a twig snap in the nearby woods.  Listening carefully, you can just make out some shuffling in the underbrush and the low, deep, rhythmic sounds of breathing.  Something is nearby.  Something big.  <br><br>Your eyes dart side to side, scanning the bushes, trying to identify the threat, but despite your best efforts you're unable to make anything out.  You're not even sure which way to run!",
 "self_flavor_text" : "",
 "solve_text" : "Finally you spot movement in the bushes and, by following the shaking of the branches you're able to just make out the form of some powerful animal perfectly blending in with the foliage.  No sooner have you found the animal than it lunges out of the bushes, attempting to drag you away.  You see a brief flash of claws as you scurry out of the way and run off in the opposite direction.  The Burninators, it would seem, do not have the same keen eyes as you and suffer a grisly fate.",
-"self_solve_text" : "Finally you spot movement in the bushes and, by following the shaking of the branches you're able to just make out the form of some powerful animal perfectly blending in with the foliage.  No sooner have you found the animal than it lunges out of the bushes, attempting to drag you away.  You see a brief flash of claws as you dodge its deadly swipe.  As you run off in the opposite direction, you wonder... could that have been Trogdor himself?!!",
+"self_solve_text" : "Finally you spot movement in the bushes and, by following the shaking of the branches, you're able to just make out the form of some powerful animal perfectly blending in with the foliage.  No sooner have you found the animal than it lunges out of the bushes, attempting to drag you away.  You see a brief flash of claws as you dodge its deadly swipe.  As you run off in the opposite direction, you wonder... could that have been Trogdor himself?!!",
 "resources_unlocked" : [],
 "teams_killed" : ["6b"],
 "meta" : false,
@@ -712,14 +712,14 @@
 		"end_time" : 55,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "This puzzle uses Braille, but you'll have to piece it together.  Also point of view is important, as is the unique order of numbers on the ground. "
+		"text" : "This puzzle uses Braille, but you'll have to piece it together.  Also point of view is important, as well as the unique order of numbers on the ground. "
 		},
 	"Hint 5" : {
 		"start_time" : 55,
 		"end_time" : 65,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Each row of each bench should either be a bump or blank depending on whether or you have been given an image in that row. To make a Braille letter. you'll need to use the two benches on either side of a number and orient yourself according to the number. "
+		"text" : "Each row of each bench should either be a bump or blank depending on whether or not you have been given an image in that row. To make a Braille letter. you'll need to use the two benches on either side of a number and orient yourself according to the number. "
 		}
 	},
 "answers" : {
@@ -735,8 +735,8 @@
 "The Feast" : {"name":"The Feast",
 "start_code" : "roundup",
 "max_fans" : 1000,
-"flavor_text" : "You arrive to see the animals promised, although they seem to be cruelly branded. Also, several other teams, including District 10's very own R.E.D.T.A.P.E. have converged on the area looking for food as well.  You're going to have to be very careful if you want to get out of here alive.",
-"self_flavor_text" : "You arrive to see the animals promised, although they seem to be cruelly branded. Also, several other teams have converged on the area looking for food as well.  You're going to have to be very careful if you want to get out of here alive.",
+"flavor_text" : "Looks like the Capitol is conducting a Feast, an event designed to draw teams out from hiding.  You find a wide variety of animals to hunt, although they seem to be cruelly branded. Also, several other teams, including District 10's very own R.E.D.T.A.P.E. have converged on the area looking for food as well.  You're going to have to be very careful if you want to get out of here alive.",
+"self_flavor_text" : "Looks like the Capitol is conducting a Feast, an event designed to draw teams out from hiding.  You find a wide variety of animals to hunt, although they seem to be cruelly branded.   You're going to have to be very careful if you want to get out of here alive.",
 "solve_text" : "Several fights have broken out amongst the teams gathered here.  You approach in the hopes that you can sneak away with some food, but as you draw near, R.E.D.T.A.P.E. spots you and rushes over.  You grab the closest weapon you can find (some sort of farming implement), and go on the offensive.  ",
 "self_solve_text" : "Everywhere you look, teams are fighting.  And as tempting as it is to eat, you know it could likely spell your doom.  Using discretion, you draw upon your extensive knowledge of animals and ride the giraffe to safety.  Clever work, Redundant Extraneous District Ten Agrarian Prairie Enforcers!!",
 "resources_unlocked" : ["flashlights"],
@@ -770,21 +770,21 @@
 		"end_time" : 45,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Each company name and its ranch share an interesting property.   Show this hint to the staffer to have two companies identified for you. "
+		"text" : "Each company name and its matching ranch share an interesting property.   Show this hint to the staffer to have two companies identified for you. "
 		},
 	"Hint 5" : {
 		"start_time" : 45,
 		"end_time" : 55,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "What positions do the two letters appear in the logo?  This will help you figure out how to spell your final answer."
+		"text" : "In what positions do the two letters appear in the logo?  This will help you figure out how to spell your final answer."
 		},
 	"Hint 6" : {
 		"start_time" : 55,
 		"end_time" : 65,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Note the positions of the letters in the logo and take the letters in the same positions from the ranch name (they have the same number of letters).  To order your answer, look closely at the signs.  Show this hint to the staffer to have all the companies identified for you. "
+		"text" : "Note the positions of the letters in the logo and take the letters in the same positions from the ranch name (they have the same number of letters).  To order your answer, look closely at the ranch signs.  Show this hint to the staffer to have all the companies identified for you. "
 		}
 	},
 "answers" : {
@@ -835,7 +835,7 @@
 		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Once you figure out which plants can kill which zombies, line them up, and kill one per turn.  You'll be taking one letter from each transformed zombie name in order of their deaths. "
+		"text" : "Once you figure out which plants can kill which zombies, line them up, and kill them one per turn.  You'll be taking one letter from each transformed zombie name in order of their deaths. "
 		},
 	"Hint 5" : {
 		"start_time" : 50,
@@ -907,7 +907,7 @@
 		"end_time" : 70,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Here are the powers: for Iceman, make the sensor cold.  For Jean Grey, tilt the cube upside down.  For Magneto, hold your magnet onto the face.  For Surge, connect the screw on that face to another different looking screw.  Each XMen member toggles a different bit, which will allow you to combine their powers to enter the word FORCEFUL. "
+		"text" : "Here are the powers: for Iceman, make the sensor cold.  For Jean Grey, tilt the cube upside down.  For Magneto, hold your magnet onto the face.  For Surge, connect the screw on that face to another different looking screw.  Each X-Men member toggles a different bit, which will allow you to combine their powers to enter the word FORCEFUL. "
 		}
 	},
 "answers" : {
@@ -1008,7 +1008,7 @@
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 5,
+		"start_time" : 1,
 		"end_time" : 15,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -1136,12 +1136,12 @@
 		}
 	}
 },
-"Wool" : {"name":"Wool",
+"Ore" : {"name":"Ore",
 "start_code" : "boardgame",
 "max_fans" : 250,
-"flavor_text" : "This is the wool mini-puzzle of Settlers of Pangram. ",
+"flavor_text" : "This is the ore mini-puzzle of Settlers of Pangram. ",
 "self_flavor_text" : "",
-"solve_text" : "You've solved the wool puzzle!",
+"solve_text" : "You've solved the ore puzzle!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -1151,16 +1151,16 @@
 	"Hint 1" : {
 		"start_time" : 20,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "These broken roads are symbolic of how messages used to travel across Pangram in the early days."
+		"text" : "These broken roads and settlements are symbolic of how messages used to travel across Pangram in the early days."
 		},
 	"Hint 2" : {
 		"start_time" : 50,
 		"end_time" : 60,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "The roads and settlements use a familiar encoding -- gaps in the chain are spaces between letters."
+		"text" : "The roads and settlements use a familiar encoding -- gaps in the chain are spaces between letters.  Two settlements next to each other doesn't constitute a gap.  Don't forget turn order!"
 		}
 	},
 "answers" : {
@@ -1188,16 +1188,16 @@
 	"Hint 1" : {
 		"start_time" : 20,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The names and numbers of each player's cards are important to solve this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 50,
 		"end_time" : 60,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Your three-letter answer will be spelled by indexing into the card name by how many of that card there are."
+		"text" : "Your three-letter answer will be spelled by indexing into the card name by how many of that card there are.  Don't forget turn order!"
 		}
 	},
 "answers" : {
@@ -1225,16 +1225,16 @@
 	"Hint 1" : {
 		"start_time" : 20,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "In a Settlers game, having the right resources is often the path to victory!"
 		},
 	"Hint 2" : {
 		"start_time" : 50,
 		"end_time" : 60,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Can you draw paths on the board using the order of each player's holdings?"
+		"text" : "Can you draw paths on the board using the order of each player's holdings?  Don't forget turn order!"
 		}
 	},
 "answers" : {
@@ -1247,12 +1247,12 @@
 		}
 	}
 },
-"Ore" : {"name":"Ore",
+"Wool" : {"name":"Wool",
 "start_code" : "boardgame",
 "max_fans" : 250,
-"flavor_text" : "This is the ore mini-puzzle of Settlers of Pangram. ",
+"flavor_text" : "This is the wool mini-puzzle of Settlers of Pangram. ",
 "self_flavor_text" : "",
-"solve_text" : "You've solved the ore puzzle!",
+"solve_text" : "You've solved the wool puzzle!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -1262,30 +1262,30 @@
 	"Hint 1" : {
 		"start_time" : 20,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Answers are in alphabetical order.  There's also additional information to get you initially started."
 		},
 	"Hint 2" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "The answers to the clues can each be mapped a single numbered disc."
+		"text" : "The answers to the clues can each be mapped to a single numbered disc."
 		},
 	"Hint 3" : {
 		"start_time" : 40,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 5,
-		"text" : "The large number on the disc indicates the length of the answer.  Match answers to the disc by their starting letter.   Given that, what could the dots mean?"
+		"text" : "The large number on the disc indicates the length of the answer.  Match answers to the discs by their starting letters.   Given that, what could the dots mean?"
 		},
 	"Hint 4" : {
 		"start_time" : 50,
 		"end_time" : 60,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 5,
-		"text" : "Index into each answer by the number of dots on the disc.  Your letters (as read on the board) will yield a clue whose answer is three letters long."
+		"text" : "Index into each answer by the number of dots on the disc.  Your letters (as read on the board) will yield a clue whose answer is four letters long."
 		}
 	},
 "answers" : {
@@ -1319,16 +1319,16 @@
 	"Hint 1" : {
 		"start_time" : 20,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "It's always good strategy to count how many cards are left."
+		"text" : "Those resouce cards are almost completely used up, aren't they?"
 		},
 	"Hint 2" : {
 		"start_time" : 50,
 		"end_time" : 60,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Your four-letter answer will be spelled by converting the number of resource cards in each pile"
+		"text" : "Your four-letter answer will be spelled by converting the number of resource cards in each pile into letters"
 		}
 	},
 "answers" : {
@@ -1346,7 +1346,7 @@
 "max_fans" : 1000,
 "flavor_text" : "As you walk among the trees, you hear a familiar sound.",
 "self_flavor_text" : "As you walk among the trees, you hear a familiar sound. Could it be... yes!  Mockingjays!  Back in your home in District 11, you fondly recall sending messages through these birds to your family and friends. Perhaps there's something they want to tell you. ",
-"solve_text" : "The mournful cry of the mockingjays rings through the trees.  It seems that Here Be Dragonfruit wasn't able to cope with the bittersweet reminder of their home district.  The sense of hopelessness that tends to affect all Tributes around this point in the Famine Game was too much for them and in the end they chose to take their own lives rather than continue on.  What a downer.",
+"solve_text" : "The mournful cries of the mockingjays ring through the trees.  It seems that Here Be Dragonfruit wasn't able to cope with the bittersweet reminder of their home district.  The sense of hopelessness that tends to affect all Tributes around this point in the Famine Game was too much for them and in the end they chose to take their own lives rather than continue on.  What a downer.",
 "self_solve_text" : "What a downer. Apparently, the mockingjays have been reprogrammed to echo a suicide message to unspecting tributes. Thankfully, you knew that it was the Capitol behind this and not the Mockingjays themselves.  You quietly sneak out and hope that other teams aren't as wise.",
 "resources_unlocked" : ["scissors"],
 "teams_killed" : ["11b"],
@@ -1372,21 +1372,21 @@
 		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Each round, each pair of birds generates a single capital letter.  And despite all the back and forth, within each pair, note that one and only one bird is singing. "
+		"text" : "Each round, each pair of birds generates a single capital letter.  And despite all the back and forth, within each pair, note that one and only one bird is singing at one time.   Show this hint to the staffer for free confirmation of your data."
 		},
 	"Hint 4" : {
 		"start_time" : 40,
 		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Think of this as a connect the dots audio puzzle.  Show this hint to the staffer for free confirmation of your data."
+		"text" : "Think of this as a connect-the-dots audio puzzle."
 		},
 	"Hint 5" : {
 		"start_time" : 50,
 		"end_time" : 60,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "You're tracing out a letter point-by-point.  For example, if the left bird started low, and then the left bird sang high, you'd draw a vertical line on the left side.  By doing so, you'll be spelling some appropriate things... well, almost."
+		"text" : "You need to trace out a letter point-by-point.  For example, if the left bird started low, and then the left bird sang high, you'd draw a vertical line on the left side.  By doing so, you'll be spelling some appropriate things... well, almost."
 		},
 	"Hint 6" : {
 		"start_time" : 60,
@@ -1411,7 +1411,7 @@
 "max_fans" : 1000,
 "flavor_text" : "Hmm, these fish look suspicious. Maybe you'd better figure out if they're safe to eat.",
 "self_flavor_text" : "",
-"solve_text" : "You've determined that these fish are safe in reasonable amounts, but an excess could be dangerous. Mystic Katfish, on the other hand, are so excited to finally see some seafood that they gorge themselves on the fish and suffer mercury poisoning. Stupid bottom feeders. ",
+"solve_text" : "You determine that these fish are safe in reasonable amounts, but an excess could be dangerous. Mystic Katfish, on the other hand, are so excited to finally see some seafood that they gorge themselves on the fish and suffer mercury poisoning. Stupid bottom feeders. ",
 "self_solve_text" : "Being an expert in fishing, you detected that several of the fish had unusally high contents of mercury.  Crisis averted!",
 "resources_unlocked" : [],
 "teams_killed" : ["4a"],
@@ -1419,7 +1419,7 @@
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 5,
+		"start_time" : 1,
 		"end_time" : 15,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -1444,7 +1444,7 @@
 		"end_time" : 60,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Each sushi bowl is actually a 2012 college football bowl game. You'll need to do some research here. "
+		"text" : "Each sushi bowl is actually a 2012 college football bowl game. You'll need to do some research here, most likely. "
 		},
 	"Hint 5" : {
 		"start_time" : 60,
@@ -1470,14 +1470,14 @@
 "flavor_text" : "As night falls, the anthem of Pangram begins, and the sky magically illuminates with the traditional presentation of Tribute deaths. ",
 "self_flavor_text" : "",
 "solve_text" : "While you've found a safe place to rest and gather your thoughts, Apetitius Giganticus has been caught out in the open by another team and was sliced to bits by some sort of futuristic weapon from the Capitol. ",
-"self_solve_text" : "Just as you think you've found a safe place to rest and gather your thoughts, Team XX-Rated comes at you with some sort of futuristic energy weapon.<br><br>Being knowledgeable in the ways of power, you dodge the weapon, quickly pull out its four D batteries and run for cover. Clever thinking!",
+"self_solve_text" : "Just as you think you've found a safe place to rest and gather your thoughts, Team Bloodshot comes at you with some sort of futuristic energy weapon.<br><br>Being knowledgeable in the ways of power, you dodge the weapon, quickly pull out its four D batteries and run for cover. Clever thinking!",
 "resources_unlocked" : [],
 "teams_killed" : ["5a"],
 "meta" : false,
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 5,
+		"start_time" : 1,
 		"end_time" : 15,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -1488,21 +1488,21 @@
 		"end_time" : 25,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "As you're undoubtedly aware, Pangram tributes are very appropriately named.  Additionally, the fact that this puzzle is projected in the sky is also a clue as to how to solve it."
+		"text" : "As you're undoubtedly aware, Pangram tributes are very appropriately named.  Additionally, the fact that this puzzle is projected up towards the sky is also a clue as to how to solve it."
 		},
-	"Hint 4" : {
+	"Hint 3" : {
 		"start_time" : 25,
 		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 5,
 		"text" : "Each body position is a zodiac constellation and each cause of death refers to a different zodiac constellation.  What's the difference, you may ask?  Also, constellations are often depicted in multiple different ways, so make sure to use your star chart.  "
 		},
-	"Hint 5" : {
+	"Hint 4" : {
 		"start_time" : 40,
 		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 5,
-		"text" : "Order the tributes by district, according to their names.  Then index into the name by how far apart the two pertinent zodiac signs are."
+		"text" : "Order the tributes by district, according to their thematic names (e.g. TUNNEL = mining).  Then index into the name by how far apart the two pertinent zodiac signs are."
 		}
 	},
 "answers" : {
@@ -1518,10 +1518,10 @@
 "Mining Artifact" : {"name":"Mining Artifact",
 "start_code" : "coal",
 "max_fans" : 1000,
-"flavor_text" : "You've unearthed a strange artifact that appears to be a lump of coal.  Was this left by another team, or is it a clue of some sort?",
+"flavor_text" : "You've unearthed a strange artifact that looks like a lump of coal. Was this left by another team, or is it a clue of some sort?",
 "self_flavor_text" : "",
 "solve_text" : "As you finish solving the artifact, Coeds on Fire emerges from an underground tunnel.  They charge at you with their pickaxes, temporarily blinding you with their miner helmets.  Thinking quickly, you grab a Rubik's Cube and jam it down their throats, blocking their airways.  Well, they did say they eat puzzles for breakfast, after all. ",
-"self_solve_text" : "Just as you solve the artifact, Team Snout emerges from a hidden underground tunnel and rams their artifact down your throat. However, being that you're miners, you know which passages lead to air and you manage to continue breathing. Well done, Coeds! ",
+"self_solve_text" : "Just as you solve the artifact, Team Snout emerges from a hidden underground tunnel and rams their artifact down your throat. However, being that you're miners, you know which passages lead to air and you manage to continue breathing. You then harmlessly cough up the artifact. Well done, Coeds! ",
 "resources_unlocked" : [],
 "teams_killed" : ["12b"],
 "meta" : false,
@@ -1539,7 +1539,7 @@
 		"end_time" : 25,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The depths of the various tunnels aren't important. However the number of tunnels on each side is significant. "
+		"text" : "You don't need to measure anything, such as the depths of the various tunnels. However the number of tunnels on each side is significant. "
 		},
 	"Hint 3" : {
 		"start_time" : 25,
@@ -1595,7 +1595,7 @@
 "Cereal" : {"name":"Cereal",
 "start_code" : "breakfast",
 "max_fans" : 1500,
-"flavor_text" : "You've found their food supply--a veritable carb-loaded, smorgasbord of sugary goodness. Now you just need to destroy it, and then go deal with the teams.<br><br><b>This box of cereal contains 5 minipuzzles and a metapuzzle, which uses the answers from the minis.  To solve a mini (and receive hints), click on the name of the particular puzzle. To enter the meta answer, return to this page.<br><br></b>",
+"flavor_text" : "You've found their food supply--a veritable carb-loaded, smorgasbord of sugary goodness. Now you just need to destroy it, and then go deal with the teams.<br><br><b>This box of cereal contains 5 minipuzzles and a metapuzzle, which uses the answers from the minis.  To solve a mini (and receive hints), click on the name of the particular puzzle. To enter the meta answer, return to this page.</b>",
 "self_flavor_text" : "",
 "solve_text" : "You skillfully manage to burn the supply of grain. As the leaders of the alliance show up to find out what happened, you hide behind a tree and stare dumbfounded at the massive creature that suddenly appears on the horizon. Defenseless, the captains of This Space Intentionally Left Blank, Occam's Unicorn, and Disobedient Children have no escape and suffer a death that can only be described as \"unique.\"",
 "self_solve_text" : "You skillfully manage to burn the supply of grain. As the two leaders of the alliance show up to find out what happened, the three of you stare dumbfounded at the massive creature that appears over the horizon. Before you can do anything, he exacts his revenge on the three of you, killing both of them and wounding you rather badly. Can you survive long enough to win this thing?",
@@ -1609,21 +1609,21 @@
 		"end_time" : 20,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Each of the five minipuzzles correspond to one of the five cereals included.  When you have all five answers, enter them alphabetically in one long string to advance your hint clock. "
+		"text" : "Each of the five minipuzzles corresponds to one of the five cereals included.  When you have all five answers, enter them alphabetically in one long string to advance your hint clock. "
 		},
 	"Hint 2" : {
 		"start_time" : 105,
 		"end_time" : 120,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The free prize included is the key to the meta.  "
+		"text" : "The free prize included is the key to the meta.  Each face references one of the cereals."
 		},
 	"Hint 3" : {
 		"start_time" : 120,
 		"end_time" : 135,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "There are five different icons on your icosohedron, each one refers to the answer word of a particular minipuzzle. To extract the answer, you might want to count the dots. "
+		"text" : "To extract the answer, you might want to count the dots. There's a logical way to navigate through all 20 faces."
 		},
 	"Hint 4" : {
 		"start_time" : 135,
@@ -1664,49 +1664,49 @@
 	"Hint 1" : {
 		"start_time" : 10,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "This puzzle starts with the Nutrition Facts % Daily Value"
 		},
 	"Hint 2" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "There's a fractional relationship between the lengths of the words and the % Daily Value"
 		},
 	"Hint 3" : {
 		"start_time" : 40,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "You need to take all of the fractional segment of the word. For example, 33% of PICKLE would be PI.  "
 		},
 	"Hint 4" : {
 		"start_time" : 50,
 		"end_time" : 60,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Have you looked at the FROOT LOOPS logo recently?"
 		},
 	"Hint 5" : {
 		"start_time" : 60,
 		"end_time" : 70,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Perhaps you can create some fruits by using the extra O's you've been given"
 		},
 	"Hint 6" : {
 		"start_time" : 70,
 		"end_time" : 80,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "There are five fruits disguised in the ring of letters.  Make special note of the colors, too, as they come into play at the very end"
+		"text" : "There are five fruits disguised in the ring of letters.  Make special note of the colors, too, as they come into play at the very end."
 		},
 	"Hint 7" : {
 		"start_time" : 80,
 		"end_time" : 90,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Change certain letters in the rings to make fruit names, and then take the changed letters in fruit order.  The color of the fruits should match the color O that you use.  "
 		}
@@ -1742,49 +1742,49 @@
 	"Hint 1" : {
 		"start_time" : 10,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "This puzzle involves the 24 colorful clues on the box. "
 		},
 	"Hint 2" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Solve the clues, and you might notice that some of the answers are related to other answers. "
 		},
 	"Hint 3" : {
 		"start_time" : 40,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "The answers should be grouped into 8 sets of three related items.  You may enter each group of three answers in rainbow order for confirmation. "
+		"text" : "The answers can be grouped into eight sets of three related items.  You may enter each group of three answers in rainbow order for confirmation. "
 		},
 	"Hint 4" : {
 		"start_time" : 50,
-		"end_time" : 60,
-		"start_cost" : 50,
+		"end_time" : 65,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "You might want to look closely at the flavor text of the clues if you haven't already.   Also, did you notice that many of the answers feature an interesting letter?"
 		},
-	"Hint 6" : {
-		"start_time" : 60,
-		"end_time" : 70,
-		"start_cost" : 50,
+	"Hint 5" : {
+		"start_time" : 65,
+		"end_time" : 80,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Count up the trix pieces, do those three numbers follow a certain pattern?"
 		},
-	"Hint 7" : {
-		"start_time" : 70,
-		"end_time" : 80,
-		"start_cost" : 50,
-		"end_cost" : 0,
-		"text" : "This puzzle could easily be renamed Tri-X"
-		},
-	"Hint 8" : {
+	"Hint 6" : {
 		"start_time" : 80,
-		"end_time" : 90,
-		"start_cost" : 50,
+		"end_time" : 95,
+		"start_cost" : 25,
+		"end_cost" : 0,
+		"text" : "This puzzle could have be named Tri-X"
+		},
+	"Hint 7" : {
+		"start_time" : 95,
+		"end_time" : 105,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "After grouping, count the X's in each answer word and convert to ternary with the red/orange answer in the 9's place, the yellow/green in the 3's place, and the blue/violet in the 1's place. Order your groups according to the hints in the flavor text.  "
 		}
@@ -1862,49 +1862,49 @@
 	"Hint 1" : {
 		"start_time" : 10,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "This puzzle involves the 9 cards labeled Useless Knowledge Quest!"
 		},
 	"Hint 2" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "What's another word for Useless Knowledge?  How about Quest?  "
 		},
 	"Hint 3" : {
 		"start_time" : 40,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "These look like cards from a very familiar trivia game, but it's certainly hard to identify what category each question belongs to!"
 		},
 	"Hint 4" : {
 		"start_time" : 50,
-		"end_time" : 60,
-		"start_cost" : 50,
+		"end_time" : 65,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Each question deals falls into multiple categories from the original Trivial Pursuit game.  Can you match the questions to the colored circles on each Honeycomb piece?"
+		"text" : "Each question deals falls into multiple categories from the original Trivial Pursuit game.  Can you match the questions to the colored circles on one of the Honeycomb pieces?"
 		},
 	"Hint 5" : {
-		"start_time" : 60,
-		"end_time" : 70,
-		"start_cost" : 50,
+		"start_time" : 65,
+		"end_time" : 80,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Every answer should have the same number of letters. It's not a coincidence that the honeycomb pieces have the same number of holes, too. "
 		},
 	"Hint 6" : {
-		"start_time" : 70,
-		"end_time" : 80,
-		"start_cost" : 50,
+		"start_time" : 80,
+		"end_time" : 90,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Try putting each answer into the holes, working clockwise. But where to start?"
 		},
 	"Hint 7" : {
-		"start_time" : 80,
-		"end_time" : 90,
-		"start_cost" : 50,
+		"start_time" : 90,
+		"end_time" : 100,
+		"start_cost" : 25,
 		"end_cost" : 15,
 		"text" : "Match the categories of a particular question with a honeycomb piece using the colored circles.  Write your six-letter answer into the holes starting at the black dot. "
 		}
@@ -1940,35 +1940,35 @@
 	"Hint 1" : {
 		"start_time" : 10,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "This puzzle involves the ingredients section. "
 		},
 	"Hint 2" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Try to make connections between the various ingredients and the names of the marshmallow charms."
 		},
 	"Hint 3" : {
 		"start_time" : 40,
 		"end_time" : 60,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The ingredients feature two balloons, three clover, five hearts, two horseshoes, two hourglasses, three moons, three rainbows, and four shooting stars.  This is unrelated to the number of charms included in your cereal. "
 		},
 	"Hint 4" : {
 		"start_time" : 60,
 		"end_time" : 70,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The number of charms of a given type is used consistently for each ingredient in its group. "
 		},
 	"Hint 5" : {
 		"start_time" : 70,
 		"end_time" : 90,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Each ingredient hints at a charm type (e.g. corset = hourglass, courage = heart).  Index into the ingredients by the number of times that particular charm is included in your box. "
 		}
@@ -2004,28 +2004,28 @@
 	"Hint 1" : {
 		"start_time" : 10,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "This puzzle involves the eight pictures on the side of the box. "
 		},
 	"Hint 2" : {
 		"start_time" : 30,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Each answer is the same number of letters.  As hinted by the phrase \"Contents mostly included,\" you'll find some, but not all of the letters to your answers in the box. "
 		},
 	"Hint 3" : {
 		"start_time" : 50,
 		"end_time" : 70,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Why do you think they're called Alpha-bits?"
 		},
 	"Hint 4" : {
 		"start_time" : 70,
 		"end_time" : 90,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Letters of answers that appear in the box are 1s and letters that don't are 0s.  Convert this binary to letters. "
 		}
@@ -2043,8 +2043,8 @@
 "Muttations" : {"name":"Muttations",
 "start_code" : "kennel",
 "max_fans" : 1500,
-"flavor_text" : "How horrible.  Just when you thought the Capitol could go no further.  Now this. Such cute cuddly creatures mutated into killing machines. ",
-"self_flavor_text" : "How horrible.  Just when you thought the Capitol could go no further.  Now this. Such cute cuddly creatures mutated into killing machines. No time to think about that... only two teams left and you're one of them! Can you make it past one final team?",
+"flavor_text" : "How horrible.  Just when you thought the Capitol could go no further.  Now this. Such cute cuddly creatures mutated into killing machines. <br><br><b>Note: One small piece of data in this puzzle has changed since the time of printing.  When you understand the main gimmick of how the puzzle works, come tell the Piecekeepers and they will tell you the element that has changed. ",
+"self_flavor_text" : "How horrible.  Just when you thought the Capitol could go no further.  Now this. Such cute cuddly creatures mutated into killing machines. No time to think about that... only two teams left and you're one of them! Can you make it past one final team? <br><br><b>Note: One small piece of data in this puzzle has changed since the time of printing.  When you understand the main gimmick of how the puzzle works, come tell the Piecekeepers and they will tell you the element that has changed. </b>",
 "solve_text" : "As Team Snout and Bloodshot succumb to the snarling boxers and the sweaty boxers, you realize that it's finally over.  You've won.  You survived the arena, you're the last team alive, and you have won the Famine Game!",
 "self_solve_text" : "Surrounded by boxers, you and your opponent begin to be pummelled by boxers, bitten by boxers, and boxed by a giant f-ing box. What will the Capitol think of next? <br><br>Trapped under the box, wresting with the enemy tributes, a grey goateed muttation dives for your throat. You recognize the dog as a reincarnated Whiskey, the annoying tribute from Golden Smokingjay. Reacting quickly, you turn over and watch the dog sink its teeth into the carotid artery of your opponent. Suddenly, the box is lifted by an unseen force, and you realize that it's finally over. You've won! You survived the arena, you're the last team alive, and you have won the Famine Game!",
 "resources_unlocked" : [],
@@ -2120,9 +2120,9 @@
 "The Clock" : {"name":"The Clock",
 "start_code" : "ticktock",
 "max_fans" : 2000,
-"flavor_text" : "It was a lie. A big damn lie. There was never going to be a winning team. <br><br>As your eyes adjust to your new surroundings, you can see spread out around you, twelve distinct areas coming off of the central hub where you are currently standing. You're not sure what new horrors await you, but your only hope now is to trust your mysterious contact, and try to get through this together.",
+"flavor_text" : "It was a lie. A big damn lie. There was never going to be a winning team. <br><br>As your eyes adjust to your new surroundings, you can see spread out around you, twelve distinct areas coming off of the central hub where you are currently standing. You're not sure what new horrors await you, but your only hope now is to trust Haymitch and try to get through this together.",
 "self_flavor_text" : "",
-"solve_text" : "When the metal touchplates were struck by lightning, it electrified the flash flood, sending the deadly beasts, monkeys, and insects into a frenzy, causing the killer robots to disembowel the jabber jays, and uh… yeah, well... hey, you've broken out of the clock arena!<br><br>Discreetly make your way into the hall.  Across from the double glass doors you will see a door marked \"Capitol Employees Only.\"  Go through it, but don't let anybody see you.  Make your way up the stairs to the second floor and enter the hallway. Turn left, and go out the glass door at the end of the hall.",
+"solve_text" : "When the metal touchplates were struck by lightning, it electrified the flash flood, sending the deadly beasts, monkeys, and insects into a frenzy, causing the killer robots to disembowel the jabberjays, and uh… yeah, well... hey, you've broken out of the clock arena!<br><br>Discreetly make your way into the hall.  Across from the double glass doors you will see a door marked \"Capitol Employees Only.\"  Go through it, but don't let anybody see you.  Make your way up the stairs to the second floor and enter the hallway. Turn left, and go out the glass door at the end of the hall.",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2236,9 +2236,9 @@
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start12" : {
+	"turing" : {
 		"type" : "partial",
-		"text" : "start12",
+		"text" : "turing",
 		"response" : "The 12:00 section of the clock is controlled by a maniacal computer who not only is intent on seeking your demise but coldly taunts you all the while. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2249,8 +2249,7 @@
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "The mist slowly dissipates. You've 
-survived 1 o' clock!",
+"solve_text" : "The mist slowly dissipates. You've survived 1 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2280,9 +2279,9 @@ survived 1 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start1" : {
+	"peasoup" : {
 		"type" : "partial",
-		"text" : "start1",
+		"text" : "peasoup",
 		"response" : "The 1:00 section of the clock is filled with an acrid mist. You soon discover that this fog invades your nervous system and prevents the use of your extremities. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2293,8 +2292,7 @@ survived 1 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "The vines retract, and you're reunited with your teammates. You've 
-survived 2 o' clock!",
+"solve_text" : "The vines retract, and you're reunited with your teammates. You've survived 2 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2313,7 +2311,7 @@ survived 2 o' clock!",
 		"end_time" : 315,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "You're tracing out letter shapes by connecting pairs of images to make the plants on your sheet in rebus form."
+		"text" : "Draw letter shapes by connecting pairs of images to make the plants on your sheet in rebus form."
 		}
 	},
 "answers" : {
@@ -2324,9 +2322,9 @@ survived 2 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start2" : {
+	"overgrown" : {
 		"type" : "partial",
-		"text" : "start2",
+		"text" : "overgrown",
 		"response" : "The 2:00 section of the clock is filled with dense vegetation, so thick that you lose sight of many of your teammates. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2337,8 +2335,7 @@ survived 2 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "You learned the secret to defeating these beasts.  Strike first!  You've 
-survived 3 o' clock!",
+"solve_text" : "You learned the secret to defeating these beasts.  Strike first!  You've survived 3 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2355,14 +2352,14 @@ survived 3 o' clock!",
 	"Hint 2" : {
 		"start_time" : 300,
 		"end_time" : 307,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Even though these animals may look deadly, they're actually quite huggable. "
 		},
 	"Hint 3" : {
-		"start_time" : 308,
+		"start_time" : 307,
 		"end_time" : 315,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "After hugging them, maybe you'll be on a first-name basis.  You'll also need to know the order of each animal in the chain. "
 		}
@@ -2375,9 +2372,9 @@ survived 3 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start3" : {
+	"venom" : {
 		"type" : "partial",
-		"text" : "start3",
+		"text" : "venom",
 		"response" : "The 3:00 section of the clock contains a wide variety of animals that seem innocent and playful, but deep down you know that they will probably rip you to shreds if you stay in here too long. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2388,8 +2385,7 @@ survived 3 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Slowly the freezing ice begins to melt. You've 
-survived 4 o' clock!",
+"solve_text" : "Slowly the freezing ice begins to melt. You've survived 4 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2419,9 +2415,9 @@ survived 4 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start4" : {
+	"sherpa" : {
 		"type" : "partial",
-		"text" : "start4",
+		"text" : "sherpa",
 		"response" : "The 4:00 section is so cold you can barely stand it, which is strange because most of your surrondings have been surprisingly temperate.  Giant snowflakes slowly fall onto the ground, crushing anything they land on. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2432,8 +2428,7 @@ survived 4 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "You rig a metal rod to harmlessly divert the lightning into the ground. You've 
-survived 5 o' clock!",
+"solve_text" : "You rig a metal rod to harmlessly divert the lightning into the ground. You've survived 5 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2452,7 +2447,7 @@ survived 5 o' clock!",
 		"end_time" : 315,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The lightning segments are grouped into six distinct sets.  Does that look like a familiar pattern?  The words you're spelling come in two groups (there's a longer break in the pattern when the divide occurs) and are all indirectly linked somehow. "
+		"text" : "The lightning segments are grouped into six distinct sets.  Does that look like a familiar pattern?  The words you're spelling come in two groups (there's a longer break in the pattern when the divide occurs)."
 		}
 	},
 "answers" : {
@@ -2463,9 +2458,9 @@ survived 5 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start5" : {
+	"thor" : {
 		"type" : "partial",
-		"text" : "start5",
+		"text" : "thor",
 		"response" : "The 5:00 section is about what you would expect from your typical arena.  However, every so often a massive bolt of lightning strikes this wedge, electrifying everything within its striking radius. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		},
@@ -2506,8 +2501,7 @@ survived 5 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "You didn't so much as defeat the jabberjays as you lived through the madness. You've 
-survived 6 o' clock!",
+"solve_text" : "You didn't so much as defeat the jabberjays as you lived through the madness. You've survived 6 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2537,11 +2531,10 @@ survived 6 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start6" : {
+	"torment" : {
 		"type" : "partial",
-		"text" : "start6",
-		"response" : "The 6:00 section of the clock is quite tormeting. While you can't see anything out of the ordinary, what you hear is maddening, for in this wedge lies the cruel jabberjays, birds that have been trained to mimic the cries of loved ones in distress.
-Your hint clock has now started for this puzzle.",
+		"text" : "torment",
+		"response" : "The 6:00 section of the clock is quite tormeting. While you can't see anything out of the ordinary, what you hear is maddening, for in this wedge lies the cruel jabberjays, birds that have been trained to mimic the cries of loved ones in distress. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2551,8 +2544,7 @@ Your hint clock has now started for this puzzle.",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Moving and dodging quickly, you allow the robots to take out each other. You've 
-survived 7 o' clock!",
+"solve_text" : "Moving and dodging quickly, you allow the robots to take out each other. You've survived 7 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2571,7 +2563,7 @@ survived 7 o' clock!",
 		"end_time" : 315,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The five robots simultaneously team up to form letters (however, they're not in synch).  They will generate an 11-letter answer."
+		"text" : "The five robots simultaneously aren't in synch with each other, but they team up to form an 11-letter answer."
 		}
 	},
 "answers" : {
@@ -2582,10 +2574,10 @@ survived 7 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start7" : {
+	"electriceye" : {
 		"type" : "partial",
-		"text" : "start7",
-		"response" : "The 7:00 section of the clock contains countless robots that are designed to melt anything in their path using their deadly laser focus eyes. Your hint clock has now started for this puzzle.",
+		"text" : "electriceye",
+		"response" : "The 7:00 section of the clock contains countless robots that are designed to melt anything in their path using their deadly lasered-focus eyes. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2595,8 +2587,7 @@ survived 7 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Finding a small cave, you hide in there until the rain goes away. You've 
-survived 8 o' clock!",
+"solve_text" : "Finding a small cave, you hide in there until the rain goes away. You've survived 8 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2615,7 +2606,7 @@ survived 8 o' clock!",
 		"end_time" : 307,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The patterns of the lights along with the letters you've received make up two separate drop quotes (google that puzzle type if you are unfamiliar with it)."
+		"text" : "The patterns of the lights along with the letters you've received make up two separate drop quotes (Google that puzzle type if you are unfamiliar with it)."
 		},
 	"Hint 3" : {
 		"start_time" : 307,
@@ -2633,9 +2624,9 @@ survived 8 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start8" : {
+	"dripdrip" : {
 		"type" : "partial",
-		"text" : "start8",
+		"text" : "dripdrip",
 		"response" : "You can't wait to leave the 8:00 section of the clock, as it appears to be raining blood, which is so thick and hot, that it's a struggle to even breathe. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		},
@@ -2658,8 +2649,7 @@ survived 8 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "You've learned the timings of the waves, so you can easily avoid them in the future. You've 
-survived 9 o' clock!",
+"solve_text" : "You've learned the timings of the waves, so you can easily avoid them in the future. You've survived 9 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2678,7 +2668,7 @@ survived 9 o' clock!",
 		"end_time" : 315,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "The answers can be logically paired.  Four of the answers seem to be retaining water."
+		"text" : "The answers can be logically paired based on a similiar characteristic.  Four of the answers seem to be retaining water."
 		}
 	},
 "answers" : {
@@ -2689,9 +2679,9 @@ survived 9 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start9" : {
+	"tsunami" : {
 		"type" : "partial",
-		"text" : "start9",
+		"text" : "tsunami",
 		"response" : "The 9:00 section of the clock seems innocent enough.  However, every so often, after a rumbling in the distance, the entire wedge is flooded by a massive wave forcing you to survive underwater for an ungodly amount of time.  Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
@@ -2702,8 +2692,7 @@ survived 9 o' clock!",
 "max_fans" : 250,
 "flavor_text" : "Who knows what horrors lie in this section of the clock?",
 "self_flavor_text" : "",
-"solve_text" : "Because each of the monkeys seems to lack one of their crucial senses, you are able to trick them into attacking each other. You've 
-survived 10 o' clock!",
+"solve_text" : "Because each of the monkeys seems to lack one of their crucial senses, you are able to trick them into attacking each other. You've survived 10 o' clock!",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2715,20 +2704,19 @@ survived 10 o' clock!",
 		"end_time" : 300,
 		"start_cost" : 0,
 		"end_cost" : 0,
-		"text" : "Your hint clock has now started for this puzzle.
-"
+		"text" : "Your hint clock has now started for this puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 300,
 		"end_time" : 315,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "It looks like these poor monkeys are unable to see, hear, and speak, respectively. They must have suffered a great EVIL."
 		},
 	"Hint 3" : {
 		"start_time" : 315,
 		"end_time" : 330,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The first monkey can't see words with EVIL; the second can't hear words in which EVIL is pronounced in the usual way; the third can't speak words that make the sound of EVIL. Read the beginnings of what they can see/hear/speak."
 		}
@@ -2741,11 +2729,10 @@ survived 10 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start10" : {
+	"kingkong" : {
 		"type" : "partial",
-		"text" : "start10",
-		"response" : "The 10:00 section of the clock is teeming with ferocious monkeys that appeared to have been grotesquely mutated by the Capitol. Your hint clock has now started for this puzzle.
-",
+		"text" : "kingkong",
+		"response" : "The 10:00 section of the clock is teeming with ferocious monkeys that appeared to have been grotesquely mutated by the Capitol. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		},
 	"gene" : {
@@ -2803,11 +2790,10 @@ survived 10 o' clock!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"start11" : {
+	"deet" : {
 		"type" : "partial",
-		"text" : "start11",
-		"response" : "The 11:00 section of the clock is filled with swarming insects who dive repeatedly at your face, arms, and anything else exposed.  You won't live in here for very long, as their stings are surely deadly.
-Your hint clock has now started for this puzzle.",
+		"text" : "deet",
+		"response" : "The 11:00 section of the clock is filled with swarming insects who dive repeatedly at your face, arms, and anything else exposed.  You won't live in here for very long, as their stings are surely deadly. Your hint clock has now started for this puzzle.",
 		"skipped_hints" : ["Hint 1"]
 		}
 	}
@@ -2817,7 +2803,7 @@ Your hint clock has now started for this puzzle.",
 "max_fans" : 1000,
 "flavor_text" : "You're not sure what happened here, but it's clear that your contact is dead.  Hopefully he left some sort of clue as to what the password is.",
 "self_flavor_text" : "",
-"solve_text" : "Good.  Now that you've entered the passcode into your App it can decrypt District 13's location.",
+"solve_text" : "Good.  Now that you've entered the passcode into your app it can decrypt District 13's location.",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -2825,7 +2811,7 @@ Your hint clock has now started for this puzzle.",
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 5,
+		"start_time" : 1,
 		"end_time" : 20,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -2843,7 +2829,7 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Type the word EXODUS.  How would that look on a normal keyboard?  "
+		"text" : "Keyboard: Type the word EXODUS.  How would that look on a normal keyboard? "
 		},
 	"Morse Hint" : {
 		"start_time" : 40,
@@ -2871,7 +2857,7 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Each semaphore letter is only half correct which gives you half of what you need. "
+		"text" : "Each semaphore letter is only half correct, which gives you half of what you need. "
 		},
 	"Meta Hint 1" : {
 		"start_time" : 40,
@@ -2892,7 +2878,7 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 70,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Cut out your keyboard, punch out a certain six letters, and overlay it onto a similarly shaped area to reveal the pass code. "
+		"text" : "Cut out your keyboard, punch out the correct six letters, and overlay it onto a similarly shaped area to reveal the password. "
 		}
 	},
 "answers" : {
@@ -2995,7 +2981,7 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 15,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "There's a lot of data on this map, and most of it is just for flavor.  But there's something about the layout of this map that might seem awfully familiar."
+		"text" : "There's a lot of data on the map (you did find the map didn't you?), and most of it is just for flavor.  But there's something about the layout of this map that might seem awfully familiar."
 		},
 	"Hint 2" : {
 		"start_time" : 15,
@@ -3034,12 +3020,6 @@ Your hint clock has now started for this puzzle.",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"roomforcreationofvids" : {
-		"type" : "partial",
-		"text" : "roomforcreationofvids",
-		"response" : "That phrase looks good.  What room might that be?",
-		"skipped_hints" : ["Hint 1", "Hint 2 ", "Hint 3", "Hint 4", "Hint 5"]
-		},
 	"roomfor" : {
 		"type" : "partial",
 		"text" : "roomfor",
@@ -3057,12 +3037,18 @@ Your hint clock has now started for this puzzle.",
 		"text" : "yttrium",
 		"response" : "You've gone one step to far.  We're looking for a room on the poster. ",
 		"skipped_hints" : ["Hint 1", "Hint 2 ", "Hint 3", "Hint 4", "Hint 5"]
+		},
+	"roomforcreationofvids" : {
+		"type" : "partial",
+		"text" : "roomforcreationofvids",
+		"response" : "That phrase looks good.  What room might that be?",
+		"skipped_hints" : ["Hint 1", "Hint 2 ", "Hint 3", "Hint 4", "Hint 5"]
 		}
 	}
 },
 "Film Propos" : {"name":"Film Propos",
 "start_code" : "action",
-"max_fans" : 1000,
+"max_fans" : 250,
 "flavor_text" : "Finish filming your propaganda video and the director will give you the code you need to decrypt your next mission briefing.",
 "self_flavor_text" : "",
 "solve_text" : "Well done.  All of Pangram will soon be watching you inspire our troubled nation. ",
@@ -3077,7 +3063,7 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 15,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Just read your lines like you're told!  Nobody told you that being a symbol of the revolution was going to be easy. "
+		"text" : "Just read your lines like you're told!  Nobody told you that being a rebel was going to be easy. "
 		}
 	},
 "answers" : {
@@ -3092,7 +3078,7 @@ Your hint clock has now started for this puzzle.",
 },
 "Avox Training" : {"name":"Avox Training",
 "start_code" : "mnnwrwn",
-"max_fans" : 1000,
+"max_fans" : 250,
 "flavor_text" : "Often times the revolution needs to send agents into the Capitol undercover.  As part of your training, you will need to spend some time as an Avox.  Don't worry, we aren't actually going to take your tongue, but it's important that you understand what life as an Avox is like so that you can properly imitate one if it becomes necessary.",
 "self_flavor_text" : "",
 "solve_text" : "How convincing! You truly do sound and look like an Avox.",
@@ -3134,20 +3120,20 @@ Your hint clock has now started for this puzzle.",
 "hints" : {
 	"Hint 1" : {
 		"start_time" : 1,
-		"end_time" : 15,
+		"end_time" : 10,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "To help you with data collection, both levels of the memorial feature a distinct sequence of U.S. States. There's also a logical way these states appear on the memorial. "
 		},
 	"Hint 2" : {
-		"start_time" : 15,
-		"end_time" : 25,
+		"start_time" : 10,
+		"end_time" : 20,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "To make it easier to check your data, the top level shows the 48 U.S. states that existed at the time the memorial was built.  The bottom level displays the 36 states that joined the Union before the end of the Civil War.  Both sets are listed chronologically. "
 		},
 	"Hint 3" : {
-		"start_time" : 15,
+		"start_time" : 20,
 		"end_time" : 30,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -3192,12 +3178,12 @@ Your hint clock has now started for this puzzle.",
 		}
 	}
 },
-"Sobriety Test" : {"name":"Sobriety Test",
-"start_code" : "dui",
+"Fighting for Justice" : {"name":"Fighting for Justice",
+"start_code" : "freeatlast",
 "max_fans" : 1000,
-"flavor_text" : "Resistance leaders are happy with the way your propaganda film is coming along.  You're projecting a good strong image for the Resistance, but we're afraid the pressure may be too much, and we wouldn't want you following in your mentor's footsteps.  The last thing the Resistance needs is another drunk running around giving them a bad name.  They've requested that you take the following field sobriety test.",
+"flavor_text" : "You've learned that the Capitol has imprisoned hundreds of innocent citizens, including many of your comrades from District 13. It's time to set things straight. ",
 "self_flavor_text" : "",
-"solve_text" : "At least they didn't make you stand on one foot and breathe into a bag. Looks like you're sober!",
+"solve_text" : "Your mission was successful! Many individuals who were wronged by the Capitol have now gained their freedom.  Well done. ",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -3220,7 +3206,7 @@ Your hint clock has now started for this puzzle.",
 		},
 	"Hint 3" : {
 		"start_time" : 25,
-		"end_time" : 35,
+		"end_time" : 40,
 		"start_cost" : 50,
 		"end_cost" : 0,
 		"text" : "The initials of the answers form a complete alphabet backwards, with some letters repeated. The repeated letters spell out the final answer."
@@ -3253,7 +3239,7 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 10,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Each dam is its own separate puzzle.  And while these are actual American rivers, no knowledge of the actual rivers is required."
+		"text" : "Each dam is its own separate puzzle.  And while these are actual American rivers, no knowledge of the rivers is required."
 		},
 	"Hint 2" : {
 		"start_time" : 10,
@@ -3290,7 +3276,7 @@ Your hint clock has now started for this puzzle.",
 "Cripple The Economy" : {"name":"Cripple The Economy",
 "start_code" : "depression",
 "max_fans" : 1000,
-"flavor_text" : "Now that their physical infrastructure is weakened, let's hit them where it hurts. Time to disable their economy.  ",
+"flavor_text" : "Now that their physical infrastructure is weakened, let's hit them where it hurts. Time to disable their economy with some crappy companies. ",
 "self_flavor_text" : "",
 "solve_text" : "You've whitewashed their electronic trading system, rendering it useless.  Good job, rook. Time to leave the Capitol for now, but deep down, you fear you'll be back. ",
 "self_solve_text" : "",
@@ -3325,20 +3311,20 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 50,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "Show this hint to the staffer to receive five companies of your choice. "
+		"text" : "Show this hint to the staffer to receive two more companies of your choice. "
 		}
 	},
 "answers" : {
-	"bleached" : {
+	"bleach" : {
 		"type" : "final",
-		"text" : "bleached",
+		"text" : "bleach",
 		"response" : "Congratulations, you have solved the puzzle!",
 		"self_response" : "",
 		"skipped_hints" : []
 		},
-	"removedcolorfromchemically" : {
+	"removecolorfromchemically" : {
 		"type" : "partial",
-		"text" : "removedcolorfromchemically",
+		"text" : "removecolorfromchemically",
 		"response" : "That looks good. What word is defined by that phrase?",
 		"skipped_hints" : []
 		}
@@ -3347,7 +3333,7 @@ Your hint clock has now started for this puzzle.",
 "District Two Recon" : {"name":"District Two Recon",
 "start_code" : "eyewitness",
 "max_fans" : 1000,
-"flavor_text" : "From up here you've got a great view of the surrounding landscape. It should be a simple matter to find your targets and prepare for the upcoming insurrection.",
+"flavor_text" : "From up here you've got a great view of the surrounding landscape. It should be a simple matter to find your targets and prepare for the upcoming insurrection.<br><br><b>Note: Scaffolding was added to the the Washington Monument after the printing of this puzzle.  </b>",
 "self_flavor_text" : "",
 "solve_text" : "Your recon of this area has given your airmen the opportunity they needed to bomb District 2 in preparation for a ground assault. ",
 "self_solve_text" : "",
@@ -3428,14 +3414,14 @@ Your hint clock has now started for this puzzle.",
 "flavor_text" : "You climb a rocky hill and prepare to claim District 2 for the Resistance.  Raise your flag and rally the troops.",
 "self_flavor_text" : "",
 "solve_text" : "District 2 was caught flatfooted.  Your onslaught was so quick and so decisive that there was no time for the Capitol to send any reinforcements.  District 2 falls easily into the hands of the Resistance.",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 0,
+		"start_time" : 1,
 		"end_time" : 10,
 		"start_cost" : 50,
 		"end_cost" : 0,
@@ -3453,7 +3439,7 @@ Your hint clock has now started for this puzzle.",
 		"end_time" : 30,
 		"start_cost" : 50,
 		"end_cost" : 0,
-		"text" : "One battle site is the flag in the background, which is always a country.  The other two battles are generating by interpreting the battle name as a wordplay rebus.  "
+		"text" : "One battle site is the flag in the background, which is always a country (or in one case two countries combined into one name).  The other two battles are generating by interpreting the battle name as a wordplay rebus.  "
 		},
 	"Hint 4" : {
 		"start_time" : 30,
@@ -3526,8 +3512,8 @@ Your hint clock has now started for this puzzle.",
 		"type" : "final",
 		"text" : "tempest",
 		"response" : "Congratulations, you have solved the puzzle!",
-		"self_response" : "Hint 1 ",
-		"skipped_hints" : ["Hint 1 ", "Hint 2"]
+		"self_response" : "",
+		"skipped_hints" : []
 		},
 	"famouslincoln" : {
 		"type" : "partial",
@@ -3615,6 +3601,71 @@ Your hint clock has now started for this puzzle.",
 		}
 	}
 },
+"Infiltrate the Capitol" : {"name":"Infiltrate the Capitol",
+"start_code" : "conquer",
+"max_fans" : 100,
+"flavor_text" : "You've secretly made your way into the city, undetected for now.  Enter the answer ONWARDS to get your next mission. ",
+"self_flavor_text" : "",
+"solve_text" : "Nicely done. Hopefully the Capitol doesn't know how deeply you've made it behind their front lines. ",
+"self_solve_text" : "",
+"resources_unlocked" : [],
+"teams_killed" : [],
+"meta" : false,
+"advance_location" : true,
+"hints" : {
+	"Hint 1" : {
+		"start_time" : 1,
+		"end_time" : 10,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Have you tried typing ONWARDS into the answer box?"
+		},
+	"Hint 2" : {
+		"start_time" : 10,
+		"end_time" : 20,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "This is pretty straightforward.  Just type the word ONWARDS. There's no puzzle here.  The answer is ONWARDS."
+		},
+	"Hint 3" : {
+		"start_time" : 20,
+		"end_time" : 30,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Why haven't you solved this yet?  You're totally wasting your time.  Just type the answer one letter at a time starting with an O.  Holy crap. "
+		},
+	"Hint 4" : {
+		"start_time" : 30,
+		"end_time" : 40,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Have you tried semaphore yet?  Of course you haven't, cause there's no fucking puzzle here.  OMG, how the hell did you make it this far?  Haymitch could have solved this and he's been passed out since the clock puzzle. "
+		},
+	"Hint 5" : {
+		"start_time" : 40,
+		"end_time" : 50,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Alright, you want this to be a puzzle? Fine. Opposite of OFF + WARDS.  Could that be a push in the right direction? "
+		},
+	"Hint 6" : {
+		"start_time" : 50,
+		"end_time" : 60,
+		"start_cost" : 50,
+		"end_cost" : 0,
+		"text" : "Type SAVE ME THRESH into the answer box. "
+		}
+	},
+"answers" : {
+	"onwards" : {
+		"type" : "final",
+		"text" : "onwards",
+		"response" : "Congratulations, you have solved the puzzle!",
+		"self_response" : "",
+		"skipped_hints" : []
+		}
+	}
+},
 "Propos Video" : {"name":"Propos Video",
 "start_code" : "inspiration",
 "max_fans" : 1000,
@@ -3669,7 +3720,7 @@ Your hint clock has now started for this puzzle.",
 "Defense Grid" : {"name":"Defense Grid",
 "start_code" : "matrix",
 "max_fans" : 1000,
-"flavor_text" : "You’re not quite sure how to interpret the President’s latest message.  Clearly you’re not dead, but could what he be saying about thwarting the rebellion be true?  Is there no hope? In order to take the Capitol you will need to make your way past their security devices, the first of which is the massive defense grid that watches over the city.",
+"flavor_text" : "Wow... such a strong message from the President. Could he be right? Is there no hope? No time to think about that right now. In order to take the Capitol you will need to make your way past their security devices, the first of which is the massive defense grid that watches over the city.",
 "self_flavor_text" : "",
 "solve_text" : "Snow's attempt to demoralize you has failed. You've deactivated their defense grid, and now it's time to make your push to the Capitol headquarters.  Onward!",
 "self_solve_text" : "Congratulations, you've solved the puzzle!",
@@ -3737,30 +3788,30 @@ Your hint clock has now started for this puzzle.",
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 5,
-		"end_time" : 15,
-		"start_cost" : 50,
+		"start_time" : 1,
+		"end_time" : 10,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The beam mutates everything in its path, whether it be big or little, good or evil. "
 		},
 	"Hint 2" : {
-		"start_time" : 15,
-		"end_time" : 30,
-		"start_cost" : 50,
+		"start_time" : 10,
+		"end_time" : 20,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Each card contains a word which has a common opposite.  Though the beam has mututated each word quite a bit, you can still spot what's changed. "
+		"text" : "Each card contains a word which has a common opposite.  Though the beam has mutated each word quite a bit, you can still spot what's changed. "
 		},
 	"Hint 3" : {
-		"start_time" : 30,
-		"end_time" : 40,
-		"start_cost" : 50,
+		"start_time" : 20,
+		"end_time" : 30,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Match edges, placing words that are opposites next to each other. Keep track of the new letters. "
 		},
 	"Hint 4" : {
-		"start_time" : 40,
-		"end_time" : 50,
-		"start_cost" : 50,
+		"start_time" : 30,
+		"end_time" : 40,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "To get your final answer, you'll need to take one more round of opposites. "
 		}
@@ -3794,30 +3845,23 @@ Your hint clock has now started for this puzzle.",
 "advance_location" : true,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 10,
-		"end_time" : 20,
-		"start_cost" : 50,
-		"end_cost" : 0,
-		"text" : "You don't need to activate the apps (except possibly to find the full name). All you need is the name of each app, and the information in the notepad at the bottom. "
-		},
-	"Hint 2" : {
-		"start_time" : 20,
-		"end_time" : 30,
-		"start_cost" : 50,
+		"start_time" : 1,
+		"end_time" : 15,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "You're making nine groups of related apps (by their names or parts of their names).  The information in the notepad is a hint to the type of group being formed. "
 		},
-	"Hint 3" : {
-		"start_time" : 30,
-		"end_time" : 40,
-		"start_cost" : 50,
+	"Hint 2" : {
+		"start_time" : 15,
+		"end_time" : 25,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "These groups aren't quite complete, are they?"
 		},
-	"Hint 4" : {
-		"start_time" : 40,
-		"end_time" : 50,
-		"start_cost" : 50,
+	"Hint 3" : {
+		"start_time" : 25,
+		"end_time" : 35,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Each group is missing one member.  Use the ordering in the notepad to spell out your final answer. "
 		}
@@ -3835,9 +3879,9 @@ Your hint clock has now started for this puzzle.",
 "Pod of Black Ooze" : {"name":"Pod of Black Ooze",
 "start_code" : "traps",
 "max_fans" : 500,
-"flavor_text" : "Suddenly, two more pods spring out from the trees on either side of you.  <br><br>One begins to ooze a noxious black liquid into the street which appears to be quickly eating through anything it touches. <br><br>The other spews forth a hail of small, hard seeds, which bury themselves in the ground around your feet and, to your amazement, begin sprouting instantly.  A tangle of thorny vines spring up, threatening to entangle you and slice you to ribbons.",
+"flavor_text" : "A pod springs up and begins to ooze a noxious black liquid into the street which appears to be quickly eating through anything it touches. ",
 "self_flavor_text" : "",
-"solve_text" : "You're able to create a makeshift raft out some nearby roofing material and are able traverse the deadly liquid. Just before your raft completely dissolves, you are able to jump off and disarm the pod. ",
+"solve_text" : "The black liquid slowly recedes back into the hole from which it spewed. ",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -3845,30 +3889,30 @@ Your hint clock has now started for this puzzle.",
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 5,
-		"end_time" : 15,
-		"start_cost" : 50,
+		"start_time" : 1,
+		"end_time" : 10,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "There's black goo everywhere, and we mean, everywhere!"
 		},
 	"Hint 2" : {
-		"start_time" : 15,
-		"end_time" : 25,
-		"start_cost" : 50,
+		"start_time" : 10,
+		"end_time" : 20,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Each wiki articles is about a particular black substance. Can you spot how to extract letters from those?"
+		"text" : "Each wiki article is about a particular black substance. Can you spot how to extract letters from those?"
 		},
 	"Hint 3" : {
-		"start_time" : 25,
-		"end_time" : 35,
-		"start_cost" : 50,
+		"start_time" : 20,
+		"end_time" : 30,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Index into the black substance by the number of blotches that touch that article.  To order the articles, however, requires a different level of thinking. "
 		},
 	"Hint 4" : {
-		"start_time" : 35,
-		"end_time" : 45,
-		"start_cost" : 50,
+		"start_time" : 30,
+		"end_time" : 40,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Order the cars from top to bottom based on the way they overlap each other. "
 		}
@@ -3904,9 +3948,9 @@ Your hint clock has now started for this puzzle.",
 "Pod of Lightning Seeds" : {"name":"Pod of Lightning Seeds",
 "start_code" : "traps",
 "max_fans" : 250,
-"flavor_text" : "Suddenly, two more pods spring out from the trees on either side of you.  One begins to ooze a noxious black liquid into the street while the other spews forth a hail of small, hard seeds.  These seeds bury themselves in the ground around your feet and, to your amazement, begin sprouting instantly.  A tangle of thorny vines spring up, threatening to entangle you and slice you to ribbons.",
+"flavor_text" : "Another pod spews forth a hail of small, hard seeds, which bury themselves in the ground around your feet and, to your amazement, begin sprouting instantly.  A tangle of thorny vines spring up, threatening to entangle you and slice you to ribbons.",
 "self_flavor_text" : "",
-"solve_text" : "Before the vines can completely suffocate your team, you grab your trusty hole punch and take a small circular chunk out of the plant's base.  It dies.  How resourceful of you!",
+"solve_text" : "The vines shrivel up and turn to dust.  Nicely done. ",
 "self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -3914,30 +3958,30 @@ Your hint clock has now started for this puzzle.",
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 10,
-		"end_time" : 20,
-		"start_cost" : 50,
+		"start_time" : 5,
+		"end_time" : 10,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Think about the clues in terms of what would actually then be inside of each bag. "
 		},
 	"Hint 2" : {
-		"start_time" : 20,
-		"end_time" : 35,
-		"start_cost" : 50,
+		"start_time" : 10,
+		"end_time" : 20,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Think of a three letter term describing an NFL or NBA player. Then think about what would grow into that. "
 		},
 	"Hint 3" : {
-		"start_time" : 35,
-		"end_time" : 45,
-		"start_cost" : 50,
+		"start_time" : 20,
+		"end_time" : 30,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The NFL bag contains a PRO SEED or PROCEED.  This can be matched up with the flavor text to one of the capitalized words.  Some of the pronunciations are a little loose. "
 		},
 	"Hint 4" : {
-		"start_time" : 45,
-		"end_time" : 55,
-		"start_cost" : 50,
+		"start_time" : 30,
+		"end_time" : 40,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The number of seeds in a bag tells you what letter to take of the word in ALL CAPS that it's matched with. "
 		}
@@ -3955,40 +3999,40 @@ Your hint clock has now started for this puzzle.",
 "Pod of Powers" : {"name":"Pod of Powers",
 "start_code" : "death",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "As you near the Capitol, a very powerful pod begins to glow.  ",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Having lost its power, the pod is now useless.  Well done!",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The five clues all solve to words that sound like other words."
 		},
 	"Hint 2" : {
 		"start_time" : 10,
 		"end_time" : 20,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The five answers sound like powers of 2: 1, 2, 4, 8, 16."
 		},
 	"Hint 3" : {
 		"start_time" : 20,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The clues are all exactly seven letters long. After reordering, use five-bit binary to get a seven-letter answer."
 		},
 	"Hint 4" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "For instance, the first letters of the clues are capitalized for the 16, 2, and 1 clues, yielding 10011 = S."
 		}
@@ -4006,9 +4050,9 @@ Your hint clock has now started for this puzzle.",
 "Pod of Deadly Metal Darts" : {"name":"Pod of Deadly Metal Darts",
 "start_code" : "death",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "A long tube emerges from the ground, and begins shooting dozens of metal darts straight at you!",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Just before the darts reach your face, they fall harmlessly to the ground. ",
 "self_solve_text" : "Congratulations, you've solved the puzzle!",
 "resources_unlocked" : [],
 "teams_killed" : [],
@@ -4017,29 +4061,29 @@ Your hint clock has now started for this puzzle.",
 "hints" : {
 	"Hint 1" : {
 		"start_time" : 5,
-		"end_time" : 15,
-		"start_cost" : 50,
+		"end_time" : 10,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Ignore the pointy parts of each dart and just focus on the curved tail section. "
 		},
 	"Hint 2" : {
-		"start_time" : 15,
-		"end_time" : 25,
-		"start_cost" : 50,
+		"start_time" : 10,
+		"end_time" : 20,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "This pod can often be found inside the occasional Capitol pub. "
 		},
 	"Hint 3" : {
-		"start_time" : 25,
-		"end_time" : 35,
-		"start_cost" : 50,
+		"start_time" : 20,
+		"end_time" : 30,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Have you seen these shapes before in the context of darts?"
 		},
 	"Hint 4" : {
-		"start_time" : 35,
-		"end_time" : 45,
-		"start_cost" : 50,
+		"start_time" : 30,
+		"end_time" : 40,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Each tail section is a scoring region of a standard dartboard (either single, double, or triple value). "
 		}
@@ -4057,40 +4101,40 @@ Your hint clock has now started for this puzzle.",
 "Whale Pod" : {"name":"Whale Pod",
 "start_code" : "death",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "You hear a woeful cry, telling you that something large is about to emerge. ",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "The cry lessens and, whatever it was, disappears below the ground. ",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "What's the original song called, and who's it by? And what has changed?"
 		},
 	"Hint 2" : {
 		"start_time" : 10,
 		"end_time" : 20,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Does the artist's name make you think of anything else, in the context of the puzzle?"
 		},
 	"Hint 3" : {
 		"start_time" : 20,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The final word in each verse is also the final word of a chapter title."
 		},
 	"Hint 4" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The chapters are from Moby Dick. Convert them to letters using 1=A, etc."
 		}
@@ -4126,40 +4170,40 @@ Your hint clock has now started for this puzzle.",
 "Pod of Arrows" : {"name":"Pod of Arrows",
 "start_code" : "surprise",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "Suddenly hundreds of arrows rise high into the air and then sharply descend towards your helpless party. ",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Fortunately the arrows burst into flames in the nick of time. ",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Figure out how each individual answer \"rises\" and then \"falls\"."
 		},
 	"Hint 2" : {
 		"start_time" : 10,
 		"end_time" : 20,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The meanings of the answer words are unimportant. Look at them letter-by-letter."
 		},
 	"Hint 3" : {
 		"start_time" : 20,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The letters in each answer word are in alphabetical order up to a point, and then in reverse alphabetical order thereafter."
 		},
 	"Hint 4" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The letters beyond which the order reverses (i.e. the ones farthest ahead in the alphabet) spell out the final answer phrase. The final answer itself yields a W using the same mechanism."
 		}
@@ -4184,40 +4228,40 @@ Your hint clock has now started for this puzzle.",
 "Pod of Encircling Muttations" : {"name":"Pod of Encircling Muttations",
 "start_code" : "surprise",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "Out of nowhere, a pack of wild dogs rabidly begin circling you. ",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "You fake throwing a stick and they all run away.  Silly muttations. ",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
-		"end_time" : 15,
-		"start_cost" : 50,
+		"start_time" : 5,
+		"end_time" : 10,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "All clues solve to relatively common five-letter words."
 		},
 	"Hint 2" : {
-		"start_time" : 15,
-		"end_time" : 25,
-		"start_cost" : 50,
+		"start_time" : 10,
+		"end_time" : 20,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Find a way to put the words in a (mostly complete) circle."
 		},
 	"Hint 3" : {
-		"start_time" : 25,
-		"end_time" : 35,
-		"start_cost" : 50,
+		"start_time" : 20,
+		"end_time" : 30,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "In the circle, each word differs from its neighbors by exactly one letter."
 		},
 	"Hint 4" : {
-		"start_time" : 35,
-		"end_time" : 45,
-		"start_cost" : 50,
+		"start_time" : 30,
+		"end_time" : 40,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Two words are missing from the circle. Together, they spell out your final answer."
 		}
@@ -4247,40 +4291,40 @@ Your hint clock has now started for this puzzle.",
 "Pod of Distracting Noise" : {"name":"Pod of Distracting Noise",
 "start_code" : "surprise",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "From behind a tree you hear the sound of metal scraping against metal, a spine-chilling screech, and an incredibly loud boom.  Something horrible is coming. ",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Fortunately you never get to find out what was making that horrid noise. ",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The beginnings are a good place to start."
 		},
 	"Hint 2" : {
 		"start_time" : 10,
 		"end_time" : 20,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "You'll obtain five messages from this text, in each case taking one letter from each line. Each message will lead you to the next."
 		},
 	"Hint 3" : {
 		"start_time" : 20,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Is that last message really sending you back to the start, or is there another way to apply it?"
 		},
 	"Hint 4" : {
 		"start_time" : 30,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The first letters of the five messages themselves spell out the answer word."
 		}
@@ -4328,33 +4372,33 @@ Your hint clock has now started for this puzzle.",
 "Pod of Hard Labor" : {"name":"Pod of Hard Labor",
 "start_code" : "armed",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "As if in a horror movie, your stomach begins protuding as if some creature is going to gruesomely pop out. ",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "Fortunately it was just Braxton Hicks contractions.  False alarm. ",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Figuring out what either the left or the right set of numbers represents should be enough to solve the puzzle."
 		},
 	"Hint 2" : {
 		"start_time" : 10,
 		"end_time" : 20,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "These gems are \"hard\" and also represent different times at which someone went into \"labor\". "
 		},
 	"Hint 3" : {
 		"start_time" : 20,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "The left numbers are Mohs scale values; the right numbers are months associated with traditional birthstones. Determine the identity of the circled gem based on its birthstone month and/or Mohs value."
 		}
@@ -4372,33 +4416,33 @@ Your hint clock has now started for this puzzle.",
 "Pod of Barbed Wire" : {"name":"Pod of Barbed Wire",
 "start_code" : "armed",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "Suddenly shooting up out of the ground and surrounding you, is the nastiest, spikiest barbed wire fence you've ever seen. ",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "The wire snaps and flies away harmlessly. ",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
-		"end_time" : 15,
-		"start_cost" : 50,
+		"start_time" : 5,
+		"end_time" : 10,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "This is a standard \"Fences\" or \"Slitherlink\" style logic puzzle. You're drawing a single closed loop connecting dots so that the numbers indicate how many fence segments border that number.  For more tips, you should look up this style of puzzle. "
 		},
 	"Hint 2" : {
-		"start_time" : 15,
-		"end_time" : 40,
-		"start_cost" : 50,
+		"start_time" : 10,
+		"end_time" : 20,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "It's often most important how many squares are outside of your fence. "
+		"text" : "It's often important to know how much territory you've yet to acquire."
 		},
 	"Hint 3" : {
-		"start_time" : 40,
-		"end_time" : 50,
-		"start_cost" : 50,
+		"start_time" : 20,
+		"end_time" : 30,
+		"start_cost" : 25,
 		"end_cost" : 0,
 		"text" : "Count the number of spaces outside the fence in each of six distinct areas, which will then be converted to letters. "
 		}
@@ -4416,35 +4460,35 @@ Your hint clock has now started for this puzzle.",
 "Pod of Ambiguity" : {"name":"Pod of Ambiguity",
 "start_code" : "armed",
 "max_fans" : 250,
-"flavor_text" : "",
+"flavor_text" : "This pod is sort of well... it's a bad thing that's going to do some stuff. ",
 "self_flavor_text" : "",
-"solve_text" : "Congratulations, you've solved the puzzle!",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "That pod was clearly doomed from the start.  ",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
 "advance_location" : false,
 "hints" : {
 	"Hint 1" : {
-		"start_time" : 1,
+		"start_time" : 5,
 		"end_time" : 10,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Hint 1"
+		"text" : "That's not much of a pod -- looks like only half. Or is the other half also included?"
 		},
 	"Hint 2" : {
 		"start_time" : 10,
 		"end_time" : 20,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Hint 2"
+		"text" : "This pod might make your head spin."
 		},
 	"Hint 3" : {
 		"start_time" : 20,
 		"end_time" : 30,
-		"start_cost" : 50,
+		"start_cost" : 25,
 		"end_cost" : 0,
-		"text" : "Hint 3"
+		"text" : "This is a stylized ambigram. Read the image, then read it upside-down; you'll get a six letter word that can mean \"indivisible\"."
 		}
 	},
 "answers" : {
@@ -4458,12 +4502,12 @@ Your hint clock has now started for this puzzle.",
 	}
 },
 "Finale" : {"name":"Finale",
-"start_code" : "snowblows",
+"start_code" : "climax",
 "max_fans" : 2000,
 "flavor_text" : "You see before you one last pod.  Though smaller than the others, it seems somehow more menacing.  As you approach, you see a mass of cables connected to its base and, with a sudden horrific understanding, realize that each one snakes out and connects to one of the pods you just encountered.  With a terrible hum, each of these pods reactivates, surrounding you in a deadly web of machinery.  If you act fast, you may be able to destroy this pod before it's too late.  It's your only hope.",
 "self_flavor_text" : "",
-"solve_text" : "You've done it! You've finally succeeded in taking down the Capitol's defenses and made your way to the heart of the city.  There's only one thing left for you to do.  Finish it.<br><br><b>Go perform your best finishing move on President Snow and end this tyrant's reign once and for all.</b>",
-"self_solve_text" : "Congratulations, you've solved the puzzle!",
+"solve_text" : "You've done it! You've finally succeeded in taking down the Capitol's defenses and made your way to Snow's headquarters.  There's only one thing left for you to do.  Finish it.<br><br><b>Go tell your answer to President Snow and end this tyrant's reign once and for all.</b>",
+"self_solve_text" : "",
 "resources_unlocked" : [],
 "teams_killed" : [],
 "meta" : false,
@@ -4472,28 +4516,28 @@ Your hint clock has now started for this puzzle.",
 	"Hint 1" : {
 		"start_time" : 1,
 		"end_time" : 15,
-		"start_cost" : 200,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "This final puzzle is pretty straightforward, as long as you work your way through it carefully. Try starting with unique letters such as the X in EXTRAVAGANT. That has to be paired with the R.  "
 		},
 	"Hint 2" : {
 		"start_time" : 15,
 		"end_time" : 25,
-		"start_cost" : 50,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "Anytime you have a letter that's part of a pangram pair (such as X and R in EXTRAVAGANT), make sure to cross out all instances of those letters in the other answer words.  It would also help to make a list of the alphabet, eliminating letters as you use them. Don't forget that you also need to match answers to Districts in a thematic way.  "
 		},
 	"Hint 3" : {
 		"start_time" : 25,
 		"end_time" : 40,
-		"start_cost" : 50,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "Some answer words can be conceivably matched with more than one district, but there's one way that makes the most sense.  Enter the answer words in the correct order for confirmation.  "
 		},
 	"Hint 4" : {
 		"start_time" : 40,
 		"end_time" : 50,
-		"start_cost" : 50,
+		"start_cost" : 100,
 		"end_cost" : 0,
 		"text" : "Show this hint to the staffer to get confirmation on your letter pairs. "
 		}

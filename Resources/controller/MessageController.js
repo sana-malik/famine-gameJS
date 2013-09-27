@@ -51,7 +51,6 @@ var MessageController = {
 				break;
 			case "video" :
 				logAction(logTypes.MESSAGE, "A video message from " + message["sender"] + " - <div id=\"" + message["content"] + "\" class=\"vid_message clickable\">Click to view message.</div>", message["id"]);
-				alert(message["content"])
 				break;
 			default:
 				console.log("Encountered a message of unknown type \"" + message["type"] + "\"");

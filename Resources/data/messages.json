@@ -1,43 +1,43 @@
 {
-	"Cornucopia - Finishing Move" : {
+	"Starting Location" : {
 		"msg1" : {
 			"id" : "msg1",
+			"type" : "video",
+			"content" : "hay1.mov",
+			"time" : 5,
+			"sender" : "Haymitch"
+		}
+	},
+	"Cornucopia - Finishing Move" : {
+		"msg2" : {
+			"id" : "msg2",
 			"type" : "text",
 			"content" : "<b>Good job not getting mixed up in that mess. You've avoided dying in what is traditionally the bloodiest portion of the Games.<br><br>Oh, one more thing. Word is that the Gamemakers have constructed various challenges throughout the arena. According to my sources, these traps are modeled after the various districts of Pangram. In order to defeat your opponents you may have to outsmart them at their own game.<br><br>Now get out there and keep not dying!</b>",
-			"time" : 2,
+			"time" : 1,
 			"sender" : "Haymitch"
 		}
 	},
 	"Vehicles" : {
-		"msg2" : {
-			"id" : "msg2",
-			"type" : "text",
-			"content" : "<b>This will be Haymitch video two.</b>",
+		"msg3" : {
+			"id" : "msg3",
+			"type" : "video",
+			"content" : "hay2.mov",
 			"time" : 2,
 			"sender" : "Haymitch"
 		}
 	},
-	"Camouflage" : {
-		"msg3" : {
-			"id" : "msg3",
-			"type" : "text",
-			"content" : "<b>Attention tributes! As we realize your hunger is likely slowing you down, we will be holding a Feast where we have a wide variety of animals for you to hunt.</b></b>",
-			"time" : 2,
-			"sender" : "The Gamemakers"
-		}
-	},
 	"Plants vs Zombies" : {
-		"msg4" : {
-			"id" : "msg4",
+		"msg5" : {
+			"id" : "msg5",
 			"type" : "text",
 			"content" : "<b>Be careful. I've heard rumors of a suspicious device that has been causing a strange string of deaths.</b>",
-			"time" : 2,
+			"time" : 4,
 			"sender" : "Haymitch"
 		}
 	},
 	"XBox" : {
-		"msg5" : {
-			"id" : "msg5",
+		"msg6" : {
+			"id" : "msg6",
 			"type" : "text",
 			"content" : "<b>I have some information for you. Come meet me at the Kennedy Center.</b>",
 			"time" : 2,
@@ -45,8 +45,8 @@
 		}
 	},
 	"Tracker Jackers" : {
-		"msg6" : {
-			"id" : "msg6",
+		"msg7" : {
+			"id" : "msg7",
 			"type" : "text",
 			"content" : "<b>Pork belly, wigwam! Pour eggnog in Sasquatch's underwear and shiv Wonder Woman in the kidneys. Monkey farts!</b>",
 			"time" : 2,
@@ -54,17 +54,17 @@
 		}
 	},
 	"Settlers of Pangram" : {
-		"msg7" : {
-			"id" : "msg7",
-			"type" : "text",
-			"content" : "<b>Multi-kill video message placeholder.</b>",
+		"msg8" : {
+			"id" : "msg8",
+			"type" : "video",
+			"content" : "hay3.mov",
 			"time" : 2,
 			"sender" : "Haymitch"
 		}
 	},
 	"The Fallen" : {
-		"msg8" : {
-			"id" : "msg8",
+		"msg9" : {
+			"id" : "msg9",
 			"type" : "text",
 			"content" : "<b>Wait, that team grabbed a lightsaber from the Cornucopia and all you got was a clipboard?!  What were you thinking?  You could've had a friggin' lightsaber!  A LIGHTSABER!!! </b>",
 			"time" : 2,
@@ -72,42 +72,55 @@
 		}
 	},
 	"Cereal" : {
-		"msg9" : {
-			"id" : "msg9",
-			"type" : "text",
-			"content" : "<b>Maybe we should start calling you the Cereal Killers.  Right?  Right? No?  Fine, whatever.</b>",
-			"time" : 2,
-			"sender" : "Haymitch"
-		},
-		"msg10" : {
-			"id" : "msg10",
-			"type" : "text",
-			"content" : "<b>With so few teams left, the Capitol is looking to bring the Games to a close. They're going to release their ungodly creations into the Arena to hunt you down.  I know where they're being kept though, and if you head there and figure out how these creations were made you may be able to defeat them. We preprogrammed the location into your App, so you should be heading there now. <b>You'll meet a contact there who will help you, but you may need to be a little creative when attempting to communicate with him.</b>",
-			"time" : 2,
-			"sender" : "Anonymous"
-		}
-	},
-	"Muttations" : {
 		"msg11" : {
 			"id" : "msg11",
 			"type" : "text",
-			"content" : "You've won video placeholder",
+			"content" : "<b>Maybe we should start calling you the Cereal Killers.  Right?  Right? No?  Fine, whatever. <br><br>With so few teams left, the Capitol is looking to bring the Games to a close. They're going to release their ungodly creations into the Arena to hunt you down.  I know where they're being kept though, and if you head there and figure out how these creations were made you may be able to defeat them. We preprogrammed the location into your App, so you should be heading there now. <b>You'll meet a contact there who will help you, but you may need to be a little creative when attempting to communicate with him.</b>",
+			"time" : 2,
+			"sender" : "Haymitch"
+		}
+	},
+	"Muttations" : {
+		"msg12" : {
+			"id" : "msg12",
+			"type" : "video",
+			"content" : "caesarannounce.mov",
 			"time" : 2,
 			"sender" : "Caesar Flickerman"
 		},
-		"msg12" : {
-			"id" : "msg12",
-			"type" : "text",
-			"content" : "<b>ANNOUNCEMENT: You may no longer win as a team.  Instead, you must fight and kill each other until only a single Tribute remains!  That is all.</b>",
-			"time" : 3,
-			"sender" : "President Snow"
-		},
 		"msg13" : {
 			"id" : "msg13",
-			"type" : "text",
-			"content" : "<b>Go to the next location as instructed, but when you get there ignore the new rules. It's imperative that you keep working together. Don't worry, we have a plan.</b>",
-			"time" : 4,
-			"sender" : "Anonymous"
+			"type" : "video",
+			"content" : "hay4.mov",
+			"time" : 5,
+			"sender" : "Haymitch"
+		}
+	},
+	"Raise the Flag" : {
+		"msg14" : {
+			"id" : "msg14",
+			"type" : "video",
+			"content" : "coin1.mov",
+			"time" : 2,
+			"sender" : "Coin"
+		}
+	},
+	"Infiltrate the Capitol" : {
+		"msg15" : {
+			"id" : "msg15",
+			"type" : "video",
+			"content" : "snow.mov",
+			"time" : 2,
+			"sender" : "President Snow"
+		}
+	},
+	"Finale" : {
+		"msg16" : {
+			"id" : "msg16",
+			"type" : "video",
+			"content" : "coin3.mov",
+			"time" : 2,
+			"sender" : "Coin"
 		}
 	}
 }
