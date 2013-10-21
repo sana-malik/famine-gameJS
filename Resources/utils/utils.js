@@ -248,7 +248,7 @@ function parseDateTimeString(str) { // in format year-month-dayThour:minute:seco
 }
 
 function saveServerSession(mySession, myTeam) {
-	var d=new Date();
+	/*var d=new Date();
 	var n=d.getTime();
 	session.lastAttempt=d.getTime();
 	request = $.ajax({
@@ -267,11 +267,13 @@ function saveServerSession(mySession, myTeam) {
 	});
 	request.always(function () {
 		// nothing for now
-	});
+	});*/
+
+	// do nothing in distributed version
 }
 
 function loadServerSession(myTeam) {
-	request = $.ajax({
+	/*request = $.ajax({
 		url: "http://www.rawbw.com/~zero/hg/load.php",
 		type: "post",
 		data: "team="+myTeam
@@ -286,7 +288,8 @@ function loadServerSession(myTeam) {
 	request.always(function () {
 		var d=new Date();
 		session.lastRestore=d.getTime();
-	});
+	});*/
+	// do nothing
 }
 
 function saveLocalSession() {
