@@ -11,8 +11,11 @@ var messages;
  * Executes once the DOM is fully loaded. Essentially a "main" method
  */
 $(document).ready(function() {
+	// Load parameters
+   	parameters = loadParameters();
+
     var dateTest = new Date();
-    if (dateTest.getTimezoneOffset() != 240) {
+    if (parameters["debug_parameters"]["check_timezone"] && dateTest.getTimezoneOffset() != 240) {
         alert("Please close the application and set\nyour computer to Eastern Daylight Time.");
         return;
     }
@@ -28,8 +31,7 @@ $(document).ready(function() {
     //Add menu to the current window
    // Ti.UI.getCurrentWindow().setMenu(menu);
 
-   	// Load parameters
-   	parameters = loadParameters();
+   
 
 	// Set up models
 	teams = populateTeams();

@@ -3,7 +3,7 @@
     "debug" : true,
     "time_multiplyer" : 1,
     "start_time" : {
-        "active" : true,
+        "active" : false,
         "year" : 2020,
         "month" : 9,
         "day" : 28,
@@ -15,7 +15,8 @@
     "verbose_server" : false,
     "video_autoplay" : false,
     "enable_encryption" : false,
-    "show_solutions" : false
+    "show_solutions" : false,
+    "check_timezone" : false
 }, 
 
 "self_defense_vid" : "movies/2b.html"
